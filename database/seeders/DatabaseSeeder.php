@@ -37,6 +37,7 @@ class DatabaseSeeder extends Seeder
             ArtifactsSeeder::class,
             ProjectsSeeder::class,
             RequirementsSeeder::class,
+            NonFunctionRequirementsSeeder::class,
         ]);
     }
 }

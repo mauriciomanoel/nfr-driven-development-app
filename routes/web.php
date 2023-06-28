@@ -29,7 +29,7 @@ use App\Http\Controllers\MenuElementController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\ResourceController;
-
+use App\Http\Controllers\FrameworkController;
 
 
 Route::get('/', function () {           return redirect('/home'); });
@@ -43,6 +43,21 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/projects/current', [ProjectsController::class, 'current'])->name('projects.current');
         Route::resource('projects', ProjectsController::class);
         Route::resource('requirements', RequirementsController::class);
+        //Route::resource('framework', FrameworkController::class);
+
+        Route::prefix('framework')->group(function () {  
+            Route::get('/', [FrameworkController::class, 'index'])->name('framework.index');
+            Route::get('/step1', [FrameworkController::class, 'step1'])->name('framework.step1');
+
+            Route::get('/storytellings', [ArtifactsController::class, 'indexStorytellings'])->name('artifacts.storytellings.index');
+            Route::get('/taxonomies', [ArtifactsController::class, 'indexTaxonomies'])->name('artifacts.storytellings.index');
+            Route::get('/create', [ArtifactsController::class, 'create'])->name('menu.menu.create');
+            Route::get('/store', [ArtifactsController::class, 'store'])->name('menu.menu.store');
+            Route::get('/edit', [ArtifactsController::class, 'edit'])->name('menu.menu.edit');
+            Route::get('/{id}', [ArtifactsController::class, 'show'])->name('menu.show');
+            Route::get('/update', [ArtifactsController::class, 'update'])->name('menu.menu.update');
+            Route::get('/delete', [ArtifactsController::class, 'delete'])->name('menu.menu.delete');
+        });
 
         Route::prefix('artifacts')->group(function () {  
             Route::get('/storytellings', [ArtifactsController::class, 'indexStorytellings'])->name('artifacts.storytellings.index');

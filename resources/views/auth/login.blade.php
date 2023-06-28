@@ -48,7 +48,7 @@
                 <div>
                   <h2>Sign up</h2>
                   <br>
-                  <p>RS4AAL: Requirement Specification for Ambient Assisted Living Tool</p>
+                  <p>NFR-Driven Development Framework Tool</p>
                   @if (Route::has('password.request'))
                     <!-- <a href="{{ route('register') }}" class="btn btn-primary active mt-3">{{ __('Register') }}</a> -->
                   @endif

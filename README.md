@@ -116,6 +116,10 @@ $ npm run dev
 
 # and repeat generate mixing
 $ npm run dev
+
+# check all the routes
+php artisan route:list
+
 ```
 
 ## Usage

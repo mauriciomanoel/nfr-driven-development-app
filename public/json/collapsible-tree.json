@@ -1,0 +1,1245 @@
+{
+    "name": " AAL",
+    "children": [
+      {
+        "name": "Independent Living",
+        "children": [
+          {
+            "name": "Daily life assistance",
+            "children": [
+                {
+                "name": "Adaptivity"
+                },
+                {
+                "name": "Compatibility"
+                },
+                {
+                "name": "Interoperability"
+                },
+                {
+                "name": "Context coverage"
+                },
+                {
+                "name": "Flexibility"
+                },
+                {
+                "name": "Effectiveness"
+                },
+                {
+                "name": "Efficiency"
+                },
+                {
+                "name": "Freedom from risk"
+                },
+                {
+                "name": "Functional suitability"
+                },
+                {
+                "name": "Functionality"
+                },
+                {
+                "name": "Maintainability"
+                },
+                {
+                "name": "Analysability"
+                },
+                {
+                "name": "Modifiability"
+                },
+                {
+                "name": "Reusability"
+                },
+                {
+                "name": "Testability"
+                },
+                {
+                "name": "Portability"
+                },
+                {
+                "name": "Performance efficiency"
+                },
+                {
+                "name": "Resource utilization"
+                },
+                {
+                "name": "Time behaviour"
+                },
+                {
+                "name": "Capacity"
+                },
+                {
+                "name": "Reliability"
+                },
+                {
+                "name": "Adaptability"
+                },
+                {
+                "name": "Installability"
+                },
+                {
+                "name": "Availability"
+                },
+                {
+                "name": "Fault tolerance"
+                },
+                {
+                "name": "Traceability"
+                },
+                {
+                "name": "Recoverability"
+                },
+                {
+                "name": "Satisfaction"
+                },
+                {
+                "name": "Trust"
+                },
+                {
+                "name": "Usefulness"
+                },
+                {
+                "name": "Scalability"
+                },
+                {
+                "name": "Security"
+                },
+                {
+                "name": "Confidentiality"
+                },
+                {
+                "name": "Integrity"
+                },
+                {
+                "name": "Non-repudiation"
+                },
+                {
+                "name": "Usability"
+                },
+                {
+                "name": "User error protection"
+                },
+                {
+                "name": "Learnability"
+                },
+                {
+                "name": "Accessibility"
+                }
+            ]
+          },
+          {
+            "name": "Supporting physical mobility",
+            "children": [
+                {
+                    "name": "Adaptivity"
+                    },
+                    {
+                    "name": "Compatibility"
+                    },
+                    {
+                    "name": "Interoperability"
+                    },
+                    {
+                    "name": "Context coverage"
+                    },
+                    {
+                    "name": "Flexibility"
+                    },
+                    {
+                    "name": "Effectiveness"
+                    },
+                    {
+                    "name": "Efficiency"
+                    },
+                    {
+                    "name": "Freedom from risk"
+                    },
+                    {
+                    "name": "Functional suitability"
+                    },
+                    {
+                    "name": "Functionality"
+                    },
+                    {
+                    "name": "Maintainability"
+                    },
+                    {
+                    "name": "Analysability"
+                    },
+                    {
+                    "name": "Modifiability"
+                    },
+                    {
+                    "name": "Reusability"
+                    },
+                    {
+                    "name": "Testability"
+                    },
+                    {
+                    "name": "Portability"
+                    },
+                    {
+                    "name": "Performance efficiency"
+                    },
+                    {
+                    "name": "Resource utilization"
+                    },
+                    {
+                    "name": "Time behaviour"
+                    },
+                    {
+                    "name": "Capacity"
+                    },
+                    {
+                    "name": "Reliability"
+                    },
+                    {
+                    "name": "Adaptability"
+                    },
+                    {
+                    "name": "Installability"
+                    },
+                    {
+                    "name": "Availability"
+                    },
+                    {
+                    "name": "Fault tolerance"
+                    },
+                    {
+                    "name": "Traceability"
+                    },
+                    {
+                    "name": "Recoverability"
+                    },
+                    {
+                    "name": "Satisfaction"
+                    },
+                    {
+                    "name": "Trust"
+                    },
+                    {
+                    "name": "Usefulness"
+                    },
+                    {
+                    "name": "Scalability"
+                    },
+                    {
+                    "name": "Security"
+                    },
+                    {
+                    "name": "Confidentiality"
+                    },
+                    {
+                    "name": "Integrity"
+                    },
+                    {
+                    "name": "Non-repudiation"
+                    },
+                    {
+                    "name": "Usability"
+                    },
+                    {
+                    "name": "User error protection"
+                    },
+                    {
+                    "name": "Learnability"
+                    },
+                    {
+                    "name": "Accessibility"
+                    }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Health and Care in Life",
+        "children": [
+          {
+            "name": "Monitoring",
+            "children": [
+                {
+                    "name": "Adaptivity"
+                    },
+                    {
+                    "name": "Compatibility"
+                    },
+                    {
+                    "name": "Interoperability"
+                    },
+                    {
+                    "name": "Context coverage"
+                    },
+                    {
+                    "name": "Flexibility"
+                    },
+                    {
+                    "name": "Effectiveness"
+                    },
+                    {
+                    "name": "Efficiency"
+                    },
+                    {
+                    "name": "Freedom from risk"
+                    },
+                    {
+                    "name": "Functional suitability"
+                    },
+                    {
+                    "name": "Functionality"
+                    },
+                    {
+                    "name": "Maintainability"
+                    },
+                    {
+                    "name": "Analysability"
+                    },
+                    {
+                    "name": "Modifiability"
+                    },
+                    {
+                    "name": "Reusability"
+                    },
+                    {
+                    "name": "Testability"
+                    },
+                    {
+                    "name": "Portability"
+                    },
+                    {
+                    "name": "Performance efficiency"
+                    },
+                    {
+                    "name": "Resource utilization"
+                    },
+                    {
+                    "name": "Time behaviour"
+                    },
+                    {
+                    "name": "Capacity"
+                    },
+                    {
+                    "name": "Reliability"
+                    },
+                    {
+                    "name": "Adaptability"
+                    },
+                    {
+                    "name": "Installability"
+                    },
+                    {
+                    "name": "Availability"
+                    },
+                    {
+                    "name": "Fault tolerance"
+                    },
+                    {
+                    "name": "Traceability"
+                    },
+                    {
+                    "name": "Recoverability"
+                    },
+                    {
+                    "name": "Satisfaction"
+                    },
+                    {
+                    "name": "Trust"
+                    },
+                    {
+                    "name": "Usefulness"
+                    },
+                    {
+                    "name": "Scalability"
+                    },
+                    {
+                    "name": "Security"
+                    },
+                    {
+                    "name": "Confidentiality"
+                    },
+                    {
+                    "name": "Integrity"
+                    },
+                    {
+                    "name": "Non-repudiation"
+                    },
+                    {
+                    "name": "Usability"
+                    },
+                    {
+                    "name": "User error protection"
+                    },
+                    {
+                    "name": "Learnability"
+                    },
+                    {
+                    "name": "Accessibility"
+                    }
+            ]
+          },
+          {
+            "name": "Caring and Intervention",
+            "children": [
+                {
+                    "name": "Adaptivity"
+                    },
+                    {
+                    "name": "Compatibility"
+                    },
+                    {
+                    "name": "Interoperability"
+                    },
+                    {
+                    "name": "Context coverage"
+                    },
+                    {
+                    "name": "Flexibility"
+                    },
+                    {
+                    "name": "Effectiveness"
+                    },
+                    {
+                    "name": "Efficiency"
+                    },
+                    {
+                    "name": "Freedom from risk"
+                    },
+                    {
+                    "name": "Functional suitability"
+                    },
+                    {
+                    "name": "Functionality"
+                    },
+                    {
+                    "name": "Maintainability"
+                    },
+                    {
+                    "name": "Analysability"
+                    },
+                    {
+                    "name": "Modifiability"
+                    },
+                    {
+                    "name": "Reusability"
+                    },
+                    {
+                    "name": "Testability"
+                    },
+                    {
+                    "name": "Portability"
+                    },
+                    {
+                    "name": "Performance efficiency"
+                    },
+                    {
+                    "name": "Resource utilization"
+                    },
+                    {
+                    "name": "Time behaviour"
+                    },
+                    {
+                    "name": "Capacity"
+                    },
+                    {
+                    "name": "Reliability"
+                    },
+                    {
+                    "name": "Adaptability"
+                    },
+                    {
+                    "name": "Installability"
+                    },
+                    {
+                    "name": "Availability"
+                    },
+                    {
+                    "name": "Fault tolerance"
+                    },
+                    {
+                    "name": "Traceability"
+                    },
+                    {
+                    "name": "Recoverability"
+                    },
+                    {
+                    "name": "Satisfaction"
+                    },
+                    {
+                    "name": "Trust"
+                    },
+                    {
+                    "name": "Usefulness"
+                    },
+                    {
+                    "name": "Scalability"
+                    },
+                    {
+                    "name": "Security"
+                    },
+                    {
+                    "name": "Confidentiality"
+                    },
+                    {
+                    "name": "Integrity"
+                    },
+                    {
+                    "name": "Non-repudiation"
+                    },
+                    {
+                    "name": "Usability"
+                    },
+                    {
+                    "name": "User error protection"
+                    },
+                    {
+                    "name": "Learnability"
+                    },
+                    {
+                    "name": "Accessibility"
+                    }
+            ]
+          },
+          {
+            "name": "Rehabilitation and Disabilities Compensation",
+            "children": [
+                {
+                    "name": "Adaptivity"
+                    },
+                    {
+                    "name": "Compatibility"
+                    },
+                    {
+                    "name": "Interoperability"
+                    },
+                    {
+                    "name": "Context coverage"
+                    },
+                    {
+                    "name": "Flexibility"
+                    },
+                    {
+                    "name": "Effectiveness"
+                    },
+                    {
+                    "name": "Efficiency"
+                    },
+                    {
+                    "name": "Freedom from risk"
+                    },
+                    {
+                    "name": "Functional suitability"
+                    },
+                    {
+                    "name": "Functionality"
+                    },
+                    {
+                    "name": "Maintainability"
+                    },
+                    {
+                    "name": "Analysability"
+                    },
+                    {
+                    "name": "Modifiability"
+                    },
+                    {
+                    "name": "Reusability"
+                    },
+                    {
+                    "name": "Testability"
+                    },
+                    {
+                    "name": "Portability"
+                    },
+                    {
+                    "name": "Performance efficiency"
+                    },
+                    {
+                    "name": "Resource utilization"
+                    },
+                    {
+                    "name": "Time behaviour"
+                    },
+                    {
+                    "name": "Capacity"
+                    },
+                    {
+                    "name": "Reliability"
+                    },
+                    {
+                    "name": "Adaptability"
+                    },
+                    {
+                    "name": "Installability"
+                    },
+                    {
+                    "name": "Availability"
+                    },
+                    {
+                    "name": "Fault tolerance"
+                    },
+                    {
+                    "name": "Traceability"
+                    },
+                    {
+                    "name": "Recoverability"
+                    },
+                    {
+                    "name": "Satisfaction"
+                    },
+                    {
+                    "name": "Trust"
+                    },
+                    {
+                    "name": "Usefulness"
+                    },
+                    {
+                    "name": "Scalability"
+                    },
+                    {
+                    "name": "Security"
+                    },
+                    {
+                    "name": "Confidentiality"
+                    },
+                    {
+                    "name": "Integrity"
+                    },
+                    {
+                    "name": "Non-repudiation"
+                    },
+                    {
+                    "name": "Usability"
+                    },
+                    {
+                    "name": "User error protection"
+                    },
+                    {
+                    "name": "Learnability"
+                    },
+                    {
+                    "name": "Accessibility"
+                    }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Occupation in Life",
+        "children": [
+          {
+            "name": "Ageing at Work",
+            "children": [
+                {
+                    "name": "Adaptivity"
+                    },
+                    {
+                    "name": "Compatibility"
+                    },
+                    {
+                    "name": "Interoperability"
+                    },
+                    {
+                    "name": "Context coverage"
+                    },
+                    {
+                    "name": "Flexibility"
+                    },
+                    {
+                    "name": "Effectiveness"
+                    },
+                    {
+                    "name": "Efficiency"
+                    },
+                    {
+                    "name": "Freedom from risk"
+                    },
+                    {
+                    "name": "Functional suitability"
+                    },
+                    {
+                    "name": "Functionality"
+                    },
+                    {
+                    "name": "Maintainability"
+                    },
+                    {
+                    "name": "Analysability"
+                    },
+                    {
+                    "name": "Modifiability"
+                    },
+                    {
+                    "name": "Reusability"
+                    },
+                    {
+                    "name": "Testability"
+                    },
+                    {
+                    "name": "Portability"
+                    },
+                    {
+                    "name": "Performance efficiency"
+                    },
+                    {
+                    "name": "Resource utilization"
+                    },
+                    {
+                    "name": "Time behaviour"
+                    },
+                    {
+                    "name": "Capacity"
+                    },
+                    {
+                    "name": "Reliability"
+                    },
+                    {
+                    "name": "Adaptability"
+                    },
+                    {
+                    "name": "Installability"
+                    },
+                    {
+                    "name": "Availability"
+                    },
+                    {
+                    "name": "Fault tolerance"
+                    },
+                    {
+                    "name": "Traceability"
+                    },
+                    {
+                    "name": "Recoverability"
+                    },
+                    {
+                    "name": "Satisfaction"
+                    },
+                    {
+                    "name": "Trust"
+                    },
+                    {
+                    "name": "Usefulness"
+                    },
+                    {
+                    "name": "Scalability"
+                    },
+                    {
+                    "name": "Security"
+                    },
+                    {
+                    "name": "Confidentiality"
+                    },
+                    {
+                    "name": "Integrity"
+                    },
+                    {
+                    "name": "Non-repudiation"
+                    },
+                    {
+                    "name": "Usability"
+                    },
+                    {
+                    "name": "User error protection"
+                    },
+                    {
+                    "name": "Learnability"
+                    },
+                    {
+                    "name": "Accessibility"
+                    }
+            ]
+          },
+          {
+            "name": "Extending Professional Life",
+            "children": [
+                {
+                    "name": "Adaptivity"
+                    },
+                    {
+                    "name": "Compatibility"
+                    },
+                    {
+                    "name": "Interoperability"
+                    },
+                    {
+                    "name": "Context coverage"
+                    },
+                    {
+                    "name": "Flexibility"
+                    },
+                    {
+                    "name": "Effectiveness"
+                    },
+                    {
+                    "name": "Efficiency"
+                    },
+                    {
+                    "name": "Freedom from risk"
+                    },
+                    {
+                    "name": "Functional suitability"
+                    },
+                    {
+                    "name": "Functionality"
+                    },
+                    {
+                    "name": "Maintainability"
+                    },
+                    {
+                    "name": "Analysability"
+                    },
+                    {
+                    "name": "Modifiability"
+                    },
+                    {
+                    "name": "Reusability"
+                    },
+                    {
+                    "name": "Testability"
+                    },
+                    {
+                    "name": "Portability"
+                    },
+                    {
+                    "name": "Performance efficiency"
+                    },
+                    {
+                    "name": "Resource utilization"
+                    },
+                    {
+                    "name": "Time behaviour"
+                    },
+                    {
+                    "name": "Capacity"
+                    },
+                    {
+                    "name": "Reliability"
+                    },
+                    {
+                    "name": "Adaptability"
+                    },
+                    {
+                    "name": "Installability"
+                    },
+                    {
+                    "name": "Availability"
+                    },
+                    {
+                    "name": "Fault tolerance"
+                    },
+                    {
+                    "name": "Traceability"
+                    },
+                    {
+                    "name": "Recoverability"
+                    },
+                    {
+                    "name": "Satisfaction"
+                    },
+                    {
+                    "name": "Trust"
+                    },
+                    {
+                    "name": "Usefulness"
+                    },
+                    {
+                    "name": "Scalability"
+                    },
+                    {
+                    "name": "Security"
+                    },
+                    {
+                    "name": "Confidentiality"
+                    },
+                    {
+                    "name": "Integrity"
+                    },
+                    {
+                    "name": "Non-repudiation"
+                    },
+                    {
+                    "name": "Usability"
+                    },
+                    {
+                    "name": "User error protection"
+                    },
+                    {
+                    "name": "Learnability"
+                    },
+                    {
+                    "name": "Accessibility"
+                    }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Recreation in Life",
+        "children": [
+          {
+            "name": "Socialization",
+            "children": [
+                {
+                    "name": "Adaptivity"
+                    },
+                    {
+                    "name": "Compatibility"
+                    },
+                    {
+                    "name": "Interoperability"
+                    },
+                    {
+                    "name": "Context coverage"
+                    },
+                    {
+                    "name": "Flexibility"
+                    },
+                    {
+                    "name": "Effectiveness"
+                    },
+                    {
+                    "name": "Efficiency"
+                    },
+                    {
+                    "name": "Freedom from risk"
+                    },
+                    {
+                    "name": "Functional suitability"
+                    },
+                    {
+                    "name": "Functionality"
+                    },
+                    {
+                    "name": "Maintainability"
+                    },
+                    {
+                    "name": "Analysability"
+                    },
+                    {
+                    "name": "Modifiability"
+                    },
+                    {
+                    "name": "Reusability"
+                    },
+                    {
+                    "name": "Testability"
+                    },
+                    {
+                    "name": "Portability"
+                    },
+                    {
+                    "name": "Performance efficiency"
+                    },
+                    {
+                    "name": "Resource utilization"
+                    },
+                    {
+                    "name": "Time behaviour"
+                    },
+                    {
+                    "name": "Capacity"
+                    },
+                    {
+                    "name": "Reliability"
+                    },
+                    {
+                    "name": "Adaptability"
+                    },
+                    {
+                    "name": "Installability"
+                    },
+                    {
+                    "name": "Availability"
+                    },
+                    {
+                    "name": "Fault tolerance"
+                    },
+                    {
+                    "name": "Traceability"
+                    },
+                    {
+                    "name": "Recoverability"
+                    },
+                    {
+                    "name": "Satisfaction"
+                    },
+                    {
+                    "name": "Trust"
+                    },
+                    {
+                    "name": "Usefulness"
+                    },
+                    {
+                    "name": "Scalability"
+                    },
+                    {
+                    "name": "Security"
+                    },
+                    {
+                    "name": "Confidentiality"
+                    },
+                    {
+                    "name": "Integrity"
+                    },
+                    {
+                    "name": "Non-repudiation"
+                    },
+                    {
+                    "name": "Usability"
+                    },
+                    {
+                    "name": "User error protection"
+                    },
+                    {
+                    "name": "Learnability"
+                    },
+                    {
+                    "name": "Accessibility"
+                    }
+            ]
+          },
+          {
+            "name": "Entertainment",
+            "children": [
+                {
+                    "name": "Adaptivity"
+                    },
+                    {
+                    "name": "Compatibility"
+                    },
+                    {
+                    "name": "Interoperability"
+                    },
+                    {
+                    "name": "Context coverage"
+                    },
+                    {
+                    "name": "Flexibility"
+                    },
+                    {
+                    "name": "Effectiveness"
+                    },
+                    {
+                    "name": "Efficiency"
+                    },
+                    {
+                    "name": "Freedom from risk"
+                    },
+                    {
+                    "name": "Functional suitability"
+                    },
+                    {
+                    "name": "Functionality"
+                    },
+                    {
+                    "name": "Maintainability"
+                    },
+                    {
+                    "name": "Analysability"
+                    },
+                    {
+                    "name": "Modifiability"
+                    },
+                    {
+                    "name": "Reusability"
+                    },
+                    {
+                    "name": "Testability"
+                    },
+                    {
+                    "name": "Portability"
+                    },
+                    {
+                    "name": "Performance efficiency"
+                    },
+                    {
+                    "name": "Resource utilization"
+                    },
+                    {
+                    "name": "Time behaviour"
+                    },
+                    {
+                    "name": "Capacity"
+                    },
+                    {
+                    "name": "Reliability"
+                    },
+                    {
+                    "name": "Adaptability"
+                    },
+                    {
+                    "name": "Installability"
+                    },
+                    {
+                    "name": "Availability"
+                    },
+                    {
+                    "name": "Fault tolerance"
+                    },
+                    {
+                    "name": "Traceability"
+                    },
+                    {
+                    "name": "Recoverability"
+                    },
+                    {
+                    "name": "Satisfaction"
+                    },
+                    {
+                    "name": "Trust"
+                    },
+                    {
+                    "name": "Usefulness"
+                    },
+                    {
+                    "name": "Scalability"
+                    },
+                    {
+                    "name": "Security"
+                    },
+                    {
+                    "name": "Confidentiality"
+                    },
+                    {
+                    "name": "Integrity"
+                    },
+                    {
+                    "name": "Non-repudiation"
+                    },
+                    {
+                    "name": "Usability"
+                    },
+                    {
+                    "name": "User error protection"
+                    },
+                    {
+                    "name": "Learnability"
+                    },
+                    {
+                    "name": "Accessibility"
+                    }
+            ]
+          },
+          {
+            "name": "Learning",
+            "children": [
+                {
+                    "name": "Adaptivity"
+                    },
+                    {
+                    "name": "Compatibility"
+                    },
+                    {
+                    "name": "Interoperability"
+                    },
+                    {
+                    "name": "Context coverage"
+                    },
+                    {
+                    "name": "Flexibility"
+                    },
+                    {
+                    "name": "Effectiveness"
+                    },
+                    {
+                    "name": "Efficiency"
+                    },
+                    {
+                    "name": "Freedom from risk"
+                    },
+                    {
+                    "name": "Functional suitability"
+                    },
+                    {
+                    "name": "Functionality"
+                    },
+                    {
+                    "name": "Maintainability"
+                    },
+                    {
+                    "name": "Analysability"
+                    },
+                    {
+                    "name": "Modifiability"
+                    },
+                    {
+                    "name": "Reusability"
+                    },
+                    {
+                    "name": "Testability"
+                    },
+                    {
+                    "name": "Portability"
+                    },
+                    {
+                    "name": "Performance efficiency"
+                    },
+                    {
+                    "name": "Resource utilization"
+                    },
+                    {
+                    "name": "Time behaviour"
+                    },
+                    {
+                    "name": "Capacity"
+                    },
+                    {
+                    "name": "Reliability"
+                    },
+                    {
+                    "name": "Adaptability"
+                    },
+                    {
+                    "name": "Installability"
+                    },
+                    {
+                    "name": "Availability"
+                    },
+                    {
+                    "name": "Fault tolerance"
+                    },
+                    {
+                    "name": "Traceability"
+                    },
+                    {
+                    "name": "Recoverability"
+                    },
+                    {
+                    "name": "Satisfaction"
+                    },
+                    {
+                    "name": "Trust"
+                    },
+                    {
+                    "name": "Usefulness"
+                    },
+                    {
+                    "name": "Scalability"
+                    },
+                    {
+                    "name": "Security"
+                    },
+                    {
+                    "name": "Confidentiality"
+                    },
+                    {
+                    "name": "Integrity"
+                    },
+                    {
+                    "name": "Non-repudiation"
+                    },
+                    {
+                    "name": "Usability"
+                    },
+                    {
+                    "name": "User error protection"
+                    },
+                    {
+                    "name": "Learnability"
+                    },
+                    {
+                    "name": "Accessibility"
+                    }
+            ]
+          }
+        ]
+      }
+    ]
+  }

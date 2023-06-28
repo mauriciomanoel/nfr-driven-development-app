@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+	<title>Novo Projeto</title>
+	<defs>
+		<image  width="376" height="178" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAACyAQMAAAByV0aDAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAAAF0Uk5TAEDm2GYAAAAfSURBVHic7cGBAAAAAMOg+VPf4ARVAQAAAAAAAADwDCFgAAEk22iXAAAAAElFTkSuQmCC"/>
+		<image  width="112" height="120" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAAB4BAMAAADYnWsVAAAAAXNSR0IB2cksfwAAAB5QTFRFAAAA////////////////////////////////////JHyblQAAAAp0Uk5TADmO/xxVxnGq48qsZX4AAAQ1SURBVHic7Zk9TxtBEIbPkpEpaWzRA/kBrHSKO4REb1BMamIhkS5NJKcDRcJJjRT4ufF+zMw7sx/2UaXIFGef333ubmd2Z+fWXVez0Ylz50dVuWrjW7e1+4vB4MwFuxvKTVYR7L8N464StyU/DeG8Y8iGOGj024G97U8+O2UPe2LSv4H95P498J3P9+Em1Pr+Ig4Cb3sEhR3jvcne3e2gKd1jE8/XdH69A/xJ/qAfyFMfdzzoS2p3Sr9cph/m7Yc9YMfQL+ygxT4gDjNy0F7gu+8I83DmhoE0DyergaBzZ/78Rs7bIDT0IZ86c6GaTaDhNnIc1WCN8aonMMyOYPXxOkotPpsJ2X+Pn7UkIhGbafAuj64yfrCFzMPYnH1dTCI8gbaON1lOgrTJOROxNTa10UXDiIVQUybvNGgn9PGLBWOui/kNwfmTAlUAFvIM8foISm7oIJPGiKVR6b92AnJ0JcuyD+dPB3Vwwd3hgXAoHW+B4sDHBP6gK3VtkHP8K/zsIGJVkKO7QLDvdoPkfQQhYncWnHHj5H8EIWK9BVfSeGrBBfY3Th8Cr26dbVED41AmUCfkNhg8nEDtyRo4Tm7zQzmCNF76iybIg8EtL/xxvKTzFPQqKJn71B9okZMKqwbCTPGHfEZUQZUL2GTe18FO5+/gKkioDRDyXTLMbS2wO9GcymxNUBdlFME6ODrhpADLDWXvpBZAP5hpdZB1i9aocVIL4EpfP3L6GR5K4Fp7MI0ZKpRYteA1e5JKzPX2CXq6jKhTA34QbyxTP2ecRGSoO/fFgGjcHC6hrQLi6hAsq7UroKnB8xo9A+cv5IJCEShqDl7zlJLSRIaCqAnk4XWGbwAE4pvADapSYWwg0DT4GuolXgXvcArjp6Su5BqdukePgSio1APxBvXTnzTU+IFZhXKOgEU13RlCTgEXsKhij6JRv+BRSyq5iTMZuxzAkkpfkgOg/EOwoPK34HIsOBWYq/LVz0OceRrMVPjef1vjDDJgv5ko1ZXsK4J/yqo/vOnq370dI/hUVv3hcaSlo0MEK2qQ1BvOdl5qsKxGCZe2TWfBopokmWl+5lmwpJJEwQ0zLwMLKklpOMWhlYEFlSVcTnIwV/+D/xwYayeR4qAmsKKGY6gOWUrLGYNlNX74XE1SOZNnavzwqYgkmgkCYmHEqqxHUbqqrFZRhdWKU95ZlDjlhqLFqjeijjnnxWqNzuyKrFVfik5NWRuNVsRRWQ01utkaCVaqOnJ1klVAuI/bUm3t1K6sUDXvGnrzTm0uOLP30BDtRfXOg33XkMexD5rtrxi3Z5uWyfIt2sqVq08CFseG2piQkvOI3gIK5ifM1p/86olr9yupRZsGb8KWyS+8+7Sxq7tcqt72umdRbdo7N9jtq+eOTWBlarTs2q9WBqt+c5czN7UvN8iehzqG7N1/Bu36++kv2joj/qLCeLYAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Background" href="#img1" x="-108" y="-9" />
+	<use id="Camada 1" href="#img2" x="24" y="20" />
+</svg>

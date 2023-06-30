@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
             ProjectsSeeder::class,
             RequirementsSeeder::class,
             NonFunctionRequirementsSeeder::class,
+            LegalAndNormativeRequirementSeeder::class,
         ]);
     }
 }

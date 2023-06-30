@@ -89,7 +89,7 @@ class ArtifactsSeeder extends Seeder
 
         DB::table('artifact_has_life_settings')->insert([
             'artifacts_id' => $artifactsId,
-            'life_settings_id' => $lifeSettingsSubcategories->category->id,            
+            'life_settings_id' => $lifeSettingsSubcategories->category->id,
         ]);
         DB::table('artifact_has_life_settings')->insert([
             'artifacts_id' => $artifactsId,

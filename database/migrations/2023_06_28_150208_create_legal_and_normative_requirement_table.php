@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('name');
             $table->text('description');
             $table->text('legal_references');
+            $table->text('recommendations');
             $table->longText('content');
             $table->unsignedBigInteger('life_settings_id');
             $table->integer('users_id')->unsigned();

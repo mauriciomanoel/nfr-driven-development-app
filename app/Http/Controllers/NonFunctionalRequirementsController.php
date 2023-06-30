@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\Requirements;
+use App\Models\LegalAndNormativeRequirements;
 use App\Models\Projects;
 use App\Models\LifeSettings;
 use App\Models\LifeSettingsCategories;
 use App\Models\LifeSettingsSubcategories;
+use App\Models\NonFunctionalRequirements;
+use File;
 
-class RequirementsController extends Controller
+
+
+class NonFunctionalRequirementsController extends Controller
 {
 
     /**
@@ -30,8 +34,8 @@ class RequirementsController extends Controller
      */
     public function index()
     {
-        $requirements = Requirements::with('user')->paginate( 20 );
-        return view('dashboard.requirements.requirementsList', ['requirements' => $requirements]);
+        $requirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
+        return view('dashboard.legalAndNormativeRequirements.requirementsList', ['requirements' => $requirements]);
     }
 
     /**
@@ -79,8 +83,10 @@ class RequirementsController extends Controller
      */
     public function show($id)
     {
-        $requirement = Requirements::with('user')->find($id);
-        return view('dashboard.requirements.requirementShow', [ 'requirement' => $requirement ]);
+
+        $legalAndNormativeRequirements = LegalAndNormativeRequirements::whereIn('id', [1, 2, 3])->get();
+        $nonFunctionalRequirement = NonFunctionalRequirements::with('user')->find($id);
+        return view('dashboard.nonFunctionalRequirements.show', ['nonFunctionalRequirement' => $nonFunctionalRequirement, 'legalAndNormativeRequirements' => $legalAndNormativeRequirements  ]);
     }
 
     /**
@@ -96,6 +102,25 @@ class RequirementsController extends Controller
         $lifeSettingsCategories = LifeSettingsCategories::all();
         $lifeSettingsSubcategories = LifeSettingsSubcategories::all();
         return view('dashboard.projects.edit', [ 'lifeSettings' => $lifeSettings, 'lifeSettingsCategories' => $lifeSettingsCategories, "lifeSettingsSubcategories" => $lifeSettingsSubcategories, 'project' => $project ]);
+    }
+
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function downloadSIG($id)
+    {
+        $nonFunctionalRequirement = NonFunctionalRequirements::find($id);
+
+        $data = $nonFunctionalRequirement->content;
+        $headers = ['Content-Type: application/json'];
+        $fileName = "sig-$nonFunctionalRequirement->name-file.txt";
+        $fileStorePath = public_path('/tmp/'.$fileName);
+        File::put($fileStorePath, $data);
+        return response()->download($fileStorePath, $fileName, $headers);
     }
 
     /**

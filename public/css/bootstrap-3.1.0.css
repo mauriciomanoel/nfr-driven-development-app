@@ -266,17 +266,17 @@ th {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-html {
+/* html {
     font-size: 62.5%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-body {
+} */
+/* body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.428571429;
     color: #333;
     background-color: #fff;
-}
+} */
 input,
 button,
 select,

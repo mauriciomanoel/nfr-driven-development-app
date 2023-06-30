@@ -135,8 +135,17 @@ class MenusTableSeeder extends Seeder
         ]);
         $this->menuId = DB::getPdo()->lastInsertId();  //set menuId
         $this->insertLink('guest,user,admin', 'Dashboard', '/', 'cil-speedometer');
-        $this->insertLink('guest,user,admin', 'NDD Framework AAL', '/', 'cil-browser');
         $this->insertLink('guest,user,admin', 'Projects', '/projects', 'cil-applications');
+        $this->beginDropdown('guest,user,admin', 'NDD Framework', 'cil-browser');
+            $this->insertLink('guest,user,admin', 'Overview',      '/framework');
+            $this->insertLink('guest,user,admin', 'Step 1',      '/framework/step1');
+            $this->insertLink('guest,user,admin', 'Step 2',      '/framework/step2');
+            $this->insertLink('guest,user,admin', 'Step 3',      '/framework/step3');
+            $this->insertLink('guest,user,admin', 'Step 4',      '/framework/step4');
+            $this->insertLink('guest,user,admin', 'Step 5',      '/framework/step5');
+
+        $this->endDropdown();
+
 
         $this->beginDropdown('guest,user,admin', 'Artifacts', 'cil-library');
             $this->insertLink('guest,user,admin', 'Storytellings',      'artifacts/storytellings');

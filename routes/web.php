@@ -30,6 +30,9 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\FrameworkController;
+use App\Http\Controllers\LegalAndNormativeRequirementsController;
+use App\Http\Controllers\NonFunctionalRequirementsController;
+
 
 
 Route::get('/', function () {           return redirect('/home'); });
@@ -43,21 +46,22 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/projects/current', [ProjectsController::class, 'current'])->name('projects.current');
         Route::resource('projects', ProjectsController::class);
         Route::resource('requirements', RequirementsController::class);
-        //Route::resource('framework', FrameworkController::class);
+        // Route::resource('framework', FrameworkController::class);
 
         Route::prefix('framework')->group(function () {  
             Route::get('/', [FrameworkController::class, 'index'])->name('framework.index');
             Route::get('/step1', [FrameworkController::class, 'step1'])->name('framework.step1');
-
-            Route::get('/storytellings', [ArtifactsController::class, 'indexStorytellings'])->name('artifacts.storytellings.index');
-            Route::get('/taxonomies', [ArtifactsController::class, 'indexTaxonomies'])->name('artifacts.storytellings.index');
-            Route::get('/create', [ArtifactsController::class, 'create'])->name('menu.menu.create');
-            Route::get('/store', [ArtifactsController::class, 'store'])->name('menu.menu.store');
-            Route::get('/edit', [ArtifactsController::class, 'edit'])->name('menu.menu.edit');
-            Route::get('/{id}', [ArtifactsController::class, 'show'])->name('menu.show');
-            Route::get('/update', [ArtifactsController::class, 'update'])->name('menu.menu.update');
-            Route::get('/delete', [ArtifactsController::class, 'delete'])->name('menu.menu.delete');
+            Route::get('/step2', [FrameworkController::class, 'step1'])->name('framework.step2');
+            Route::get('/step3', [FrameworkController::class, 'step1'])->name('framework.step3');
+            Route::get('/step4', [FrameworkController::class, 'step1'])->name('framework.step4');
+            Route::get('/step5', [FrameworkController::class, 'step1'])->name('framework.step5');
+            
         });
+
+        Route::resource('legalAndNormativeRequirements', LegalAndNormativeRequirementsController::class);
+        Route::resource('nonFunctionalRequirements', NonFunctionalRequirementsController::class);
+        Route::get('nonFunctionalRequirements/downloadSIG/{id}', [NonFunctionalRequirementsController::class, 'downloadSIG'])->name('download.sig');
+
 
         Route::prefix('artifacts')->group(function () {  
             Route::get('/storytellings', [ArtifactsController::class, 'indexStorytellings'])->name('artifacts.storytellings.index');

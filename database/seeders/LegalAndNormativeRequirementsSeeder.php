@@ -6,13 +6,13 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Requirements;
-use App\Models\LegalAndNormativeRequirement;
+use App\Models\LegalAndNormativeRequirements;
 use App\Models\LifeSettings;
 use App\Models\NonFunctionalRequirements;
 use Carbon\Carbon;
 
 
-class LegalAndNormativeRequirementSeeder extends Seeder
+class LegalAndNormativeRequirementsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -25,7 +25,7 @@ class LegalAndNormativeRequirementSeeder extends Seeder
         $user = User::where('email' , '=' , 'admin@rs4aal.site' )->first();
         $lifeSettings = LifeSettings::where('name' , '=' , 'Generic' )->first();
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirement::create([  
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
             'name' => "Regulamento Geral de Proteção de Dados (RGPD)",
             'description' => "O sistema AAL deve cumprir as disposições do RGPD em relação à coleta, processamento e armazenamento de dados pessoais. Isso inclui obter o consentimento adequado dos usuários para o uso de seus dados, garantir a segurança e a privacidade desses dados, e possibilitar que os usuários acessem, retifiquem e excluam suas informações pessoais.",
             'legal_references' => "<p>Artigo 6(1)(a) do RGPD - Base legal para o processamento de dados pessoais com o consentimento do titular dos dados.</p><p>Artigo 25 do RGPD - Princípio da proteção de dados desde a concepção e por padrão.</p>",
@@ -46,7 +46,7 @@ class LegalAndNormativeRequirementSeeder extends Seeder
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirement::create([  
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
             'name' => "Acessibilidade dos sítios Web e das aplicações móveis de organismos do setor público",
             'description' => "O sistema AAL deve ser projetado e desenvolvido levando em consideração os princípios de acessibilidade, garantindo que seja utilizável por pessoas com diferentes níveis de habilidades e capacidades. Isso inclui a implementação de recursos e funcionalidades que permitam o acesso e a interação por parte de pessoas com deficiência, como pessoas com deficiência visual, auditiva, motora ou cognitiva.",
             'legal_references' => "<p>Diretiva (UE) 2016/2102 relativa à acessibilidade dos sítios Web e das aplicações móveis de organismos do setor público - https://eur-lex.europa.eu/legal-content/PT/LSU/?uri=CELEX:32016L2102</p><p>Norma ISO 9241-171:2020 - Requisitos de acessibilidade e usabilidade para produtos e serviços interativos</p>",
@@ -66,7 +66,7 @@ class LegalAndNormativeRequirementSeeder extends Seeder
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirement::create([  
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
             'name' => "ISO/IEC 27001:2022(en) Information security, cybersecurity and privacy protection — Information security management systems",
             'description' => "O sistema AAL deve ser projetado e implementado de acordo com os padrões e regulamentos de segurança aplicáveis, garantindo a integridade e confiabilidade do sistema. O objetivo é proteger informações confidenciais, impedir o acesso não autorizado e mitigar possíveis riscos e ameaças à segurança.",
             'legal_references' => "<p>ISO/IEC 27001:2022 - Sistemas de gestão de segurança da informação. Este padrão internacional fornece uma estrutura para estabelecer, implementar, manter e melhorar continuamente um sistema de gerenciamento de segurança da informação - https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-3:v1:en.</p><p>Leis e regulamentos de proteção de dados e privacidade aplicáveis. Isso pode incluir o Regulamento Geral de Proteção de Dados (GDPR) e outras leis regionais ou específicas do setor que regem a coleta, o processamento e o armazenamento de dados pessoais.</p>",
@@ -91,7 +91,7 @@ class LegalAndNormativeRequirementSeeder extends Seeder
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirement::create([  
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
             'name' => "ISO 9241-171:2008 Ergonomics of human-system interaction",
             'description' => "O sistema AAL deve ser projetado para atender às necessidades de uma ampla gama de usuários, considerando recursos como acessibilidade, linguagem clara e opções de personalização. O design inclusivo visa garantir que o sistema possa ser usado por indivíduos com diversas habilidades, incluindo aqueles com deficiências ou habilidades cognitivas limitadas. O objetivo é fornecer uma experiência inclusiva e amigável para todos os usuários.",
             'legal_references' => "<p>ISO 9241-171:2008 Ergonomics of human-system interaction - https://www.iso.org/obp/ui/en/#iso:std:iso:9241:-171:ed-1:v1:en.</p>",
@@ -113,7 +113,7 @@ class LegalAndNormativeRequirementSeeder extends Seeder
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirement::create([  
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
             'name' => "Usabilidade",
             'description' => "O sistema AAL deve ser projetado considerando os princípios de usabilidade, facilitando seu uso pelos usuários independentemente de suas habilidades técnicas. Usabilidade refere-se à medida em que um sistema pode ser usado por usuários específicos para atingir objetivos específicos com eficácia, eficiência e satisfação em um contexto específico de uso.",
             'legal_references' => "
@@ -140,7 +140,7 @@ class LegalAndNormativeRequirementSeeder extends Seeder
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirement::create([  
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
             'name' => "Health Informatics",
             'description' => "ISO/TS 22272:2021 é um padrão na área de Informática em Saúde que fornece uma metodologia para analisar as necessidades de negócios e informações das empresas de saúde. O padrão visa apoiar o desenvolvimento de arquiteturas baseadas em padrões no setor de saúde. Ele fornece orientação sobre a realização de análises abrangentes para identificar os requisitos e desafios enfrentados pelas empresas de saúde na implementação de tecnologias e sistemas de informação.",
             'legal_references' => "<p>ISO/TS 22272:2021 - Health Informatics - https://www.iso.org/obp/ui/#iso:std:iso:ts:22272:ed-1:v1:en.</p>",

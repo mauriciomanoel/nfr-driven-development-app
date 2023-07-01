@@ -136,7 +136,7 @@ class NonFunctionRequirementsSeeder extends Seeder
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
             'recommendations' => "",
             'content' => "",
-            'image' => "",
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/usability.png')),
             'characteristics_id' => 0,
             'users_id' => $user->id,
         ]);
@@ -293,8 +293,8 @@ class NonFunctionRequirementsSeeder extends Seeder
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
             'recommendations' => "",
-            'content' => "",
-            'image' => "",
+            'content' => file_get_contents(storage_path() . '/files/sig-security-file.txt'),
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/security.png')),
             'characteristics_id' => 0,
             'users_id' => $user->id,
         ]);
@@ -365,8 +365,8 @@ class NonFunctionRequirementsSeeder extends Seeder
             'model_quality' => "Product quality",
             'source' => "Gomes, Timóteo, and Fernanda Alencar. Um survey com especialistas como validação de elementos para composição de uma ontologia para Sistemas AAL (Ambient Assisted Living). 25th WER. Natal, Brasil (2022).",
             'recommendations' => "<p>Garantir que o sistema AAL esteja em conformidade com as leis e regulamentações de proteção de dados, como o Regulamento Geral de Proteção de Dados (GDPR) na União Europeia.</p><p>Implementar políticas de privacidade claras e transparentes, fornecendo aos usuários controle sobre suas informações pessoais e garantindo o consentimento adequado para o uso desses dados.</p>",
-            'content' => "",
-            'image' => "",
+            'content' => file_get_contents(storage_path() . '/files/sig-Privacy-file.txt'),
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/privacy.png')),
             'characteristics_id' => $securityRequeriment->id,
             'users_id' => $user->id,
         ]);

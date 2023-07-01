@@ -51,10 +51,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::prefix('framework')->group(function () {  
             Route::get('/', [FrameworkController::class, 'index'])->name('framework.index');
             Route::get('/step1', [FrameworkController::class, 'step1'])->name('framework.step1');
-            Route::get('/step2', [FrameworkController::class, 'step1'])->name('framework.step2');
-            Route::get('/step3', [FrameworkController::class, 'step1'])->name('framework.step3');
-            Route::get('/step4', [FrameworkController::class, 'step1'])->name('framework.step4');
-            Route::get('/step5', [FrameworkController::class, 'step1'])->name('framework.step5');
+            Route::get('/step2', [FrameworkController::class, 'step2'])->name('framework.step2');
+            Route::get('/step3', [FrameworkController::class, 'step3'])->name('framework.step3');
+            Route::get('/step4', [FrameworkController::class, 'step4'])->name('framework.step4');
+            Route::get('/step5', [FrameworkController::class, 'step5'])->name('framework.step5');
             
         });
 

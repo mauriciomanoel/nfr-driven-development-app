@@ -43,5 +43,49 @@ class FrameworkController extends Controller
         return view('dashboard.framework.framework-step01', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
     }
 
+         /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function step2()
+    {
+        $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
+        return view('dashboard.framework.framework-step02', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
+    }
+
+         /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function step3()
+    {
+        $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
+        return view('dashboard.framework.framework-step03', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
+    }
+
+         /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function step4()
+    {
+        $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
+        return view('dashboard.framework.framework-step04', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
+    }
+
+         /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function step5()
+    {
+        $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
+        return view('dashboard.framework.framework-step05', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
+    }
+
     
 }

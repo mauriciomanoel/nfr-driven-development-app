@@ -19,12 +19,12 @@
               @endif  
 
               <div class="card-header">
-                <i class="fa fa-align-justify"></i>{{ __('Step 02: Identificar e Análise de Stakeholders') }}
+                <i class="fa fa-align-justify"></i><strong>{{ __('Step 02: Identificar e Análise de Stakeholders') }}</strong>
               </div>
               <div class="card-body">
               <p>Esta etapa tem como objetico identificar os diferentes stakeholders envolvidos no sistema AAL e analisar suas necessidades, expectativas e experiências em relação ao sistema.</p> 
               <p>Sua análise deve ter o foco na usabilidade e aceitabilidade, permitindo priorizar as demandas dos stakeholders e estabelecer uma comunicação efetiva ao longo do processo de desenvolvimento.</p>
-
+              <p><strong>Saída:</strong> Lista de stakeholders relevantes e documentação das suas necessidades, expectativas e experiências relacionadas à usabilidade e aceitabilidade do sistema AAL.</p>
                 <table class="table table-responsive-sm table-striped">
                   <thead>
                     <tr>
@@ -32,37 +32,25 @@
                       <th>Name</th>
                       <th>Description</th>
                       <th>Last Update</th>
-                      <!-- <th>Status</th> -->
-                      <!-- <th>Note type</th> -->
                       <th colspan="3" class="text-center">Actions</th>
                       
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($legalAndNormativeRequirements as $legalAndNormativeRequirement)
+                    @foreach($stakeholders as $stakeholder)
                       <tr>
-                        <td><strong>{{ $legalAndNormativeRequirement->name }}</strong></td>
-                        <td>{{ $legalAndNormativeRequirement->description }}</td>
-                        <td>{{ $legalAndNormativeRequirement->updated_at }}</td>                        
+                        <td><strong>{{ $stakeholder->name }}</strong></td>
+                        <td>{{ $stakeholder->description }}</td>
+                        <td>{{ $stakeholder->updated_at }}</td>                        
                         <td>
-                          <a href="{{ url('/legalAndNormativeRequirements/' . $legalAndNormativeRequirement->id) }}" class="btn btn-block btn-primary">View</a>
-                        </td>
-                        <!--<td>
-                          <a href="{{ url('/legalAndNormativeRequirements/' . $legalAndNormativeRequirement->id . '/edit') }}" class="btn btn-block btn-primary">Edit</a>
-                        </td>
-                        <td>
-                          <form action="{{ route('legalAndNormativeRequirements.destroy', $legalAndNormativeRequirement->id ) }}" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <button class="btn btn-block btn-danger">Delete</button>
-                          </form>
-                        </td> -->
+                          <a href="{{ url('framework/stakeholders/' . $stakeholder->id) }}" class="btn btn-block btn-primary">Detail</a>
+                        </td>                        
                       </tr>
                     @endforeach
                   </tbody>
                 </table>
-                {{ $legalAndNormativeRequirements->links() }}
-                            
+                {{ $stakeholders->links() }}
+
               </div>
           </div>
         </div>

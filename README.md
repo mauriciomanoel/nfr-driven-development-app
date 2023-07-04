@@ -113,7 +113,6 @@ $ php artisan migrate:refresh --seed
 # php artisan migrate:fresh --seed
 
 
-
 # generate mixing
 $ npm run dev
 

@@ -16,6 +16,6 @@ class StakeholderAnalysis extends Model
     //  */
     public function stakeholders()
     {
-        return $this->belongsTo('App\Models\Stakeholders', 'stakeholder_id');
+        return $this->belongsTo('App\Models\Stakeholders', 'stakeholders_id');
     }
 }

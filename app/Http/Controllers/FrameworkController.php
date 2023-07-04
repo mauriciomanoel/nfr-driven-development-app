@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\LegalAndNormativeRequirements;
+use App\Models\Stakeholders;
 
 
 use Session;
@@ -50,8 +51,8 @@ class FrameworkController extends Controller
      */
     public function step2()
     {
-        $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
-        return view('dashboard.framework.framework-step02', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
+        $stakeholders = Stakeholders::with('analysis')->paginate( 20 );
+        return view('dashboard.framework.framework-step02', ['stakeholders' => $stakeholders]);
     }
 
          /**
@@ -85,6 +86,17 @@ class FrameworkController extends Controller
     {
         $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
         return view('dashboard.framework.framework-step05', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
+    }
+
+         /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function stakeholders($id)
+    {
+        $stakeholder = Stakeholders::with('analysis')->find($id);
+        return view('dashboard.framework.stakeholders-show', ['stakeholder' => $stakeholder]);
     }
 
     

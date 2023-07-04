@@ -32,6 +32,8 @@ use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\FrameworkController;
 use App\Http\Controllers\LegalAndNormativeRequirementsController;
 use App\Http\Controllers\NonFunctionalRequirementsController;
+use App\Http\Controllers\StakeholdersRequirementsController;
+
 
 
 
@@ -46,6 +48,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/projects/current', [ProjectsController::class, 'current'])->name('projects.current');
         Route::resource('projects', ProjectsController::class);
         Route::resource('requirements', RequirementsController::class);
+        Route::resource('stakeholders', StakeholdersRequirementsController::class);
+
         // Route::resource('framework', FrameworkController::class);
 
         Route::prefix('framework')->group(function () {  
@@ -55,6 +59,8 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/step3', [FrameworkController::class, 'step3'])->name('framework.step3');
             Route::get('/step4', [FrameworkController::class, 'step4'])->name('framework.step4');
             Route::get('/step5', [FrameworkController::class, 'step5'])->name('framework.step5');
+            Route::get('/stakeholders/{id}', [FrameworkController::class, 'stakeholders'])->name('framework.stakeholders');
+
             
         });
 

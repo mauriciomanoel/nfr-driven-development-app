@@ -19,13 +19,13 @@
               @endif  
 
               <div class="card-header">
-                <i class="fa fa-align-justify"></i>{{ __('Step 01: Levantar Requisitos Legais e Normativos') }}
+                <i class="fa fa-align-justify"></i><strong>{{ __('Step 04: Definir Requisitos não Funcionais') }}</strong>
               </div>
               <div class="card-body">
-                <p>Esta etapa tem como objetivo identificar e analisar os requisitos legais, regulamentos, diretrizes e padrões relevantes para sistemas AAL, com foco na usabilidade e aceitabilidade. </p>
+              <p>Com base nos requisitos legais e normativos identificados, bem como nas informações coletadas sobre a experiência dos stakeholders, os requisitos não funcionais relacionados à usabilidade e aceitabilidade do sistema AAL são definidos</p>
+              <p><strong>Saída:</strong> Documentação dos requisitos não funcionais específicos relacionados à usabilidade e aceitabilidade do sistema AAL.</p>
 
-                <p>Essa documentação apresenta informações sobre o requisito legal ou normativo relevante, incluindo o nome, descrição, texto legal/referência e os requisitos não funcionais impactados por este requisito.</p>
-              
+
                 <table class="table table-responsive-sm table-striped">
                   <thead>
                     <tr>

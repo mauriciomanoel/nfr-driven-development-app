@@ -21,7 +21,7 @@ return new class extends Migration
 
         Schema::create('stakeholder_analysis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('stakeholder_id');
+            $table->unsignedBigInteger('stakeholders_id');
             $table->text('description');
             $table->text('identified_needs');
             $table->text('expectations');
@@ -29,7 +29,24 @@ return new class extends Migration
             $table->integer('users_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('stakeholder_id')
+            $table->foreign('stakeholders_id')
+                ->references('id')
+                ->on('stakeholders')
+                ->onDelete('cascade');
+        });
+
+
+        Schema::create('stakeholder_experiencies', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('stakeholders_id');
+            $table->text('factors_that_impact_acceptability');
+            $table->text('factors_that_impact_usability');
+            $table->text('proposed_improvements');
+            $table->text('recommendations');
+            $table->integer('users_id')->unsigned();
+            $table->timestamps();
+
+            $table->foreign('stakeholders_id')
                 ->references('id')
                 ->on('stakeholders')
                 ->onDelete('cascade');
@@ -41,6 +58,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('stakeholder_experiencies');
         Schema::dropIfExists('stakeholder_analysis');
         Schema::dropIfExists('stakeholders');
     }

@@ -140,7 +140,8 @@ class MenusTableSeeder extends Seeder
             $this->insertLink('guest,user,admin', 'Overview',      '/framework');
             $this->insertLink('guest,user,admin', 'Step 1',      '/framework/step1');
             $this->insertLink('guest,user,admin', 'Step 2',      '/framework/step2');
-            $this->insertLink('guest,user,admin', 'Step 3',      '/framework/step3');
+            $this->insertLink('guest,user,admin', 'Step 3 - 1',      '/framework/step3');
+            $this->insertLink('guest,user,admin', 'Step 3 - 2',      '/framework/step3_2');
             $this->insertLink('guest,user,admin', 'Step 4',      '/framework/step4');
             $this->insertLink('guest,user,admin', 'Step 5',      '/framework/step5');
 

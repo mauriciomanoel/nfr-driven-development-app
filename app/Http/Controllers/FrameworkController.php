@@ -66,6 +66,16 @@ class FrameworkController extends Controller
         return view('dashboard.framework.framework-step03', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
     }
 
+             /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function step3_2()
+    {
+        $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
+        return view('dashboard.framework.framework-step03.2', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
+    }
          /**
      * Display a listing of the resource.
      *

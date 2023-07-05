@@ -25,9 +25,9 @@
 
               <p>Esta etapa tem como objetivo coletar informações sobre a experiência dos stakeholders em relação à usabilidade e aceitabilidade de sistemas AAL.</p> 
               
-              <p>Para chegar ao objetivo, pode ser utiizado entrevistas, questionários, storytelling ou outras técnicas de coleta de dados.</p> 
+              <p>Para chegar ao objetivo, pode ser utilizado entrevistas, pesquisas, observações, storytelling ou outras técnicas de coleta de dados.</p> 
               
-              <p><strong>Saída:</strong> Dados e insights obtidos a partir das atividades de coleta de experiência dos stakeholders.</p>
+              <p><strong>Saída:</strong> O método de captura dos dados com o idoso e o planejamento de como será usado o método.</p>
               
               <br>
               <h2>Sugestões de técnicas para coleta de dados:</h2>

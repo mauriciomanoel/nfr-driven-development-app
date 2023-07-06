@@ -62,6 +62,7 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/step4', [FrameworkController::class, 'step4'])->name('framework.step4');
             Route::get('/step5', [FrameworkController::class, 'step5'])->name('framework.step5');
             Route::get('/stakeholders/{id}', [FrameworkController::class, 'stakeholders'])->name('framework.stakeholders');
+            Route::get('/stakeholders/experiencies/{id}', [FrameworkController::class, 'stakeholdersExperiencies'])->name('framework.stakeholders.experiencies');
 
             
         });

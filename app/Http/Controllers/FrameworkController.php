@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\LegalAndNormativeRequirements;
 use App\Models\Stakeholders;
+use App\Models\StakeholderExperiencies;
 
 
 use Session;
@@ -73,8 +74,8 @@ class FrameworkController extends Controller
      */
     public function step3_2()
     {
-        $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
-        return view('dashboard.framework.framework-step03_2', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
+        $stakeholderExperiencies = StakeholderExperiencies::with('stakeholders')->paginate( 20 );
+        return view('dashboard.framework.framework-step03_2', ['stakeholderExperiencies' => $stakeholderExperiencies]);
     }
          /**
      * Display a listing of the resource.
@@ -98,7 +99,7 @@ class FrameworkController extends Controller
         return view('dashboard.framework.framework-step05', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
     }
 
-         /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -107,6 +108,17 @@ class FrameworkController extends Controller
     {
         $stakeholder = Stakeholders::with('analysis')->find($id);
         return view('dashboard.framework.stakeholders-show', ['stakeholder' => $stakeholder]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function stakeholdersExperiencies($id)
+    {
+        $stakeholderExperience = StakeholderExperiencies::with('stakeholders')->find($id);
+        return view('dashboard.framework.stakeholders-experience-show', ['stakeholderExperience' => $stakeholderExperience]);
     }
 
     

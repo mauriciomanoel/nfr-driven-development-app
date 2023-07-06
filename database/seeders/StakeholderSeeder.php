@@ -8,12 +8,9 @@ use App\Models\User;
 use App\Models\Projects;
 use App\Models\StakeholderAnalysis;
 use App\Models\Stakeholders;
+use App\Models\StakeholderExperiencies;
 
-
-
-
-
-class StakeholderAnalysisSeeder extends Seeder
+class StakeholderSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -82,8 +79,6 @@ class StakeholderAnalysisSeeder extends Seeder
             ",
         ]);
 
-        
-
         StakeholderAnalysis::create([  
             'users_id' => 1,
             'stakeholders_id' => $finalUsers->id,
@@ -120,6 +115,34 @@ class StakeholderAnalysisSeeder extends Seeder
             'identified_needs' => "<p>Entender as necessidades e expectativas dos usuários finais, familiares e profissionais de saúde.</p><p>Desenvolvimento de soluções tecnológicas escaláveis e confiáveis.</p><p>Garantir a usabilidade e a acessibilidade das soluções desenvolvidas.</p><p>Manter-se atualizado com as tendências e inovações em tecnologia de AAL.</p>",
             'expectations' => "<p>Colaboração e feedback contínuos dos outros stakeholders.</p><p>Desenvolvimento de soluções personalizadas e flexíveis.</p><p>Implementação de medidas de segurança e privacidade robustas.</p><p>Suporte técnico para solução de problemas e atualizações regulares.</p>",
             'experiences' => "<p>Desenvolvedores e engenheiros de software têm um alto nível de experiência e conhecimento técnico.<p><p>Experiência com tecnologias de assistência ao ambiente e saúde digital.</p>",
+        ]);
+
+
+
+        StakeholderExperiencies::create([  
+            'users_id' => 1,
+            'stakeholders_id' => $finalUsers->id,
+            'description' => "Esta documentação apresenta os resultados da etapa de coleta de experiência dos stakeholders para o sistema AAL. Através de entrevistas individuais, questionários e grupos focais, foram coletadas informações valiosas sobre a usabilidade e aceitabilidade do sistema, de acordo com as perspectivas dos stakeholders envolvidos. A análise dos dados permitiu a identificação de insights significativos que podem orientar melhorias e ajustes no sistema AAL",
+            'factors_that_impact_acceptability' => "<p>Facilidade de uso: O idoso de 75 anos mencionou a importância da simplicidade e facilidade de uso do sistema AAL. Se o sistema for complexo ou difícil de entender e operar, pode afetar negativamente sua aceitabilidade.</p>
+            <p>Intuitividade: O idoso valoriza a intuição no uso do sistema, ou seja, a capacidade de entender e interagir com o sistema de forma natural, sem a necessidade de instruções complicadas.</p>
+            <p> Necessidades individuais: O idoso destaca a importância de o sistema atender às suas necessidades específicas. Isso pode incluir recursos personalizados para lidar com as limitações físicas, preferências de comunicação ou outras necessidades particulares relacionadas à sua saúde e bem-estar.</p>
+            <p>Confiança e segurança: O idoso mencionou que se sentir seguro e confiante ao usar o sistema é essencial para adotá-lo. Questões de privacidade e segurança dos dados também podem ser mencionadas.</p>
+            <p>Suporte técnico e treinamento: O idoso enfatiza a importância de receber suporte técnico adequado e treinamento para usar o sistema AAL. Se houver dificuldades no aprendizado ou na resolução de problemas, isso pode impactar sua aceitabilidade.</p>",
+            'factors_that_impact_usability' => "<p>Interface intuitiva: O idoso mencionou a importância de uma interface intuitiva e fácil de entender. Ícones claros, navegação simplificada e menus organizados contribuem para a usabilidade do sistema AAL.</p>
+            <p> Instruções claras: O idoso enfatizou a necessidade de instruções claras e simples para operar o sistema.</p> Orientações passo a passo, exemplos práticos e documentação de fácil compreensão podem melhorar a usabilidade do sistema.</p>
+            <p>Feedback imediato: O idoso valoriza a presença de feedback sonoro imediato ao realizar ações no sistema AAL. Isso pode incluir notificações visuais, sonoras ou táteis que confirmem que a ação foi executada com sucesso.</p>
+            <p>Tamanho de fonte ajustável: O idoso valoriza a possibilidade de ajustar o tamanho da fonte no sistema AAL. Isso permite que ele personalize a legibilidade da informação de acordo com suas necessidades visuais.</p>
+            <p>Facilidade de configuração: O idoso mencionou a importância de uma configuração inicial fácil e rápida do sistema. Se a configuração for complicada e demorada, pode causar frustração e diminuir a usabilidade do sistema.</p>",
+            'proposed_improvements' => "<p>Vários stakeholders sugeriram a inclusão de recursos de comunicação mais avançados, como videochamadas, para melhorar a interação social dos usuários.</p>
+            <p>Foi destacada a importância de personalização e adaptação do sistema às necessidades individuais dos usuários, considerando diferentes perfis e preferências.
+            <p>Foi sugerido a inclusão de tutoriais interativos no sistema AAL, que guiem o usuário passo a passo nas principais funcionalidades e recursos do sistema.
+            <p>Foi destacado a importância de  ter um suporte técnico adequado para solucionar dúvidas e problemas que possam surgir durante a utilização do sistema AAL.</p>",
+            'recommendations' => "<p>Aprimorar a orientação inicial: Desenvolver um processo de configuração mais intuitivo e fornecer orientações claras para facilitar a configuração inicial do sistema.</p>
+            <p>Reforçar a privacidade e segurança: Implementar medidas adicionais de segurança de dados e fornecer informações transparentes aos stakeholders para aumentar a confiança no sistema.</p>
+            <p>Ampliar recursos de comunicação: Considerar a inclusão de recursos de videochamada e outras formas avançadas de comunicação para melhorar a interação social e o bem-estar dos usuários.</p>
+            <p>Realizar sessões de treinamento: O idoso pode sugerir a realização de sessões de treinamento presenciais ou online para ajudar na familiarização e no uso adequado do sistema AAL.</p>
+            <p>Simplificar a interface: O idoso pode sugerir a simplificação da interface do sistema AAL, removendo elementos desnecessários e mantendo apenas as funcionalidades mais importantes e relevantes para os usuários finais.</p>
+            <p>Realizar testes de usabilidade com idosos: O idoso sugeriu que sejam realizados testes de usabilidade específicos com pessoas da mesma faixa etária para identificar e corrigir possíveis obstáculos e desafios relacionados à usabilidade do sistema.</p>",
         ]);
 
     }

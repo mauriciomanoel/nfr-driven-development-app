@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
             RequirementsSeeder::class,
             NonFunctionRequirementsSeeder::class,
             LegalAndNormativeRequirementsSeeder::class,
-            StakeholderAnalysisSeeder::class,
+            StakeholderSeeder::class,
         ]);
     }
 }

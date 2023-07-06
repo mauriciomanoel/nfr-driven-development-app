@@ -39,6 +39,7 @@ return new class extends Migration
         Schema::create('stakeholder_experiencies', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('stakeholders_id');
+            $table->text('description');
             $table->text('factors_that_impact_acceptability');
             $table->text('factors_that_impact_usability');
             $table->text('proposed_improvements');

@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\LegalAndNormativeRequirements;
 use App\Models\Stakeholders;
 use App\Models\StakeholderExperiencies;
-
+use App\Models\NonFunctionalRequirements;
 
 use Session;
 
@@ -84,8 +84,8 @@ class FrameworkController extends Controller
      */
     public function step4()
     {
-        $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
-        return view('dashboard.framework.framework-step04', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
+        $nonFunctionalRequirements = NonFunctionalRequirements::with('user')->paginate( 20 );
+        return view('dashboard.framework.framework-step04', ['nonFunctionalRequirements' => $nonFunctionalRequirements]);
     }
 
          /**

@@ -27,61 +27,66 @@
                 </br>
                 <h2><strong>Recommendations Non-Functional Requirements</strong></h2>
                 <p>NFR recommendations based on previous steps</p>
-
-                <table class="table table-responsive-sm table-striped">
-                  <thead>
-                    <tr>
-                      <th>Select</th>
-                      <th>Name</th>
-                      <th>Description</th>
-                      <th>Last Update</th>
-                      <th colspan="3" class="text-center">Actions</th>
-                      
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @foreach($nonFunctionalRequirements as $nonFunctionalRequirement)
+                <form method="POST" action="{{ url('framework/confirmNonFunctionalRequirements') }}">
+                  {{ csrf_field() }}
+                  <table class="table table-responsive-sm table-striped">
+                    <thead>
                       <tr>
-                        <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
-                        <td><strong>{{ $nonFunctionalRequirement->name }}</strong></td>
-                        <td>{{ $nonFunctionalRequirement->description }}</td>
-                        <td>{{ $nonFunctionalRequirement->updated_at }}</td>                        
-                        <td>
-                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">View</a>
-                        </td>                        
+                        <th><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Last Update</th>
+                        <th colspan="3" class="text-center">Actions</th>
+                        
                       </tr>
-                    @endforeach
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      @foreach($recommendationsNonFunctionalRequirements as $recommendationNonFunctionalRequirement)
+                        <tr>
+                          <td><input type="checkbox" id="recommendationNonFunctionalRequirement" name="recommendationsNonFunctionalRequirements[]" value="{{ $recommendationNonFunctionalRequirement->id }}"></td>
+                          <td><strong>{{ $recommendationNonFunctionalRequirement->name }}</strong></td>
+                          <td>{{ $recommendationNonFunctionalRequirement->description }}</td>
+                          <td>{{ $recommendationNonFunctionalRequirement->updated_at }}</td>                        
+                          <td>
+                            <a href="{{ url('/nonFunctionalRequirements/' . $recommendationNonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">View</a>
+                          </td>                        
+                        </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
 
-                <h3><strong>All the Non-Functional Requirements</strong></h3>
-                <table class="table table-responsive-sm table-striped">
-                  <thead>
-                    <tr>
-                      <!-- <th>Author</th> -->
-                      <th>Name</th>
-                      <th>Description</th>
-                      <th>Last Update</th>
-                      <th colspan="3" class="text-center">Actions</th>
-                      
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @foreach($nonFunctionalRequirements as $nonFunctionalRequirement)
+                  <h3><strong>All the Non-Functional Requirements</strong></h3>
+                  <table class="table table-responsive-sm table-striped">
+                    <thead>
                       <tr>
-                        <td><strong>{{ $nonFunctionalRequirement->name }}</strong></td>
-                        <td>{{ $nonFunctionalRequirement->description }}</td>
-                        <td>{{ $nonFunctionalRequirement->updated_at }}</td>                        
-                        <td>
-                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">View</a>
-                        </td>                        
+                        <th><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Last Update</th>
+                        <th colspan="3" class="text-center">Actions</th>
+                        
                       </tr>
-                    @endforeach
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      @foreach($nonFunctionalRequirements as $nonFunctionalRequirement)
+                        <tr>
+                          <td><input type="checkbox" id="nonFunctionalRequirement" name="nonFunctionalRequirements[]" value="{{ $nonFunctionalRequirement->id }}"></td>
+                          <td><strong>{{ $nonFunctionalRequirement->name }}</strong></td>
+                          <td>{{ $nonFunctionalRequirement->description }}</td>
+                          <td>{{ $nonFunctionalRequirement->updated_at }}</td>                        
+                          <td>
+                            <a href="{{ url('/nonFunctionalRequirements/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">View</a>
+                          </td>                        
+                        </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
 
 
-                {{ $nonFunctionalRequirements->links() }}
+                <button type="submit" class="btn btn-block btn-primary">Confirm the NFR</button>
+
+
+              </form>
                             
               </div>
           </div>

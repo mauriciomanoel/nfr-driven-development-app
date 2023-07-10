@@ -24,6 +24,19 @@ return new class extends Migration
             $table->unsignedBigInteger('characteristics_id');
             $table->timestamps();
         });
+
+        Schema::create('non_functional_requirement_for_specification', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('project_id');
+            $table->unsignedBigInteger('users_id');
+            $table->unsignedBigInteger('nfr_id');
+            $table->timestamps();
+
+            $table->foreign('nfr_id')
+                ->references('id')
+                ->on('non_functional_requirement')
+                ->onDelete('cascade');
+        });
     }
 
     /**
@@ -32,5 +45,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('non_functional_requirement');
+        Schema::dropIfExists('definition_nfr_for_specification');
+
     }
 };

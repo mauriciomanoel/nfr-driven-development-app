@@ -63,6 +63,7 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/step5', [FrameworkController::class, 'step5'])->name('framework.step5');
             Route::get('/stakeholders/{id}', [FrameworkController::class, 'stakeholders'])->name('framework.stakeholders');
             Route::get('/stakeholders/experiencies/{id}', [FrameworkController::class, 'stakeholdersExperiencies'])->name('framework.stakeholders.experiencies');
+            Route::post('/confirmNonFunctionalRequirements', [FrameworkController::class, 'confirmNonFunctionalRequirements'])->name('framework.confirmNonFunctionalRequirements');
 
             
         });

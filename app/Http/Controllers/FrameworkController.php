@@ -8,6 +8,7 @@ use App\Models\LegalAndNormativeRequirements;
 use App\Models\Stakeholders;
 use App\Models\StakeholderExperiencies;
 use App\Models\NonFunctionalRequirements;
+use App\Models\NonFunctionalRequirementsForSpecification;
 
 use Session;
 
@@ -84,8 +85,11 @@ class FrameworkController extends Controller
      */
     public function step4()
     {
-        $nonFunctionalRequirements = NonFunctionalRequirements::with('user')->paginate( 20 );
-        return view('dashboard.framework.framework-step04', ['nonFunctionalRequirements' => $nonFunctionalRequirements]);
+        
+        $recommendationsNonFunctionalRequirements = NonFunctionalRequirements::whereIn('name', ["Comfort", "Usability", "Learnability", "Accessibility"])->get();
+
+        $nonFunctionalRequirements = NonFunctionalRequirements::with('user')->get();
+        return view('dashboard.framework.framework-step04', ['nonFunctionalRequirements' => $nonFunctionalRequirements, 'recommendationsNonFunctionalRequirements' => $recommendationsNonFunctionalRequirements]);
     }
 
          /**
@@ -121,5 +125,36 @@ class FrameworkController extends Controller
         return view('dashboard.framework.stakeholders-experience-show', ['stakeholderExperience' => $stakeholderExperience]);
     }
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function confirmNonFunctionalRequirements(Request $request)
+    {
+
+        var_dump($request["recommendationsNonFunctionalRequirements"]); 
+        var_dump($request["nonFunctionalRequirements"]); 
+
+
+        $flight = new NonFunctionalRequirementsForSpecification;
+ 
+        $flight->project_id = 1;
+        $flight->users_id = 1;
+        $flight->nfr_id = 1;
+ 
+        $flight->save();
+
+
+        //return redirect()->action([FrameworkController::class, 'step5']);
+        exit;
+
+
+        $stakeholderExperience = StakeholderExperiencies::with('stakeholders')->find($id);
+        return view('dashboard.framework.stakeholders-experience-show', ['stakeholderExperience' => $stakeholderExperience]);
+    }
+
+
+    
     
 }

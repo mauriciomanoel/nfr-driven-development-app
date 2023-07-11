@@ -26,44 +26,37 @@
                 <p>Os requisitos não funcionais são especificados de forma clara e precisa, fornecendo operacionalizações e justificativas (Claim) nas operacionalizações sobre cada requisito não funcional entre outros elementos relevantes.<p> 
                 <p><strong>Saída:</strong> Documentação detalhada (SIG) dos requisitos não funcionais especificados.</p>
               
+                <a href=" " class="btn btn-block btn-info">Download Documents</a>
+                <a href=" " class="btn btn-block btn-info">Download All SIG File</a>
+
                 <table class="table table-responsive-sm table-striped">
                   <thead>
                     <tr>
-                      <!-- <th>Author</th> -->
                       <th>Name</th>
                       <th>Description</th>
+                      <th>Recomentation</th>
                       <th>Last Update</th>
-                      <!-- <th>Status</th> -->
-                      <!-- <th>Note type</th> -->
-                      <th colspan="3" class="text-center">Actions</th>
-                      
+                      <th colspan="3" class="text-center">Actions</th>            
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($legalAndNormativeRequirements as $legalAndNormativeRequirement)
+                    @foreach($nonFunctionalRequirements as $nonFunctionalRequirement)
                       <tr>
-                        <td><strong>{{ $legalAndNormativeRequirement->name }}</strong></td>
-                        <td>{{ $legalAndNormativeRequirement->description }}</td>
-                        <td>{{ $legalAndNormativeRequirement->updated_at }}</td>                        
+                        <td><strong>{{ $nonFunctionalRequirement->nonFunctionalRequirement->name }}</strong></td>
+                        <td>{{ $nonFunctionalRequirement->nonFunctionalRequirement->description }}</td>
+                        <td>{{ $nonFunctionalRequirement->is_recommendation }}</td>
+                        <td>{{ $nonFunctionalRequirement->updated_at }}</td>                        
                         <td>
-                          <a href="{{ url('/legalAndNormativeRequirements/' . $legalAndNormativeRequirement->id) }}" class="btn btn-block btn-primary">View</a>
-                        </td>
-                        <!--<td>
-                          <a href="{{ url('/legalAndNormativeRequirements/' . $legalAndNormativeRequirement->id . '/edit') }}" class="btn btn-block btn-primary">Edit</a>
+                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">Download SIG File</a>
                         </td>
                         <td>
-                          <form action="{{ route('legalAndNormativeRequirements.destroy', $legalAndNormativeRequirement->id ) }}" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <button class="btn btn-block btn-danger">Delete</button>
-                          </form>
-                        </td> -->
+                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">View Document</a>
+                        </td>
+                        
                       </tr>
                     @endforeach
                   </tbody>
-                </table>
-                {{ $legalAndNormativeRequirements->links() }}
-                            
+                </table>                            
               </div>
           </div>
         </div>

@@ -99,8 +99,12 @@ class FrameworkController extends Controller
      */
     public function step5()
     {
-        $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
-        return view('dashboard.framework.framework-step05', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
+
+        $nonFunctionalRequirements = NonFunctionalRequirementsForSpecification::with('nonFunctionalRequirement')->get();
+
+// var_dump($nonFunctionalRequirements); exit;
+        // $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
+        return view('dashboard.framework.framework-step05', ['nonFunctionalRequirements' => $nonFunctionalRequirements]);
     }
 
     /**
@@ -121,6 +125,7 @@ class FrameworkController extends Controller
      */
     public function stakeholdersExperiencies($id)
     {
+
         $stakeholderExperience = StakeholderExperiencies::with('stakeholders')->find($id);
         return view('dashboard.framework.stakeholders-experience-show', ['stakeholderExperience' => $stakeholderExperience]);
     }
@@ -133,28 +138,29 @@ class FrameworkController extends Controller
     public function confirmNonFunctionalRequirements(Request $request)
     {
 
-        var_dump($request["recommendationsNonFunctionalRequirements"]); 
-        var_dump($request["nonFunctionalRequirements"]); 
+        $recommendationsNonFunctionalRequirements = $request["recommendationsNonFunctionalRequirements"];
+        $allNonFunctionalRequirements = $request["nonFunctionalRequirements"];
 
+        NonFunctionalRequirementsForSpecification::where('project_id', '=', '1')->delete();
 
-        $flight = new NonFunctionalRequirementsForSpecification;
- 
-        $flight->project_id = 1;
-        $flight->users_id = 1;
-        $flight->nfr_id = 1;
- 
-        $flight->save();
+        foreach($recommendationsNonFunctionalRequirements as $recommendationNonFunctionalRequirement) {                
+            $nfrForSpecification = new NonFunctionalRequirementsForSpecification;
+            $nfrForSpecification->project_id = 1;
+            $nfrForSpecification->users_id = 1;
+            $nfrForSpecification->is_recommendation = 1;
+            $nfrForSpecification->nfr_id = $recommendationNonFunctionalRequirement;
+            $nfrForSpecification->save();
+        }
 
+        foreach($allNonFunctionalRequirements as $nonFunctionalRequirement) {                
+            $nfrForSpecification = new NonFunctionalRequirementsForSpecification;
+            $nfrForSpecification->project_id = 1;
+            $nfrForSpecification->users_id = 1;
+            $nfrForSpecification->is_recommendation = 0;
+            $nfrForSpecification->nfr_id = $nonFunctionalRequirement;
+            $nfrForSpecification->save();
+        }
 
-        //return redirect()->action([FrameworkController::class, 'step5']);
-        exit;
-
-
-        $stakeholderExperience = StakeholderExperiencies::with('stakeholders')->find($id);
-        return view('dashboard.framework.stakeholders-experience-show', ['stakeholderExperience' => $stakeholderExperience]);
+        return redirect()->action([FrameworkController::class, 'step5']);
     }
-
-
-    
-    
 }

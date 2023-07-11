@@ -30,6 +30,8 @@ return new class extends Migration
             $table->unsignedBigInteger('project_id');
             $table->unsignedBigInteger('users_id');
             $table->unsignedBigInteger('nfr_id');
+            $table->unsignedBigInteger('is_recommendation');
+
             $table->timestamps();
 
             $table->foreign('nfr_id')

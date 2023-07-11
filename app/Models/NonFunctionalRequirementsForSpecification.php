@@ -34,7 +34,7 @@ class NonFunctionalRequirementsForSpecification extends Model
      */
     public function nonFunctionalRequirement()
     {
-        return $this->hasMany('App\Models\NonFunctionalRequirements', 'nfr_id');
+        return $this->belongsTo('App\Models\NonFunctionalRequirements', 'nfr_id');
     }
 
 }

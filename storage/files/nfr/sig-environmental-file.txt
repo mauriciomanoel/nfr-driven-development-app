@@ -1,0 +1,216 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e",
+      "text": "Aceitabilidade",
+      "type": "nfr.NFR",
+      "x": 374,
+      "y": 136,
+      "customProperties": {
+        "Description": "Refere-se à medida em que um sistema é considerado adequado, satisfatório e útil para os usuários finais ou os destinatários do sistema. Envolve a avaliação de fatores como usabilidade, acessibilidade, adaptabilidade, segurança e a satisfação geral do usuário com o sistema."
+      }
+    },
+    {
+      "id": "0496507a-c6be-49b2-8411-bea3b4d0aa93",
+      "text": "Ambiental",
+      "type": "nfr.NFR",
+      "x": 205,
+      "y": 169,
+      "customProperties": {
+        "Description": "Referem-se a critérios ou necessidades relacionadas ao ambiente físico no qual o sistema ou produto será utilizado. Isso pode incluir aspectos como temperatura, umidade, pressão, iluminação e ruído."
+      }
+    },
+    {
+      "id": "6ba502ce-0706-4885-877b-d9dd6bf64584",
+      "text": "Locacionais",
+      "type": "nfr.NFR",
+      "x": 98,
+      "y": 285,
+      "customProperties": {
+        "Description": "Refere-se aos aspectos relacionados à localização física de um projeto, serviço ou sistema. Isso pode envolver aspectos como infraestrutura disponível, restrições geográficas, exigências regulatórias e características do ambiente local entre outros fatores que podem influenciar o ambiente em que o sistema será implantado."
+      }
+    },
+    {
+      "id": "85a460e4-4c5e-473f-8b69-39335860ba49",
+      "text": "Infraestrutura",
+      "type": "nfr.Operationalization",
+      "x": 158,
+      "y": 455
+    },
+    {
+      "id": "1d3bd459-6f67-475f-9e7c-b9128c55b945",
+      "text": "Restrições Geográficas",
+      "type": "nfr.Operationalization",
+      "x": 46,
+      "y": 453
+    },
+    {
+      "id": "8d170208-a1ac-4b1b-9625-e95dae20aa51",
+      "text": "Características Local",
+      "type": "nfr.Operationalization",
+      "x": 268,
+      "y": 441
+    },
+    {
+      "id": "bd5f1729-7fae-433c-b6d0-a77b544ebc6e",
+      "text": "Normativas Legais",
+      "type": "nfr.Operationalization",
+      "x": 418,
+      "y": 441
+    },
+    {
+      "id": "2ac7fa4d-84a0-45f6-b7b1-9b2d1e9f910d",
+      "text": "Padrões",
+      "type": "nfr.Operationalization",
+      "x": 561,
+      "y": 408
+    },
+    {
+      "id": "25258d58-7681-4614-8e5b-d686589f329b",
+      "text": "Conformidade",
+      "type": "nfr.NFR",
+      "x": 412,
+      "y": 275,
+      "customProperties": {
+        "Description": "Diz respeito ao cumprimento de regulamentações e leis de privacidade relevantes. Os sistemas AAL devem ser projetados e operados em conformidade com essas regulamentações para garantir a proteção adequada dos dados pessoais dos usuários."
+      }
+    },
+    {
+      "id": "be20c3e8-67d1-42d5-8c86-e28270d2046e",
+      "text": "GDPR",
+      "type": "nfr.Operationalization",
+      "x": 450,
+      "y": 592,
+      "customProperties": {
+        "Description": "General Data Protection Regulation"
+      }
+    },
+    {
+      "id": "2cd5387f-eb46-4e3e-84e8-77f148e7aea1",
+      "text": "LGPD",
+      "type": "nfr.Operationalization",
+      "x": 345,
+      "y": 584,
+      "customProperties": {
+        "Description": "Lei Geral de Proteção de Dados"
+      }
+    },
+    {
+      "id": "5ebfbb42-ee73-49d1-a46b-33eea7819367",
+      "text": "ADPPA",
+      "type": "nfr.Operationalization",
+      "x": 561,
+      "y": 579,
+      "customProperties": {
+        "Description": "American Data Privacy and Protection Act"
+      }
+    },
+    {
+      "id": "e2457711-2d24-4804-91fb-845e8a1106e1",
+      "text": "Criptografia",
+      "type": "nfr.Operationalization",
+      "x": 1740,
+      "y": 1109,
+      "customProperties": {
+        "Description": "Utilize criptografia para proteger os dados durante o armazenamento e a transmissão. Isso ajuda a garantir que apenas pessoas autorizadas possam acessar e decifrar as informações"
+      }
+    },
+    {
+      "id": "02ddb11b-8f14-4a8f-a6ee-fcc2116fa66a",
+      "text": "Políticas Acesso Restrito",
+      "type": "nfr.Operationalization",
+      "x": 1905,
+      "y": 1050,
+      "customProperties": {
+        "Description": "Implemente controles de acesso adequados para garantir que apenas pessoas autorizadas possam acessar os dados pessoais dos idosos. Isso inclui autenticação forte, restrição de privilégios e monitoramento de atividades."
+      }
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "58e56d32-aee1-44f7-823a-3caf1d2ad315",
+      "type": "nfr.AndRefinementLink",
+      "source": "0496507a-c6be-49b2-8411-bea3b4d0aa93",
+      "target": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e"
+    },
+    {
+      "id": "8a7566b2-5a5f-4512-a278-f172dbc65e86",
+      "type": "nfr.AndRefinementLink",
+      "source": "6ba502ce-0706-4885-877b-d9dd6bf64584",
+      "target": "0496507a-c6be-49b2-8411-bea3b4d0aa93"
+    },
+    {
+      "id": "c514489f-c4e0-49ab-ae91-7e74c25a2436",
+      "type": "nfr.OrRefinementLink",
+      "source": "85a460e4-4c5e-473f-8b69-39335860ba49",
+      "target": "6ba502ce-0706-4885-877b-d9dd6bf64584"
+    },
+    {
+      "id": "bac0b5fa-221a-4eba-9076-86cd6a5a2e27",
+      "type": "nfr.OrRefinementLink",
+      "source": "1d3bd459-6f67-475f-9e7c-b9128c55b945",
+      "target": "6ba502ce-0706-4885-877b-d9dd6bf64584"
+    },
+    {
+      "id": "94c50f5b-b7d5-46a1-85e1-bccafe888ce4",
+      "type": "nfr.OrRefinementLink",
+      "source": "8d170208-a1ac-4b1b-9625-e95dae20aa51",
+      "target": "6ba502ce-0706-4885-877b-d9dd6bf64584"
+    },
+    {
+      "id": "f6853fbd-09bd-4288-8e9e-f4239b931603",
+      "type": "nfr.AndRefinementLink",
+      "source": "25258d58-7681-4614-8e5b-d686589f329b",
+      "target": "0496507a-c6be-49b2-8411-bea3b4d0aa93"
+    },
+    {
+      "id": "099bf2b1-1a09-42e9-a6b4-d7b20f98ba9b",
+      "type": "nfr.AndRefinementLink",
+      "source": "bd5f1729-7fae-433c-b6d0-a77b544ebc6e",
+      "target": "25258d58-7681-4614-8e5b-d686589f329b"
+    },
+    {
+      "id": "f96198a2-9f0c-4e5f-a90e-2645f319e49b",
+      "type": "nfr.AndRefinementLink",
+      "source": "2ac7fa4d-84a0-45f6-b7b1-9b2d1e9f910d",
+      "target": "25258d58-7681-4614-8e5b-d686589f329b"
+    },
+    {
+      "id": "b6e9ad64-ce8a-4264-a310-494f103d5bbe",
+      "type": "nfr.OrRefinementLink",
+      "source": "2cd5387f-eb46-4e3e-84e8-77f148e7aea1",
+      "target": "bd5f1729-7fae-433c-b6d0-a77b544ebc6e"
+    },
+    {
+      "id": "ab62a9a6-3756-46b2-be9b-1b42b2e66617",
+      "type": "nfr.OrRefinementLink",
+      "source": "be20c3e8-67d1-42d5-8c86-e28270d2046e",
+      "target": "bd5f1729-7fae-433c-b6d0-a77b544ebc6e"
+    },
+    {
+      "id": "d891a72a-247e-48e3-a3ea-631542219200",
+      "type": "nfr.OrRefinementLink",
+      "source": "5ebfbb42-ee73-49d1-a46b-33eea7819367",
+      "target": "bd5f1729-7fae-433c-b6d0-a77b544ebc6e"
+    }
+  ],
+  "display": {
+    "8d170208-a1ac-4b1b-9625-e95dae20aa51": {
+      "width": 97.09173583984375,
+      "height": 50.409942626953125
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Wed, 12 Jul 2023 10:57:26 GMT",
+  "diagram": {
+    "width": 2513,
+    "height": 1300,
+    "name": "Example NFR model",
+    "customProperties": {
+      "Description": "This tool supports two things that are often troublesome to develop with generic modelling frameworks:\n - draw complex shapes (clouds) without distorting when they are resized\n - create links from an element to a link (claim links)"
+    }
+  }
+}

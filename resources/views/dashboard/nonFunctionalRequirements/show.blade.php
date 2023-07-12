@@ -52,7 +52,7 @@
                           and Open in <a href="https://www.cin.ufpe.br/~jhcp/dsm3goals/nfr.html#">DSM3 - NFR</a>
                         </p>                          
                         <p>  
-                          <img src="{{ $nonFunctionalRequirement->image }}" width="40%" alt="Softgoal Interdependency Graph (SIG)" />
+                          <img src="{{ $nonFunctionalRequirement->image }}" width="60%" alt="Softgoal Interdependency Graph (SIG)" />
                         </p>
                         <h5><strong>Last Update:</strong></h5> 
                         <p>{{ $nonFunctionalRequirement->created_at }}</p>

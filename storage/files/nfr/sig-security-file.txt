@@ -1,1 +1,280 @@
-{"actors":[],"orphans":[{"id":"b79575b1-2b32-466b-bd0f-2f2f41cbcf41","text":"Security","type":"nfr.NFR","x":248,"y":201,"customProperties":{"Description":""}},{"id":"cdfac142-9e92-403f-a3c9-b1858a5e6e77","text":"Confidenciality","type":"nfr.NFR","x":172,"y":302,"customProperties":{"Description":""}},{"id":"c578c382-617b-4f83-9454-5f0019d759c1","text":"Authentication","type":"nfr.NFR","x":315,"y":306,"customProperties":{"Description":""}},{"id":"67e5a5df-ff16-4fae-bbfa-235881aa03e1","text":"Encrypt with RSA 128 bits","type":"nfr.Operationalization","x":86,"y":441,"customProperties":{"Description":""}},{"id":"1f16044e-7b7a-49c3-b8ac-8b3bb2410b3c","text":"Encrypt with RSA 260 bits","type":"nfr.Operationalization","x":219,"y":471,"customProperties":{"Description":""}},{"id":"ba10f8ed-95c2-4b35-b7da-9d31c4750a0e","text":"Usability","type":"nfr.NFR","x":483,"y":196,"customProperties":{"Description":""}},{"id":"457b4872-538b-458d-8bd2-71564f69f1ee","text":"Login with Username and Password","type":"nfr.Operationalization","x":356,"y":552,"customProperties":{"Description":""}},{"id":"3730b4da-fc87-4204-ab85-b12d1caedbde","text":"Voice Interface","type":"nfr.Operationalization","x":461,"y":476},{"id":"90de211d-c7c3-40d0-80b9-dbc92940bf72","text":"Biometric Recognition","type":"nfr.Operationalization","x":551,"y":422}],"dependencies":[],"links":[{"id":"34099a1a-dd1f-42aa-97ac-9b66612dbf12","type":"nfr.AndRefinementLink","source":"cdfac142-9e92-403f-a3c9-b1858a5e6e77","target":"b79575b1-2b32-466b-bd0f-2f2f41cbcf41"},{"id":"b0681ddc-b225-4c46-9b46-f2ec98ad6174","type":"nfr.AndRefinementLink","source":"c578c382-617b-4f83-9454-5f0019d759c1","target":"b79575b1-2b32-466b-bd0f-2f2f41cbcf41"},{"id":"41e1958b-0636-4be3-ba5f-5d62eb96b4f2","type":"nfr.ContributionLink","source":"1f16044e-7b7a-49c3-b8ac-8b3bb2410b3c","target":"cdfac142-9e92-403f-a3c9-b1858a5e6e77","label":"+"},{"id":"3a57f4d9-a905-4b55-9d17-82e951a79558","type":"nfr.ContributionLink","source":"67e5a5df-ff16-4fae-bbfa-235881aa03e1","target":"cdfac142-9e92-403f-a3c9-b1858a5e6e77","label":"–"},{"id":"475c8651-9281-4653-855a-e268868173ca","type":"nfr.CorrelationLink","source":"c578c382-617b-4f83-9454-5f0019d759c1","target":"ba10f8ed-95c2-4b35-b7da-9d31c4750a0e","label":"some+"},{"id":"61370348-a045-42bb-bfeb-07b8a8a90fdc","type":"nfr.ContributionLink","source":"90de211d-c7c3-40d0-80b9-dbc92940bf72","target":"c578c382-617b-4f83-9454-5f0019d759c1","label":"+"},{"id":"7405620a-4826-49b2-9477-2539cbce08cc","type":"nfr.ContributionLink","source":"3730b4da-fc87-4204-ab85-b12d1caedbde","target":"c578c382-617b-4f83-9454-5f0019d759c1","label":"+"},{"id":"fbeee789-0678-454f-a9b6-bb399890e56c","type":"nfr.ContributionLink","source":"457b4872-538b-458d-8bd2-71564f69f1ee","target":"c578c382-617b-4f83-9454-5f0019d759c1","label":"–"}],"display":{"cdfac142-9e92-403f-a3c9-b1858a5e6e77":{"width":103.08329772949219,"height":52.986724853515625},"c578c382-617b-4f83-9454-5f0019d759c1":{"width":97.0841064453125,"height":60.985260009765625},"67e5a5df-ff16-4fae-bbfa-235881aa03e1":{"width":121.08137512207031,"height":53.9871826171875},"1f16044e-7b7a-49c3-b8ac-8b3bb2410b3c":{"width":116.08197021484375,"height":55.9866943359375},"457b4872-538b-458d-8bd2-71564f69f1ee":{"width":145.07916259765625,"height":54.487335205078125},"475c8651-9281-4653-855a-e268868173ca":{"vertices":[{"x":459,"y":263}]}},"tool":"dsm3-goals","metamodelVersion":"1.0","saveDate":"Fri, 30 Jun 2023 16:28:10 GMT","diagram":{"width":2000,"height":1300,"name":"Example NFR model","customProperties":{"Description":"This tool supports two things that are often troublesome to develop with generic modelling frameworks:\n - draw complex shapes (clouds) without distorting when they are resized\n - create links from an element to a link (claim links)"}}}
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e",
+      "text": "Aceitabilidade",
+      "type": "nfr.NFR",
+      "x": 790,
+      "y": 2,
+      "customProperties": {
+        "Description": "Refere-se à medida em que um sistema é considerado adequado, satisfatório e útil para os usuários finais ou os destinatários do sistema. Envolve a avaliação de fatores como usabilidade, acessibilidade, adaptabilidade, segurança e a satisfação geral do usuário com o sistema."
+      }
+    },
+    {
+      "id": "3f5e4219-1bd0-4151-9913-5d9ce32cf9d4",
+      "text": "Segurança",
+      "type": "nfr.NFR",
+      "x": 573,
+      "y": 130,
+      "customProperties": {
+        "Description": "Referem-se a critérios ou necessidades relacionadas à proteção do sistema, dados e usuários contra ameaças, vulnerabilidades e acessos não autorizados. Isso pode incluir aspectos como autenticação, criptografia, controle de acesso, detecção de intrusões e auditoria."
+      }
+    },
+    {
+      "id": "ffd14392-37d7-4d15-bf49-50376430ada4",
+      "text": "Disponibilidade",
+      "type": "nfr.NFR",
+      "x": 211,
+      "y": 241
+    },
+    {
+      "id": "82b9f300-3c80-4e9f-a8c4-69c39f4c9f29",
+      "text": "Integridade de Dados",
+      "type": "nfr.NFR",
+      "x": 371,
+      "y": 296
+    },
+    {
+      "id": "50757511-8a46-4bdf-b017-c3d9dc8201c6",
+      "text": "Segurança de Conteúdo",
+      "type": "nfr.NFR",
+      "x": 524,
+      "y": 351
+    },
+    {
+      "id": "ac4da81e-651a-4dba-b680-aead4d73f9d1",
+      "text": "Privacidade",
+      "type": "nfr.NFR",
+      "x": 926,
+      "y": 196
+    },
+    {
+      "id": "e001b998-7a94-4dc3-9c6a-5ea072d4036f",
+      "text": "Armazenamento e Backup Seguros",
+      "type": "nfr.NFR",
+      "x": 844,
+      "y": 316
+    },
+    {
+      "id": "e484cc0f-914d-4ebb-af7c-a4f07c397c1b",
+      "text": "Resistência à Violação e Recuperação",
+      "type": "nfr.NFR",
+      "x": 641,
+      "y": 346
+    },
+    {
+      "id": "1efd6773-754d-4673-8de8-5e0a662276b2",
+      "text": "Redundância",
+      "type": "nfr.Operationalization",
+      "x": 73,
+      "y": 435
+    },
+    {
+      "id": "fae4829e-14be-463f-bc22-14a2093005c2",
+      "text": "Arquitetura tolerante a falhas",
+      "type": "nfr.Operationalization",
+      "x": 168,
+      "y": 396
+    },
+    {
+      "id": "dd069270-fe06-4f79-bafe-db2dbded50cf",
+      "text": "Recuperação de Desastres",
+      "type": "nfr.Operationalization",
+      "x": 228,
+      "y": 502
+    },
+    {
+      "id": "50370edd-1024-4d02-bbbb-3137c31a6be6",
+      "text": "Mecanismos de Validação de Dados",
+      "type": "nfr.Operationalization",
+      "x": 359,
+      "y": 524
+    },
+    {
+      "id": "fcd43ff5-a2cb-4884-ac91-5c7a158350cc",
+      "text": "Detecção e Correção de Erros",
+      "type": "nfr.Operationalization",
+      "x": 310,
+      "y": 407
+    },
+    {
+      "id": "52e5aef4-9685-4767-926b-ad502d9495b3",
+      "text": "Trilhas de Auditoria",
+      "type": "nfr.Operationalization",
+      "x": 425,
+      "y": 423
+    },
+    {
+      "id": "851025f9-add2-4720-b105-a642fb504425",
+      "text": "Mecanismos de controle de acesso",
+      "type": "nfr.Operationalization",
+      "x": 498,
+      "y": 550
+    },
+    {
+      "id": "08a691a2-4917-4a18-900d-ab6c65c39c2e",
+      "text": "Backups Regulares",
+      "type": "nfr.Operationalization",
+      "x": 847,
+      "y": 573
+    },
+    {
+      "id": "89b1da09-6045-439e-886f-c43a695d1edc",
+      "text": "Transferência segura de dados",
+      "type": "nfr.Operationalization",
+      "x": 937,
+      "y": 434
+    },
+    {
+      "id": "d5c0bf06-39f7-4e48-a7b2-e7d44424eb6c",
+      "text": "Sistemas de Detecção de Intrusão",
+      "type": "nfr.Operationalization",
+      "x": 587,
+      "y": 590
+    },
+    {
+      "id": "6c943f50-4220-4434-85ca-2570e160ff1f",
+      "text": "Planejar Resposta a Incidentes",
+      "type": "nfr.Operationalization",
+      "x": 688,
+      "y": 506
+    },
+    {
+      "id": "ec7b2ad0-627a-4655-97cb-21d654dc8ae5",
+      "text": "Processo Recuperação de Dados",
+      "type": "nfr.Operationalization",
+      "x": 788,
+      "y": 459
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "29b1ca16-d6e8-43ed-8a16-fc412d9aaa90",
+      "type": "nfr.AndRefinementLink",
+      "source": "3f5e4219-1bd0-4151-9913-5d9ce32cf9d4",
+      "target": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e"
+    },
+    {
+      "id": "b5e0dbf0-55e1-4806-863a-42a853dff1d4",
+      "type": "nfr.AndRefinementLink",
+      "source": "ffd14392-37d7-4d15-bf49-50376430ada4",
+      "target": "3f5e4219-1bd0-4151-9913-5d9ce32cf9d4"
+    },
+    {
+      "id": "8318deaa-9e72-4beb-800b-c94d6e4e2837",
+      "type": "nfr.AndRefinementLink",
+      "source": "82b9f300-3c80-4e9f-a8c4-69c39f4c9f29",
+      "target": "3f5e4219-1bd0-4151-9913-5d9ce32cf9d4"
+    },
+    {
+      "id": "4bf95211-dca5-4a87-8252-367fca11efa0",
+      "type": "nfr.AndRefinementLink",
+      "source": "50757511-8a46-4bdf-b017-c3d9dc8201c6",
+      "target": "3f5e4219-1bd0-4151-9913-5d9ce32cf9d4"
+    },
+    {
+      "id": "229d54f7-d463-46d0-9fce-bf73506d8a22",
+      "type": "nfr.AndRefinementLink",
+      "source": "ac4da81e-651a-4dba-b680-aead4d73f9d1",
+      "target": "3f5e4219-1bd0-4151-9913-5d9ce32cf9d4"
+    },
+    {
+      "id": "4eaffcf5-7022-4dfc-a5cb-8d2e5ff3fff5",
+      "type": "nfr.AndRefinementLink",
+      "source": "e001b998-7a94-4dc3-9c6a-5ea072d4036f",
+      "target": "3f5e4219-1bd0-4151-9913-5d9ce32cf9d4"
+    },
+    {
+      "id": "0c058a8c-c65f-41dd-ae28-5a7f48a95878",
+      "type": "nfr.AndRefinementLink",
+      "source": "e484cc0f-914d-4ebb-af7c-a4f07c397c1b",
+      "target": "3f5e4219-1bd0-4151-9913-5d9ce32cf9d4"
+    },
+    {
+      "id": "b82a70cc-66d2-494a-b01e-13f95a776c03",
+      "type": "nfr.OrRefinementLink",
+      "source": "1efd6773-754d-4673-8de8-5e0a662276b2",
+      "target": "ffd14392-37d7-4d15-bf49-50376430ada4"
+    },
+    {
+      "id": "b335813e-1976-400a-bca9-e3039e3cad32",
+      "type": "nfr.OrRefinementLink",
+      "source": "fae4829e-14be-463f-bc22-14a2093005c2",
+      "target": "ffd14392-37d7-4d15-bf49-50376430ada4"
+    },
+    {
+      "id": "471c2c44-3121-4084-96c6-e623878e2f85",
+      "type": "nfr.OrRefinementLink",
+      "source": "dd069270-fe06-4f79-bafe-db2dbded50cf",
+      "target": "ffd14392-37d7-4d15-bf49-50376430ada4"
+    },
+    {
+      "id": "bb7fced4-121c-414f-9ad7-a9e4ec2d541f",
+      "type": "nfr.OrRefinementLink",
+      "source": "50370edd-1024-4d02-bbbb-3137c31a6be6",
+      "target": "82b9f300-3c80-4e9f-a8c4-69c39f4c9f29"
+    },
+    {
+      "id": "23d45caa-3f64-4490-a08a-4fb2cd352c1f",
+      "type": "nfr.OrRefinementLink",
+      "source": "fcd43ff5-a2cb-4884-ac91-5c7a158350cc",
+      "target": "82b9f300-3c80-4e9f-a8c4-69c39f4c9f29"
+    },
+    {
+      "id": "20a6e342-b432-4761-9664-98bb793566ac",
+      "type": "nfr.OrRefinementLink",
+      "source": "52e5aef4-9685-4767-926b-ad502d9495b3",
+      "target": "82b9f300-3c80-4e9f-a8c4-69c39f4c9f29"
+    },
+    {
+      "id": "8da0937b-dedc-4b19-8927-89b913361d68",
+      "type": "nfr.AndRefinementLink",
+      "source": "851025f9-add2-4720-b105-a642fb504425",
+      "target": "50757511-8a46-4bdf-b017-c3d9dc8201c6"
+    },
+    {
+      "id": "1742e51c-56bd-4612-8190-487f59cecb76",
+      "type": "nfr.AndRefinementLink",
+      "source": "08a691a2-4917-4a18-900d-ab6c65c39c2e",
+      "target": "e001b998-7a94-4dc3-9c6a-5ea072d4036f"
+    },
+    {
+      "id": "fe69c154-cbea-4448-8a2f-7e7b7b57162b",
+      "type": "nfr.AndRefinementLink",
+      "source": "89b1da09-6045-439e-886f-c43a695d1edc",
+      "target": "e001b998-7a94-4dc3-9c6a-5ea072d4036f"
+    },
+    {
+      "id": "cbd025ed-1c87-444c-8b65-3cee6eddadf6",
+      "type": "nfr.AndRefinementLink",
+      "source": "d5c0bf06-39f7-4e48-a7b2-e7d44424eb6c",
+      "target": "e484cc0f-914d-4ebb-af7c-a4f07c397c1b"
+    },
+    {
+      "id": "d981df87-ceb3-422d-b6ee-ab65819ab58e",
+      "type": "nfr.AndRefinementLink",
+      "source": "6c943f50-4220-4434-85ca-2570e160ff1f",
+      "target": "e484cc0f-914d-4ebb-af7c-a4f07c397c1b"
+    },
+    {
+      "id": "b8b6f20a-10cb-4f32-8c27-e7a751066e01",
+      "type": "nfr.AndRefinementLink",
+      "source": "ec7b2ad0-627a-4655-97cb-21d654dc8ae5",
+      "target": "e484cc0f-914d-4ebb-af7c-a4f07c397c1b"
+    }
+  ],
+  "display": {},
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Wed, 12 Jul 2023 21:04:27 GMT",
+  "diagram": {
+    "width": 2513,
+    "height": 1300,
+    "name": "Example NFR model",
+    "customProperties": {
+      "Description": "This tool supports two things that are often troublesome to develop with generic modelling frameworks:\n - draw complex shapes (clouds) without distorting when they are resized\n - create links from an element to a link (claim links)"
+    }
+  }
+}

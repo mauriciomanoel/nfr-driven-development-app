@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Projects;
 use App\Models\LifeSettings;
+use App\Models\LegalAndNormativeRequirements;
+use App\Models\Stakeholders;
+use App\Models\StakeholderExperiencies;
+use App\Models\NonFunctionalRequirements;
+use App\Models\NonFunctionalRequirementsForSpecification;
 
 class DashboardController extends Controller
 {
@@ -27,8 +32,24 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        $nonFunctionalRequirements = NonFunctionalRequirements::get();
+        $nonFunctionalRequirementCount = $nonFunctionalRequirements->count();
+
+        $legalAndNormativeRequirements = LegalAndNormativeRequirements::get();
+        $legalAndNormativeRequirementCount = $legalAndNormativeRequirements->count();
+
+        $sigs = NonFunctionalRequirements::whereNotNull('content')->get();
+        $sigCount = $sigs->count();
         $projects = Projects::with('user')->with('lifeSettings')->paginate( 20 );
-        return view('dashboard.homepage', ['projects' => $projects]);
+        $countProject = $projects->count();
+
+        $values = array();
+        $values["nonFunctionalRequirementCount"] = $nonFunctionalRequirementCount;
+        $values["legalAndNormativeRequirementCount"] = $legalAndNormativeRequirementCount;
+        $values["sigCount"] = $sigCount;
+        $values["countProject"] = $countProject;
+
+        return view('dashboard.homepage', ['projects' => $projects, 'values' => $values]);
     }
 
     /**

@@ -1,0 +1,421 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e",
+      "text": "Aceitabilidade",
+      "type": "nfr.NFR",
+      "x": 396,
+      "y": 72,
+      "customProperties": {
+        "Description": "Refere-se à medida em que um sistema é considerado adequado, satisfatório e útil para os usuários finais ou os destinatários do sistema. Envolve a avaliação de fatores como usabilidade, acessibilidade, adaptabilidade, segurança e a satisfação geral do usuário com o sistema."
+      }
+    },
+    {
+      "id": "51a3a01e-90e0-486b-b912-710d56705363",
+      "text": "Integração",
+      "type": "nfr.NFR",
+      "x": 271,
+      "y": 191,
+      "customProperties": {
+        "Description": "Referem-se a critérios ou necessidades relacionadas à capacidade do sistema de se conectar e interagir com outros sistemas ou componentes. Isso pode incluir aspectos como integração de APIs, interoperabilidade, troca de dados e compatibilidade com padrões e protocolos."
+      }
+    },
+    {
+      "id": "44069d54-6d5a-4d23-b2bc-2fcbe24d9e48",
+      "text": "Manutenção",
+      "type": "nfr.NFR",
+      "x": 149,
+      "y": 333,
+      "customProperties": {
+        "Description": "refere-se à facilidade e eficácia com que um sistema pode ser mantido, atualizado e corrigido ao longo do tempo. Envolve atividades como monitoramento, diagnóstico, reparo, aplicação de atualizações e correção de falhas. Um sistema com boa manutenção permite que as equipes de suporte e desenvolvimento realizem as atividades de manutenção de forma eficiente, minimizando o tempo de inatividade e garantindo a disponibilidade contínua do sistema"
+      }
+    },
+    {
+      "id": "2cfe0c12-61d0-4c7c-9b37-feb0037a44d6",
+      "text": "Eficiência",
+      "type": "nfr.NFR",
+      "x": 618,
+      "y": 337,
+      "customProperties": {
+        "Description": "Considera à utilização otimizada dos recursos, como processamento, memória, largura de banda ou energia, pelo sistema. Um sistema eficiente é capaz de realizar suas funções de maneira rápida e com uso mínimo de recursos, garantindo um desempenho adequado sem desperdício."
+      }
+    },
+    {
+      "id": "1ed39570-ffe7-44ba-a919-efabcfb8e78c",
+      "text": "Performance",
+      "type": "nfr.NFR",
+      "x": 765,
+      "y": 218,
+      "customProperties": {
+        "Description": "Garantir que o desempenho do sistema atenda às expectativas dos usuários. Isso inclui tempos de resposta rápidos, eficiência no processamento de dados e capacidade de lidar com cargas de trabalho esperadas. Realize testes de desempenho para identificar possíveis gargalos e otimizar o sistema quando necessário"
+      }
+    },
+    {
+      "id": "bd5f1729-7fae-433c-b6d0-a77b544ebc6e",
+      "text": "Normativas Legais",
+      "type": "nfr.Operationalization",
+      "x": 1443,
+      "y": 842
+    },
+    {
+      "id": "2ac7fa4d-84a0-45f6-b7b1-9b2d1e9f910d",
+      "text": "Padrões",
+      "type": "nfr.Operationalization",
+      "x": 1562,
+      "y": 837
+    },
+    {
+      "id": "be20c3e8-67d1-42d5-8c86-e28270d2046e",
+      "text": "GDPR",
+      "type": "nfr.Operationalization",
+      "x": 1424,
+      "y": 1030,
+      "customProperties": {
+        "Description": "General Data Protection Regulation"
+      }
+    },
+    {
+      "id": "2cd5387f-eb46-4e3e-84e8-77f148e7aea1",
+      "text": "LGPD",
+      "type": "nfr.Operationalization",
+      "x": 1345,
+      "y": 960,
+      "customProperties": {
+        "Description": "Lei Geral de Proteção de Dados"
+      }
+    },
+    {
+      "id": "5ebfbb42-ee73-49d1-a46b-33eea7819367",
+      "text": "ADPPA",
+      "type": "nfr.Operationalization",
+      "x": 1513,
+      "y": 971,
+      "customProperties": {
+        "Description": "American Data Privacy and Protection Act"
+      }
+    },
+    {
+      "id": "e324d7aa-4535-496c-86c9-45a9c1397f05",
+      "text": "Abordagem Atenciosa",
+      "type": "nfr.Operationalization",
+      "x": 1943,
+      "y": 867,
+      "customProperties": {
+        "Description": "Interaja com o idoso de maneira respeitosa, considerando sua privacidade, dignidade e autonomia. Esteja ciente de que algumas pessoas idosas podem ter dificuldades de audição, visão ou cognição, então adapte sua comunicação de acordo."
+      }
+    },
+    {
+      "id": "e09b1f59-0f7c-4f54-a80a-861f744d26c1",
+      "text": "Explicação Clara",
+      "type": "nfr.Operationalization",
+      "x": 1985,
+      "y": 985,
+      "customProperties": {
+        "Description": "xplique de forma clara e simples o motivo pelo qual está buscando o consentimento do idoso em relação à privacidade. Certifique-se de que ele entenda os benefícios e possíveis riscos envolvidos. Use uma linguagem acessível e evite termos técnicos complicados."
+      }
+    },
+    {
+      "id": "6ae06499-cf1c-4842-a0cf-ae21bad76435",
+      "text": "Consentimento Escrito",
+      "type": "nfr.Operationalization",
+      "x": 2070,
+      "y": 920,
+      "customProperties": {
+        "Description": "Se possível, obtenha o consentimento por escrito. Isso pode ser feito por meio de uma assinatura em um formulário ou documento específico, ou até mesmo por meio de um processo eletrônico, se for viável e compreensível para o idoso."
+      }
+    },
+    {
+      "id": "3951efa9-7fd0-4ed2-b489-efa337825014",
+      "text": "Representação Legal",
+      "type": "nfr.Operationalization",
+      "x": 2112,
+      "y": 838,
+      "customProperties": {
+        "Description": "Em casos em que o idoso não tem capacidade legal para consentir, por motivos de saúde ou outros, é importante envolver um representante legal adequado, como um membro da família ou um tutor legal, para tomar decisões em nome do idoso."
+      }
+    },
+    {
+      "id": "e2457711-2d24-4804-91fb-845e8a1106e1",
+      "text": "Criptografia",
+      "type": "nfr.Operationalization",
+      "x": 1740,
+      "y": 1109,
+      "customProperties": {
+        "Description": "Utilize criptografia para proteger os dados durante o armazenamento e a transmissão. Isso ajuda a garantir que apenas pessoas autorizadas possam acessar e decifrar as informações"
+      }
+    },
+    {
+      "id": "c15a03d2-7ec8-437a-bb79-8c766211605b",
+      "text": "Coleta Mínima de Dados",
+      "type": "nfr.Operationalization",
+      "x": 1849,
+      "y": 963,
+      "customProperties": {
+        "Description": "Limite a coleta de dados pessoais ao mínimo necessário para cumprir o objetivo pretendido. Quanto menos informações identificáveis forem coletadas, menor será o risco de identificação do idoso."
+      }
+    },
+    {
+      "id": "02ddb11b-8f14-4a8f-a6ee-fcc2116fa66a",
+      "text": "Políticas Acesso Restrito",
+      "type": "nfr.Operationalization",
+      "x": 1905,
+      "y": 1050,
+      "customProperties": {
+        "Description": "Implemente controles de acesso adequados para garantir que apenas pessoas autorizadas possam acessar os dados pessoais dos idosos. Isso inclui autenticação forte, restrição de privilégios e monitoramento de atividades."
+      }
+    },
+    {
+      "id": "f866b4a7-6a8e-4a9f-b602-463aaf9cae09",
+      "text": "Padrões de Projeto",
+      "type": "nfr.Operationalization",
+      "x": 59,
+      "y": 510,
+      "customProperties": {
+        "Description": "O uso de padrões de projeto facilitam a documentação e manutenção da arquitetura do software."
+      }
+    },
+    {
+      "id": "f14d3d6d-966a-4d9c-9355-3c0a971cb371",
+      "text": "Monitoramento e registro de erros",
+      "type": "nfr.Operationalization",
+      "x": 167,
+      "y": 512,
+      "customProperties": {
+        "Description": "Implementar mecanismos de monitoramento em tempo real e registre erros ou problemas encontrados no sistema. Isso ajuda a identificar rapidamente possíveis falhas ou necessidades de correção, permitindo uma resposta mais ágil e eficaz"
+      }
+    },
+    {
+      "id": "50048542-fe47-446d-8fc4-ec0f86bcecc3",
+      "text": "Automação de Processos",
+      "type": "nfr.Operationalization",
+      "x": 269,
+      "y": 507,
+      "customProperties": {
+        "Description": "Utilizar ferramentas e técnicas de automação para simplificar as tarefas de manutenção e atualização do sistema. Isso pode incluir a automação de testes, implantação contínua, monitoramento de desempenho e notificações de erros. A automação reduz a necessidade de intervenção manual e acelera o processo de manutenção."
+      }
+    },
+    {
+      "id": "8ba30042-1db3-4421-9c67-da3ca935136a",
+      "text": "Compactação e Otimização de dados",
+      "type": "nfr.Operationalization",
+      "x": 784,
+      "y": 414,
+      "customProperties": {
+        "Description": "Utilizar técnicas de compactação e otimização de dados para reduzir o uso de memória e largura de banda. Comprima os dados quando possível, utilizando algoritmos de compactação eficientes, e remova informações redundantes ou desnecessárias"
+      }
+    },
+    {
+      "id": "b88c96ad-16c2-4a01-9de9-699375f6ad98",
+      "text": "Cache e Armazenamento em Cache",
+      "type": "nfr.Operationalization",
+      "x": 710,
+      "y": 481,
+      "customProperties": {
+        "Description": "Implementar mecanismos de cache para reduzir a necessidade de acessar recursos externos repetidamente. Armazene em cache dados frequentemente acessados ou processados para minimizar a carga de processamento, a latência e o consumo de largura de banda"
+      }
+    },
+    {
+      "id": "849eff3a-2786-4430-850d-b9b0cd092539",
+      "text": "Gerenciamento Conexões",
+      "type": "nfr.Operationalization",
+      "x": 631,
+      "y": 571,
+      "customProperties": {
+        "Description": "Considerar que na integração com sistemas externos, gerenciar eficientemente as conexões de rede pode minimizar a sobrecarga e o consumo de largura de banda. Utilizar pools de conexões para reutilizar conexões existentes em vez de abrir e fechar conexões repetidamente."
+      }
+    },
+    {
+      "id": "ac9c694e-8f33-4487-b6a0-9c1a7a4404ee",
+      "text": "Acesso aos Dados",
+      "type": "nfr.Operationalization",
+      "x": 1604,
+      "y": 922,
+      "customProperties": {
+        "Description": "Garantir que os idosos tenham o direito de acessar seus dados pessoais facilmente. Forneçer uma opção para que eles possam solicitar uma cópia de suas informações pessoais e disponibilize um processo simples e eficiente para atender a essa solicitação."
+      }
+    },
+    {
+      "id": "4552d2ad-3d3d-4a23-b310-20e7a4e89bca",
+      "text": "Controle de Privacidade",
+      "type": "nfr.Operationalization",
+      "x": 1704,
+      "y": 877,
+      "customProperties": {
+        "Description": "Criar um painel de controle de privacidade intuitivo e acessível aos idosos. Esse painel deve permitir que eles visualizem e gerenciem suas preferências de privacidade, incluindo a seleção de dados a serem compartilhados, a escolha de finalidades de processamento e a definição de limitações de compartilhamento."
+      }
+    },
+    {
+      "id": "6b059c4b-bcbc-411e-868b-b30cf6e1f00c",
+      "text": "Exclusão de Dados",
+      "type": "nfr.Operationalization",
+      "x": 1780,
+      "y": 815,
+      "customProperties": {
+        "Description": "Permitir a capacidade de solicitar a exclusão de seus dados pessoais quando não forem mais necessários para as finalidades originais ou quando o consentimento for retirado. Implementar um processo para avaliar e atender a essas solicitações de exclusão de forma oportuna."
+      }
+    },
+    {
+      "id": "74b742ce-95fc-45a2-8bcb-36de97c59d44",
+      "text": "Interoperabilidade",
+      "type": "nfr.NFR",
+      "x": 389,
+      "y": 348
+    },
+    {
+      "id": "a88f50e0-7b6f-44c8-b4ae-fba0e82d4c62",
+      "text": "Padrões de Comunicação",
+      "type": "nfr.Operationalization",
+      "x": 341,
+      "y": 581
+    },
+    {
+      "id": "6510fdd8-d579-416a-ad1b-13557d2d6ede",
+      "text": "Protocolos de Integração",
+      "type": "nfr.Operationalization",
+      "x": 444,
+      "y": 580
+    },
+    {
+      "id": "2e52b07f-5c06-4d74-a0be-a3f4f4d07a5f",
+      "text": "APIs e Interfaces",
+      "type": "nfr.Operationalization",
+      "x": 528,
+      "y": 517
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "f8a20293-7391-42af-849f-d5848c60daa2",
+      "type": "nfr.AndRefinementLink",
+      "source": "51a3a01e-90e0-486b-b912-710d56705363",
+      "target": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e"
+    },
+    {
+      "id": "7aaaf2c5-1d71-47a9-8a2a-4e13a5903c3e",
+      "type": "nfr.AndRefinementLink",
+      "source": "44069d54-6d5a-4d23-b2bc-2fcbe24d9e48",
+      "target": "51a3a01e-90e0-486b-b912-710d56705363"
+    },
+    {
+      "id": "207b89fe-fdd0-4a80-bd43-a5b2ecb9bce1",
+      "type": "nfr.AndRefinementLink",
+      "source": "2cfe0c12-61d0-4c7c-9b37-feb0037a44d6",
+      "target": "51a3a01e-90e0-486b-b912-710d56705363"
+    },
+    {
+      "id": "690ad639-3dbf-4cc4-8ab2-5d6d5675046b",
+      "type": "nfr.OrRefinementLink",
+      "source": "f866b4a7-6a8e-4a9f-b602-463aaf9cae09",
+      "target": "44069d54-6d5a-4d23-b2bc-2fcbe24d9e48"
+    },
+    {
+      "id": "61a48f3f-6468-4c2c-8b20-ef8755c7067d",
+      "type": "nfr.OrRefinementLink",
+      "source": "f14d3d6d-966a-4d9c-9355-3c0a971cb371",
+      "target": "44069d54-6d5a-4d23-b2bc-2fcbe24d9e48"
+    },
+    {
+      "id": "341035da-92e8-41c1-8cd0-72d435a6dafe",
+      "type": "nfr.OrRefinementLink",
+      "source": "50048542-fe47-446d-8fc4-ec0f86bcecc3",
+      "target": "44069d54-6d5a-4d23-b2bc-2fcbe24d9e48"
+    },
+    {
+      "id": "acf76eb0-4903-4d3a-9042-52e638c30467",
+      "type": "nfr.OrRefinementLink",
+      "source": "8ba30042-1db3-4421-9c67-da3ca935136a",
+      "target": "2cfe0c12-61d0-4c7c-9b37-feb0037a44d6"
+    },
+    {
+      "id": "ec12679e-b6e1-44b8-a326-0f41a9beeb3c",
+      "type": "nfr.OrRefinementLink",
+      "source": "b88c96ad-16c2-4a01-9de9-699375f6ad98",
+      "target": "2cfe0c12-61d0-4c7c-9b37-feb0037a44d6"
+    },
+    {
+      "id": "1d82f0ee-31a3-4a51-b55d-c83932fb254c",
+      "type": "nfr.OrRefinementLink",
+      "source": "849eff3a-2786-4430-850d-b9b0cd092539",
+      "target": "2cfe0c12-61d0-4c7c-9b37-feb0037a44d6"
+    },
+    {
+      "id": "991199dc-02bf-45d7-84c2-32b7412539df",
+      "type": "nfr.ContributionLink",
+      "source": "2cfe0c12-61d0-4c7c-9b37-feb0037a44d6",
+      "target": "1ed39570-ffe7-44ba-a919-efabcfb8e78c",
+      "label": "++"
+    },
+    {
+      "id": "b6e9ad64-ce8a-4264-a310-494f103d5bbe",
+      "type": "nfr.OrRefinementLink",
+      "source": "2cd5387f-eb46-4e3e-84e8-77f148e7aea1",
+      "target": "bd5f1729-7fae-433c-b6d0-a77b544ebc6e"
+    },
+    {
+      "id": "ab62a9a6-3756-46b2-be9b-1b42b2e66617",
+      "type": "nfr.OrRefinementLink",
+      "source": "be20c3e8-67d1-42d5-8c86-e28270d2046e",
+      "target": "bd5f1729-7fae-433c-b6d0-a77b544ebc6e"
+    },
+    {
+      "id": "d891a72a-247e-48e3-a3ea-631542219200",
+      "type": "nfr.OrRefinementLink",
+      "source": "5ebfbb42-ee73-49d1-a46b-33eea7819367",
+      "target": "bd5f1729-7fae-433c-b6d0-a77b544ebc6e"
+    },
+    {
+      "id": "91e3ab92-42c7-43f6-883e-e390776d6725",
+      "type": "nfr.AndRefinementLink",
+      "source": "74b742ce-95fc-45a2-8bcb-36de97c59d44",
+      "target": "51a3a01e-90e0-486b-b912-710d56705363"
+    },
+    {
+      "id": "6d411d55-2f84-4ed3-b7b6-2b17d1c7d25c",
+      "type": "nfr.ContributionLink",
+      "source": "a88f50e0-7b6f-44c8-b4ae-fba0e82d4c62",
+      "target": "74b742ce-95fc-45a2-8bcb-36de97c59d44",
+      "label": "+"
+    },
+    {
+      "id": "07aa6a08-12ca-46a3-b7ca-b6b393f71465",
+      "type": "nfr.ContributionLink",
+      "source": "6510fdd8-d579-416a-ad1b-13557d2d6ede",
+      "target": "74b742ce-95fc-45a2-8bcb-36de97c59d44",
+      "label": "+"
+    },
+    {
+      "id": "3d1054f9-3dbe-4e17-9aba-93b65e147652",
+      "type": "nfr.ContributionLink",
+      "source": "2e52b07f-5c06-4d74-a0be-a3f4f4d07a5f",
+      "target": "74b742ce-95fc-45a2-8bcb-36de97c59d44",
+      "label": "+"
+    }
+  ],
+  "display": {
+    "1ed39570-ffe7-44ba-a919-efabcfb8e78c": {
+      "width": 99.591552734375,
+      "height": 58.80610656738281
+    },
+    "6ae06499-cf1c-4842-a0cf-ae21bad76435": {
+      "width": 103.091064453125,
+      "height": 60.30572509765625
+    },
+    "3951efa9-7fd0-4ed2-b489-efa337825014": {
+      "width": 95.091796875,
+      "height": 57.80609130859375
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Wed, 12 Jul 2023 11:30:44 GMT",
+  "diagram": {
+    "width": 2513,
+    "height": 1300,
+    "name": "Example NFR model",
+    "customProperties": {
+      "Description": "This tool supports two things that are often troublesome to develop with generic modelling frameworks:\n - draw complex shapes (clouds) without distorting when they are resized\n - create links from an element to a link (claim links)"
+    }
+  }
+}

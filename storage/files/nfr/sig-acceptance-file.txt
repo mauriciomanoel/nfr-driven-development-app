@@ -1,0 +1,353 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e",
+      "text": "Aceitabilidade",
+      "type": "nfr.NFR",
+      "x": 547,
+      "y": 68,
+      "customProperties": {
+        "Description": "Refere-se à medida em que um sistema é considerado adequado, satisfatório e útil para os usuários finais ou os destinatários do sistema. Envolve a avaliação de fatores como usabilidade, acessibilidade, adaptabilidade, segurança e a satisfação geral do usuário com o sistema."
+      }
+    },
+    {
+      "id": "c5fbff5b-bc2f-4455-9b5c-42a2ab844686",
+      "text": "Usabilidade",
+      "type": "nfr.NFR",
+      "x": 263,
+      "y": 128,
+      "customProperties": {
+        "Description": "é definida como \"a medida em que um produto pode ser usado por usuários específicos para alcançar metas específicas com eficácia, eficiência e satisfação em um contexto de uso específico\"."
+      }
+    },
+    {
+      "id": "36919aad-207a-430a-af85-d98d98c7a6a6",
+      "text": "Aceitação",
+      "type": "nfr.NFR",
+      "x": 470,
+      "y": 157,
+      "customProperties": {
+        "Description": "Critérios que um sistema ou produto deve atender para ser considerado satisfatório e aceito pelos usuários ou clientes. Esses requisitos geralmente são estabelecidos com base nas necessidades e expectativas dos stakeholders. Também pode ser uma avaliação pragmática a posteriori, implicando que uma atividade real é exigida do usuário antes da avaliação de aceitação"
+      }
+    },
+    {
+      "id": "2cfe0c12-61d0-4c7c-9b37-feb0037a44d6",
+      "text": "Eficiência",
+      "type": "nfr.NFR",
+      "x": 771,
+      "y": 282,
+      "customProperties": {
+        "Description": "Considera à utilização otimizada dos recursos, como processamento, memória, largura de banda ou energia, pelo sistema. Um sistema eficiente é capaz de realizar suas funções de maneira rápida e com uso mínimo de recursos, garantindo um desempenho adequado sem desperdício."
+      }
+    },
+    {
+      "id": "a2d23f9b-9eee-4d67-90c1-0c1be8365439",
+      "text": "Envolvimento do Usuário",
+      "type": "nfr.NFR",
+      "x": 127,
+      "y": 252,
+      "customProperties": {
+        "Description": "Inserir o idoso desde as fases iniciais do projeto, envolva no processo de desenvolvimento para entender suas necessidades, expectativas e requisitos. Pode ser usado sessões de feedback e iterações com os idosos para garantir que suas perspectivas sejam consideradas no desenvolvimento do sistema AAL."
+      }
+    },
+    {
+      "id": "1e47d8e3-c528-42d3-8df2-2e90972e4400",
+      "text": "Documentação e Suporte",
+      "type": "nfr.NFR",
+      "x": 446,
+      "y": 275,
+      "customProperties": {
+        "Description": "Forneçer documentação clara e abrangente, bem como suporte adequado ao idoso. Isso inclui manuais de usuário, tutoriais, recursos de ajuda online e um canal de suporte para responder a perguntas e solucionar problemas"
+      }
+    },
+    {
+      "id": "1ed39570-ffe7-44ba-a919-efabcfb8e78c",
+      "text": "Performance",
+      "type": "nfr.NFR",
+      "x": 608,
+      "y": 259,
+      "customProperties": {
+        "Description": "Garantir que o desempenho do sistema atenda às expectativas dos usuários. Isso inclui tempos de resposta rápidos, eficiência no processamento de dados e capacidade de lidar com cargas de trabalho esperadas. Realize testes de desempenho para identificar possíveis gargalos e otimizar o sistema quando necessário"
+      }
+    },
+    {
+      "id": "d6a33292-1f61-4934-ae0b-8fb2f9693db4",
+      "text": "Comunicação Efetiva",
+      "type": "nfr.NFR",
+      "x": 860,
+      "y": 205,
+      "customProperties": {
+        "Description": "Manter uma comunicação aberta e efetiva com os idosos ou cuidadores durante todo o processo de desenvolvimento. Manter informados sobre o progresso do sistema, envolva-os em discussões relevantes e esteja disponível para responder a perguntas ou preocupações."
+      }
+    },
+    {
+      "id": "ac4da81e-651a-4dba-b680-aead4d73f9d1",
+      "text": "Privacidade",
+      "type": "nfr.NFR",
+      "x": 387,
+      "y": 46
+    },
+    {
+      "id": "9178a76e-ac68-487a-abfe-04be68152a43",
+      "text": "Testes de Aceitação",
+      "type": "nfr.Operationalization",
+      "x": 120,
+      "y": 472,
+      "customProperties": {
+        "Description": "Realizar testes de aceitação com os idosos para validar se o sistema atende aos requisitos funcionais e não funcionais estabelecidos. Esses testes devem ser projetados para simular as condições reais de uso do sistema e verificar se ele está em conformidade com as expectativas dos usuários."
+      }
+    },
+    {
+      "id": "bc6d36c2-6470-4b63-a988-52b9f304d498",
+      "text": "Testes de Usabilidade",
+      "type": "nfr.Operationalization",
+      "x": 221,
+      "y": 476,
+      "customProperties": {
+        "Description": "Realizar testes de usabilidade envolvendo idosos como usuários participantes. Observe como eles interagem com o sistema, identifique dificuldades ou confusões e obtenha feedback direto sobre a experiência de uso. Isso ajudará a identificar áreas de melhoria e a otimizar a usabilidade para atender às necessidades do público idoso."
+      }
+    },
+    {
+      "id": "9d74dce0-dc38-487c-93f9-3b64b086f42d",
+      "text": "Feedback Contínuo",
+      "type": "nfr.Operationalization",
+      "x": 31,
+      "y": 427,
+      "customProperties": {
+        "Description": "Estabeleçer canais de comunicação para receber feedback contínuo dos idosos. Isso pode ser feito por meio de pesquisas, formulários de feedback, grupos de discussão ou sessões de feedback direto. Demonstre que as opiniões e preocupações dos idosos são valorizadas e levadas em consideração no processo de desenvolvimento"
+      }
+    },
+    {
+      "id": "c68e15a5-15c7-444b-89b9-ba7c21474ee9",
+      "text": "Engajamento Participativo",
+      "type": "nfr.Operationalization",
+      "x": 264,
+      "y": 403,
+      "customProperties": {
+        "Description": "Incentivar a participação ativa dos idosos no desenvolvimento do sistema. Isso pode ser feito por meio de grupos de discussão, comitês consultivos ou convites para fornecer feedback em estágios-chave do processo. Dê voz aos idosos e envolva-os na tomada de decisões relacionadas às funcionalidades e experiência de uso do sistema."
+      }
+    },
+    {
+      "id": "d8b57f49-489e-4c18-98b2-c986318c0c05",
+      "text": "Treinamento Presencial",
+      "type": "nfr.Operationalization",
+      "x": 357,
+      "y": 462,
+      "customProperties": {
+        "Description": "Realizar sessões de treinamento presencial para os idosos, oferecendo orientações práticas sobre o uso do sistema AAL. Essas sessões podem ser conduzidas em grupos ou individualmente, dependendo das necessidades e preferências dos idosos. Garantir que o treinamento seja adaptado às habilidades e características dos usuários idosos, com ênfase na interatividade e no esclarecimento de dúvidas"
+      }
+    },
+    {
+      "id": "b45c7cf0-069f-4dd2-a105-45d5cf144800",
+      "text": "Manuais do Usuário",
+      "type": "nfr.Operationalization",
+      "x": 416,
+      "y": 522,
+      "customProperties": {
+        "Description": "Desenvolver manuais do usuário adaptados para o público idoso, escritos em linguagem clara e acessível. Utilizar recursos visuais e exemplos práticos para facilitar a compreensão das funcionalidades e do uso do sistema."
+      }
+    },
+    {
+      "id": "778fec1e-ede0-4298-90e8-d680291654ca",
+      "text": "Canais de Suporte",
+      "type": "nfr.Operationalization",
+      "x": 499,
+      "y": 480,
+      "customProperties": {
+        "Description": "Estabeleçer canais de suporte direto, como uma linha de suporte telefônico ou um serviço de atendimento ao cliente via chat. Certifique-se de que os idosos tenham um meio fácil de entrar em contato com a equipe de suporte para receber ajuda personalizada, esclarecer dúvidas ou relatar problemas encontrados no sistema"
+      }
+    },
+    {
+      "id": "b8993527-3d79-421e-9dc7-acf690bb6d76",
+      "text": "Tempo de Resposta",
+      "type": "nfr.Operationalization",
+      "x": 569,
+      "y": 416,
+      "customProperties": {
+        "Description": "Garantir que o sistema AAL responda prontamente às interações dos idosos. Isso inclui a resposta rápida aos comandos, a exibição instantânea de informações relevantes e a minimização de atrasos perceptíveis. Otimizar o desempenho do sistema para garantir uma experiência fluida e sem interrupções."
+      }
+    },
+    {
+      "id": "20007fec-4f3a-48d3-a987-e9c11f6ae396",
+      "text": "Tempo de inicialização e reinicialização",
+      "type": "nfr.Operationalization",
+      "x": 681,
+      "y": 407,
+      "customProperties": {
+        "Description": "Reduzir o tempo necessário para iniciar ou reiniciar o sistema AAL. Minimizar o tempo de inicialização e forneça feedback visual ou sonoro para indicar o progresso durante esse processo."
+      }
+    },
+    {
+      "id": "6063f4dc-abd5-42cf-8629-9f35f60a547c",
+      "text": "Linguagem Clara e Simples",
+      "type": "nfr.Operationalization",
+      "x": 809,
+      "y": 460,
+      "customProperties": {
+        "Description": "Utilize uma linguagem clara, simples e acessível ao se comunicar com os idosos. Evitar jargões técnicos e termos complexos que possam gerar confusão ou dificuldade de compreensão. A comunicação deve se adaptar ao nível de conhecimento, contexto e habilidades dos idosos."
+      }
+    },
+    {
+      "id": "c4bcd2d7-c400-490d-9214-b8f75f5a4e27",
+      "text": "Instruções Visuais e Auditivas",
+      "type": "nfr.Operationalization",
+      "x": 930,
+      "y": 454,
+      "customProperties": {
+        "Description": "Utilizar instruções visuais e auditivas para auxiliar a comunicação com os idosos. Por exemplo, exibir informações relevantes na interface do sistema AAL por meio de ícones, imagens ou índices claros. Além disso, forneça feedback sonoro, como avisos ou confirmações sonoras, para garantir que os idosos recebam informações de maneira efetiva."
+      }
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "bcae9d5b-74e6-46a3-9b43-b112620eaf0b",
+      "type": "nfr.AndRefinementLink",
+      "source": "36919aad-207a-430a-af85-d98d98c7a6a6",
+      "target": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e"
+    },
+    {
+      "id": "2926d25b-e2bb-452d-a444-63994ae52e8d",
+      "type": "nfr.ContributionLink",
+      "source": "c5fbff5b-bc2f-4455-9b5c-42a2ab844686",
+      "target": "36919aad-207a-430a-af85-d98d98c7a6a6",
+      "label": "++"
+    },
+    {
+      "id": "b7f7e496-0d92-4488-8eda-9466ea14d962",
+      "type": "nfr.AndRefinementLink",
+      "source": "a2d23f9b-9eee-4d67-90c1-0c1be8365439",
+      "target": "36919aad-207a-430a-af85-d98d98c7a6a6"
+    },
+    {
+      "id": "1709ca6c-38e0-410b-b36a-6364a888696e",
+      "type": "nfr.AndRefinementLink",
+      "source": "1e47d8e3-c528-42d3-8df2-2e90972e4400",
+      "target": "36919aad-207a-430a-af85-d98d98c7a6a6"
+    },
+    {
+      "id": "a783833f-3013-49f5-904b-cce9a9dd1721",
+      "type": "nfr.AndRefinementLink",
+      "source": "1ed39570-ffe7-44ba-a919-efabcfb8e78c",
+      "target": "36919aad-207a-430a-af85-d98d98c7a6a6"
+    },
+    {
+      "id": "03873763-9d36-4842-8da3-968f1830674b",
+      "type": "nfr.AndRefinementLink",
+      "source": "d6a33292-1f61-4934-ae0b-8fb2f9693db4",
+      "target": "36919aad-207a-430a-af85-d98d98c7a6a6"
+    },
+    {
+      "id": "0abb2705-8b7a-43e7-8a3c-0aad57612c30",
+      "type": "nfr.ContributionLink",
+      "source": "ac4da81e-651a-4dba-b680-aead4d73f9d1",
+      "target": "36919aad-207a-430a-af85-d98d98c7a6a6",
+      "label": "++"
+    },
+    {
+      "id": "b1f45657-b1d0-4be0-8bf2-bdaa522e97f0",
+      "type": "nfr.OrRefinementLink",
+      "source": "9178a76e-ac68-487a-abfe-04be68152a43",
+      "target": "a2d23f9b-9eee-4d67-90c1-0c1be8365439"
+    },
+    {
+      "id": "ffd2ea74-ed82-49f9-b184-fcf0f9fe3553",
+      "type": "nfr.OrRefinementLink",
+      "source": "bc6d36c2-6470-4b63-a988-52b9f304d498",
+      "target": "a2d23f9b-9eee-4d67-90c1-0c1be8365439"
+    },
+    {
+      "id": "da17f33e-956d-47d3-98f5-b630facfd397",
+      "type": "nfr.OrRefinementLink",
+      "source": "9d74dce0-dc38-487c-93f9-3b64b086f42d",
+      "target": "a2d23f9b-9eee-4d67-90c1-0c1be8365439"
+    },
+    {
+      "id": "fbd6c92b-c182-42d4-9283-9c4db8d68df8",
+      "type": "nfr.OrRefinementLink",
+      "source": "c68e15a5-15c7-444b-89b9-ba7c21474ee9",
+      "target": "a2d23f9b-9eee-4d67-90c1-0c1be8365439"
+    },
+    {
+      "id": "8409feda-b32a-4a27-96ee-618e0ec70f3a",
+      "type": "nfr.OrRefinementLink",
+      "source": "d8b57f49-489e-4c18-98b2-c986318c0c05",
+      "target": "1e47d8e3-c528-42d3-8df2-2e90972e4400"
+    },
+    {
+      "id": "ecdbedc4-91ee-45b5-8515-ff12475b4d19",
+      "type": "nfr.OrRefinementLink",
+      "source": "b45c7cf0-069f-4dd2-a105-45d5cf144800",
+      "target": "1e47d8e3-c528-42d3-8df2-2e90972e4400"
+    },
+    {
+      "id": "c08d98c9-6fca-4f81-b248-914c6b9be3c0",
+      "type": "nfr.OrRefinementLink",
+      "source": "778fec1e-ede0-4298-90e8-d680291654ca",
+      "target": "1e47d8e3-c528-42d3-8df2-2e90972e4400"
+    },
+    {
+      "id": "991199dc-02bf-45d7-84c2-32b7412539df",
+      "type": "nfr.ContributionLink",
+      "source": "2cfe0c12-61d0-4c7c-9b37-feb0037a44d6",
+      "target": "1ed39570-ffe7-44ba-a919-efabcfb8e78c",
+      "label": "++"
+    },
+    {
+      "id": "96885a5b-8d1c-475b-ad62-557268d34194",
+      "type": "nfr.ContributionLink",
+      "source": "b8993527-3d79-421e-9dc7-acf690bb6d76",
+      "target": "1ed39570-ffe7-44ba-a919-efabcfb8e78c",
+      "label": "+"
+    },
+    {
+      "id": "4d2579fa-268f-456e-823a-4f1f747be246",
+      "type": "nfr.ContributionLink",
+      "source": "20007fec-4f3a-48d3-a987-e9c11f6ae396",
+      "target": "1ed39570-ffe7-44ba-a919-efabcfb8e78c",
+      "label": "+"
+    },
+    {
+      "id": "4c9c080a-0c0b-462f-af31-68eb8478c684",
+      "type": "nfr.AndRefinementLink",
+      "source": "6063f4dc-abd5-42cf-8629-9f35f60a547c",
+      "target": "d6a33292-1f61-4934-ae0b-8fb2f9693db4"
+    },
+    {
+      "id": "24a8fac9-f286-4061-8469-eff63e2bab98",
+      "type": "nfr.AndRefinementLink",
+      "source": "c4bcd2d7-c400-490d-9214-b8f75f5a4e27",
+      "target": "d6a33292-1f61-4934-ae0b-8fb2f9693db4"
+    }
+  ],
+  "display": {
+    "c5fbff5b-bc2f-4455-9b5c-42a2ab844686": {
+      "width": 97.5916748046875,
+      "height": 53.80732727050781
+    },
+    "a2d23f9b-9eee-4d67-90c1-0c1be8365439": {
+      "width": 99.5914306640625,
+      "height": 58.305999755859375
+    },
+    "1e47d8e3-c528-42d3-8df2-2e90972e4400": {
+      "width": 98.5914306640625,
+      "height": 63.804901123046875
+    },
+    "1ed39570-ffe7-44ba-a919-efabcfb8e78c": {
+      "width": 99.591552734375,
+      "height": 58.80610656738281
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Wed, 12 Jul 2023 17:36:57 GMT",
+  "diagram": {
+    "width": 2513,
+    "height": 1346,
+    "name": "Example NFR model",
+    "customProperties": {
+      "Description": "This tool supports two things that are often troublesome to develop with generic modelling frameworks:\n - draw complex shapes (clouds) without distorting when they are resized\n - create links from an element to a link (claim links)"
+    }
+  }
+}

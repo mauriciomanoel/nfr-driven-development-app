@@ -1,0 +1,201 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e",
+      "text": "Aceitabilidade",
+      "type": "nfr.NFR",
+      "x": 601,
+      "y": 208,
+      "customProperties": {
+        "Description": "Refere-se à medida em que um sistema é considerado adequado, satisfatório e útil para os usuários finais ou os destinatários do sistema. Envolve a avaliação de fatores como usabilidade, acessibilidade, adaptabilidade, segurança e a satisfação geral do usuário com o sistema."
+      }
+    },
+    {
+      "id": "372c0719-1b25-40a3-9f2b-b21402e65541",
+      "text": "Preferências",
+      "type": "nfr.NFR",
+      "x": 510,
+      "y": 487,
+      "customProperties": {
+        "Description": "referem-se às escolhas individuais dos usuários em relação a um produto, serviço ou sistema. Elas envolvem aspectos como personalização, configurações personalizáveis, opções de escolha e ajustes que atendam às necessidades e preferências específicas de cada usuário"
+      }
+    },
+    {
+      "id": "c4b0005c-7956-4479-8868-0dc4bffdf040",
+      "text": "Satisfação",
+      "type": "nfr.NFR",
+      "x": 522,
+      "y": 308,
+      "customProperties": {
+        "Description": "refere-se ao grau em que as necessidades e expectativas dos usuários são atendidas e excedidas. É a percepção subjetiva dos usuários em relação à qualidade, utilidade e valor do produto, serviço ou sistema fornecido."
+      }
+    },
+    {
+      "id": "17e46732-c55c-4d8c-9343-2b5a7ed8fe67",
+      "text": "Relacionamento",
+      "type": "nfr.NFR",
+      "x": 365,
+      "y": 486,
+      "customProperties": {
+        "Description": "refere-se à qualidade da interação entre uma organização e seus usuários. Envolve a construção de confiança, comunicação efetiva e estabelecimento de vínculos duradouros. Um bom relacionamento implica em ouvir ativamente os usuários, compreender suas necessidades e expectativas, bem como responder de maneira eficiente e personalizada."
+      }
+    },
+    {
+      "id": "1e47d8e3-c528-42d3-8df2-2e90972e4400",
+      "text": "Documentação e Suporte",
+      "type": "nfr.NFR",
+      "x": 664,
+      "y": 377,
+      "customProperties": {
+        "Description": "Forneçer documentação clara e abrangente, bem como suporte adequado ao idoso. Isso inclui manuais de usuário, tutoriais, recursos de ajuda online e um canal de suporte para responder a perguntas e solucionar problemas"
+      }
+    },
+    {
+      "id": "d67772bb-4355-43e2-a80f-bc0f3f12aeed",
+      "text": "Comunicação Efetiva",
+      "type": "nfr.Operationalization",
+      "x": 284,
+      "y": 657
+    },
+    {
+      "id": "b9537e86-4605-47d4-995f-29f6fd3eed87",
+      "text": "Feedback",
+      "type": "nfr.Operationalization",
+      "x": 388,
+      "y": 657,
+      "customProperties": {
+        "Description": "refere-se à informação ou resposta fornecida aos usuários sobre suas ações, interações ou o estado do sistema. É uma forma de comunicação bidirecional entre o sistema e o usuário, permitindo que o usuário compreenda melhor o que está acontecendo e tome decisões informadas."
+      }
+    },
+    {
+      "id": "56172113-5e8e-4682-950d-d34106420a9a",
+      "text": "Personalização",
+      "type": "nfr.Operationalization",
+      "x": 504,
+      "y": 650,
+      "customProperties": {
+        "Description": "refere-se à capacidade de adaptar ou customizar um sistema ou produto de acordo com as preferências e necessidades individuais dos usuários. Envolve oferecer opções e recursos que permitam aos usuários configurar o sistema de acordo com suas preferências, tornando-o mais adequado e relevante para suas necessidades específicas"
+      }
+    },
+    {
+      "id": "d8b57f49-489e-4c18-98b2-c986318c0c05",
+      "text": "Treinamento Presencial",
+      "type": "nfr.Operationalization",
+      "x": 767,
+      "y": 496,
+      "customProperties": {
+        "Description": "Realizar sessões de treinamento presencial para os idosos, oferecendo orientações práticas sobre o uso do sistema AAL. Essas sessões podem ser conduzidas em grupos ou individualmente, dependendo das necessidades e preferências dos idosos. Garantir que o treinamento seja adaptado às habilidades e características dos usuários idosos, com ênfase na interatividade e no esclarecimento de dúvidas"
+      }
+    },
+    {
+      "id": "b45c7cf0-069f-4dd2-a105-45d5cf144800",
+      "text": "Manuais do Usuário",
+      "type": "nfr.Operationalization",
+      "x": 645,
+      "y": 515,
+      "customProperties": {
+        "Description": "Desenvolver manuais do usuário adaptados para o público idoso, escritos em linguagem clara e acessível. Utilizar recursos visuais e exemplos práticos para facilitar a compreensão das funcionalidades e do uso do sistema."
+      }
+    },
+    {
+      "id": "778fec1e-ede0-4298-90e8-d680291654ca",
+      "text": "Canais de Suporte",
+      "type": "nfr.Operationalization",
+      "x": 872,
+      "y": 446,
+      "customProperties": {
+        "Description": "Estabeleçer canais de suporte direto, como uma linha de suporte telefônico ou um serviço de atendimento ao cliente via chat. Certifique-se de que os idosos tenham um meio fácil de entrar em contato com a equipe de suporte para receber ajuda personalizada, esclarecer dúvidas ou relatar problemas encontrados no sistema"
+      }
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "1a02c8a0-a9ad-43e6-9957-542cdc732965",
+      "type": "nfr.AndRefinementLink",
+      "source": "17e46732-c55c-4d8c-9343-2b5a7ed8fe67",
+      "target": "c4b0005c-7956-4479-8868-0dc4bffdf040"
+    },
+    {
+      "id": "03ef358b-0a38-46fc-98d1-de1ec1ca1b9e",
+      "type": "nfr.AndRefinementLink",
+      "source": "c4b0005c-7956-4479-8868-0dc4bffdf040",
+      "target": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e"
+    },
+    {
+      "id": "d237e69d-48eb-40ff-9433-5dbcd7eb6830",
+      "type": "nfr.AndRefinementLink",
+      "source": "372c0719-1b25-40a3-9f2b-b21402e65541",
+      "target": "c4b0005c-7956-4479-8868-0dc4bffdf040"
+    },
+    {
+      "id": "aec39bf7-a752-42ee-84d9-9c515357e51f",
+      "type": "nfr.OrRefinementLink",
+      "source": "d67772bb-4355-43e2-a80f-bc0f3f12aeed",
+      "target": "17e46732-c55c-4d8c-9343-2b5a7ed8fe67"
+    },
+    {
+      "id": "fb7b22e2-ac33-4cd1-bc6d-bc0015f0f60d",
+      "type": "nfr.OrRefinementLink",
+      "source": "b9537e86-4605-47d4-995f-29f6fd3eed87",
+      "target": "17e46732-c55c-4d8c-9343-2b5a7ed8fe67"
+    },
+    {
+      "id": "8409feda-b32a-4a27-96ee-618e0ec70f3a",
+      "type": "nfr.OrRefinementLink",
+      "source": "d8b57f49-489e-4c18-98b2-c986318c0c05",
+      "target": "1e47d8e3-c528-42d3-8df2-2e90972e4400"
+    },
+    {
+      "id": "ecdbedc4-91ee-45b5-8515-ff12475b4d19",
+      "type": "nfr.OrRefinementLink",
+      "source": "b45c7cf0-069f-4dd2-a105-45d5cf144800",
+      "target": "1e47d8e3-c528-42d3-8df2-2e90972e4400"
+    },
+    {
+      "id": "c08d98c9-6fca-4f81-b248-914c6b9be3c0",
+      "type": "nfr.OrRefinementLink",
+      "source": "778fec1e-ede0-4298-90e8-d680291654ca",
+      "target": "1e47d8e3-c528-42d3-8df2-2e90972e4400"
+    },
+    {
+      "id": "3246a86b-347f-4c0f-a1b9-34587cedc24d",
+      "type": "nfr.ContributionLink",
+      "source": "56172113-5e8e-4682-950d-d34106420a9a",
+      "target": "372c0719-1b25-40a3-9f2b-b21402e65541",
+      "label": "+"
+    },
+    {
+      "id": "7905946e-d78e-473a-8f74-95b7dd325b31",
+      "type": "nfr.AndRefinementLink",
+      "source": "1e47d8e3-c528-42d3-8df2-2e90972e4400",
+      "target": "c4b0005c-7956-4479-8868-0dc4bffdf040"
+    }
+  ],
+  "display": {
+    "17e46732-c55c-4d8c-9343-2b5a7ed8fe67": {
+      "width": 104.59097290039062,
+      "height": 53.80731201171875
+    },
+    "1e47d8e3-c528-42d3-8df2-2e90972e4400": {
+      "width": 98.5914306640625,
+      "height": 63.804901123046875
+    },
+    "56172113-5e8e-4682-950d-d34106420a9a": {
+      "width": 103.09112548828125,
+      "height": 58.80609130859375
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Wed, 12 Jul 2023 10:17:55 GMT",
+  "diagram": {
+    "width": 1300,
+    "height": 1300,
+    "name": "Example NFR model",
+    "customProperties": {
+      "Description": "This tool supports two things that are often troublesome to develop with generic modelling frameworks:\n - draw complex shapes (clouds) without distorting when they are resized\n - create links from an element to a link (claim links)"
+    }
+  }
+}

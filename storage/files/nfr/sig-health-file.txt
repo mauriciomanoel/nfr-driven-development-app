@@ -1,0 +1,180 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "b79575b1-2b32-466b-bd0f-2f2f41cbcf41",
+      "text": "Saúde",
+      "type": "nfr.NFR",
+      "x": 308,
+      "y": 210,
+      "customProperties": {
+        "Description": "Referem-se a critérios ou necessidades relacionadas à saúde física e mental dos usuários ou clientes. Esses requisitos podem incluir aspectos como segurança, ergonomia, qualidade de vida e bem-estar geral",
+        "definition": ""
+      }
+    },
+    {
+      "id": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e",
+      "text": "Aceitabilidade",
+      "type": "nfr.NFR",
+      "x": 472,
+      "y": 125,
+      "customProperties": {
+        "Description": "Refere-se à medida em que um sistema é considerado adequado, satisfatório e útil para os usuários finais ou os destinatários do sistema. Envolve a avaliação de fatores como usabilidade, acessibilidade, adaptabilidade, segurança e a satisfação geral do usuário com o sistema."
+      }
+    },
+    {
+      "id": "b168f024-44da-44f2-b9ff-5e6dac3c5ed4",
+      "text": "Bem-Estar",
+      "type": "nfr.NFR",
+      "x": 211,
+      "y": 321,
+      "customProperties": {
+        "Description": "Dizem respeito a objetivos ou critérios que promovem a satisfação e o bem-estar dos usuários. Isso pode envolver aspectos emocionais, sociais, cognitivos e físicos."
+      }
+    },
+    {
+      "id": "dda9b763-798b-487e-b4fa-407d316f7ab1",
+      "text": "Recursos",
+      "type": "nfr.NFR",
+      "x": 347,
+      "y": 322,
+      "customProperties": {
+        "Description": "refere-se à disponibilidade de recursos relacionados à saúde, como instalações médicas, medicamentos, equipamentos médicos, profissionais de saúde qualificados, acesso a serviços de saúde, entre outros"
+      }
+    },
+    {
+      "id": "4fc0e0c9-5799-456f-85fc-2aa451b0bd62",
+      "text": "Monitoramento de Saúde",
+      "type": "nfr.Operationalization",
+      "x": 41,
+      "y": 401,
+      "customProperties": {
+        "Description": "Envolve a interpretação e análise dos dados coletados por meio do monitoramento da saúde dos idosos. O objetivo é compreender o estado de bem-estar, identificar doenças, deficiências ou problemas de saúde específicos e obter informações relevantes para a tomada de decisões relacionadas ao cuidado e tratamento adequados."
+      }
+    },
+    {
+      "id": "9d4dcd66-405a-4920-be2b-5848885c5ddb",
+      "text": "Tecnologia de Saúde",
+      "type": "nfr.Operationalization",
+      "x": 126,
+      "y": 448,
+      "customProperties": {
+        "Description": "Refere-se ao fornecimento de tecnologias, dispositivos e soluções que permitem o monitoramento contínuo da saúde dos idosos. Isso inclui dispositivos de monitoramento, sensores, aplicativos móveis e outras ferramentas tecnológicas que permitem a coleta, análise e transmissão de dados relevantes sobre saúde e bem-estar."
+      }
+    },
+    {
+      "id": "7c6fbd0c-63b8-4c1d-9779-83418990f69e",
+      "text": "Gestão da Saúde",
+      "type": "nfr.Operationalization",
+      "x": 226,
+      "y": 467,
+      "customProperties": {
+        "Description": "Envolve a identificação, compreensão e abordagem de deficiências físicas, doenças crônicas e deficiências mentais específicas enfrentadas pelos idosos. Isso inclui a implementação de estratégias, tratamentos e cuidados específicos para melhorar a saúde física, controlar doenças crônicas e fornecer suporte adequado para deficiências mentais."
+      }
+    },
+    {
+      "id": "66c4e0ad-4c47-49b8-9ee0-0afc5b99dfae",
+      "text": "Serviços de Saúde",
+      "type": "nfr.Operationalization",
+      "x": 354,
+      "y": 465,
+      "customProperties": {
+        "Description": "Refere-se à disponibilização de soluções, serviços e intervenções personalizadas para abordar as deficiências físicas, doenças crônicas e deficiências mentais identificadas. Isso inclui tratamentos médicos, terapias, adaptações no ambiente físico e psicossocial, e suporte adequado para melhorar a qualidade de vida dos idosos afetados por essas condições."
+      }
+    },
+    {
+      "id": "bbf65111-8cd0-49e9-847b-73288abffae2",
+      "text": "Serviços médicos",
+      "type": "nfr.Operationalization",
+      "x": 303,
+      "y": 586,
+      "customProperties": {
+        "Description": "São serviços relacionados ao cuidado da saúde prestados por profissionais de saúde, como médicos, enfermeiros e terapeutas. Eles abrangem uma ampla gama de intervenções e tratamentos médicos para abordar as deficiências físicas, doenças crônicas e deficiências mentais identificadas em idosos. Os serviços médicos podem incluir diagnóstico, prescrição de medicamentos, exames de laboratório, cirurgia, fisioterapia, terapia ocupacional, terapia da fala e outros tratamentos direcionados para melhorar a saúde e o bem-estar dos idosos afetados"
+      }
+    },
+    {
+      "id": "8c4fd8c0-9034-41ff-a604-1a0f09dd7a48",
+      "text": "Serviços Digitais",
+      "type": "nfr.Operationalization",
+      "x": 407,
+      "y": 582,
+      "customProperties": {
+        "Description": "São serviços baseados em tecnologia digital e computação que complementam ou apoiam os serviços médicos e a saúde dos idosos. Os serviços digitais na área de AAL se concentram em fornecer soluções inovadoras para melhorar a qualidade de vida dos idosos, promovendo sua autonomia, segurança e bem-estar."
+      }
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "5c418656-165a-4135-b18c-dd71eba68669",
+      "type": "nfr.AndRefinementLink",
+      "source": "b79575b1-2b32-466b-bd0f-2f2f41cbcf41",
+      "target": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e"
+    },
+    {
+      "id": "a18ccf5e-e20d-4e6f-a0ff-ab289acf5fb0",
+      "type": "nfr.AndRefinementLink",
+      "source": "b168f024-44da-44f2-b9ff-5e6dac3c5ed4",
+      "target": "b79575b1-2b32-466b-bd0f-2f2f41cbcf41"
+    },
+    {
+      "id": "58c6d394-be69-48b1-adca-24dbe6b5a930",
+      "type": "nfr.AndRefinementLink",
+      "source": "dda9b763-798b-487e-b4fa-407d316f7ab1",
+      "target": "b79575b1-2b32-466b-bd0f-2f2f41cbcf41"
+    },
+    {
+      "id": "54fe1e87-6e8c-436c-9cf9-737e7467cbcd",
+      "type": "nfr.AndRefinementLink",
+      "source": "4fc0e0c9-5799-456f-85fc-2aa451b0bd62",
+      "target": "b168f024-44da-44f2-b9ff-5e6dac3c5ed4"
+    },
+    {
+      "id": "551b1d4f-810f-4ce3-8ba5-311e76298be9",
+      "type": "nfr.AndRefinementLink",
+      "source": "9d4dcd66-405a-4920-be2b-5848885c5ddb",
+      "target": "b168f024-44da-44f2-b9ff-5e6dac3c5ed4"
+    },
+    {
+      "id": "7c625e38-d11f-4056-90df-7b9e13b4e6de",
+      "type": "nfr.AndRefinementLink",
+      "source": "7c6fbd0c-63b8-4c1d-9779-83418990f69e",
+      "target": "b168f024-44da-44f2-b9ff-5e6dac3c5ed4"
+    },
+    {
+      "id": "282f988e-d520-4ccd-b4e3-f6a7c4108931",
+      "type": "nfr.AndRefinementLink",
+      "source": "66c4e0ad-4c47-49b8-9ee0-0afc5b99dfae",
+      "target": "dda9b763-798b-487e-b4fa-407d316f7ab1"
+    },
+    {
+      "id": "ba2d4024-e34b-4e64-8b5b-c897dac0374b",
+      "type": "nfr.AndRefinementLink",
+      "source": "bbf65111-8cd0-49e9-847b-73288abffae2",
+      "target": "66c4e0ad-4c47-49b8-9ee0-0afc5b99dfae"
+    },
+    {
+      "id": "700dfa04-b9ea-4793-812f-882ba65750d5",
+      "type": "nfr.AndRefinementLink",
+      "source": "8c4fd8c0-9034-41ff-a604-1a0f09dd7a48",
+      "target": "66c4e0ad-4c47-49b8-9ee0-0afc5b99dfae"
+    }
+  ],
+  "display": {
+    "4fc0e0c9-5799-456f-85fc-2aa451b0bd62": {
+      "width": 95.59197616577148,
+      "height": 58.90765380859375
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Wed, 12 Jul 2023 10:09:27 GMT",
+  "diagram": {
+    "width": 2513,
+    "height": 1300,
+    "name": "Example NFR model",
+    "customProperties": {
+      "Description": "This tool supports two things that are often troublesome to develop with generic modelling frameworks:\n - draw complex shapes (clouds) without distorting when they are resized\n - create links from an element to a link (claim links)"
+    }
+  }
+}

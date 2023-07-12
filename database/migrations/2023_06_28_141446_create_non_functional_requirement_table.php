@@ -18,8 +18,8 @@ return new class extends Migration
             $table->text('model_quality');
             $table->text('source');
             $table->text('recommendations');
-            $table->longText('content');
-            $table->longText('image');
+            $table->longText('content')->nullable();;
+            $table->longText('image')->nullable();;
             $table->unsignedBigInteger('users_id');
             $table->unsignedBigInteger('characteristics_id');
             $table->timestamps();

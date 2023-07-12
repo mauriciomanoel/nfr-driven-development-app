@@ -22,8 +22,8 @@ return new class extends Migration
             $table->text('description');
             $table->text('acceptance_criteria');
             $table->text('evaluation_metrics');
-            $table->longText('content');
-            $table->longText('image');
+            $table->longText('content')->nullable();;
+            $table->longText('image')->nullable();;
 
             $table->timestamps();
 

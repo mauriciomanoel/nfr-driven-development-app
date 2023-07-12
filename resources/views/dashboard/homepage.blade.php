@@ -16,7 +16,7 @@
                         </button>
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
                       </div>
-                      <div class="text-value-lg">39</div>
+                      <div class="text-value-lg">{{ $values["nonFunctionalRequirementCount"] }}</div>
                       <div>Requeriments</div>
                     </div>
                     <div class="c-chart-wrapper mt-3 mx-3" style="height:50px;">
@@ -24,27 +24,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- /.col-->
-                <div class="col-sm-6 col-lg-3">
-                  <div class="card text-white bg-info">
-                    <div class="card-body pb-0">
-                      <div class="btn-group float-right">
-                        <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <svg class="c-icon">
-                            <use xlink:href="assets/icons/coreui/free-symbol-defs.svg#cui-settings"></use>
-                          </svg>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
-                      </div>
-                      <div class="text-value-lg">43</div>
-                      <div>Storintellings</div>
-                    </div>
-                    <div class="c-chart-wrapper mt-3 mx-3" style="height:50px;">
-                      <canvas class="chart" id="card-chart2" height="50"></canvas>
-                    </div>
-                  </div>
-                </div>
-                <!-- /.col-->
+                <!-- /.col-->            
                 <div class="col-sm-6 col-lg-3">
                   <div class="card text-white bg-warning">
                     <div class="card-body pb-0">
@@ -56,7 +36,7 @@
                         </button>
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
                       </div>
-                      <div class="text-value-lg">16</div>
+                      <div class="text-value-lg">{{ $values["legalAndNormativeRequirementCount"] }}</div>
                       <div>Legal Regulations</div>
                     </div>
                     <div class="c-chart-wrapper mt-3" style="height:50px;">
@@ -76,11 +56,31 @@
                         </button>
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
                       </div>
-                      <div class="text-value-lg">23</div>
+                      <div class="text-value-lg">{{ $values["sigCount"] }}</div>
                       <div>SIG Tree</div>
                     </div>
                     <div class="c-chart-wrapper mt-3 mx-3" style="height:50px;">
                       <canvas class="chart" id="card-chart4" height="50"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.col-->
+                <div class="col-sm-6 col-lg-3">
+                  <div class="card text-white bg-info">
+                    <div class="card-body pb-0">
+                      <div class="btn-group float-right">
+                        <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <svg class="c-icon">
+                            <use xlink:href="assets/icons/coreui/free-symbol-defs.svg#cui-settings"></use>
+                          </svg>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
+                      </div>
+                      <div class="text-value-lg">{{ $values["countProject"] }}</div>
+                      <div>Projects</div>
+                    </div>
+                    <div class="c-chart-wrapper mt-3 mx-3" style="height:50px;">
+                      <canvas class="chart" id="card-chart2" height="50"></canvas>
                     </div>
                   </div>
                 </div>

@@ -26,8 +26,10 @@
                 <p>Os requisitos não funcionais são especificados de forma clara e precisa, fornecendo operacionalizações e justificativas (Claim) nas operacionalizações sobre cada requisito não funcional entre outros elementos relevantes.<p> 
                 <p><strong>Saída:</strong> Documentação detalhada (SIG) dos requisitos não funcionais especificados.</p>
               
-                <a href=" " class="btn btn-block btn-info">Download Documents</a>
-                <a href=" " class="btn btn-block btn-info">Download All SIG File</a>
+                
+                <p><a href=" " class="btn btn-primary btn-block" data-toggle="button" aria-pressed="true">Download Documents</a></p>
+                <p><a href=" " class="btn btn-primary btn-block" data-toggle="button" aria-pressed="true">Download All SIG File</a></p>
+
 
                 <table class="table table-responsive-sm table-striped">
                   <thead>
@@ -47,10 +49,10 @@
                         <td>{{ $nonFunctionalRequirement->is_recommendation }}</td>
                         <td>{{ $nonFunctionalRequirement->updated_at }}</td>                        
                         <td>
-                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">Download SIG File</a>
+                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-info">Download SIG File</a>
                         </td>
                         <td>
-                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">View Document</a>
+                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-info">View Document</a>
                         </td>
                         
                       </tr>

@@ -136,7 +136,7 @@ class NonFunctionRequirementsSeeder extends Seeder
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
             'recommendations' => "",
             'content' => "",
-            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/usability.png')),
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/usability.png')),
             'characteristics_id' => 0,
             'users_id' => $user->id,
         ]);
@@ -293,8 +293,8 @@ class NonFunctionRequirementsSeeder extends Seeder
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
             'recommendations' => "",
-            'content' => file_get_contents(storage_path() . '/files/sig-security-file.txt'),
-            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/security.png')),
+            'content' => file_get_contents(storage_path() . '/files/nfr/sig-security-file.txt'),
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/security.png')),
             'characteristics_id' => 0,
             'users_id' => $user->id,
         ]);
@@ -365,8 +365,8 @@ class NonFunctionRequirementsSeeder extends Seeder
             'model_quality' => "Product quality",
             'source' => "Gomes, Timóteo, and Fernanda Alencar. Um survey com especialistas como validação de elementos para composição de uma ontologia para Sistemas AAL (Ambient Assisted Living). 25th WER. Natal, Brasil (2022).",
             'recommendations' => "<p>Garantir que o sistema AAL esteja em conformidade com as leis e regulamentações de proteção de dados, como o Regulamento Geral de Proteção de Dados (GDPR) na União Europeia.</p><p>Implementar políticas de privacidade claras e transparentes, fornecendo aos usuários controle sobre suas informações pessoais e garantindo o consentimento adequado para o uso desses dados.</p>",
-            'content' => file_get_contents(storage_path() . '/files/sig-Privacy-file.txt'),
-            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/privacy.png')),
+            'content' => file_get_contents(storage_path() . '/files/nfr/sig-privacy-file.txt'),
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-privacy-file.png')),
             'characteristics_id' => $securityRequeriment->id,
             'users_id' => $user->id,
         ]);
@@ -379,6 +379,18 @@ class NonFunctionRequirementsSeeder extends Seeder
             'recommendations' => "<p>Implementar mecanismos de registro e auditoria que permitam verificar a veracidade das informações e transações registradas no sistema AAL.</p><p>Utilizar técnicas de verificação de integridade e autenticidade dos dados para garantir que as informações fornecidas pelo sistema sejam confiáveis e precisas.</p>",
             'content' => "",
             'image' => "",
+            'characteristics_id' => $securityRequeriment->id,
+            'users_id' => $user->id,
+        ]);
+
+        NonFunctionalRequirements::create([  
+            'name' => "Anonymization",
+            'description' => "processo pelo qual as informações de identificação pessoal (IIP) são alteradas de modo irreversível de forma que uma IIP não pode mais ser identificado direta ou indiretamente, seja pelo controlador das IIP sozinho ou em colaboração com qualquer outra parte.",
+            'model_quality' => "Product quality",
+            'source' => "ISO/IEC 29100:2011 Information technology — Security techniques — Privacy framework | Anonymization and GDPR compliance; an overview",
+            'recommendations' => "<p>Os algoritmos de anonimização de dados são projetados para automatizar o processo de proteção da identidade de um titular de dados em um conjunto de dados.</p><p>Substitui identificadores privados por identificadores falsos ou pseudônimos - anonimização de dados e pseudônimos são termos frequentemente usados de forma intercambiável.</p><p>Eliminar apenas algumas partes dos dados para torná-los menos identificáveis, mas também mantém a precisão dos dados.</p>",
+            'content' => file_get_contents(storage_path() . '/files/nfr/sig-anonymization-file.txt'),
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-anonymization-file.png')),
             'characteristics_id' => $securityRequeriment->id,
             'users_id' => $user->id,
         ]);

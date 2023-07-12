@@ -1,0 +1,178 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "67e5a5df-ff16-4fae-bbfa-235881aa03e1",
+      "text": "Criptografar com hash SHA-2",
+      "type": "nfr.Operationalization",
+      "x": 324,
+      "y": 410,
+      "customProperties": {
+        "Description": ""
+      }
+    },
+    {
+      "id": "69fc80a6-4aaa-4d96-a2ee-dfdaff9c0a2d",
+      "text": "Anonimização",
+      "type": "nfr.NFR",
+      "x": 520,
+      "y": 129,
+      "customProperties": {
+        "Description": "Envolve o processo de remoção ou alteração de informações pessoais identificáveis, de forma que os dados se tornem anônimos e não possam ser atribuídos a um indivíduo específico. A anonimização é uma medida importante para proteger a privacidade dos usuários."
+      }
+    },
+    {
+      "id": "e2457711-2d24-4804-91fb-845e8a1106e1",
+      "text": "Criptografia",
+      "type": "nfr.Operationalization",
+      "x": 411,
+      "y": 265,
+      "customProperties": {
+        "Description": "Utilize criptografia para proteger os dados durante o armazenamento e a transmissão. Isso ajuda a garantir que apenas pessoas autorizadas possam acessar e decifrar as informações"
+      }
+    },
+    {
+      "id": "c15a03d2-7ec8-437a-bb79-8c766211605b",
+      "text": "Coleta Mínima de Dados",
+      "type": "nfr.Operationalization",
+      "x": 758,
+      "y": 221,
+      "customProperties": {
+        "Description": "Limite a coleta de dados pessoais ao mínimo necessário para cumprir o objetivo pretendido. Quanto menos informações identificáveis forem coletadas, menor será o risco de identificação do idoso."
+      }
+    },
+    {
+      "id": "02ddb11b-8f14-4a8f-a6ee-fcc2116fa66a",
+      "text": "Políticas Acesso Restrito",
+      "type": "nfr.Operationalization",
+      "x": 524,
+      "y": 262,
+      "customProperties": {
+        "Description": "Implemente controles de acesso adequados para garantir que apenas pessoas autorizadas possam acessar os dados pessoais dos idosos. Isso inclui autenticação forte, restrição de privilégios e monitoramento de atividades."
+      }
+    },
+    {
+      "id": "c886aa20-e141-402a-bd80-72cc0980e2b0",
+      "text": "Técnicas",
+      "type": "nfr.Operationalization",
+      "x": 657,
+      "y": 264
+    },
+    {
+      "id": "64d153db-05a2-48ae-aa62-f31bb207b57b",
+      "text": "Generalização",
+      "type": "nfr.Operationalization",
+      "x": 559,
+      "y": 407,
+      "customProperties": {
+        "Definition": "elimina apenas algumas partes dos dados para torná-los menos identificáveis, mas também mantém a precisão dos dados."
+      }
+    },
+    {
+      "id": "db6e8bc7-dab2-465c-938e-6148ef6e4daf",
+      "text": "Perturbação",
+      "type": "nfr.Operationalization",
+      "x": 661,
+      "y": 404,
+      "customProperties": {
+        "Definition": "modifica levemente um conjunto de dados adicionando ruído aleatório e aplicando técnicas que arredondam números."
+      }
+    },
+    {
+      "id": "f97d8710-90c0-49d6-9786-39b4f4503b79",
+      "text": "Pseudonimização",
+      "type": "nfr.Operationalization",
+      "x": 768,
+      "y": 403,
+      "customProperties": {
+        "Definition": "Substituir identificadores privados por identificadores falsos ou pseudônimos - anonimização de dados e pseudônimos são termos frequentemente usados de forma intercambiável"
+      }
+    },
+    {
+      "id": "cf840daa-5ed4-49ed-a769-4635700023ec",
+      "text": "Embaralhamento",
+      "type": "nfr.Operationalization",
+      "x": 872,
+      "y": 389,
+      "customProperties": {
+        "Definition": "As letras são completamente misturadas e reorganizadas."
+      }
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "bd7d62d6-6079-4ba4-ab44-8faa5d9dd673",
+      "type": "nfr.OrRefinementLink",
+      "source": "e2457711-2d24-4804-91fb-845e8a1106e1",
+      "target": "69fc80a6-4aaa-4d96-a2ee-dfdaff9c0a2d"
+    },
+    {
+      "id": "a7cbda6c-c393-4945-a409-e1557f4ca894",
+      "type": "nfr.OrRefinementLink",
+      "source": "c15a03d2-7ec8-437a-bb79-8c766211605b",
+      "target": "69fc80a6-4aaa-4d96-a2ee-dfdaff9c0a2d"
+    },
+    {
+      "id": "b8fdbc53-7201-492c-b8d7-b19d07a5880f",
+      "type": "nfr.OrRefinementLink",
+      "source": "02ddb11b-8f14-4a8f-a6ee-fcc2116fa66a",
+      "target": "69fc80a6-4aaa-4d96-a2ee-dfdaff9c0a2d"
+    },
+    {
+      "id": "1e5f6bc6-9637-4082-82da-1d8b4d6e2681",
+      "type": "nfr.ContributionLink",
+      "source": "c886aa20-e141-402a-bd80-72cc0980e2b0",
+      "target": "69fc80a6-4aaa-4d96-a2ee-dfdaff9c0a2d",
+      "label": "+"
+    },
+    {
+      "id": "bea6eb51-f970-4cef-a5dc-f56c1aa5f7d3",
+      "type": "nfr.OrRefinementLink",
+      "source": "cf840daa-5ed4-49ed-a769-4635700023ec",
+      "target": "c886aa20-e141-402a-bd80-72cc0980e2b0"
+    },
+    {
+      "id": "c20d720d-ec1b-4533-bc3d-5f87ba5757b4",
+      "type": "nfr.OrRefinementLink",
+      "source": "f97d8710-90c0-49d6-9786-39b4f4503b79",
+      "target": "c886aa20-e141-402a-bd80-72cc0980e2b0"
+    },
+    {
+      "id": "9f2a2c95-0b2f-4638-9d52-d796e59829a9",
+      "type": "nfr.OrRefinementLink",
+      "source": "db6e8bc7-dab2-465c-938e-6148ef6e4daf",
+      "target": "c886aa20-e141-402a-bd80-72cc0980e2b0"
+    },
+    {
+      "id": "3e8f5a5d-afc9-490a-8423-96c3dd36922e",
+      "type": "nfr.OrRefinementLink",
+      "source": "64d153db-05a2-48ae-aa62-f31bb207b57b",
+      "target": "c886aa20-e141-402a-bd80-72cc0980e2b0"
+    },
+    {
+      "id": "e5a1cf9a-04bf-46ea-b37f-ddc39722c833",
+      "type": "nfr.ContributionLink",
+      "source": "67e5a5df-ff16-4fae-bbfa-235881aa03e1",
+      "target": "e2457711-2d24-4804-91fb-845e8a1106e1",
+      "label": "+"
+    }
+  ],
+  "display": {
+    "67e5a5df-ff16-4fae-bbfa-235881aa03e1": {
+      "width": 121.08137512207031,
+      "height": 53.9871826171875
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Wed, 12 Jul 2023 08:48:50 GMT",
+  "diagram": {
+    "width": 2271,
+    "height": 1300,
+    "name": "Example NFR model",
+    "customProperties": {
+      "Description": "This tool supports two things that are often troublesome to develop with generic modelling frameworks:\n - draw complex shapes (clouds) without distorting when they are resized\n - create links from an element to a link (claim links)"
+    }
+  }
+}

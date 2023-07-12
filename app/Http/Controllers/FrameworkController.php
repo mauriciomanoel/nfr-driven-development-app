@@ -101,9 +101,6 @@ class FrameworkController extends Controller
     {
 
         $nonFunctionalRequirements = NonFunctionalRequirementsForSpecification::with('nonFunctionalRequirement')->get();
-
-// var_dump($nonFunctionalRequirements); exit;
-        // $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
         return view('dashboard.framework.framework-step05', ['nonFunctionalRequirements' => $nonFunctionalRequirements]);
     }
 
@@ -149,6 +146,12 @@ class FrameworkController extends Controller
             $nfrForSpecification->users_id = 1;
             $nfrForSpecification->is_recommendation = 1;
             $nfrForSpecification->nfr_id = $recommendationNonFunctionalRequirement;
+            $nfrForSpecification->legal_requirements_id="1,2,3";
+            $nfrForSpecification->description = "";
+            $nfrForSpecification->acceptance_criteria = "";
+            $nfrForSpecification->evaluation_metrics = "";
+            $nfrForSpecification->content = "";
+            $nfrForSpecification->image = "";
             $nfrForSpecification->save();
         }
 
@@ -158,6 +161,12 @@ class FrameworkController extends Controller
             $nfrForSpecification->users_id = 1;
             $nfrForSpecification->is_recommendation = 0;
             $nfrForSpecification->nfr_id = $nonFunctionalRequirement;
+            $nfrForSpecification->legal_requirements_id="1,2,3";
+            $nfrForSpecification->description = "";
+            $nfrForSpecification->acceptance_criteria = "";
+            $nfrForSpecification->evaluation_metrics = "";
+            $nfrForSpecification->content = "";
+            $nfrForSpecification->image = "";
             $nfrForSpecification->save();
         }
 

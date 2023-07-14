@@ -31,18 +31,17 @@ return new class extends Migration
         });
 
         Schema::create('legal_has_nfr_requirement', function (Blueprint $table) {
+            $table->increments('id');
             $table->unsignedBigInteger('legal_id');
             $table->unsignedBigInteger('nfr_id');
 
             $table->foreign('legal_id')
                 ->references('id')
-                ->on('legal_and_normative_requirement')
-                ->onDelete('cascade');
+                ->on('legal_and_normative_requirement');
 
             $table->foreign('nfr_id')
                 ->references('id')
-                ->on('non_functional_requirement')
-                ->onDelete('cascade');
+                ->on('non_functional_requirement');
 
             // $table->primary(['legal_id', 'nfr_id'], 'legal_has_nfr_requirement_primary');
         });

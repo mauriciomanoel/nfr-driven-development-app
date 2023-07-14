@@ -81,9 +81,15 @@ class LegalAndNormativeRequirementsController extends Controller
      */
     public function show($id)
     {
-        $nonFunctionalRequirements = NonFunctionalRequirements::whereIn('name', ["Security", "Privacy", "Usability"])->get();
-        $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->find($id);
-        return view('dashboard.legalAndNormativeRequirements.show', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements , 'nonFunctionalRequirements' => $nonFunctionalRequirements ]);
+        // DB::enableQueryLog();
+
+         $nonFunctionalRequirements = NonFunctionalRequirements::whereIn('name', ["Security", "Privacy", "Usability"])->get();
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::with('user', 'nonFunctionRequeriments')->where("id", "=", $id)->first();
+        // dd(DB::getQueryLog());
+        //  var_dump($legalAndNormativeRequirement->nonFunctionRequeriments); 
+         
+        //  exit;
+        return view('dashboard.legalAndNormativeRequirements.show', ['legalAndNormativeRequirements' => $legalAndNormativeRequirement , 'nonFunctionalRequirements' => $nonFunctionalRequirements]);
     }
 
     /**

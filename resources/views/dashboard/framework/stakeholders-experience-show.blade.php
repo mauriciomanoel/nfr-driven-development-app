@@ -13,13 +13,13 @@
                         <h5><strong>Description:</strong></h5> 
                         <p>{{ $stakeholderExperience->description }}</p>
                         <h5><strong>Factors That Impact Acceptability:</strong></h5> 
-                        <p>{{!! html_entity_decode($stakeholderExperience->factors_that_impact_acceptability) !!}}</p>
+                        <p>{!! html_entity_decode($stakeholderExperience->factors_that_impact_acceptability) !!}</p>
                         <h5><strong>Factors That Impact Usability:</strong></h5> 
-                        <p>{{!! html_entity_decode($stakeholderExperience->factors_that_impact_usability) !!}}</p>
+                        <p>{!! html_entity_decode($stakeholderExperience->factors_that_impact_usability) !!}</p>
                         <h5><strong>Proposed Improvements:</strong></h5> 
-                        <p>{{!! html_entity_decode($stakeholderExperience->proposed_improvements) !!}}</p>
+                        <p>{!! html_entity_decode($stakeholderExperience->proposed_improvements) !!}</p>
                         <h5><strong>Recommendations:</strong></h5> 
-                        <p>{{!! html_entity_decode($stakeholderExperience->recommendations) !!}}</p>
+                        <p>{!! html_entity_decode($stakeholderExperience->recommendations) !!}</p>
                                                 
                         <h5><strong>Last Update:</strong></h5> 
                         <p>{{ $stakeholderExperience->updated_at }}</p>                     

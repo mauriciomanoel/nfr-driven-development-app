@@ -19,6 +19,11 @@ class LegalAndNormativeRequirements extends Model
         return $this->belongsTo('App\Models\User', 'users_id')->withTrashed();
     }
 
+    public function nonFunctionRequeriments()
+    {
+        return $this->belongsToMany(NonFunctionalRequirements::class, "legal_has_nfr_requirement", "legal_id", "nfr_id");
+    }
+
     // // /**
     // //  * Get the notes for the status.
     // //  */
@@ -27,11 +32,4 @@ class LegalAndNormativeRequirements extends Model
     //     return $this->belongsToMany('App\Models\NonFunctionalRequirements');
     // }
 
-    /**
-     * The users that belong to the role.
-     */
-    // public function nonFunctionRequeriments(): BelongsToMany
-    // {
-    //     return $this->belongsToMany(NonFunctionalRequirements::class, 'legal_has_nfr_requirement');
-    // }
 }

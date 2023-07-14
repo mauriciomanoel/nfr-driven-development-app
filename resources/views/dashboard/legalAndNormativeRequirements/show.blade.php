@@ -17,9 +17,9 @@
                         <h5><strong>Description:</strong></h5> 
                         <p>{{ $legalAndNormativeRequirements->description }}</p>
                         <h5><strong>Legal Text/Reference:</strong></h5> 
-                        <p>{{!! html_entity_decode($legalAndNormativeRequirements->legal_references) !!}}</p>
+                        <p>{!! html_entity_decode($legalAndNormativeRequirements->legal_references) !!}</p>
                         <h5><strong>Recommendations:</strong></h5> 
-                        <p>{{!! html_entity_decode($legalAndNormativeRequirements->recommendations) !!}}</p>
+                        <p>{!! html_entity_decode($legalAndNormativeRequirements->recommendations) !!}</p>
                         
                         <h5><strong>Non-Functional Requirements:</strong></h5> 
                         <p>                        
@@ -32,7 +32,7 @@
                               </tr>
                             </thead>
                             <tbody>
-                            @foreach($nonFunctionalRequirements as $nonFunctionalRequirement)
+                            @foreach($legalAndNormativeRequirements->nonFunctionRequeriments as $nonFunctionalRequirement)
                                 <tr>
                                   <td><strong>{{ $nonFunctionalRequirement->name }}</strong></td>
                                   <td>{{ $nonFunctionalRequirement->description }}</td>                                

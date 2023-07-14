@@ -32,4 +32,8 @@ class NonFunctionalRequirements extends Model
     {
         return $this->belongsTo('App\Models\Requirements', 'characteristics_id');
     }
+
+    public function legalAndNormativeRequirements(){
+        return $this->belongsToMany(LegalAndNormativeRequirements::class);
+    }
 }

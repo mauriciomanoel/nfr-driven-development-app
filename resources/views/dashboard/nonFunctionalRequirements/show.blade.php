@@ -19,9 +19,9 @@
                         <h5><strong>Model Quality:</strong></h5> 
                         <p>{{ $nonFunctionalRequirement->model_quality }}</p>
                         <h5><strong>Recommendations:</strong></h5> 
-                        <p>{{!! html_entity_decode($nonFunctionalRequirement->recommendations) !!}}</p>
+                        <p>{!! html_entity_decode($nonFunctionalRequirement->recommendations) !!}</p>
                         <h5><strong>Source:</strong></h5> 
-                        <p>{{!! html_entity_decode($nonFunctionalRequirement->source) !!}}</p>
+                        <p>{!! html_entity_decode($nonFunctionalRequirement->source) !!}</p>
                         
                         <h5><strong>Legal/Normative Requirements:</strong></h5> 
                         <p>                        

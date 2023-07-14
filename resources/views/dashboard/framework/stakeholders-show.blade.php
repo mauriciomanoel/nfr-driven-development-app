@@ -13,11 +13,11 @@
                         <h5><strong>Description:</strong></h5> 
                         <p>{{ $stakeholder->analysis[0]->description }}</p>
                         <h5><strong>Identified Needs:</strong></h5> 
-                        <p>{{!! html_entity_decode($stakeholder->analysis[0]->identified_needs) !!}}</p>
+                        <p>{!! html_entity_decode($stakeholder->analysis[0]->identified_needs) !!}</p>
                         <h5><strong>Expectations:</strong></h5> 
-                        <p>{{!! html_entity_decode($stakeholder->analysis[0]->expectations) !!}}</p>
+                        <p>{!! html_entity_decode($stakeholder->analysis[0]->expectations) !!}</p>
                         <h5><strong>Experiences:</strong></h5> 
-                        <p>{{!! html_entity_decode($stakeholder->analysis[0]->experiences) !!}}</p>
+                        <p>{!! html_entity_decode($stakeholder->analysis[0]->experiences) !!}</p>
                                                 
                         <h5><strong>Last Update:</strong></h5> 
                         <p>{{ $stakeholder->analysis[0]->created_at }}</p>                     

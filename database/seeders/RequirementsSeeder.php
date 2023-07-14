@@ -18,7 +18,7 @@ class RequirementsSeeder extends Seeder
     public function run()
     {
 
-        $user = User::where('email' , '=' , 'admin@rs4aal.site' )->first();   
+        $user = User::where('email' , '=' , 'admin@nddframework.io' )->first();   
         Requirements::create([  
             'name' => "Adaptivity",
             'description' => "Is the software capability to modify its own behaviour in response to changes in its operating environment (i.e., anything observable by the software system, such as end-user input, external hardware devices and sensors, or program instrumentation)",

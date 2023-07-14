@@ -21,12 +21,12 @@ class ProjectsSeeder extends Seeder
     public function run()
     {
 
-        $user = User::where('email' , '=' , 'mauriciomanoel@gmail.com' )->first();   
+        $user = User::where('email' , '=' , 'admin@nddframework.io' )->first();   
         $lifeSettingsSubcategories = LifeSettingsSubcategories::where('name' , '=' , 'Home Safety and Care' )->first();
      
         $artifact = Projects::create([  
-            'title' => "Rustic home monitoring system",
-            'description' => "An accident monitoring system for the elderly for rustic homes located in the countryside.",
+            'title' => "Sistema de monitoramento de casa rústica",
+            'description' => "Sistema de monitoramento de acidentes de idosos em residências rústicas localizadas na zona rural.",
             'life_settings_id' => $lifeSettingsSubcategories->category->lifeSettings->id,
             'life_settings_category_id' => $lifeSettingsSubcategories->category->id,
             'life_settings_subcategory_id' => $lifeSettingsSubcategories->id,
@@ -37,8 +37,8 @@ class ProjectsSeeder extends Seeder
         $lifeSettingsSubcategories = LifeSettingsSubcategories::where('name' , '=' , 'Remote Learning' )->first();
      
         $artifact = Projects::create([  
-            'title' => "Remore Learning System",
-            'description' => "An Elderly Support System in Learning New Languages using your smartphone that adapts to their daily needs.",
+            'title' => "Sistema de Aprendizagem Remota",
+            'description' => "Um Sistema de Apoio ao Idoso na Aprendizagem de Novos Idiomas através do seu smartphone que se adapta às suas necessidades diárias.",
             'life_settings_id' => $lifeSettingsSubcategories->category->lifeSettings->id,
             'life_settings_category_id' => $lifeSettingsSubcategories->category->id,
             'life_settings_subcategory_id' => $lifeSettingsSubcategories->id,
@@ -49,8 +49,8 @@ class ProjectsSeeder extends Seeder
         $lifeSettingsSubcategories = LifeSettingsSubcategories::where('name' , '=' , 'Sensorial supervision' )->first();
      
         $artifact = Projects::create([  
-            'title' => "Medication Control System",
-            'description' => "An Elderly support to medication control for Hypertension and Cholesterol with adaptation for urgent tasks.",
+            'title' => "Sistema de Gestão de Saúde",
+            'description' => "Apoio ao Idoso no controle de medicamentos e gestão de atividades.",
             'life_settings_id' => $lifeSettingsSubcategories->category->lifeSettings->id,
             'life_settings_category_id' => $lifeSettingsSubcategories->category->id,
             'life_settings_subcategory_id' => $lifeSettingsSubcategories->id,
@@ -59,12 +59,12 @@ class ProjectsSeeder extends Seeder
         ]);
 
 
-        $user = User::where('email' , '=' , 'admin@rs4aal.site' )->first();   
+        // $user = User::where('email' , '=' , 'admin@nddframework.io' )->first();   
         $lifeSettingsSubcategories = LifeSettingsSubcategories::where('name' , '=' , 'Generic' )->first();
 
         $artifact = Projects::create([  
-            'title' => "Autentication System",
-            'description' => "An authentication system adapted for elderly people with motor problems.",
+            'title' => "Sistema de Autenticação",
+            'description' => "Um sistema de autenticação adaptado para idosos com problemas motores.",
             'life_settings_id' => $lifeSettingsSubcategories->category->lifeSettings->id,
             'life_settings_category_id' => $lifeSettingsSubcategories->category->id,
             'life_settings_subcategory_id' => $lifeSettingsSubcategories->id,
@@ -73,8 +73,8 @@ class ProjectsSeeder extends Seeder
         ]);
 
         $artifact = Projects::create([  
-            'title' => "Position System",
-            'description' => "A positioning system adapted for elderly people in wheelchairs.",
+            'title' => "Sistema de Posição",
+            'description' => "Um sistema de posicionamento adaptado para pessoas idosas em cadeiras de rodas.",
             'life_settings_id' => $lifeSettingsSubcategories->category->lifeSettings->id,
             'life_settings_category_id' => $lifeSettingsSubcategories->category->id,
             'life_settings_subcategory_id' => $lifeSettingsSubcategories->id,

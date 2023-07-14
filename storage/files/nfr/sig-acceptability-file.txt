@@ -340,14 +340,17 @@
       "text": "Privacidade",
       "type": "nfr.NFR",
       "x": 1936,
-      "y": 590
+      "y": 590,
+      "customProperties": {
+        "Description": "Refere-se ao grau de proteção das informações e dados dos usuários."
+      }
     },
     {
       "id": "6d32cbab-08b3-40de-9933-44a7c0640a6f",
       "text": "Consentimento",
       "type": "nfr.NFR",
-      "x": 2050,
-      "y": 702,
+      "x": 2069,
+      "y": 711,
       "customProperties": {
         "Description": "Refere-se ao requisito de obter o consentimento explícito dos usuários antes de coletar, processar ou compartilhar suas informações pessoais. É importante garantir que os usuários tenham a capacidade de tomar decisões informadas sobre o uso de seus dados pessoais."
       }
@@ -416,8 +419,8 @@
       "id": "e324d7aa-4535-496c-86c9-45a9c1397f05",
       "text": "Abordagem Atenciosa",
       "type": "nfr.Operationalization",
-      "x": 1943,
-      "y": 867,
+      "x": 1984,
+      "y": 895,
       "customProperties": {
         "Description": "Interaja com o idoso de maneira respeitosa, considerando sua privacidade, dignidade e autonomia. Esteja ciente de que algumas pessoas idosas podem ter dificuldades de audição, visão ou cognição, então adapte sua comunicação de acordo."
       }
@@ -426,8 +429,8 @@
       "id": "e09b1f59-0f7c-4f54-a80a-861f744d26c1",
       "text": "Explicação Clara",
       "type": "nfr.Operationalization",
-      "x": 1985,
-      "y": 985,
+      "x": 2068,
+      "y": 991,
       "customProperties": {
         "Description": "xplique de forma clara e simples o motivo pelo qual está buscando o consentimento do idoso em relação à privacidade. Certifique-se de que ele entenda os benefícios e possíveis riscos envolvidos. Use uma linguagem acessível e evite termos técnicos complicados."
       }
@@ -436,8 +439,8 @@
       "id": "6ae06499-cf1c-4842-a0cf-ae21bad76435",
       "text": "Consentimento Escrito",
       "type": "nfr.Operationalization",
-      "x": 2070,
-      "y": 920,
+      "x": 2149,
+      "y": 930,
       "customProperties": {
         "Description": "Se possível, obtenha o consentimento por escrito. Isso pode ser feito por meio de uma assinatura em um formulário ou documento específico, ou até mesmo por meio de um processo eletrônico, se for viável e compreensível para o idoso."
       }
@@ -446,8 +449,8 @@
       "id": "3951efa9-7fd0-4ed2-b489-efa337825014",
       "text": "Representação Legal",
       "type": "nfr.Operationalization",
-      "x": 2112,
-      "y": 838,
+      "x": 2242,
+      "y": 858,
       "customProperties": {
         "Description": "Em casos em que o idoso não tem capacidade legal para consentir, por motivos de saúde ou outros, é importante envolver um representante legal adequado, como um membro da família ou um tutor legal, para tomar decisões em nome do idoso."
       }
@@ -1041,30 +1044,6 @@
       "target": "ac4da81e-651a-4dba-b680-aead4d73f9d1"
     },
     {
-      "id": "02541947-d4be-4456-9d0e-346e8f033121",
-      "type": "nfr.OrRefinementLink",
-      "source": "3951efa9-7fd0-4ed2-b489-efa337825014",
-      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f"
-    },
-    {
-      "id": "0edef97f-226e-4927-955e-b396e3e84690",
-      "type": "nfr.OrRefinementLink",
-      "source": "6ae06499-cf1c-4842-a0cf-ae21bad76435",
-      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f"
-    },
-    {
-      "id": "6a6554c7-c71c-42e1-a37c-8ccc4e045720",
-      "type": "nfr.OrRefinementLink",
-      "source": "e09b1f59-0f7c-4f54-a80a-861f744d26c1",
-      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f"
-    },
-    {
-      "id": "3211aaae-7d1b-4750-a170-9aff57abca9a",
-      "type": "nfr.OrRefinementLink",
-      "source": "e324d7aa-4535-496c-86c9-45a9c1397f05",
-      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f"
-    },
-    {
       "id": "bd7d62d6-6079-4ba4-ab44-8faa5d9dd673",
       "type": "nfr.OrRefinementLink",
       "source": "e2457711-2d24-4804-91fb-845e8a1106e1",
@@ -1377,6 +1356,34 @@
       "type": "nfr.AndRefinementLink",
       "source": "ec7b2ad0-627a-4655-97cb-21d654dc8ae5",
       "target": "e484cc0f-914d-4ebb-af7c-a4f07c397c1b"
+    },
+    {
+      "id": "d1515166-cc0d-4666-8e26-0e384b84b6cc",
+      "type": "nfr.ContributionLink",
+      "source": "3951efa9-7fd0-4ed2-b489-efa337825014",
+      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f",
+      "label": "+"
+    },
+    {
+      "id": "0d38a0b9-79bf-4fac-9600-8f3c47690fbb",
+      "type": "nfr.ContributionLink",
+      "source": "6ae06499-cf1c-4842-a0cf-ae21bad76435",
+      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f",
+      "label": "+"
+    },
+    {
+      "id": "7fa7e4d7-5293-4174-bb13-ab5bf42cb90e",
+      "type": "nfr.ContributionLink",
+      "source": "e09b1f59-0f7c-4f54-a80a-861f744d26c1",
+      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f",
+      "label": "+"
+    },
+    {
+      "id": "912ed8d5-147e-4fe4-bb59-a211a1a0a666",
+      "type": "nfr.ContributionLink",
+      "source": "e324d7aa-4535-496c-86c9-45a9c1397f05",
+      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f",
+      "label": "+"
     }
   ],
   "display": {
@@ -1467,7 +1474,7 @@
   },
   "tool": "dsm3-goals",
   "metamodelVersion": "1.0",
-  "saveDate": "Wed, 12 Jul 2023 20:51:18 GMT",
+  "saveDate": "Fri, 14 Jul 2023 03:06:34 GMT",
   "diagram": {
     "width": 2513,
     "height": 1300,

@@ -1,0 +1,465 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "af6341d5-3840-4285-bd97-7e9830a96e55",
+      "text": "Transparência",
+      "type": "nfr.NFR",
+      "x": 724,
+      "y": 38,
+      "customProperties": {
+        "Description": "refere à capacidade de um sistema fornecer informações claras, compreensíveis e acessíveis aos usuários sobre seu funcionamento, processamento de dados e tomada de decisões. A transparência visa garantir que os usuários possam entender e confiar nas operações do sistema, compreender como suas informações são tratadas e compreender as lógicas e critérios por trás das ações do sistema."
+      }
+    },
+    {
+      "id": "4fabd04f-fb53-4fa6-a9ee-4551f63de998",
+      "text": "Usabilidade",
+      "type": "nfr.NFR",
+      "x": 180,
+      "y": 249
+    },
+    {
+      "id": "374620a2-f5fb-4a49-b456-006f0d7f50ae",
+      "text": "Auditabilidade",
+      "type": "nfr.NFR",
+      "x": 488,
+      "y": 259
+    },
+    {
+      "id": "3858c1ba-181e-4eb4-9c1d-4bba6ba8e53b",
+      "text": "Acessibilidade",
+      "type": "nfr.NFR",
+      "x": 284,
+      "y": 260
+    },
+    {
+      "id": "94080112-6dfe-4efe-a776-4caf62cc2242",
+      "text": "Compreensibilidade",
+      "type": "nfr.NFR",
+      "x": 758,
+      "y": 287
+    },
+    {
+      "id": "8bbd40eb-ad9f-4127-bb1f-530b5556475c",
+      "text": "Informatividade",
+      "type": "nfr.NFR",
+      "x": 1059,
+      "y": 128
+    },
+    {
+      "id": "fdff9fd2-2dce-473f-9e64-d7a7a9bc15a2",
+      "text": "Validade",
+      "type": "nfr.NFR",
+      "x": 257,
+      "y": 414,
+      "customProperties": {
+        "name_en": "Validability",
+        "Description": "Capacidade de ser avaliado por experimento ou observação para identificar se está de acordo com as expectativas dos usuários."
+      }
+    },
+    {
+      "id": "b9e584ba-3081-465a-9e5d-ba431a8c7dc8",
+      "text": "Identificar Mecanismos de Validação",
+      "type": "nfr.Operationalization",
+      "x": 187,
+      "y": 514
+    },
+    {
+      "id": "1fcd70e2-1d71-4765-baff-2127593e8968",
+      "text": "Usar Técnicas de Validação",
+      "type": "nfr.Operationalization",
+      "x": 211,
+      "y": 610
+    },
+    {
+      "id": "d96291ba-62bf-4283-9d15-48121a67a3df",
+      "text": "Controlabilidade",
+      "type": "nfr.NFR",
+      "x": 367,
+      "y": 426,
+      "customProperties": {
+        "Description": "Capacidade de ser dirigido, fiscalizado e orientado."
+      }
+    },
+    {
+      "id": "a2a18313-c3c8-4d21-90cd-ea64da9eacce",
+      "text": "Usar Controle de Versão",
+      "type": "nfr.Operationalization",
+      "x": 315,
+      "y": 564
+    },
+    {
+      "id": "5c46118d-5e78-4425-ae63-5942574ee051",
+      "text": "Usar Politicas de Acompanhamento",
+      "type": "nfr.Operationalization",
+      "x": 411,
+      "y": 525
+    },
+    {
+      "id": "5b94e0dd-8ab6-4589-a4da-d4ab25021fd1",
+      "text": "Verificabilidade",
+      "type": "nfr.NFR",
+      "x": 472,
+      "y": 423,
+      "customProperties": {
+        "Description": "Capacidade de identificar se o que está sendo feito está correto."
+      }
+    },
+    {
+      "id": "e6f55f88-819f-4ed3-8268-9621fae2e707",
+      "text": "Utilizar Padrões de Projeto",
+      "type": "nfr.Operationalization",
+      "x": 446,
+      "y": 702
+    },
+    {
+      "id": "e2b49dab-ac68-448c-bd6b-6fa3180a13a6",
+      "text": "Anexar Requisitos ao Sistema",
+      "type": "nfr.Operationalization",
+      "x": 585,
+      "y": 574
+    },
+    {
+      "id": "df0ee931-8722-46c3-a61d-3747e9d79a9f",
+      "text": "Usar Ambiente que permita Verificação",
+      "type": "nfr.Operationalization",
+      "x": 526,
+      "y": 641
+    },
+    {
+      "id": "e4089a76-9ec1-4330-9e2a-fa394962e89f",
+      "text": "Rastreabilidade",
+      "type": "nfr.NFR",
+      "x": 585,
+      "y": 436,
+      "customProperties": {
+        "Description": "capacidade de seguir a construção ou evolução de um software, suas mudanças e justificativas."
+      }
+    },
+    {
+      "id": "8c9291b9-27a1-48de-8eb5-60673fa7c160",
+      "text": "Dependência",
+      "type": "nfr.NFR",
+      "x": 680,
+      "y": 463,
+      "customProperties": {
+        "Description": "Capacidade de identificar a relação entre as partes de um todo."
+      }
+    },
+    {
+      "id": "05ff19cf-f870-4924-b28d-9586e49eba72",
+      "text": "Compositividade",
+      "type": "nfr.NFR",
+      "x": 740,
+      "y": 540,
+      "customProperties": {
+        "Description": "Capacidade de construir ou formar a partir de diferentes partes."
+      }
+    },
+    {
+      "id": "7a90baef-b4d7-4092-97ce-4e9caa96ebb6",
+      "text": "Divisibilidade",
+      "type": "nfr.NFR",
+      "x": 822,
+      "y": 459,
+      "customProperties": {
+        "Description": "Capacidade de ser separado em partes coesas."
+      }
+    },
+    {
+      "id": "055c5f1e-6261-4c1c-a413-844bec591272",
+      "text": "Detalhamento",
+      "type": "nfr.NFR",
+      "x": 825,
+      "y": 597,
+      "customProperties": {
+        "Description": "Capacidade de ser descrito em minúcias"
+      }
+    },
+    {
+      "id": "d6129c78-6a8b-4c73-bb4e-58334e6d1407",
+      "text": "Concisão",
+      "type": "nfr.NFR",
+      "x": 936,
+      "y": 489,
+      "customProperties": {
+        "Description": "Capacidade de utilizar o estritamente necessário."
+      }
+    },
+    {
+      "id": "7b0e9dac-c7c0-4f7e-bfbf-9e8f962d2edf",
+      "text": "Clareza",
+      "type": "nfr.NFR",
+      "x": 977,
+      "y": 346,
+      "customProperties": {
+        "Description": "Capacidade de ser nítido e compreensível."
+      }
+    },
+    {
+      "id": "2bf345dd-4d84-449f-be23-8fbad9b19fe1",
+      "text": "Consistência",
+      "type": "nfr.NFR",
+      "x": 1050,
+      "y": 408,
+      "customProperties": {
+        "Description": "Capacidade de ser isento de contradição, e ao longo do tempo obter resultados equivalentes para várias medições de um mesmo item."
+      }
+    },
+    {
+      "id": "4e1000a0-f8c2-4123-8c10-dfcb3ea2f868",
+      "text": "Integridade",
+      "type": "nfr.NFR",
+      "x": 1124,
+      "y": 524,
+      "customProperties": {
+        "Description": "Capacidade de estar inteiro (no sentido de não faltar nenhuma das partes)."
+      }
+    },
+    {
+      "id": "6506a9a8-98d8-4d52-ba7d-48f0ae1078ab",
+      "text": "Corretude",
+      "type": "nfr.NFR",
+      "x": 1147,
+      "y": 351,
+      "customProperties": {
+        "Description": "Capacidade de ser isento de erros ou faltas."
+      }
+    },
+    {
+      "id": "9dcb1ee3-d9c7-4982-b2ab-a7a19cbd18d9",
+      "text": "Acurácia",
+      "type": "nfr.NFR",
+      "x": 921,
+      "y": 302,
+      "customProperties": {
+        "Description": "Capacidade de estar próximo do valor de referência dentro de limites previamente estabelecidos."
+      }
+    },
+    {
+      "id": "c6525f3d-0495-427a-9f5f-fa55c78dbac3",
+      "text": "Atualidade",
+      "type": "nfr.NFR",
+      "x": 1313,
+      "y": 455,
+      "customProperties": {
+        "Description": "Capacidade de refletir a última informação ou mudança."
+      }
+    },
+    {
+      "id": "dce2040f-f930-4d96-9b76-9b6b958d5027",
+      "text": "Completeza",
+      "type": "nfr.NFR",
+      "x": 1272,
+      "y": 333,
+      "customProperties": {
+        "Description": "Capacidade de não faltar nada do que é exigido."
+      }
+    },
+    {
+      "id": "9da756ad-a48c-45bf-9a2c-e3b9d8cbd303",
+      "text": "Comparabilidade",
+      "type": "nfr.NFR",
+      "x": 1276,
+      "y": 257,
+      "customProperties": {
+        "Description": "Capacidade de ser confrontado com outro para lhe determinar diferença, semelhança ou relação"
+      }
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "f4969ef9-f447-4f7e-a806-141fdbe8db21",
+      "type": "nfr.AndRefinementLink",
+      "source": "4fabd04f-fb53-4fa6-a9ee-4551f63de998",
+      "target": "af6341d5-3840-4285-bd97-7e9830a96e55"
+    },
+    {
+      "id": "8a30267b-a5ed-4c56-9d8a-ebd5038f2a8e",
+      "type": "nfr.AndRefinementLink",
+      "source": "374620a2-f5fb-4a49-b456-006f0d7f50ae",
+      "target": "af6341d5-3840-4285-bd97-7e9830a96e55"
+    },
+    {
+      "id": "e7330e38-f9c9-44c1-84e1-fbaf672f3b71",
+      "type": "nfr.AndRefinementLink",
+      "source": "3858c1ba-181e-4eb4-9c1d-4bba6ba8e53b",
+      "target": "af6341d5-3840-4285-bd97-7e9830a96e55"
+    },
+    {
+      "id": "a409283a-6bb5-4b40-ab08-bd8563b5a537",
+      "type": "nfr.AndRefinementLink",
+      "source": "94080112-6dfe-4efe-a776-4caf62cc2242",
+      "target": "af6341d5-3840-4285-bd97-7e9830a96e55"
+    },
+    {
+      "id": "59020709-3d25-46e2-9515-b7271ffbce53",
+      "type": "nfr.AndRefinementLink",
+      "source": "8bbd40eb-ad9f-4127-bb1f-530b5556475c",
+      "target": "af6341d5-3840-4285-bd97-7e9830a96e55"
+    },
+    {
+      "id": "3b0a99d1-f9a2-4206-bb08-63887d556c05",
+      "type": "nfr.ContributionLink",
+      "source": "b9e584ba-3081-465a-9e5d-ba431a8c7dc8",
+      "target": "fdff9fd2-2dce-473f-9e64-d7a7a9bc15a2",
+      "label": "+"
+    },
+    {
+      "id": "8d53b63b-ec1c-4d2b-9034-57bd22e598a5",
+      "type": "nfr.ContributionLink",
+      "source": "1fcd70e2-1d71-4765-baff-2127593e8968",
+      "target": "fdff9fd2-2dce-473f-9e64-d7a7a9bc15a2",
+      "label": "+"
+    },
+    {
+      "id": "ff0270f8-9d19-42b6-b1fb-6841588f9d08",
+      "type": "nfr.AndRefinementLink",
+      "source": "fdff9fd2-2dce-473f-9e64-d7a7a9bc15a2",
+      "target": "374620a2-f5fb-4a49-b456-006f0d7f50ae"
+    },
+    {
+      "id": "a010d550-9924-4203-8bf4-5d0df31af9ca",
+      "type": "nfr.ContributionLink",
+      "source": "a2a18313-c3c8-4d21-90cd-ea64da9eacce",
+      "target": "d96291ba-62bf-4283-9d15-48121a67a3df",
+      "label": "+"
+    },
+    {
+      "id": "01c7a51c-464a-49fb-9eaa-bce341629c7c",
+      "type": "nfr.ContributionLink",
+      "source": "5c46118d-5e78-4425-ae63-5942574ee051",
+      "target": "d96291ba-62bf-4283-9d15-48121a67a3df",
+      "label": "+"
+    },
+    {
+      "id": "23982edd-392e-4436-bfe5-34417caefc1a",
+      "type": "nfr.ContributionLink",
+      "source": "e6f55f88-819f-4ed3-8268-9621fae2e707",
+      "target": "5b94e0dd-8ab6-4589-a4da-d4ab25021fd1",
+      "label": "+"
+    },
+    {
+      "id": "fcdc557a-0b66-4acb-b3cd-f257898be774",
+      "type": "nfr.ContributionLink",
+      "source": "df0ee931-8722-46c3-a61d-3747e9d79a9f",
+      "target": "5b94e0dd-8ab6-4589-a4da-d4ab25021fd1",
+      "label": "+"
+    },
+    {
+      "id": "c7a4ebcb-3665-464d-986e-ac753bea3fa0",
+      "type": "nfr.ContributionLink",
+      "source": "e2b49dab-ac68-448c-bd6b-6fa3180a13a6",
+      "target": "5b94e0dd-8ab6-4589-a4da-d4ab25021fd1",
+      "label": "+"
+    },
+    {
+      "id": "daa79365-20ee-46a5-863d-0f73f88b3217",
+      "type": "nfr.AndRefinementLink",
+      "source": "d96291ba-62bf-4283-9d15-48121a67a3df",
+      "target": "374620a2-f5fb-4a49-b456-006f0d7f50ae"
+    },
+    {
+      "id": "6b9b4017-e3f5-4612-a2dd-23fa3476bb56",
+      "type": "nfr.AndRefinementLink",
+      "source": "5b94e0dd-8ab6-4589-a4da-d4ab25021fd1",
+      "target": "374620a2-f5fb-4a49-b456-006f0d7f50ae"
+    },
+    {
+      "id": "43ce0cea-eec9-4c52-9011-cac2c0af8de0",
+      "type": "nfr.AndRefinementLink",
+      "source": "e4089a76-9ec1-4330-9e2a-fa394962e89f",
+      "target": "374620a2-f5fb-4a49-b456-006f0d7f50ae"
+    },
+    {
+      "id": "de86467e-5baa-484e-9115-1dda505fe526",
+      "type": "nfr.AndRefinementLink",
+      "source": "8c9291b9-27a1-48de-8eb5-60673fa7c160",
+      "target": "94080112-6dfe-4efe-a776-4caf62cc2242"
+    },
+    {
+      "id": "98d4fa94-eae3-4c48-a91b-22f437719b5e",
+      "type": "nfr.AndRefinementLink",
+      "source": "05ff19cf-f870-4924-b28d-9586e49eba72",
+      "target": "94080112-6dfe-4efe-a776-4caf62cc2242"
+    },
+    {
+      "id": "9ba4a5e3-cd4d-44bd-89f7-44fa0d332729",
+      "type": "nfr.AndRefinementLink",
+      "source": "055c5f1e-6261-4c1c-a413-844bec591272",
+      "target": "94080112-6dfe-4efe-a776-4caf62cc2242"
+    },
+    {
+      "id": "32c936a0-c224-4158-a7dd-195afa3c1726",
+      "type": "nfr.AndRefinementLink",
+      "source": "7a90baef-b4d7-4092-97ce-4e9caa96ebb6",
+      "target": "94080112-6dfe-4efe-a776-4caf62cc2242"
+    },
+    {
+      "id": "7447d6af-d5ad-451d-91f1-149bf39d0667",
+      "type": "nfr.AndRefinementLink",
+      "source": "d6129c78-6a8b-4c73-bb4e-58334e6d1407",
+      "target": "94080112-6dfe-4efe-a776-4caf62cc2242"
+    },
+    {
+      "id": "12930bab-5b6f-4373-8e47-06d4ca38eced",
+      "type": "nfr.AndRefinementLink",
+      "source": "7b0e9dac-c7c0-4f7e-bfbf-9e8f962d2edf",
+      "target": "8bbd40eb-ad9f-4127-bb1f-530b5556475c"
+    },
+    {
+      "id": "d97c4157-37d2-46a4-8f0d-44c106d6f0b0",
+      "type": "nfr.AndRefinementLink",
+      "source": "2bf345dd-4d84-449f-be23-8fbad9b19fe1",
+      "target": "8bbd40eb-ad9f-4127-bb1f-530b5556475c"
+    },
+    {
+      "id": "096cb5be-bd68-4d23-bd2a-80ba853cccb0",
+      "type": "nfr.AndRefinementLink",
+      "source": "4e1000a0-f8c2-4123-8c10-dfcb3ea2f868",
+      "target": "8bbd40eb-ad9f-4127-bb1f-530b5556475c"
+    },
+    {
+      "id": "fd9b1cd4-a5b8-4a0c-a8d0-030d28c60df4",
+      "type": "nfr.AndRefinementLink",
+      "source": "6506a9a8-98d8-4d52-ba7d-48f0ae1078ab",
+      "target": "8bbd40eb-ad9f-4127-bb1f-530b5556475c"
+    },
+    {
+      "id": "ad642b08-2f3e-4dbf-8f77-6c60d9916afc",
+      "type": "nfr.AndRefinementLink",
+      "source": "c6525f3d-0495-427a-9f5f-fa55c78dbac3",
+      "target": "8bbd40eb-ad9f-4127-bb1f-530b5556475c"
+    },
+    {
+      "id": "c2d08de6-f7aa-4f4e-9448-8781b19b2683",
+      "type": "nfr.AndRefinementLink",
+      "source": "dce2040f-f930-4d96-9b76-9b6b958d5027",
+      "target": "8bbd40eb-ad9f-4127-bb1f-530b5556475c"
+    },
+    {
+      "id": "1ff1ee55-931a-49a7-b06d-eb559a07a8a5",
+      "type": "nfr.AndRefinementLink",
+      "source": "9da756ad-a48c-45bf-9a2c-e3b9d8cbd303",
+      "target": "8bbd40eb-ad9f-4127-bb1f-530b5556475c"
+    },
+    {
+      "id": "c3aa585b-450e-4a37-ab48-1548fe15d2a5",
+      "type": "nfr.AndRefinementLink",
+      "source": "9dcb1ee3-d9c7-4982-b2ab-a7a19cbd18d9",
+      "target": "8bbd40eb-ad9f-4127-bb1f-530b5556475c"
+    }
+  ],
+  "display": {},
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Fri, 14 Jul 2023 02:25:56 GMT",
+  "diagram": {
+    "width": 2000,
+    "height": 1300,
+    "customProperties": {
+      "Description": ""
+    }
+  }
+}

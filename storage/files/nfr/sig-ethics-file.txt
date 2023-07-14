@@ -1,0 +1,106 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "2c1ee16f-c03d-4805-b4d2-def77b2d1d5f",
+      "text": "Ética",
+      "type": "nfr.NFR",
+      "x": 414,
+      "y": 97
+    },
+    {
+      "id": "8d87dc5c-c498-4e30-862e-0006b6bb19d7",
+      "text": "Privacidade",
+      "type": "nfr.NFR",
+      "x": 200,
+      "y": 255,
+      "customProperties": {
+        "Description": "Refere-se ao grau de proteção das informações e dados dos usuários."
+      }
+    },
+    {
+      "id": "4591fe83-87e3-4aaa-ae21-235275fcb1a8",
+      "text": "Segurança",
+      "type": "nfr.NFR",
+      "x": 308,
+      "y": 262,
+      "customProperties": {
+        "Description": "Grau em que um produto ou sistema protege informações e dados para que pessoas ou outros produtos ou sistemas tenham o grau de acesso aos dados apropriado para seus tipos e níveis de autorização."
+      }
+    },
+    {
+      "id": "6b937613-fc9b-454d-9bde-957490933da9",
+      "text": "Transparência",
+      "type": "nfr.NFR",
+      "x": 418,
+      "y": 264,
+      "customProperties": {
+        "Description": "refere à capacidade de um sistema fornecer informações claras, compreensíveis e acessíveis aos usuários sobre seu funcionamento, processamento de dados e tomada de decisões. A transparência visa garantir que os usuários possam entender e confiar nas operações do sistema, compreender como suas informações são tratadas e compreender as lógicas e critérios por trás das ações do sistema."
+      }
+    },
+    {
+      "id": "349d5e40-d8bd-4c5d-938a-5ae3df0ecd91",
+      "text": "Consentimento",
+      "type": "nfr.NFR",
+      "x": 540,
+      "y": 260,
+      "customProperties": {
+        "Description": "Refere-se ao requisito de obter o consentimento explícito dos usuários antes de coletar, processar ou compartilhar suas informações pessoais. É importante garantir que os usuários tenham a capacidade de tomar decisões informadas sobre o uso de seus dados pessoais."
+      }
+    },
+    {
+      "id": "b791b11a-0700-4160-9b7f-7367cbfed692",
+      "text": "Confidencialidade",
+      "type": "nfr.NFR",
+      "x": 659,
+      "y": 253,
+      "customProperties": {
+        "Description": "Refere-se ao grau em que um produto ou sistema AAL garante que os dados sejam acessíveis apenas por pessoas ou outros produtos/sistemas autorizados."
+      }
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "7770ca57-d232-4f2b-a084-3da14c5564b0",
+      "type": "nfr.AndRefinementLink",
+      "source": "8d87dc5c-c498-4e30-862e-0006b6bb19d7",
+      "target": "2c1ee16f-c03d-4805-b4d2-def77b2d1d5f"
+    },
+    {
+      "id": "f9088120-c20c-4b73-84ec-f51e8c7196eb",
+      "type": "nfr.AndRefinementLink",
+      "source": "4591fe83-87e3-4aaa-ae21-235275fcb1a8",
+      "target": "2c1ee16f-c03d-4805-b4d2-def77b2d1d5f"
+    },
+    {
+      "id": "e2e44d3c-1eda-48a2-82f9-c9023778e8d1",
+      "type": "nfr.AndRefinementLink",
+      "source": "6b937613-fc9b-454d-9bde-957490933da9",
+      "target": "2c1ee16f-c03d-4805-b4d2-def77b2d1d5f"
+    },
+    {
+      "id": "9842d23a-64d4-49fe-b80f-b6d0bfc16c10",
+      "type": "nfr.AndRefinementLink",
+      "source": "349d5e40-d8bd-4c5d-938a-5ae3df0ecd91",
+      "target": "2c1ee16f-c03d-4805-b4d2-def77b2d1d5f"
+    },
+    {
+      "id": "82fc8db2-189d-4d63-98ac-725f64fe6b22",
+      "type": "nfr.AndRefinementLink",
+      "source": "b791b11a-0700-4160-9b7f-7367cbfed692",
+      "target": "2c1ee16f-c03d-4805-b4d2-def77b2d1d5f"
+    }
+  ],
+  "display": {},
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Fri, 14 Jul 2023 00:42:36 GMT",
+  "diagram": {
+    "width": 2000,
+    "height": 1300,
+    "customProperties": {
+      "Description": ""
+    }
+  }
+}

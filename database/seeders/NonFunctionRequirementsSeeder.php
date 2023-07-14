@@ -18,7 +18,7 @@ class NonFunctionRequirementsSeeder extends Seeder
     public function run()
     {
 
-        $user = User::where('email' , '=' , 'admin@rs4aal.site' )->first();
+        $user = User::where('email' , '=' , 'admin@nddframework.io' )->first();
 
         $acceptabilityRequeriment = NonFunctionalRequirements::create([  
             'name' => "Acceptability",
@@ -398,11 +398,14 @@ class NonFunctionRequirementsSeeder extends Seeder
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
             'recommendations' => "<p>Implementar mecanismos de criptografia robustos para proteger as informações confidenciais dos usuários, como dados pessoais e registros médicos.</p><p>Estabelecer controles de acesso adequados para restringir o acesso aos dados sensíveis apenas a usuários autorizados.</p>",
-            'content' => null,
-            'image' => null,
+            'content' => file_get_contents(storage_path() . '/files/nfr/sig-confidentiality-file.txt'),
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-confidentiality-file.png')),
             'characteristics_id' => $securityRequeriment->id,
             'users_id' => $user->id,
         ]);
+
+
+        
 
         NonFunctionalRequirements::create([  
             'name' => "Integrity",
@@ -858,23 +861,77 @@ class NonFunctionRequirementsSeeder extends Seeder
             'description' => "Refere-se ao grau em que um produto ou sistema pode ser utilizado com eficácia, eficiência, liberdade de riscos e satisfação em todos os contextos de uso especificados. Isso implica que o sistema AAL deve ser capaz de atender aos objetivos pretendidos, de forma efetiva, eficiente, segura e satisfatória, em todos os contextos de uso previstos.",
             'model_quality' => "Quality in Use",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
-            'recommendations' => "<p>Análise do Contextos de Uso: Mapear e análise os diferentes contextos de uso em que o sistema AAL será utilizado. Isso deve auxiliar a compreender as particularidades de cada situação, permitindo que o sistema seja projetado e adaptado para atender às demandas específicas de diferentes contexto.</p><p>Flexibilidade e Adaptabilidade: Projete o sistema AAL de forma flexível e adaptável, de modo a permitir sua utilização em diferentes contextos. Isso pode incluir a personalização de configurações, interfaces e funcionalidades para atender às necessidades específicas de cada contexto de uso. Considere também a compatibilidade com dispositivos e tecnologias existentes nos diferentes ambientes em que o sistema será utilizado.</p><p>Testes de Contextos: Realize testes e avaliações em diversos cenários de uso, tanto nos contextos especificados quanto em contextos além daqueles inicialmente identificados. Isso permitirá identificar possíveis desafios, restrições ou necessidades que possam surgir em diferentes situações. Os testes devem incluir os mapeados e simular condições variadas para garantir que o sistema funcione de maneira efetiva, eficiente e segura em uma ampla gama de contextos.</p><p>Suporte Técnico e Assistência: Fornecer suporte técnico e assistência aos usuários do sistema AAL em todos os contextos de uso auxilia na utilização do sistema AAL de forma eficaz e satisfatória.</p>",
+            'recommendations' => "<p>Mapear e análise os diferentes contextos de uso em que o sistema AAL será utilizado. Isso deve auxiliar a compreender as particularidades de cada situação, permitindo que o sistema seja projetado e adaptado para atender às demandas específicas de diferentes contexto.</p><p>Flexibilidade e Adaptabilidade: Projete o sistema AAL de forma flexível e adaptável, de modo a permitir sua utilização em diferentes contextos. Isso pode incluir a personalização de configurações, interfaces e funcionalidades para atender às necessidades específicas de cada contexto de uso. Considere também a compatibilidade com dispositivos e tecnologias existentes nos diferentes ambientes em que o sistema será utilizado.</p><p>Testes de Contextos: Realize testes e avaliações em diversos cenários de uso, tanto nos contextos especificados quanto em contextos além daqueles inicialmente identificados. Isso permitirá identificar possíveis desafios, restrições ou necessidades que possam surgir em diferentes situações. Os testes devem incluir os mapeados e simular condições variadas para garantir que o sistema funcione de maneira efetiva, eficiente e segura em uma ampla gama de contextos.</p><p>Suporte Técnico e Assistência: Fornecer suporte técnico e assistência aos usuários do sistema AAL em todos os contextos de uso auxilia na utilização do sistema AAL de forma eficaz e satisfatória.</p>",
             'content' => null,
             'image' => null,
             'characteristics_id' => $contextCoverageRequeriment->id,
             'users_id' => $user->id,
         ]);
 
+        $ethicsNonFunctionalRequirements = NonFunctionalRequirements::create([  
+            'name' => "Ethics",
+            'description' => "define os princípios éticos e os padrões de conduta que um sistema ou aplicativo de software deve cumprir. Esses requisitos visam garantir que o sistema atue de maneira ética e responsável em relação aos usuários, à sociedade e aos valores éticos estabelecidos. Eles podem abordar questões como privacidade, segurança, equidade, transparência, responsabilidade social e conformidade com regulamentações aplicáveis. O objetivo é assegurar que o sistema seja projetado, desenvolvido e operado levando em consideração considerações éticas fundamentais.",
+            'model_quality' => "Transversal",
+            'source' => "Cysneiros, Luiz Marcio, and Julio Cesar Sampaio do Prado Leite. Non-functional requirements orienting the development of socially responsible software. Enterprise, Business-Process and Information Systems Modeling: 21st International Conference, BPMDS 2020, 25th International Conference, EMMSAD 2020, Held at CAiSE 2020, Grenoble, France, June 8–9, 2020, Proceedings 21. Springer International Publishing, 2020.",
+            'recommendations' => "<p>O desenvolvimento deve considerar a proteção a privacidade dos stakeholders e respeitando a confidencialidade de seus dados pessoais e informações sensíveis.</p> 
+            <p>Considerar a gestão para coleta, armazenamento e compartilhamento de dados, garantindo que haja consentimento informado dos usuários e que as informações sejam tratadas de forma segura.</p>
+            <p>Os stakeholders devem ter o controle da gestão do consentimento de coleta e uso de dados, possibilitando inserir, atualizar e remover o consentimento e o acesso a configurações de privacidade para personalizar as preferências do usuário.</p><p>Os requisitos não funcionais de segurança devem ser especificados com robustos para proteger o sistema AAL contra acesso não autorizado, violações de dados e ameaças à integridade do sistema.</p> 
+            <p>A transparencia dos dados deve ser considerado para atender este NFR. O stakeholders deve ter acesso de forma transparente a toda a informações que o sistema coleta, usa e compartilha os dados pessoais.</p> 
+            <p>Durante o processo de desenvolvimento devem considerar a responsabilidade social, incluindo considerações de impactos ambientais, a promoção da inclusão digital e a garantia de que o sistema atenda às necessidades e valores culturais dos usuários.</p>",
+            'content' => file_get_contents(storage_path() . '/files/nfr/sig-ethics-file.txt'),
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-ethics-file.png')),
+            'characteristics_id' => 0,
+            'users_id' => $user->id,
+        ]);
+
         NonFunctionalRequirements::create([  
-            'name' => "Flexibility",
-            'description' => "É o grau em que um produto ou sistema pode ser usado com efetividade, eficiência, ausência de riscos e satisfação em contextos além daqueles inicialmente especificados nos requisitos. A flexibilidade pode ser alcançada adaptando um produto para grupos de usuários adicionais, tarefas e culturas. Ela permite que os produtos considerem circunstâncias, oportunidades e preferências individuais que não haviam sido previstas antecipadamente. Se um produto não for projetado para flexibilidade, pode não ser seguro usá-lo em contextos não planejados. A flexibilidade pode ser medida como a extensão em que um produto pode ser usado por tipos adicionais de usuários para alcançar objetivos adicionais com efetividade, eficiência, ausência de riscos e satisfação em tipos adicionais de contextos de uso, ou pela capacidade de ser modificado para suportar adaptação a novos tipos de usuários, tarefas e ambientes, e adequação para a individualização conforme definido na norma ISO 9241-110.",
+            'name' => "Autonomy",
+            'description' => "Refere à capacidade do sistema ou aplicativo em permitir que os usuários tenham controle e tomem decisões independentes. Ele visa proporcionar aos stakeholders a liberdade de personalizar configurações, definir preferências e ajustar o comportamento do sistema de acordo com suas necessidades e preferências individuais. Esse requisito enfatiza a importância de dar libertade os stakeholders, permitindo que eles tenham autonomia sobre o sistema, ao invés de impor restrições ou limitações excessivas.",
             'model_quality' => "Quality in Use",
-            'source' => "ISO/IEC 25010:2011 Systems and software engineering",
-            'recommendations' => "<p>
-            Integração com Tecnologias e Dispositivos Externos: A interoperabilidade do sistema AAL facilita a adaptação e a diferentes contextos de uso do sistema.</p><p>Personalização: Utilize padrões que permitam a personalização no sistema AAL baseado no contexto de utilização e as preferências de acordo com suas necessidades dos stakeholders.</p><p>Suporte a Múltiplos Idiomas e Culturas: Forneça suporte a múltiplos idiomas, seja selecionando automaticamente ou escolham manualmente. Além disso, leve em conta diferenças culturais e práticas sociais ao projetar as interfaces e funcionalidades, garantindo que sejam adequadas e aceitáveis em diferentes contextos culturais. Isso aumenta a flexibilidade do sistema, permitindo que ele seja utilizado por usuários de diferentes origens e contextos culturais.</p><p>Design Modular: Utilizar uma abordagem de design modular, permite que o sistema AAL seja adaptado e expandido para atender a diferentes requisitos, contextos de uso e às mudanças ao longo do tempo.</p>",
+            'source' => "Monaco, Roberto, et al. A non-functional requirements-based ontology for supporting the development of industrial energy management systems. Journal of Cleaner Production (2023): 137614.",
+            'recommendations' => "<p>Devenvolver mecanismos de interação flexíveis para acomodar diferentes estilos de uso e necessidades dos usuários, incluindo por exemplo, suporte a diferentes modos de entrada, opções de navegação alternativas e adaptação da interface do usuário para diferentes dispositivos ou necessidades de acessibilidade.</p>
+            <p>Implementar mecanismos para que aos stakeholders a capacidade de controlar o compartilhamento e o acesso aos seus dados pessoais e incluir recursos de gerenciamento de consentimento e privacidade.</p>
+            <p>Implementar mecanismos de personalização para ajudar a aparência, o layout, as preferências de idioma, notificações, ativar ou desativar recursos específicos, definir padrões de exibição de conteúdo e outras configurações de acordo com suas preferências individuais.</p>",
             'content' => null,
             'image' => null,
-            'characteristics_id' => $contextCoverageRequeriment->id,
+            'characteristics_id' => 0,
+            'users_id' => $user->id,
+        ]);
+
+        NonFunctionalRequirements::create([  
+            'name' => "Transparency",
+            'description' => "refere à capacidade de um sistema fornecer informações claras, compreensíveis e acessíveis aos usuários sobre seu funcionamento, processamento de dados e tomada de decisões. A transparência visa garantir que os usuários possam entender e confiar nas operações do sistema, compreender como suas informações são tratadas e compreender as lógicas e critérios por trás das ações do sistema.",
+            'model_quality' => "Quality in Use",
+            'source' => "Portugal, Roxana Lisette Quintanilla, et al. Is there a demand of software transparency?. Proceedings of the XXXI Brazilian Symposium on Software Engineering. 2017.",
+            'recommendations' => "<p>Os stakeholders devem ser informados sobre quais informações são coletados, como esses dados são usados e quais são os benefícios e riscos associados na utilização do sistema AAL.</p>
+            <p>Implementar mecanismos para permitir que os stakeholders acessar/remover o consentimento para a coleta e uso de seus dados pessoais e ofereça opções claras de gerenciamento de privacidade.</p>
+            <p>Garantir que as informações fornecidas pelo sistema sejam expressas em uma linguagem clara, simples e compreensível pelos usuários-alvo dos sistemas AAL. Evite jargões técnicos e complexidades desnecessárias.</p>
+            <p>Desenvolver uma interface do usuário intuitiva e amigável, com elementos visuais e interativos que tornem as informações e a funcionalidade do sistema AAL facilmente compreensíveis para os usuários.</p>
+            <p>Garantir que o sistema AAL forneça feedback em tempo real sobre suas ações e decisões, informando os usuários sobre o status das operações, resultados de ações realizadas e qualquer informação relevante para a tomada de decisões.</p>
+            <p>Testes de usabilidade e feedback dos usuários: Realize testes de usabilidade para validar a eficácia da transparência do sistema AAL. Envolver os usuários-alvo nos testes e coletar feedback deles para identificar possíveis melhorias na transparência do sistema.</p>
+            <p>Documentar e partilhar todas as instruções detalhadas sobre o sistema AAL, incluindo manuais de usuário, guias de ajuda, tutoriais em vídeo ou qualquer outro recurso que possa auxiliar os stakeholders na compreensão do funcionamento do sistema.</p>",
+            'content' => file_get_contents(storage_path() . '/files/nfr/sig-transparency-file.txt'),
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-transparency-file.png')),
+            'characteristics_id' => $ethicsNonFunctionalRequirements->id,
+            'users_id' => $user->id,
+        ]);
+
+
+        NonFunctionalRequirements::create([  
+            'name' => "Consent",
+            'description' => "Refere-se ao requisito de obter o consentimento explícito dos usuários antes de coletar, processar ou compartilhar suas informações pessoais. É importante garantir que os usuários tenham a capacidade de tomar decisões informadas sobre o uso de seus dados pessoais.",
+            'model_quality' => "Quality in Use",
+            'source' => "<p>Pinheiro, Patricia Peck. Proteção de dados pessoais: Comentários à lei n. 13.709/2018-lgpd. Saraiva Educação SA, 2020.</p><p>REGULAMENTO (UE) 2016/679 DO PARLAMENTO EUROPEU E DO CONSELHO</p>",
+            'recommendations' => "<p>Implementar mecanismos para controles de privacidade personalizáveis para os usuários, permitindo que eles ajustem suas preferências de privacidade de acordo com suas necessidades e níveis de conforto.</p>
+            <p>Implementar interfaces de usuário clara e acessível para obter o consentimento dos usuários.</p>
+            <p>Procurar utilizar linguagem clara, evitando jargões técnicos, e forneça uma estrutura lógica e organizada para as informações.</p>
+            <p>Fornecer opções explícitas de consentimento para os usuários, permitindo que eles tomem decisões informadas sobre quais dados desejam compartilhar e como desejam que sejam usados no contexto dos sistemas AAL.</p> 
+            <p>Se a coleta e uso de dados pessoais no contexto dos sistemas AAL envolver várias finalidades ou tipos de dados, permita que os usuários forneçam consentimento separadamente para cada finalidade ou tipo de dados.</p> 
+            <p>Implementar mecanismos de gestão de concentimento para mantenha registros claros e precisos dos consentimentos fornecidos pelos usuários, incluindo a data e a finalidade do consentimento.</p> 
+            <p>No plano de treinamento e documentação, apresentar os usuários sobre seus direitos em relação ao consentimento e privacidade de dados, fornecendo informações claras sobre como eles podem acessar, corrigir, excluir ou exportar seus dados pessoais e como podem entrar em contato com o responsável pelo tratamento de dados para exercer esses direitos.</p>",
+            'content' => file_get_contents(storage_path() . '/files/nfr/sig-consent-file.txt'),
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-consent-file.png')),
+            'characteristics_id' => $ethicsNonFunctionalRequirements->id,
             'users_id' => $user->id,
         ]);
     

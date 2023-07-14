@@ -1,0 +1,163 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "6d32cbab-08b3-40de-9933-44a7c0640a6f",
+      "text": "Confidencialidade",
+      "type": "nfr.NFR",
+      "x": 276,
+      "y": 498,
+      "customProperties": {
+        "Description": "Refere-se ao grau em que um produto ou sistema AAL garante que os dados sejam acessíveis apenas por pessoas ou outros produtos/sistemas autorizados."
+      }
+    },
+    {
+      "id": "e324d7aa-4535-496c-86c9-45a9c1397f05",
+      "text": "Controle de Acesso",
+      "type": "nfr.Operationalization",
+      "x": 406,
+      "y": 615,
+      "customProperties": {
+        "Description": ""
+      }
+    },
+    {
+      "id": "e09b1f59-0f7c-4f54-a80a-861f744d26c1",
+      "text": "Criptografia",
+      "type": "nfr.Operationalization",
+      "x": 171,
+      "y": 619,
+      "customProperties": {
+        "Description": ""
+      }
+    },
+    {
+      "id": "6ae06499-cf1c-4842-a0cf-ae21bad76435",
+      "text": "SSL/TLS",
+      "type": "nfr.Operationalization",
+      "x": 235,
+      "y": 768,
+      "customProperties": {
+        "Description": "Se possível, obtenha o consentimento por escrito. Isso pode ser feito por meio de uma assinatura em um formulário ou documento específico, ou até mesmo por meio de um processo eletrônico, se for viável e compreensível para o idoso."
+      }
+    },
+    {
+      "id": "3951efa9-7fd0-4ed2-b489-efa337825014",
+      "text": "Hashing",
+      "type": "nfr.Operationalization",
+      "x": 112,
+      "y": 764,
+      "customProperties": {
+        "Description": ""
+      }
+    },
+    {
+      "id": "9ac04c94-a51d-4439-b910-d5b0815c3bba",
+      "text": "Autenticação",
+      "type": "nfr.Operationalization",
+      "x": 376,
+      "y": 742
+    },
+    {
+      "id": "9b2d05c9-48e6-43bc-aa59-2eb171d37417",
+      "text": "Autorização",
+      "type": "nfr.Operationalization",
+      "x": 498,
+      "y": 742
+    },
+    {
+      "id": "36b1beba-b214-4711-a453-1dd1f0237023",
+      "text": "Restrições",
+      "type": "nfr.Operationalization",
+      "x": 463,
+      "y": 852
+    },
+    {
+      "id": "98db8259-a1cb-4986-b8b1-22aa0b6cb907",
+      "text": "Logs",
+      "type": "nfr.Operationalization",
+      "x": 568,
+      "y": 853
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "cba05358-cf19-42df-b3b9-4c283f2ef2f0",
+      "type": "nfr.ContributionLink",
+      "source": "3951efa9-7fd0-4ed2-b489-efa337825014",
+      "target": "e09b1f59-0f7c-4f54-a80a-861f744d26c1",
+      "label": "+"
+    },
+    {
+      "id": "45275bb3-a8f6-41c3-b2a7-6a1d1146f0db",
+      "type": "nfr.ContributionLink",
+      "source": "6ae06499-cf1c-4842-a0cf-ae21bad76435",
+      "target": "e09b1f59-0f7c-4f54-a80a-861f744d26c1",
+      "label": "+"
+    },
+    {
+      "id": "a5d63458-cf6a-4535-9949-6caf5ad15e90",
+      "type": "nfr.AndRefinementLink",
+      "source": "e09b1f59-0f7c-4f54-a80a-861f744d26c1",
+      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f"
+    },
+    {
+      "id": "92d7a1e3-8fa1-45a7-87e7-6a7f1862caca",
+      "type": "nfr.AndRefinementLink",
+      "source": "e324d7aa-4535-496c-86c9-45a9c1397f05",
+      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f"
+    },
+    {
+      "id": "2ead5e87-8755-4d8d-a3ca-29faa00610a5",
+      "type": "nfr.AndRefinementLink",
+      "source": "9ac04c94-a51d-4439-b910-d5b0815c3bba",
+      "target": "e324d7aa-4535-496c-86c9-45a9c1397f05"
+    },
+    {
+      "id": "c70afc52-28db-457b-a28f-6cfcccf4d852",
+      "type": "nfr.AndRefinementLink",
+      "source": "9b2d05c9-48e6-43bc-aa59-2eb171d37417",
+      "target": "e324d7aa-4535-496c-86c9-45a9c1397f05"
+    },
+    {
+      "id": "eaa47a5f-5c2e-4e6f-9379-1ff3150e4f05",
+      "type": "nfr.ContributionLink",
+      "source": "36b1beba-b214-4711-a453-1dd1f0237023",
+      "target": "9b2d05c9-48e6-43bc-aa59-2eb171d37417",
+      "label": "+"
+    },
+    {
+      "id": "1197fb0a-4a35-4126-a69b-4c5e13c3495e",
+      "type": "nfr.ContributionLink",
+      "source": "98db8259-a1cb-4986-b8b1-22aa0b6cb907",
+      "target": "9b2d05c9-48e6-43bc-aa59-2eb171d37417",
+      "label": "+"
+    }
+  ],
+  "display": {
+    "6d32cbab-08b3-40de-9933-44a7c0640a6f": {
+      "width": 102.59130859375,
+      "height": 55.30694580078125
+    },
+    "6ae06499-cf1c-4842-a0cf-ae21bad76435": {
+      "width": 103.091064453125,
+      "height": 60.30572509765625
+    },
+    "3951efa9-7fd0-4ed2-b489-efa337825014": {
+      "width": 95.091796875,
+      "height": 57.80609130859375
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Fri, 14 Jul 2023 03:44:19 GMT",
+  "diagram": {
+    "width": 2513,
+    "height": 1300,
+    "name": "Example NFR model",
+    "customProperties": {
+      "Description": "This tool supports two things that are often troublesome to develop with generic modelling frameworks:\n - draw complex shapes (clouds) without distorting when they are resized\n - create links from an element to a link (claim links)"
+    }
+  }
+}

@@ -22,7 +22,7 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
     public function run()
     {
 
-        $user = User::where('email' , '=' , 'admin@rs4aal.site' )->first();
+        $user = User::where('email' , '=' , 'admin@nddframework.io' )->first();
         $lifeSettings = LifeSettings::where('name' , '=' , 'Generic' )->first();
 
         $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
@@ -164,8 +164,41 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
             ]);
         }
 
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+            'name' => "AAL Guidelines for Ethics, data privacy and security",
+            'description' => "As Diretrizes de Ética, Privacidade e Segurança de Dados da AAL são um documento que fornece um modelo para alcançar a excelência ética em tecnologias digitais para um envelhecimento ativo e saudável. Integra o cumprimento da legislação geral com um diálogo ético e oferece reflexões sobre como estabelecer excelência ética para soluções voltadas para o envelhecimento ativo e saudável por meio de tecnologias digitais.",
+            'legal_references' => "<p>ISO TC314 Ageing Societies</p>
+            <p>EN 301 549 V3.2.1 (2021-03) Accessibility requirements for ICT products and services</p>
+            <p>CEN-ISO/TS 82304-2:2021 Health and wellness apps – quality and reliability</p>
+            <p>IEC 62304:2006 Medical device software – Software lifecycle processes</p>
+            <p>IEC 62366-1:2015 Medical devices – Application of usability engineering to medical devices</p>
+            <p>ISO 13485:2016 Medical devices – Quality management systems – Requirements for regulatory purposes</p>
+            <p>ISO 14971:2019 Medical devices – Application of risk management to medical devices</p>
+            <p>ISO 14155:2020 Clinical investigation of medical devices for human subjects – Good clinical practice</p>
+            <p>ISO/IEC 27001:2022 – Information security management</p>",
+            'recommendations' => "
+            <p>Assegurar que a conceção e o desenvolvimento de tecnologias digitais para um envelhecimento ativo e saudável se baseiam em princípios e valores éticos.</p>
+            <p>Garantir que a privacidade e a segurança dos dados pessoais sejam protegidas durante todo o ciclo de vida da tecnologia digital.</p>
+            <p>Garantir que a tecnologia digital seja acessível e utilizável por todos os usuários, incluindo aqueles com deficiências ou deficiências.</p>
+            <p>Garantir que a tecnologia digital seja projetada para promover a autonomia, a independência e a dignidade dos idosos.</p>
+            <p>Garantir que a tecnologia digital seja projetada para apoiar a inclusão social e a conexão entre os idosos.</p>
+            <p>Promover a autonomia, independência e dignidade dos idosos, por exemplo, permitindo que eles controlem seus próprios dados pessoais e tomem decisões informadas sobre o uso da tecnologia digital.</p>
+            <p>Estabelecer um diálogo ético com todos os stakeholders relevantes, incluindo idosos, cuidadores, profissionais de saúde e desenvolvedores de tecnologia digital.</p>
+            <p>Garantir que os usuários finais sejam informados sobre seus direitos e tenham a capacidade de exercê-los.</p>",
+            'content' => "",
+            'life_settings_id' => $lifeSettings->id,
+            'users_id' => $user->id,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),            
+        ]);
 
-
+        $requirements = NonFunctionalRequirements::whereIn('name', ['Usability', 'Accessibility', 'Privacy', "Security", "Ethics", "Autonomy"])->get();
+        foreach($requirements as $requirement) {
+            DB::table('legal_has_nfr_requirement')->insert([
+                'legal_id' =>  $legalAndNormativeRequirement->id,
+                'nfr_id' => $requirement->id,
+            ]);
+        }
         
     }
 }

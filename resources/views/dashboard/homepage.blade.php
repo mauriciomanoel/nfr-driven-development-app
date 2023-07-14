@@ -17,7 +17,7 @@
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
                       </div>
                       <div class="text-value-lg">{{ $values["nonFunctionalRequirementCount"] }}</div>
-                      <div>Requeriments</div>
+                      <div>Non-Functional Requirements</div>
                     </div>
                     <div class="c-chart-wrapper mt-3 mx-3" style="height:50px;">
                       <canvas class="chart" id="card-chart1" height="50"></canvas>
@@ -37,7 +37,7 @@
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
                       </div>
                       <div class="text-value-lg">{{ $values["legalAndNormativeRequirementCount"] }}</div>
-                      <div>Legal Regulations</div>
+                      <div>Legal Regulations and Normative</div>
                     </div>
                     <div class="c-chart-wrapper mt-3" style="height:50px;">
                       <canvas class="chart" id="card-chart3" height="50"></canvas>

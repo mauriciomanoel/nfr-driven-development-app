@@ -25,14 +25,14 @@
                     <div class="card-body">
                         <div class="row justify-content-md-center bs-wizard" style="border-bottom:0;">
                         
-                            <div class="col-xs-2 bs-wizard-step complete">
+                            <div class="col-xs-2 bs-wizard-step disabled"> 
                               <div class="text-center bs-wizard-stepnum">Step 1</div>
                               <div class="progress"><div class="progress-bar"></div></div>
                               <a href="{{ route('framework.step1') }}" class="bs-wizard-dot"></a>
                               <div class="bs-wizard-info text-center">Levantar Requisitos Legais e Normativos</div>
                             </div>
                             
-                            <div class="col-xs-2 bs-wizard-step active"><!-- complete -->
+                            <div class="col-xs-2 bs-wizard-step disabled"><!-- complete -->
                               <div class="text-center bs-wizard-stepnum">Step 2</div>
                               <div class="progress"><div class="progress-bar"></div></div>
                               <a href="{{ route('framework.step2') }}" class="bs-wizard-dot"></a>

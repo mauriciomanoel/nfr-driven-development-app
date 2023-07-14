@@ -41,7 +41,7 @@ class ArtifactsSeeder extends Seeder
         ]);
 
 
-        $user = User::where('email' , '=' , 'admin@rs4aal.site' )->first();        
+        $user = User::where('email' , '=' , 'admin@nddframework.io' )->first();        
         $lifeSettingsSubcategories = LifeSettingsSubcategories::where('name' , '=' , 'Home Safety and Care' )->first();
 
         $artifact = Artifacts::create([  
@@ -1403,7 +1403,7 @@ class ArtifactsSeeder extends Seeder
         $artifact = Artifacts::create([  
             'title' => "AAL Guidelines for Ethics, Data Privacy and Security",
             'description' => "",            
-            'content' => $b64Doc = chunk_split(base64_encode(file_get_contents(storage_path() . '/files/AAL-guidelines-for-ethics-final-V2.pdf'))),
+            'content' => $b64Doc = chunk_split(base64_encode(file_get_contents(storage_path() . '/files/AAL-Guidelines_Dec.-2022_FINAL.pdf'))),
             'artifacts_type_id' => $legalRegulationsId,
             'life_settings_subcategories_id' => $lifeSettingsSubcategories->id,
             'users_id' => $user->id,

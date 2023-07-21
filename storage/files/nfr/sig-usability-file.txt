@@ -1,0 +1,1305 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e",
+      "text": "Usabilidade",
+      "type": "nfr.NFR",
+      "x": 1191,
+      "y": 10,
+      "customProperties": {
+        "Description": ""
+      }
+    },
+    {
+      "id": "cee71d70-652b-4852-bda2-b1b093321106",
+      "text": "Reconhecimento de adequação",
+      "type": "nfr.NFR",
+      "x": 584,
+      "y": 93,
+      "customProperties": {
+        "Description": "Refere-se à facilidade com que os usuários podem reconhecer se o sistema é adequado para suas necessidades e objetivos."
+      }
+    },
+    {
+      "id": "d75cf51f-b7ca-442a-b69e-cac88b835680",
+      "text": "Operabilidade",
+      "type": "nfr.NFR",
+      "x": 1193,
+      "y": 315,
+      "customProperties": {
+        "Description": "Refere-se à facilidade de operação e controle do sistema pelos usuários."
+      }
+    },
+    {
+      "id": "7011e15a-ec3e-4a92-ad85-7d06355df01a",
+      "text": "Aprendizagem",
+      "type": "nfr.NFR",
+      "x": 1660,
+      "y": 527,
+      "customProperties": {
+        "Description": "Refere-se à facilidade de aprendizado do sistema para novos usuários e a capacidade de relembrar a utilização após um período de não uso."
+      }
+    },
+    {
+      "id": "96e1dcd4-ea7a-44f1-9df5-def924fefd54",
+      "text": "Estética da interface do usuário",
+      "type": "nfr.NFR",
+      "x": 1933,
+      "y": 354,
+      "customProperties": {
+        "Description": "Refere-se ao design visual e à estética geral da interface do usuário, focando na satisfação estética do usuário."
+      }
+    },
+    {
+      "id": "f2db5df9-ac3e-4dc1-900b-1ec9de19bf5e",
+      "text": "Proteção contra erros do usuário",
+      "type": "nfr.NFR",
+      "x": 2228,
+      "y": 290,
+      "customProperties": {
+        "Referesecapacidadedosistemadeprevenirdetectarerecuperarerroscometidospelousurio": ""
+      }
+    },
+    {
+      "id": "e1465084-37b1-4b54-8132-dc3d2281a221",
+      "text": "Experiência do Usuário",
+      "type": "nfr.NFR",
+      "x": 258,
+      "y": 250
+    },
+    {
+      "id": "475ac96f-cb2c-4238-b323-7ea578a2de70",
+      "text": "Responsividade",
+      "type": "nfr.NFR",
+      "x": 749,
+      "y": 229
+    },
+    {
+      "id": "88a65186-6710-4977-9d15-ba4811cbe893",
+      "text": "Disponibilidade",
+      "type": "nfr.NFR",
+      "x": 517,
+      "y": 248
+    },
+    {
+      "id": "24d53936-82e5-480f-86ed-05c5349e7105",
+      "text": "Segurança",
+      "type": "nfr.NFR",
+      "x": 957,
+      "y": 128
+    },
+    {
+      "id": "7e7dd76e-7569-4ec1-8d0e-33297f9d6a70",
+      "text": "Desempenho",
+      "type": "nfr.NFR",
+      "x": 885,
+      "y": 203
+    },
+    {
+      "id": "90c3d1a3-7270-4429-83bf-06a693f3e4be",
+      "text": "Design da Interface do Usuário",
+      "type": "nfr.Operationalization",
+      "x": 146,
+      "y": 499
+    },
+    {
+      "id": "09b854c5-c691-4098-9a41-c1725be2c602",
+      "text": "Navegação",
+      "type": "nfr.Operationalization",
+      "x": 315,
+      "y": 493
+    },
+    {
+      "id": "3e64bad6-4bd4-463a-893c-de6f61e15956",
+      "text": "Ajuda",
+      "type": "nfr.Operationalization",
+      "x": 472,
+      "y": 494
+    },
+    {
+      "id": "e90d3cdb-692d-40ea-b011-8c36d589c442",
+      "text": "visual minimalista",
+      "type": "nfr.Operationalization",
+      "x": 12,
+      "y": 570
+    },
+    {
+      "id": "fb6a5ed4-0ead-40cf-9a66-625afbaeda36",
+      "text": "Mostrar indicação de gestos",
+      "type": "nfr.Operationalization",
+      "x": 35,
+      "y": 641
+    },
+    {
+      "id": "51876ce5-aff4-4997-ac0e-858e50279e7a",
+      "text": "Usar dicas visuais ",
+      "type": "nfr.Operationalization",
+      "x": 78,
+      "y": 701
+    },
+    {
+      "id": "c56db6ff-c0b0-42d3-a8d3-cfb925599ad7",
+      "text": "Uso de Cores para destacar botões",
+      "type": "nfr.Operationalization",
+      "x": 178,
+      "y": 719
+    },
+    {
+      "id": "aed70b96-8781-4fe9-b4e7-ee9ff43b2295",
+      "text": "Visual mais limpo",
+      "type": "nfr.Operationalization",
+      "x": 249,
+      "y": 597
+    },
+    {
+      "id": "022dd3ad-293b-4e05-825d-9d95caeea42c",
+      "text": "Aumentar os elementos visuais",
+      "type": "nfr.Operationalization",
+      "x": 299,
+      "y": 671
+    },
+    {
+      "id": "b42aaba5-d0e7-466e-9211-41b76e60c8f5",
+      "text": "Ícones com Nomes",
+      "type": "nfr.Operationalization",
+      "x": 374,
+      "y": 607
+    },
+    {
+      "id": "ba986350-a4bd-4dca-95d5-eea546149506",
+      "text": "tutoriais e vídeos explicativos",
+      "type": "nfr.Operationalization",
+      "x": 439,
+      "y": 669
+    },
+    {
+      "id": "3baee841-5254-42ba-9e7f-f5a33dd0a6be",
+      "text": "Uso de áudio e vídeo",
+      "type": "nfr.Operationalization",
+      "x": 523,
+      "y": 613
+    },
+    {
+      "id": "0407e1b4-fdbf-40de-9b46-47ef9c336e46",
+      "text": "Media Queries",
+      "type": "nfr.Operationalization",
+      "x": 656,
+      "y": 310
+    },
+    {
+      "id": "28bbbf68-a05d-4711-be7f-6fa85e553efe",
+      "text": "Flexbox",
+      "type": "nfr.Operationalization",
+      "x": 703,
+      "y": 375
+    },
+    {
+      "id": "79618984-723e-4c07-b41b-c1da3bfdcae9",
+      "text": "Minificação de Código",
+      "type": "nfr.Operationalization",
+      "x": 804,
+      "y": 393
+    },
+    {
+      "id": "98323e3f-a3e9-4926-a3cb-aee5fa2f34f0",
+      "text": "Componentes Prontos",
+      "type": "nfr.Operationalization",
+      "x": 929,
+      "y": 357
+    },
+    {
+      "id": "17e2fc22-bca8-4d06-9548-056bb09231f4",
+      "text": "Paginas em manutenção",
+      "type": "nfr.Operationalization",
+      "x": 445,
+      "y": 370
+    },
+    {
+      "id": "a815888d-5198-470e-a76b-74e71bc5fbd6",
+      "text": "Verificação Periodica Links quebrados",
+      "type": "nfr.Operationalization",
+      "x": 551,
+      "y": 400
+    },
+    {
+      "id": "cfa3b979-aaf2-48af-a5f7-143605be8308",
+      "text": "Memorabilidade",
+      "type": "nfr.NFR",
+      "x": 990,
+      "y": 457
+    },
+    {
+      "id": "66a31e9e-7b29-44f6-9b3c-4750422c4b80",
+      "text": "Simplicidade",
+      "type": "nfr.NFR",
+      "x": 1349,
+      "y": 534
+    },
+    {
+      "id": "89ce632d-4987-470f-88fb-d791220ab63f",
+      "text": "Reação do Sistema",
+      "type": "nfr.Operationalization",
+      "x": 889,
+      "y": 585
+    },
+    {
+      "id": "4abbcf16-e634-4633-b72a-e40c04e3c064",
+      "text": "Uso de asset familiar",
+      "type": "nfr.Operationalization",
+      "x": 998,
+      "y": 586
+    },
+    {
+      "id": "cda97521-df64-4797-bcbe-f4f9f5d28831",
+      "text": "Apresentação Visual",
+      "type": "nfr.Operationalization",
+      "x": 1184,
+      "y": 598
+    },
+    {
+      "id": "9b814c23-95e5-4fa8-9c2b-3f932e389d2c",
+      "text": "Exibir mensagem sem ação",
+      "type": "nfr.Operationalization",
+      "x": 807,
+      "y": 781
+    },
+    {
+      "id": "25461f9a-ecb9-418f-8a83-b7184b28a2aa",
+      "text": "Exibir mensagem por ação",
+      "type": "nfr.Operationalization",
+      "x": 885,
+      "y": 829
+    },
+    {
+      "id": "0197327b-4adf-4aca-bdf8-ec46ca11e8ec",
+      "text": "Mensagens via texto, SMS ou notificações",
+      "type": "nfr.Operationalization",
+      "x": 998,
+      "y": 810
+    },
+    {
+      "id": "81f7d53f-e06f-47ed-bdca-0b1863b8a6ce",
+      "text": "Tipografia",
+      "type": "nfr.Operationalization",
+      "x": 1119,
+      "y": 865,
+      "customProperties": {
+        "Description": "https://www.ux-republic.com/pt/tipografia-e-acessibilidade-ato-1-como-escolher-a-fonte-de-escrita-certa/"
+      }
+    },
+    {
+      "id": "5eb0d6a8-4dbd-495e-b9a5-7790a9ef8db6",
+      "text": "Uso de Cores de Preferência do Usuário",
+      "type": "nfr.Operationalization",
+      "x": 1227,
+      "y": 854
+    },
+    {
+      "id": "dff75920-e093-4947-b1a1-d5bdd68d4385",
+      "text": "Objetos, ações e opções sempre visíveis",
+      "type": "nfr.Operationalization",
+      "x": 1278,
+      "y": 758
+    },
+    {
+      "id": "a887580e-940a-4419-a518-a8a4dc39a572",
+      "text": "Uso de Fontes Sans-Serif",
+      "type": "nfr.Operationalization",
+      "x": 1020,
+      "y": 1130
+    },
+    {
+      "id": "eecae5f1-c6fe-45a8-b6ba-1b60a72cbcfb",
+      "text": "Usar Diferentes estilos",
+      "type": "nfr.Operationalization",
+      "x": 1105,
+      "y": 1077
+    },
+    {
+      "id": "28ca89a3-e9ea-4912-be6d-3f32573839eb",
+      "text": "Uso e exibição de fontes",
+      "type": "nfr.Operationalization",
+      "x": 1176,
+      "y": 1161
+    },
+    {
+      "id": "fbecc8d8-0900-48b3-92f1-b39ff92921ed",
+      "text": "Multilíngue",
+      "type": "nfr.Operationalization",
+      "x": 1215,
+      "y": 1074
+    },
+    {
+      "id": "582f6219-b345-488a-8987-15ed3f47d1e7",
+      "text": "Fontes consistente ao longo do sistema",
+      "type": "nfr.Operationalization",
+      "x": 969,
+      "y": 1069
+    },
+    {
+      "id": "f0080c87-e4bc-41be-a25e-2ef8412fe5ca",
+      "text": "Diferenças de personagem entre caracteres",
+      "type": "nfr.Operationalization",
+      "x": 906,
+      "y": 1011,
+      "customProperties": {
+        "Description": ""
+      }
+    },
+    {
+      "id": "d1ba76eb-30be-4e3d-a5db-adffc6787a01",
+      "text": "Limitar recursos na  interface",
+      "type": "nfr.Operationalization",
+      "x": 1305,
+      "y": 627.5
+    },
+    {
+      "id": "683c9803-5a4a-4fe2-bc1e-d9432441748a",
+      "text": "Priorizar Tatefas",
+      "type": "nfr.Operationalization",
+      "x": 1417,
+      "y": 623.5
+    },
+    {
+      "id": "7badfe05-c14c-496c-afc0-3161a011016c",
+      "text": "Prioridade de conteúdo e recurso",
+      "type": "nfr.Operationalization",
+      "x": 1503,
+      "y": 708
+    },
+    {
+      "id": "70aebf4e-bb7c-4200-81c2-bda0955a5177",
+      "text": "Modelos Mentais",
+      "type": "nfr.Operationalization",
+      "x": 1648,
+      "y": 701,
+      "customProperties": {
+        "Description": "https://xd.adobe.com/ideas/process/user-testing/how-to-test-your-designs-learnability/"
+      }
+    },
+    {
+      "id": "d1f357f3-d69b-4af6-ab4d-892e6ead65ac",
+      "text": "Treinamento",
+      "type": "nfr.Operationalization",
+      "x": 1802,
+      "y": 684
+    },
+    {
+      "id": "7431eafd-3df5-4bb4-b16f-713b410cbe2b",
+      "text": "Peso visual em objetos",
+      "type": "nfr.Operationalization",
+      "x": 1425,
+      "y": 841
+    },
+    {
+      "id": "3e06b85e-dbb3-4a66-826f-7bc333e8e58e",
+      "text": "Tamanho de objetos individuais",
+      "type": "nfr.Operationalization",
+      "x": 1546,
+      "y": 836
+    },
+    {
+      "id": "069681cb-d59c-412f-8a92-d716bfc9ea60",
+      "text": "Instruções claras de cada etapa",
+      "type": "nfr.Operationalization",
+      "x": 1577,
+      "y": 921
+    },
+    {
+      "id": "9429e756-f5c5-4bbf-9137-195e26ef6f85",
+      "text": "Facilitar a localização de instruções",
+      "type": "nfr.Operationalization",
+      "x": 1659,
+      "y": 853
+    },
+    {
+      "id": "e47543d2-2e0d-42b7-b889-69202830a8cd",
+      "text": "Design centrado na experiência do usuário",
+      "type": "nfr.Operationalization",
+      "x": 1748,
+      "y": 918
+    },
+    {
+      "id": "faca50a4-7ac8-4d6c-a6a4-a00057994723",
+      "text": "Sensibilização",
+      "type": "nfr.Operationalization",
+      "x": 1773,
+      "y": 802,
+      "customProperties": {
+        "Description": "Treinamento de sensibilização: Este tipo de treinamento visa ajudar os usuários a entenderem como os sistemas AAL podem ajudá-los e como eles podem usá-los em seu dia a dia."
+      }
+    },
+    {
+      "id": "a267980d-0113-4074-9d86-51199c2040b7",
+      "text": "Operação",
+      "type": "nfr.Operationalization",
+      "x": 1876,
+      "y": 793,
+      "customProperties": {
+        "Description": "Treinamento de operação: Este tipo de treinamento visa ensinar aos usuários como operar os sistemas AAL, incluindo a navegação em menus, entrada de dados e uso de comandos de voz."
+      }
+    },
+    {
+      "id": "04678519-67f7-4679-9b2d-cdc925a8b605",
+      "text": " Utilizar cores e fontes coerentes e apropriadas",
+      "type": "nfr.Operationalization",
+      "x": 1829,
+      "y": 527
+    },
+    {
+      "id": "095918c2-7637-499e-8ce2-89d047433b71",
+      "text": "ícones intuitivos e reconhecíveis",
+      "type": "nfr.Operationalization",
+      "x": 1893,
+      "y": 578
+    },
+    {
+      "id": "e747b9ec-6bc6-481e-86b9-db2852e4936f",
+      "text": "animações suaves e naturais",
+      "type": "nfr.Operationalization",
+      "x": 1987,
+      "y": 525
+    },
+    {
+      "id": "d5d2699a-1330-490c-a3d0-4b40ff009cb9",
+      "text": "feedback visual",
+      "type": "nfr.Operationalization",
+      "x": 2095,
+      "y": 578
+    },
+    {
+      "id": "0ce3c2bc-13c8-4d40-ad37-f760bb5db1c3",
+      "text": "implementação de campos de validação",
+      "type": "nfr.Operationalization",
+      "x": 2195,
+      "y": 489
+    },
+    {
+      "id": "cbc6dcdb-cc8b-4f74-96d7-7ea49e264bb7",
+      "text": "mensagens de erro claras",
+      "type": "nfr.Operationalization",
+      "x": 2267,
+      "y": 558
+    },
+    {
+      "id": "ab2bd141-e73d-470e-95c2-995c6018f354",
+      "text": "informações de ajuda",
+      "type": "nfr.Operationalization",
+      "x": 2340,
+      "y": 458
+    },
+    {
+      "id": "3e38ae20-7849-4cc5-b160-cd3956a4c79f",
+      "text": "Alertas de confirmação",
+      "type": "nfr.Operationalization",
+      "x": 2347,
+      "y": 635
+    },
+    {
+      "id": "819def32-792e-41a5-bd7d-30a97c6b50a3",
+      "text": "Internationalização",
+      "type": "nfr.NFR",
+      "x": 2532,
+      "y": 343.5
+    },
+    {
+      "id": "a15649b9-c345-42de-b658-1100aba450ba",
+      "text": "Conformidade",
+      "type": "nfr.NFR",
+      "x": 2745,
+      "y": 420
+    },
+    {
+      "id": "1da8219e-88de-460f-b527-35e63769eda7",
+      "text": "Compatibilidade",
+      "type": "nfr.NFR",
+      "x": 3006,
+      "y": 365
+    },
+    {
+      "id": "5fbf128a-fea9-4259-a540-30bde11fda1e",
+      "text": "Adaptabilidade",
+      "type": "nfr.NFR",
+      "x": 3339,
+      "y": 274
+    },
+    {
+      "id": "35ac76a0-d548-4aac-b780-4d91cb330ca0",
+      "text": "Cultura",
+      "type": "nfr.Operationalization",
+      "x": 2446,
+      "y": 450.5
+    },
+    {
+      "id": "ae32365a-1fc0-479f-8eb6-23bdcc9713da",
+      "text": "Suporte Características da Localização",
+      "type": "nfr.Operationalization",
+      "x": 2538,
+      "y": 504
+    },
+    {
+      "id": "4db3026f-a489-4d63-89d9-c13e73ed246c",
+      "text": "WCAG 2.0",
+      "type": "nfr.Operationalization",
+      "x": 2552,
+      "y": 598
+    },
+    {
+      "id": "6e584ba6-6bc3-42f2-831e-89613944e1ef",
+      "text": "Web Accessibility Initiative",
+      "type": "nfr.Operationalization",
+      "x": 2575,
+      "y": 672
+    },
+    {
+      "id": "f9e22b20-cf69-4842-9b21-9e8474c8e1b4",
+      "text": "Section 508",
+      "type": "nfr.Operationalization",
+      "x": 2640,
+      "y": 751
+    },
+    {
+      "id": "15e6b2c2-8280-46a3-9559-d73c114e05c6",
+      "text": "NBR ISO 9241-171/2018",
+      "type": "nfr.Operationalization",
+      "x": 2822,
+      "y": 651
+    },
+    {
+      "id": "55e31736-0145-4df0-9ff8-7fecb5990534",
+      "text": "ISO 9241-110:2020",
+      "type": "nfr.Operationalization",
+      "x": 2756,
+      "y": 724
+    },
+    {
+      "id": "b491fe3e-f778-4587-a8dd-1320ced41e51",
+      "text": "tecnologias interoperáveis",
+      "type": "nfr.Operationalization",
+      "x": 2926,
+      "y": 504.5
+    },
+    {
+      "id": "c7ae7384-7842-4020-909e-68ea7aebeeca",
+      "text": "Design Responsivo",
+      "type": "nfr.Operationalization",
+      "x": 3033,
+      "y": 510.5
+    },
+    {
+      "id": "cb5b1d9f-afaf-47d5-9d19-092f579da907",
+      "text": "Customização",
+      "type": "nfr.NFR",
+      "x": 3240,
+      "y": 417
+    },
+    {
+      "id": "e9f47e70-c356-46f8-b6c9-b80660a8ace2",
+      "text": "Flexibilidade",
+      "type": "nfr.NFR",
+      "x": 3530,
+      "y": 426
+    },
+    {
+      "id": "5da2c5c1-eafe-4b23-a189-f8743abe7bb1",
+      "text": "Componentes Nativos",
+      "type": "nfr.Operationalization",
+      "x": 3179,
+      "y": 597
+    },
+    {
+      "id": "d4ab17e6-caa7-4c70-b78d-aabad5398165",
+      "text": "tecnologia assistiva",
+      "type": "nfr.Operationalization",
+      "x": 3282,
+      "y": 603
+    },
+    {
+      "id": "31e27771-f86f-4e0a-b885-ef6bf09cafb2",
+      "text": "Utilizar frameworks",
+      "type": "nfr.Operationalization",
+      "x": 3424,
+      "y": 577
+    },
+    {
+      "id": "153949ec-b3ec-4c67-b456-8ecda65f92e3",
+      "text": "Web",
+      "type": "nfr.Operationalization",
+      "x": 3306,
+      "y": 716
+    },
+    {
+      "id": "f6c2e2a4-4eba-405b-ae69-a80b96b1ee73",
+      "text": "Desktop",
+      "type": "nfr.Operationalization",
+      "x": 3348,
+      "y": 775
+    },
+    {
+      "id": "ed1569d7-224d-41d7-8538-8316c035781e",
+      "text": "Mobile",
+      "type": "nfr.Operationalization",
+      "x": 3444,
+      "y": 727
+    },
+    {
+      "id": "24e0feae-6bc0-4807-80df-4131feb4360a",
+      "text": "Reutilização Componentes",
+      "type": "nfr.Operationalization",
+      "x": 3550,
+      "y": 578
+    },
+    {
+      "id": "b9e963ae-746e-4db4-a99b-bb83136e6dd0",
+      "text": "Técnicas de refatoração",
+      "type": "nfr.Operationalization",
+      "x": 3680,
+      "y": 576
+    },
+    {
+      "id": "641eda78-58e1-49e6-b871-aa241817e0a3",
+      "text": "Interface do usuário",
+      "type": "nfr.Operationalization",
+      "x": 3640,
+      "y": 699.5,
+      "customProperties": {
+        "Description": "Você pode fazer alterações simples na IU e refatorar o código. Por exemplo: alinhe o campo de entrada, aplique a fonte, reformule em voz ativa, indique o formato, aplique o tamanho do botão comum e aumente o contraste da cor, etc."
+      }
+    },
+    {
+      "id": "356b084e-ac36-4168-aef9-13fbf7b43079",
+      "text": "Vermelho-Verde",
+      "type": "nfr.Operationalization",
+      "x": 3754,
+      "y": 689,
+      "customProperties": {
+        "Description": "Red-Green é a técnica de refatoração de código mais popular e amplamente usada no processo de desenvolvimento de software Agile. Essa técnica segue a abordagem “teste primeiro” para design e implementação, o que estabelece a base para todas as formas de refatoração. Os desenvolvedores tomam a iniciativa de refatorar no ciclo de desenvolvimento orientado a testes e isso é realizado nas três etapas distritais."
+      }
+    },
+    {
+      "id": "156ad9d2-302e-4e09-9b7a-8f573dfa9f33",
+      "text": "Acessibilidade",
+      "type": "nfr.NFR",
+      "x": 2873,
+      "y": 177,
+      "customProperties": {
+        "Description": "Refere-se à capacidade do sistema de ser utilizado por uma ampla gama de usuários, incluindo aqueles com deficiências ou necessidades especiais"
+      }
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "278d78c7-3fb1-459f-a189-f0a06d789e0e",
+      "type": "nfr.AndRefinementLink",
+      "source": "cee71d70-652b-4852-bda2-b1b093321106",
+      "target": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e"
+    },
+    {
+      "id": "344b217c-f4a9-48e7-af87-ecf0641b6abd",
+      "type": "nfr.AndRefinementLink",
+      "source": "d75cf51f-b7ca-442a-b69e-cac88b835680",
+      "target": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e"
+    },
+    {
+      "id": "1e9ec4aa-8244-4817-9cb5-f74aaa167d9f",
+      "type": "nfr.AndRefinementLink",
+      "source": "7011e15a-ec3e-4a92-ad85-7d06355df01a",
+      "target": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e"
+    },
+    {
+      "id": "487283ed-7767-4108-92cf-3e51841936e6",
+      "type": "nfr.AndRefinementLink",
+      "source": "96e1dcd4-ea7a-44f1-9df5-def924fefd54",
+      "target": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e"
+    },
+    {
+      "id": "2543a389-81b2-40b8-a4c8-df8f8d4c0da9",
+      "type": "nfr.AndRefinementLink",
+      "source": "f2db5df9-ac3e-4dc1-900b-1ec9de19bf5e",
+      "target": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e"
+    },
+    {
+      "id": "0e1efe9e-2a57-4c74-ba8a-3d3ae0a57aa8",
+      "type": "nfr.AndRefinementLink",
+      "source": "e1465084-37b1-4b54-8132-dc3d2281a221",
+      "target": "cee71d70-652b-4852-bda2-b1b093321106"
+    },
+    {
+      "id": "ececdcd0-cda3-4469-97f7-5e4b28f296b9",
+      "type": "nfr.AndRefinementLink",
+      "source": "475ac96f-cb2c-4238-b323-7ea578a2de70",
+      "target": "cee71d70-652b-4852-bda2-b1b093321106"
+    },
+    {
+      "id": "d819e513-63d7-4009-ac66-9114b76281e8",
+      "type": "nfr.AndRefinementLink",
+      "source": "88a65186-6710-4977-9d15-ba4811cbe893",
+      "target": "cee71d70-652b-4852-bda2-b1b093321106"
+    },
+    {
+      "id": "abb7b2b4-58e5-4419-be8c-79698d7d3fb0",
+      "type": "nfr.AndRefinementLink",
+      "source": "24d53936-82e5-480f-86ed-05c5349e7105",
+      "target": "cee71d70-652b-4852-bda2-b1b093321106"
+    },
+    {
+      "id": "a9ddd421-55fe-44e4-ae37-6a4ef13eaaa7",
+      "type": "nfr.AndRefinementLink",
+      "source": "7e7dd76e-7569-4ec1-8d0e-33297f9d6a70",
+      "target": "cee71d70-652b-4852-bda2-b1b093321106"
+    },
+    {
+      "id": "5f581d0f-21e0-4ef8-8f5f-76f036d12b0f",
+      "type": "nfr.AndRefinementLink",
+      "source": "90c3d1a3-7270-4429-83bf-06a693f3e4be",
+      "target": "e1465084-37b1-4b54-8132-dc3d2281a221"
+    },
+    {
+      "id": "8f9c5dc3-bac7-4189-93af-090cb0fe76c2",
+      "type": "nfr.AndRefinementLink",
+      "source": "09b854c5-c691-4098-9a41-c1725be2c602",
+      "target": "e1465084-37b1-4b54-8132-dc3d2281a221"
+    },
+    {
+      "id": "b58a4203-e058-457b-a157-04c4cf65949b",
+      "type": "nfr.AndRefinementLink",
+      "source": "3e64bad6-4bd4-463a-893c-de6f61e15956",
+      "target": "e1465084-37b1-4b54-8132-dc3d2281a221"
+    },
+    {
+      "id": "a22a77e0-a325-4a40-b2a4-071962f94ab0",
+      "type": "nfr.AndRefinementLink",
+      "source": "e90d3cdb-692d-40ea-b011-8c36d589c442",
+      "target": "90c3d1a3-7270-4429-83bf-06a693f3e4be"
+    },
+    {
+      "id": "08178fab-dd06-46dd-976f-5e74102ad2a4",
+      "type": "nfr.AndRefinementLink",
+      "source": "fb6a5ed4-0ead-40cf-9a66-625afbaeda36",
+      "target": "90c3d1a3-7270-4429-83bf-06a693f3e4be"
+    },
+    {
+      "id": "3b6f4f34-d962-429b-b26e-8951787cd1e3",
+      "type": "nfr.AndRefinementLink",
+      "source": "51876ce5-aff4-4997-ac0e-858e50279e7a",
+      "target": "90c3d1a3-7270-4429-83bf-06a693f3e4be"
+    },
+    {
+      "id": "a919d83d-f82c-4802-9ad2-48e73534fe73",
+      "type": "nfr.AndRefinementLink",
+      "source": "c56db6ff-c0b0-42d3-a8d3-cfb925599ad7",
+      "target": "90c3d1a3-7270-4429-83bf-06a693f3e4be"
+    },
+    {
+      "id": "f851010a-2351-42ea-8d2f-21ec48fd11af",
+      "type": "nfr.AndRefinementLink",
+      "source": "aed70b96-8781-4fe9-b4e7-ee9ff43b2295",
+      "target": "09b854c5-c691-4098-9a41-c1725be2c602"
+    },
+    {
+      "id": "b27c1857-47f6-4dd8-bc39-fc9c556f8fcf",
+      "type": "nfr.AndRefinementLink",
+      "source": "022dd3ad-293b-4e05-825d-9d95caeea42c",
+      "target": "09b854c5-c691-4098-9a41-c1725be2c602"
+    },
+    {
+      "id": "eac4f9c2-b08b-4609-a51d-85b3b0a9abe0",
+      "type": "nfr.AndRefinementLink",
+      "source": "b42aaba5-d0e7-466e-9211-41b76e60c8f5",
+      "target": "09b854c5-c691-4098-9a41-c1725be2c602"
+    },
+    {
+      "id": "9cde2ee1-e0df-4e02-9520-2a22d756817e",
+      "type": "nfr.OrRefinementLink",
+      "source": "ba986350-a4bd-4dca-95d5-eea546149506",
+      "target": "3e64bad6-4bd4-463a-893c-de6f61e15956"
+    },
+    {
+      "id": "edcaa2d5-a733-4c24-b0a8-89516eaecb3c",
+      "type": "nfr.OrRefinementLink",
+      "source": "3baee841-5254-42ba-9e7f-f5a33dd0a6be",
+      "target": "3e64bad6-4bd4-463a-893c-de6f61e15956"
+    },
+    {
+      "id": "735b1882-0c91-4678-b0e6-b13e612d4294",
+      "type": "nfr.OrRefinementLink",
+      "source": "0407e1b4-fdbf-40de-9b46-47ef9c336e46",
+      "target": "475ac96f-cb2c-4238-b323-7ea578a2de70"
+    },
+    {
+      "id": "7eaf136f-9295-4fec-af03-49cffeda29df",
+      "type": "nfr.OrRefinementLink",
+      "source": "28bbbf68-a05d-4711-be7f-6fa85e553efe",
+      "target": "475ac96f-cb2c-4238-b323-7ea578a2de70"
+    },
+    {
+      "id": "a265692d-fa17-4ee4-a556-e228b1ef5731",
+      "type": "nfr.OrRefinementLink",
+      "source": "79618984-723e-4c07-b41b-c1da3bfdcae9",
+      "target": "475ac96f-cb2c-4238-b323-7ea578a2de70"
+    },
+    {
+      "id": "a1418738-716d-462c-99fe-19747644e934",
+      "type": "nfr.OrRefinementLink",
+      "source": "98323e3f-a3e9-4926-a3cb-aee5fa2f34f0",
+      "target": "475ac96f-cb2c-4238-b323-7ea578a2de70"
+    },
+    {
+      "id": "532aa4d9-9fc6-438a-9dfd-0ef3268a2678",
+      "type": "nfr.ContributionLink",
+      "source": "98323e3f-a3e9-4926-a3cb-aee5fa2f34f0",
+      "target": "7e7dd76e-7569-4ec1-8d0e-33297f9d6a70",
+      "label": "+"
+    },
+    {
+      "id": "811f1f5a-b68f-4c65-bc7f-15a2963af76a",
+      "type": "nfr.ContributionLink",
+      "source": "79618984-723e-4c07-b41b-c1da3bfdcae9",
+      "target": "7e7dd76e-7569-4ec1-8d0e-33297f9d6a70",
+      "label": "+"
+    },
+    {
+      "id": "8f8f2545-7643-48ec-8f33-2a0f55214dfe",
+      "type": "nfr.OrRefinementLink",
+      "source": "17e2fc22-bca8-4d06-9548-056bb09231f4",
+      "target": "88a65186-6710-4977-9d15-ba4811cbe893"
+    },
+    {
+      "id": "03a697dc-fb3e-4cfe-b61d-63160e003b6c",
+      "type": "nfr.OrRefinementLink",
+      "source": "a815888d-5198-470e-a76b-74e71bc5fbd6",
+      "target": "88a65186-6710-4977-9d15-ba4811cbe893"
+    },
+    {
+      "id": "08be3f5a-716a-4873-acb4-b07c9128f02a",
+      "type": "nfr.AndRefinementLink",
+      "source": "89ce632d-4987-470f-88fb-d791220ab63f",
+      "target": "cfa3b979-aaf2-48af-a5f7-143605be8308"
+    },
+    {
+      "id": "d242e646-1a64-46e5-9636-67f63d93ade1",
+      "type": "nfr.AndRefinementLink",
+      "source": "4abbcf16-e634-4633-b72a-e40c04e3c064",
+      "target": "cfa3b979-aaf2-48af-a5f7-143605be8308"
+    },
+    {
+      "id": "914ee9ca-d311-48a4-b367-ea3ec4ea125e",
+      "type": "nfr.AndRefinementLink",
+      "source": "cda97521-df64-4797-bcbe-f4f9f5d28831",
+      "target": "cfa3b979-aaf2-48af-a5f7-143605be8308"
+    },
+    {
+      "id": "1e531afc-fada-4ef4-95d0-05590e418eca",
+      "type": "nfr.AndRefinementLink",
+      "source": "9b814c23-95e5-4fa8-9c2b-3f932e389d2c",
+      "target": "89ce632d-4987-470f-88fb-d791220ab63f"
+    },
+    {
+      "id": "402a98f4-f7d6-46d3-8e51-e81aa74575c5",
+      "type": "nfr.AndRefinementLink",
+      "source": "25461f9a-ecb9-418f-8a83-b7184b28a2aa",
+      "target": "89ce632d-4987-470f-88fb-d791220ab63f"
+    },
+    {
+      "id": "40057237-c727-4d78-9151-101cb99e2550",
+      "type": "nfr.AndRefinementLink",
+      "source": "0197327b-4adf-4aca-bdf8-ec46ca11e8ec",
+      "target": "89ce632d-4987-470f-88fb-d791220ab63f"
+    },
+    {
+      "id": "b6838646-d46c-48cb-9cc4-7df0bba09ff6",
+      "type": "nfr.AndRefinementLink",
+      "source": "cfa3b979-aaf2-48af-a5f7-143605be8308",
+      "target": "d75cf51f-b7ca-442a-b69e-cac88b835680"
+    },
+    {
+      "id": "9c8c914b-3581-432c-919b-495eb0cab74f",
+      "type": "nfr.AndRefinementLink",
+      "source": "66a31e9e-7b29-44f6-9b3c-4750422c4b80",
+      "target": "d75cf51f-b7ca-442a-b69e-cac88b835680"
+    },
+    {
+      "id": "aaa4d6e2-bff4-421b-9837-56f5cabe2236",
+      "type": "nfr.AndRefinementLink",
+      "source": "81f7d53f-e06f-47ed-bdca-0b1863b8a6ce",
+      "target": "cda97521-df64-4797-bcbe-f4f9f5d28831"
+    },
+    {
+      "id": "51ceb868-718e-4b54-957a-4245649038ed",
+      "type": "nfr.AndRefinementLink",
+      "source": "5eb0d6a8-4dbd-495e-b9a5-7790a9ef8db6",
+      "target": "cda97521-df64-4797-bcbe-f4f9f5d28831"
+    },
+    {
+      "id": "6905f86e-3557-4e38-81d7-ae4595eed67f",
+      "type": "nfr.AndRefinementLink",
+      "source": "dff75920-e093-4947-b1a1-d5bdd68d4385",
+      "target": "cda97521-df64-4797-bcbe-f4f9f5d28831"
+    },
+    {
+      "id": "f5ed3327-4f4a-4420-a4ac-39ced937edf4",
+      "type": "nfr.OrRefinementLink",
+      "source": "f0080c87-e4bc-41be-a25e-2ef8412fe5ca",
+      "target": "81f7d53f-e06f-47ed-bdca-0b1863b8a6ce"
+    },
+    {
+      "id": "f3c197c0-4d52-45f8-864d-dd58e1062510",
+      "type": "nfr.OrRefinementLink",
+      "source": "582f6219-b345-488a-8987-15ed3f47d1e7",
+      "target": "81f7d53f-e06f-47ed-bdca-0b1863b8a6ce"
+    },
+    {
+      "id": "5a553bae-9dfb-47fd-ba59-943dcc563258",
+      "type": "nfr.OrRefinementLink",
+      "source": "a887580e-940a-4419-a518-a8a4dc39a572",
+      "target": "81f7d53f-e06f-47ed-bdca-0b1863b8a6ce"
+    },
+    {
+      "id": "15e63186-75bf-4d94-b225-34370bb36839",
+      "type": "nfr.OrRefinementLink",
+      "source": "eecae5f1-c6fe-45a8-b6ba-1b60a72cbcfb",
+      "target": "81f7d53f-e06f-47ed-bdca-0b1863b8a6ce"
+    },
+    {
+      "id": "4d6273a7-d639-45f4-8550-d7611d611599",
+      "type": "nfr.OrRefinementLink",
+      "source": "28ca89a3-e9ea-4912-be6d-3f32573839eb",
+      "target": "81f7d53f-e06f-47ed-bdca-0b1863b8a6ce"
+    },
+    {
+      "id": "65723305-ac48-4ca5-af79-79124a317f22",
+      "type": "nfr.OrRefinementLink",
+      "source": "fbecc8d8-0900-48b3-92f1-b39ff92921ed",
+      "target": "81f7d53f-e06f-47ed-bdca-0b1863b8a6ce"
+    },
+    {
+      "id": "63adf439-dee6-4f43-b84e-62ab13c90abb",
+      "type": "nfr.AndRefinementLink",
+      "source": "d1ba76eb-30be-4e3d-a5db-adffc6787a01",
+      "target": "66a31e9e-7b29-44f6-9b3c-4750422c4b80"
+    },
+    {
+      "id": "5a6e5983-195b-4a35-835e-1940e365d722",
+      "type": "nfr.AndRefinementLink",
+      "source": "683c9803-5a4a-4fe2-bc1e-d9432441748a",
+      "target": "66a31e9e-7b29-44f6-9b3c-4750422c4b80"
+    },
+    {
+      "id": "0b113054-6d6b-4783-825d-46e4fdaf29de",
+      "type": "nfr.OrRefinementLink",
+      "source": "7badfe05-c14c-496c-afc0-3161a011016c",
+      "target": "7011e15a-ec3e-4a92-ad85-7d06355df01a"
+    },
+    {
+      "id": "a1e821a0-4c3a-48c0-a378-fc3e5eeb45cc",
+      "type": "nfr.OrRefinementLink",
+      "source": "70aebf4e-bb7c-4200-81c2-bda0955a5177",
+      "target": "7011e15a-ec3e-4a92-ad85-7d06355df01a"
+    },
+    {
+      "id": "ad002265-9443-410e-bf12-147f57402eb6",
+      "type": "nfr.OrRefinementLink",
+      "source": "d1f357f3-d69b-4af6-ab4d-892e6ead65ac",
+      "target": "7011e15a-ec3e-4a92-ad85-7d06355df01a"
+    },
+    {
+      "id": "b9089406-0d81-4d1a-ba33-957cbd42d89c",
+      "type": "nfr.OrRefinementLink",
+      "source": "3e06b85e-dbb3-4a66-826f-7bc333e8e58e",
+      "target": "7badfe05-c14c-496c-afc0-3161a011016c"
+    },
+    {
+      "id": "d0bb6f92-d2b5-41a1-9a02-78da26ea58d5",
+      "type": "nfr.OrRefinementLink",
+      "source": "7431eafd-3df5-4bb4-b16f-713b410cbe2b",
+      "target": "7badfe05-c14c-496c-afc0-3161a011016c"
+    },
+    {
+      "id": "885b28fb-824a-4838-a6b9-70fdc12f7b0f",
+      "type": "nfr.AndRefinementLink",
+      "source": "069681cb-d59c-412f-8a92-d716bfc9ea60",
+      "target": "70aebf4e-bb7c-4200-81c2-bda0955a5177"
+    },
+    {
+      "id": "72741f6a-9834-494c-a7be-4e350f0dd850",
+      "type": "nfr.AndRefinementLink",
+      "source": "9429e756-f5c5-4bbf-9137-195e26ef6f85",
+      "target": "70aebf4e-bb7c-4200-81c2-bda0955a5177"
+    },
+    {
+      "id": "3a1c1312-b309-4698-8ce0-a46ec0162f44",
+      "type": "nfr.AndRefinementLink",
+      "source": "e47543d2-2e0d-42b7-b889-69202830a8cd",
+      "target": "70aebf4e-bb7c-4200-81c2-bda0955a5177"
+    },
+    {
+      "id": "9e88968b-9de7-41ba-a6f6-b1617535b17d",
+      "type": "nfr.OrRefinementLink",
+      "source": "faca50a4-7ac8-4d6c-a6a4-a00057994723",
+      "target": "d1f357f3-d69b-4af6-ab4d-892e6ead65ac"
+    },
+    {
+      "id": "c2747866-cfdf-4477-a0ab-0abca7f2ffde",
+      "type": "nfr.OrRefinementLink",
+      "source": "a267980d-0113-4074-9d86-51199c2040b7",
+      "target": "d1f357f3-d69b-4af6-ab4d-892e6ead65ac"
+    },
+    {
+      "id": "5ad64ae6-1adf-473a-a021-7ddfa221ddf3",
+      "type": "nfr.AndRefinementLink",
+      "source": "04678519-67f7-4679-9b2d-cdc925a8b605",
+      "target": "96e1dcd4-ea7a-44f1-9df5-def924fefd54"
+    },
+    {
+      "id": "706cd812-6b42-478f-a22c-e3bdfb061d06",
+      "type": "nfr.AndRefinementLink",
+      "source": "095918c2-7637-499e-8ce2-89d047433b71",
+      "target": "96e1dcd4-ea7a-44f1-9df5-def924fefd54"
+    },
+    {
+      "id": "70a0cbe3-61d9-46ff-9ed7-2bf68f6a8f4f",
+      "type": "nfr.AndRefinementLink",
+      "source": "e747b9ec-6bc6-481e-86b9-db2852e4936f",
+      "target": "96e1dcd4-ea7a-44f1-9df5-def924fefd54"
+    },
+    {
+      "id": "53521b38-7594-4d9a-934c-e78a7a5ad178",
+      "type": "nfr.AndRefinementLink",
+      "source": "d5d2699a-1330-490c-a3d0-4b40ff009cb9",
+      "target": "96e1dcd4-ea7a-44f1-9df5-def924fefd54"
+    },
+    {
+      "id": "0c402629-5fd1-4041-8aa8-f84eae57bace",
+      "type": "nfr.AndRefinementLink",
+      "source": "0ce3c2bc-13c8-4d40-ad37-f760bb5db1c3",
+      "target": "f2db5df9-ac3e-4dc1-900b-1ec9de19bf5e"
+    },
+    {
+      "id": "f8fc7e24-13f7-4568-a7ef-fe4abc03719d",
+      "type": "nfr.AndRefinementLink",
+      "source": "cbc6dcdb-cc8b-4f74-96d7-7ea49e264bb7",
+      "target": "f2db5df9-ac3e-4dc1-900b-1ec9de19bf5e"
+    },
+    {
+      "id": "b4bc87aa-30e8-4bf6-90f6-03eb6aa72d5b",
+      "type": "nfr.AndRefinementLink",
+      "source": "ab2bd141-e73d-470e-95c2-995c6018f354",
+      "target": "f2db5df9-ac3e-4dc1-900b-1ec9de19bf5e"
+    },
+    {
+      "id": "2504c44f-4808-4c95-914c-5bfa6bcbe56d",
+      "type": "nfr.AndRefinementLink",
+      "source": "3e38ae20-7849-4cc5-b160-cd3956a4c79f",
+      "target": "f2db5df9-ac3e-4dc1-900b-1ec9de19bf5e"
+    },
+    {
+      "id": "5e473fa9-e477-4ec2-a77f-56d9d4860c12",
+      "type": "nfr.AndRefinementLink",
+      "source": "35ac76a0-d548-4aac-b780-4d91cb330ca0",
+      "target": "819def32-792e-41a5-bd7d-30a97c6b50a3"
+    },
+    {
+      "id": "a343c62f-be08-4c98-bc58-fb146e4e037e",
+      "type": "nfr.AndRefinementLink",
+      "source": "ae32365a-1fc0-479f-8eb6-23bdcc9713da",
+      "target": "819def32-792e-41a5-bd7d-30a97c6b50a3"
+    },
+    {
+      "id": "b21305e8-6547-4d32-94af-6ae9a042ca74",
+      "type": "nfr.OrRefinementLink",
+      "source": "4db3026f-a489-4d63-89d9-c13e73ed246c",
+      "target": "a15649b9-c345-42de-b658-1100aba450ba"
+    },
+    {
+      "id": "8e47676e-9e72-47d7-97e4-2e86353dc707",
+      "type": "nfr.OrRefinementLink",
+      "source": "6e584ba6-6bc3-42f2-831e-89613944e1ef",
+      "target": "a15649b9-c345-42de-b658-1100aba450ba"
+    },
+    {
+      "id": "280498be-aebc-45ac-80cc-d025e66ef1ca",
+      "type": "nfr.OrRefinementLink",
+      "source": "f9e22b20-cf69-4842-9b21-9e8474c8e1b4",
+      "target": "a15649b9-c345-42de-b658-1100aba450ba"
+    },
+    {
+      "id": "17130239-1513-4f2a-963d-e474e36a8b16",
+      "type": "nfr.OrRefinementLink",
+      "source": "55e31736-0145-4df0-9ff8-7fecb5990534",
+      "target": "a15649b9-c345-42de-b658-1100aba450ba"
+    },
+    {
+      "id": "c74d6b9b-b2ca-49c4-a713-301093770032",
+      "type": "nfr.OrRefinementLink",
+      "source": "15e6b2c2-8280-46a3-9559-d73c114e05c6",
+      "target": "a15649b9-c345-42de-b658-1100aba450ba"
+    },
+    {
+      "id": "bd50a257-10a6-4b42-837f-71990cc2be18",
+      "type": "nfr.OrRefinementLink",
+      "source": "b491fe3e-f778-4587-a8dd-1320ced41e51",
+      "target": "1da8219e-88de-460f-b527-35e63769eda7"
+    },
+    {
+      "id": "c841bcb5-4890-4244-b1b5-14d29467ae88",
+      "type": "nfr.OrRefinementLink",
+      "source": "c7ae7384-7842-4020-909e-68ea7aebeeca",
+      "target": "1da8219e-88de-460f-b527-35e63769eda7"
+    },
+    {
+      "id": "c1521cba-b482-4884-bf2d-f35cefac32c0",
+      "type": "nfr.OrRefinementLink",
+      "source": "c7ae7384-7842-4020-909e-68ea7aebeeca",
+      "target": "cb5b1d9f-afaf-47d5-9d19-092f579da907"
+    },
+    {
+      "id": "b981fc6c-d5a3-48dc-9e40-47ba4aa8c7f7",
+      "type": "nfr.OrRefinementLink",
+      "source": "5da2c5c1-eafe-4b23-a189-f8743abe7bb1",
+      "target": "cb5b1d9f-afaf-47d5-9d19-092f579da907"
+    },
+    {
+      "id": "f64b0c8f-1189-4a92-91cd-13af3d7fc815",
+      "type": "nfr.OrRefinementLink",
+      "source": "d4ab17e6-caa7-4c70-b78d-aabad5398165",
+      "target": "cb5b1d9f-afaf-47d5-9d19-092f579da907"
+    },
+    {
+      "id": "6afaf0b6-c2e1-4c36-9cfb-c2e7ba82fa40",
+      "type": "nfr.AndRefinementLink",
+      "source": "cb5b1d9f-afaf-47d5-9d19-092f579da907",
+      "target": "5fbf128a-fea9-4259-a540-30bde11fda1e"
+    },
+    {
+      "id": "a59c3297-126e-4b9b-b075-73caa0baf9df",
+      "type": "nfr.AndRefinementLink",
+      "source": "e9f47e70-c356-46f8-b6c9-b80660a8ace2",
+      "target": "5fbf128a-fea9-4259-a540-30bde11fda1e"
+    },
+    {
+      "id": "38635084-e6f7-4cd5-bdb7-ee01e15f50b1",
+      "type": "nfr.OrRefinementLink",
+      "source": "153949ec-b3ec-4c67-b456-8ecda65f92e3",
+      "target": "31e27771-f86f-4e0a-b885-ef6bf09cafb2"
+    },
+    {
+      "id": "7905f96d-836c-4a54-8d93-80bf10706eb3",
+      "type": "nfr.OrRefinementLink",
+      "source": "f6c2e2a4-4eba-405b-ae69-a80b96b1ee73",
+      "target": "31e27771-f86f-4e0a-b885-ef6bf09cafb2"
+    },
+    {
+      "id": "3775b2fe-82f2-4f5d-a71a-e04c15d1e2a3",
+      "type": "nfr.OrRefinementLink",
+      "source": "ed1569d7-224d-41d7-8538-8316c035781e",
+      "target": "31e27771-f86f-4e0a-b885-ef6bf09cafb2"
+    },
+    {
+      "id": "1aa98565-a9f8-4d13-aa5c-226e9b660466",
+      "type": "nfr.OrRefinementLink",
+      "source": "641eda78-58e1-49e6-b871-aa241817e0a3",
+      "target": "b9e963ae-746e-4db4-a99b-bb83136e6dd0"
+    },
+    {
+      "id": "7ded8b08-7383-467e-b56e-92fbcc4a6d21",
+      "type": "nfr.AndRefinementLink",
+      "source": "31e27771-f86f-4e0a-b885-ef6bf09cafb2",
+      "target": "e9f47e70-c356-46f8-b6c9-b80660a8ace2"
+    },
+    {
+      "id": "a74ec587-a713-402f-902f-4ab7731226aa",
+      "type": "nfr.AndRefinementLink",
+      "source": "24e0feae-6bc0-4807-80df-4131feb4360a",
+      "target": "e9f47e70-c356-46f8-b6c9-b80660a8ace2"
+    },
+    {
+      "id": "a0c50059-be95-4c05-a9e8-2c3fbac7c21b",
+      "type": "nfr.AndRefinementLink",
+      "source": "b9e963ae-746e-4db4-a99b-bb83136e6dd0",
+      "target": "e9f47e70-c356-46f8-b6c9-b80660a8ace2"
+    },
+    {
+      "id": "8ffdb40f-b489-47dc-b6c6-f5011c308ce7",
+      "type": "nfr.OrRefinementLink",
+      "source": "356b084e-ac36-4168-aef9-13fbf7b43079",
+      "target": "b9e963ae-746e-4db4-a99b-bb83136e6dd0"
+    },
+    {
+      "id": "6af27005-0b5d-4a36-9c01-7cb56e3f5fff",
+      "type": "nfr.AndRefinementLink",
+      "source": "819def32-792e-41a5-bd7d-30a97c6b50a3",
+      "target": "156ad9d2-302e-4e09-9b7a-8f573dfa9f33"
+    },
+    {
+      "id": "f461b669-6db4-45b4-844f-5d12ec490b7f",
+      "type": "nfr.AndRefinementLink",
+      "source": "a15649b9-c345-42de-b658-1100aba450ba",
+      "target": "156ad9d2-302e-4e09-9b7a-8f573dfa9f33"
+    },
+    {
+      "id": "f8f1a6c8-f848-47fa-ad2f-dfa0683bc5cd",
+      "type": "nfr.AndRefinementLink",
+      "source": "1da8219e-88de-460f-b527-35e63769eda7",
+      "target": "156ad9d2-302e-4e09-9b7a-8f573dfa9f33"
+    },
+    {
+      "id": "0a1c3fd8-a784-463c-8dbd-f9819c11672c",
+      "type": "nfr.AndRefinementLink",
+      "source": "5fbf128a-fea9-4259-a540-30bde11fda1e",
+      "target": "156ad9d2-302e-4e09-9b7a-8f573dfa9f33"
+    },
+    {
+      "id": "41b4ae2c-226c-4a80-9f3a-a8c2e281fc82",
+      "type": "nfr.AndRefinementLink",
+      "source": "156ad9d2-302e-4e09-9b7a-8f573dfa9f33",
+      "target": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e"
+    }
+  ],
+  "display": {
+    "cee71d70-652b-4852-bda2-b1b093321106": {
+      "width": 117.58966064453125,
+      "height": 68.40536499023438
+    },
+    "7011e15a-ec3e-4a92-ad85-7d06355df01a": {
+      "width": 98.357177734375,
+      "height": 57.806365966796875
+    },
+    "17e2fc22-bca8-4d06-9548-056bb09231f4": {
+      "width": 104.35662841796875,
+      "height": 63.3050537109375
+    },
+    "a815888d-5198-470e-a76b-74e71bc5fbd6": {
+      "width": 115.35546875,
+      "height": 60.80560302734375
+    },
+    "4abbcf16-e634-4633-b72a-e40c04e3c064": {
+      "width": 94.35760498046875,
+      "height": 62.80517578125
+    },
+    "5eb0d6a8-4dbd-495e-b9a5-7790a9ef8db6": {
+      "width": 99.357177734375,
+      "height": 58.30621337890625
+    },
+    "dff75920-e093-4947-b1a1-d5bdd68d4385": {
+      "width": 113.355712890625,
+      "height": 64.3048095703125
+    },
+    "069681cb-d59c-412f-8a92-d716bfc9ea60": {
+      "width": 95.3575439453125,
+      "height": 65.804443359375
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Fri, 21 Jul 2023 13:46:53 GMT",
+  "diagram": {
+    "width": 3884,
+    "height": 1300,
+    "name": "Example NFR model",
+    "customProperties": {
+      "Description": "This tool supports two things that are often troublesome to develop with generic modelling frameworks:\n - draw complex shapes (clouds) without distorting when they are resized\n - create links from an element to a link (claim links)"
+    }
+  }
+}

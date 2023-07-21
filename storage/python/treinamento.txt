@@ -1,0 +1,33 @@
+Este software deve ser acessível a todos os usuários|Accessibility
+A segurança dos dados deve ser uma prioridade absoluta|Security
+Este software deve ser desenvolvido seguindo os mais altos padrões éticos|Ethics
+O usuário deve ter autonomia para personalizar as configurações do sistema|Autonomy
+Este software deve ter alta disponibilidade|Availability
+Este software deve ter alta performance|Performance
+Este software deve ter alta segurança|Security
+Este software deve ser bem documentado|Documentation
+Este software deve ter uma interface intuitiva|Usability
+Uso de símbolos e palavras que sejam naturalmente compreensíveis é essencial|Aceitability
+intuição no uso do sistema, capacidade de entender e interagir com o sistema|Usability
+atender às suas necessidades específicas|Adaptability
+recursos personalizados|Usability
+Este software deve ser desenvolvido com foco na acessibilidade|Accessibility
+A segurança dos dados deve ser garantida em todas as interações|Security
+As decisões tomadas pelo software devem ser baseadas em princípios éticos|Ethics
+Os usuários devem ter controle total sobre suas informações e dados|Autonomy
+Este software deve garantir a acessibilidade para pessoas com deficiência|Accessibility
+A segurança física e lógica do sistema deve ser rigorosamente mantida|Security
+Ética e privacidade devem ser consideradas em todas as etapas do desenvolvimento|Ethics
+O usuário deve ter autonomia para tomar decisões dentro do sistema|Autonomy
+Este software deve ser compatível com as diretrizes de acessibilidade|Accessibility
+A segurança da informação deve ser tratada como uma preocupação primordial|Security
+As decisões tomadas pelo software devem ser éticas e responsáveis|Ethics
+Os usuários devem ter controle sobre como seus dados são coletados e usados|Autonomy
+Este software deve ser acessível para pessoas com diferentes necessidades|Accessibility
+A segurança do software deve ser constantemente monitorada e atualizada|Security
+Os valores éticos da empresa devem ser incorporados ao desenvolvimento do software|Ethics
+O usuário deve ter autonomia para configurar suas preferências e restrições|Autonomy
+Este software deve atender aos padrões de acessibilidade estabelecidos|Accessibility
+A segurança dos dados deve ser protegida por criptografia robusta|Security
+As práticas éticas devem ser seguidas em todas as interações com o software|Ethics
+Os usuários devem ter controle sobre o uso de seus dados pessoais|Autonomy

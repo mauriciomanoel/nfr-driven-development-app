@@ -19,7 +19,7 @@
               @endif  
 
               <div class="card-header">
-                <i class="fa fa-align-justify"></i><strong>{{ __('Step 03 - 2: Coletar Experiência dos Stakeholders') }}</strong>
+                <i class="fa fa-align-justify"></i><strong>{{ __('Step 3.2: Coletar Experiência dos Stakeholders') }}</strong>
               </div>
               <div class="card-body">
 

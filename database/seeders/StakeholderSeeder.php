@@ -44,9 +44,9 @@ class StakeholderSeeder extends Seeder
             'users_id' => 1,
             'stakeholders_id' => $finalUsers->id,
             'description' => "O grupo de usuários finais é composto por idosos que utilizarão o sistema AAL. Eles são os principais beneficiários do sistema, buscando melhorar sua qualidade de vida, segurança e independência.",
-            'identified_needs' => "<p>Monitoramento remoto de saúde e bem-estar.</p><p>Suporte para atividades diárias, como lembretes de medicação e assistência na realização de tarefas domésticas.</p><p>Comunicação fácil com cuidadores e familiares.</p><p>Interface intuitiva e de fácil uso, considerando as habilidades digitais variadas dos usuários.</p><p>Privacidade e segurança dos dados pessoais.</p>",
+            'identified_needs' => "<p>Monitoramento remoto de saúde e bem-estar.</p><p>Suporte para atividades diárias, como lembretes de medicação e assistência na realização de tarefas domésticas.</p><p>Comunicação fácil com cuidadores e familiares.</p><p>Interface intuitiva e de fácil uso, considerando as habilidades digitais variadas dos usuários.</p><p>Privacidade e segurança dos dados pessoais.</p><p>Treinamento para o uso do sistema Android</p>",
             'expectations' => "<p>Acesso fácil e rápido às funcionalidades do sistema.</p><p>Disponibilidade de suporte técnico para solucionar eventuais problemas.</p><p>Interface de usuário amigável, com ícones claros e texto legível.</p><p>Funcionalidades adaptáveis e personalizáveis para atender às preferências individuais.</p><p>Alertas e notificações claras e compreensíveis.</p>",
-            'experiences' => "<p>Alguns usuários finais têm experiência prévia limitada com tecnologia, enquanto outros têm maior familiaridade com dispositivos eletrônicos.</p>",
+            'experiences' => "<p>Alguns usuários finais não tem experiência com tecnologia, mais utilizam com frequencia a plataforma de stream para assistir os canais favoritos, enquanto outros têm maior familiaridade com dispositivos eletrônicos.</p>",
         ]);
 
         StakeholderAnalysis::create([  

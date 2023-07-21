@@ -25,7 +25,7 @@ class NonFunctionRequirementsSeeder extends Seeder
             'description' => "Refere-se à medida em que um sistema é considerado adequado, satisfatório e útil para os usuários finais ou os destinatários do sistema. Envolve a avaliação de fatores como usabilidade, acessibilidade, adaptabilidade, segurança e a satisfação geral do usuário com o sistema.",
             'model_quality' => "Transversal",
             'source' => "<p>Leal, José Eugênio. Avaliação da aceitabilidade de um sistema de apoio à logística humanitária. Diss. PUC-Rio, 2019.</p><p>McCreadie, Claudine, and Anthea Tinker. The acceptability of assistive technology to older people. Ageing & Society 25.1 (2005): 91-110.</p><p>Whelan, Sally, et al. Factors affecting the acceptability of social robots by older adults including people with dementia or cognitive impairment: a literature review. International Journal of Social Robotics 10.5 (2018): 643-668.</p>",
-            'recommendations' => "<p>Certifique-se de que o sistema é seguro e funcional, desenvolvendo ou melhorando sua segurança, utilidade, efetividade e usabilidade</p>.<p>Realize uma análise exaustiva do sistema para avaliar suas capacidades e competências dos usuários finais, ou seja, seu grau de usabilidade.<p>Utilize ferramentas de verificação dos procedimentos de interação em sistemas, como proposto por REBELO (2004), para garantir a adequação, a satisfação e a utilidade do sistema para os usuários finais ou os destinatários do sistema.</p>",
+            'recommendations' => "<p>Certifique-se de que o sistema é seguro e funcional, desenvolvendo ou melhorando sua segurança, utilidade, efetividade e usabilidade</p><p>Realize uma análise exaustiva do sistema para avaliar suas capacidades e competências dos usuários finais, ou seja, seu grau de usabilidade.<p>Utilize ferramentas de verificação dos procedimentos de interação em sistemas, como proposto por REBELO (2004), para garantir a adequação, a satisfação e a utilidade do sistema para os usuários finais ou os destinatários do sistema.</p>",
             'content' => file_get_contents(storage_path() . '/files/nfr/sig-acceptability-file.txt'),
             'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-acceptability-file.png')),
             'characteristics_id' => 0,
@@ -44,20 +44,20 @@ class NonFunctionRequirementsSeeder extends Seeder
             'users_id' => $user->id,
         ]);
 
-        NonFunctionalRequirements::create([  
-            'name' => "Satisfaction",
-            'description' => "Refere-se ao grau em que as necessidades e expectativas dos usuários são atendidas e excedidas. É a percepção subjetiva dos usuários em relação à qualidade, utilidade e valor do produto, serviço ou sistema fornecido.",
-            'model_quality' => "Transversal",
-            'source' => "<p>Silva, Flávia Janólio Costacurta Pinto da, et al. Grau de satisfação dos usuários de um hospital universitário: a influência da presença de alunos. Revista da Escola de Enfermagem da USP 53 (2019).</p>
-            <p>Kim, Eric S., et al. Life satisfaction and subsequent physical, behavioral, and psychosocial health in older adults. The Milbank Quarterly 99.1 (2021): 209-239.</p>",
-            'recommendations' => "<p>Garantir que as necessidades e expectativas dos usuários sejam atendidas e, se possível, excedidas. Para isso, é fundamental realizar pesquisas quantitativas para medir a satisfação dos clientes.</p> 
-            Analisar as lacunas entre a expectativa e a percepção dos clientes em relação às dimensões do serviço oferecido [1]. Além disso, é crucial considerar os determinantes de satisfação dos clientes, que podem variar dependendo do serviço prestado.</p> 
-            Garantir a qualidade, utilidade e valor do produto, serviço ou sistema fornecido para aumentar a satisfação dos usuários. Dessa forma, é possível fidelizar clientes e aumentar a reputação do sistema AAL.</p>",
-            'content' => file_get_contents(storage_path() . '/files/nfr/sig-satisfaction-file.txt'),
-            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-satisfaction-file.png')),        
-            'characteristics_id' => $acceptabilityRequeriment->id,
-            'users_id' => $user->id,
-        ]);
+        // NonFunctionalRequirements::create([  
+        //     'name' => "Satisfaction",
+        //     'description' => "Refere-se ao grau em que as necessidades e expectativas dos usuários são atendidas e excedidas. É a percepção subjetiva dos usuários em relação à qualidade, utilidade e valor do produto, serviço ou sistema fornecido.",
+        //     'model_quality' => "Transversal",
+        //     'source' => "<p>Silva, Flávia Janólio Costacurta Pinto da, et al. Grau de satisfação dos usuários de um hospital universitário: a influência da presença de alunos. Revista da Escola de Enfermagem da USP 53 (2019).</p>
+        //     <p>Kim, Eric S., et al. Life satisfaction and subsequent physical, behavioral, and psychosocial health in older adults. The Milbank Quarterly 99.1 (2021): 209-239.</p>",
+        //     'recommendations' => "<p>Garantir que as necessidades e expectativas dos usuários sejam atendidas e, se possível, excedidas. Para isso, é fundamental realizar pesquisas quantitativas para medir a satisfação dos clientes.</p> 
+        //     Analisar as lacunas entre a expectativa e a percepção dos clientes em relação às dimensões do serviço oferecido [1]. Além disso, é crucial considerar os determinantes de satisfação dos clientes, que podem variar dependendo do serviço prestado.</p> 
+        //     Garantir a qualidade, utilidade e valor do produto, serviço ou sistema fornecido para aumentar a satisfação dos usuários. Dessa forma, é possível fidelizar clientes e aumentar a reputação do sistema AAL.</p>",
+        //     'content' => file_get_contents(storage_path() . '/files/nfr/sig-satisfaction-file.txt'),
+        //     'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-satisfaction-file.png')),        
+        //     'characteristics_id' => $acceptabilityRequeriment->id,
+        //     'users_id' => $user->id,
+        // ]);
 
         NonFunctionalRequirements::create([  
             'name' => "Environmental",
@@ -228,8 +228,8 @@ class NonFunctionRequirementsSeeder extends Seeder
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
             'recommendations' => "",
-            'content' => null,
-            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/usability.png')),
+            'content' => file_get_contents(storage_path() . '/files/nfr/sig-usability-file.txt'),
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-usability-file.png')),
             'characteristics_id' => $acceptabilityRequeriment->id,
             'users_id' => $user->id,
         ]);
@@ -703,10 +703,13 @@ class NonFunctionRequirementsSeeder extends Seeder
             'description' => "refere-se ao grau em que as necessidades dos usuários são atendidas quando um produto ou sistema é utilizado em um contexto específico de uso. É a resposta do usuário à interação com o produto ou sistema, incluindo suas atitudes em relação ao uso do mesmo.",
             'model_quality' => "Quality in Use",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
-            'recommendations' => "<p>Compreensão das necessidades dos usuários: Realizar pesquisas e estudos para compreender profundamente as necessidades, preferências e expectativas dos usuários de sistemas AAL. Isso inclui considerar as características específicas do público-alvo, como idosos, pessoas com deficiências ou pessoas com condições de saúde específicas. Ao entender as necessidades dos usuários, é possível projetar um sistema que atenda às suas demandas e gere satisfação.</p><p>Personalização e adaptação: Oferecer recursos de personalização e adaptação no sistema AAL, permitindo que os usuários ajustem as configurações, preferências e interfaces de acordo com suas necessidades individuais. Isso inclui permitir a configuração de alertas, notificações, níveis de assistência e outras opções que tornem a experiência mais personalizada e adequada às preferências do usuário.</p><p>Facilidade de uso: Garantir que o sistema AAL seja intuitivo e de fácil utilização, com interfaces claras, simples e acessíveis. Isso inclui fornecer instruções claras sobre o uso do sistema, guias de ajuda contextuais, ícones e rótulos compreensíveis, além de evitar o uso de jargões técnicos ou linguagem complexa. Um design centrado no usuário, com ênfase na usabilidade, facilita a interação e contribui para a satisfação dos usuários.</p><p>Confiança e transparência: Construir confiança no sistema AAL é fundamental para promover a satisfação dos usuários. Isso envolve garantir a segurança e a privacidade dos dados pessoais, fornecer informações claras sobre como o sistema funciona, quais dados são coletados e como são utilizados. Transparência nas políticas de privacidade, consentimento adequado para a coleta e uso de dados e a implementação de medidas de segurança robustas são essenciais para gerar confiança nos usuários.</p><p>Avaliação contínua: Realizar avaliações periódicas da satisfação dos usuários por meio de pesquisas, feedback e análise de dados de uso. Essas avaliações ajudam a identificar áreas de melhoria, entender as demandas dos usuários em evolução e tomar medidas corretivas para garantir a satisfação contínua dos usuários.</p>",
-            'content' => null,
-            'image' => null,
-            'characteristics_id' => 0,
+            'recommendations' => "<p>Compreensão das necessidades dos usuários: Realizar pesquisas e estudos para compreender profundamente as necessidades, preferências e expectativas dos usuários de sistemas AAL. Isso inclui considerar as características específicas do público-alvo, como idosos, pessoas com deficiências ou pessoas com condições de saúde específicas. Ao entender as necessidades dos usuários, é possível projetar um sistema que atenda às suas demandas e gere satisfação.</p><p>Personalização e adaptação: Oferecer recursos de personalização e adaptação no sistema AAL, permitindo que os usuários ajustem as configurações, preferências e interfaces de acordo com suas necessidades individuais. Isso inclui permitir a configuração de alertas, notificações, níveis de assistência e outras opções que tornem a experiência mais personalizada e adequada às preferências do usuário.</p><p>Facilidade de uso: Garantir que o sistema AAL seja intuitivo e de fácil utilização, com interfaces claras, simples e acessíveis. Isso inclui fornecer instruções claras sobre o uso do sistema, guias de ajuda contextuais, ícones e rótulos compreensíveis, além de evitar o uso de jargões técnicos ou linguagem complexa. Um design centrado no usuário, com ênfase na usabilidade, facilita a interação e contribui para a satisfação dos usuários.</p><p>Confiança e transparência: Construir confiança no sistema AAL é fundamental para promover a satisfação dos usuários. Isso envolve garantir a segurança e a privacidade dos dados pessoais, fornecer informações claras sobre como o sistema funciona, quais dados são coletados e como são utilizados. Transparência nas políticas de privacidade, consentimento adequado para a coleta e uso de dados e a implementação de medidas de segurança robustas são essenciais para gerar confiança nos usuários.</p><p>Avaliação contínua: Realizar avaliações periódicas da satisfação dos usuários por meio de pesquisas, feedback e análise de dados de uso. Essas avaliações ajudam a identificar áreas de melhoria, entender as demandas dos usuários em evolução e tomar medidas corretivas para garantir a satisfação contínua dos usuários.</p>
+            <p>Garantir que as necessidades e expectativas dos usuários sejam atendidas e, se possível, excedidas. Para isso, é fundamental realizar pesquisas quantitativas para medir a satisfação dos clientes.</p> 
+            Analisar as lacunas entre a expectativa e a percepção dos clientes em relação às dimensões do serviço oferecido [1]. Além disso, é crucial considerar os determinantes de satisfação dos clientes, que podem variar dependendo do serviço prestado.</p> 
+            Garantir a qualidade, utilidade e valor do produto, serviço ou sistema fornecido para aumentar a satisfação dos usuários. Dessa forma, é possível fidelizar clientes e aumentar a reputação do sistema AAL.</p>",
+            'content' => file_get_contents(storage_path() . '/files/nfr/sig-satisfaction-file.txt'),
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-satisfaction-file.png')), 
+            'characteristics_id' => $acceptabilityRequeriment->id,
             'users_id' => $user->id,
         ]);
 

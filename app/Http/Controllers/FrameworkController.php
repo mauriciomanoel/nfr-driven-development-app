@@ -9,6 +9,8 @@ use App\Models\Stakeholders;
 use App\Models\StakeholderExperiencies;
 use App\Models\NonFunctionalRequirements;
 use App\Models\NonFunctionalRequirementsForSpecification;
+use Symfony\Component\Process\Exception\ProcessFailedException;
+use Symfony\Component\Process\Process;
 
 use Session;
 
@@ -86,8 +88,24 @@ class FrameworkController extends Controller
     public function step4()
     {
         
-        $recommendationsNonFunctionalRequirements = NonFunctionalRequirements::whereIn('name', ["Comfort", "Usability", "Learnability", "Accessibility"])->get();
+        $valueTreinamento = storage_path() . "/python/treinamento.txt";
+        $valueText = storage_path() . "/python/texto.txt";
 
+        $command = "python " . storage_path() . "/python/classification_of_non_functional_requirements_1.3.py " . $valueTreinamento . " " . $valueText;
+        $process = Process::fromShellCommandline($command);
+        $process->run();
+
+        // executes after the command finishes
+        if (!$process->isSuccessful()) {
+            throw new ProcessFailedException($process);
+        }
+
+        $values = explode("|", str_replace("\n", "", $process->getOutput()));  
+        $nonFunctionalRequirementsFromExternal = explode(";", $values[1]);
+        $nonFunctionalRequirementsFromExternal[] = "Acceptability";
+        $nonFunctionalRequirementsFromExternal[] = "Ethics";
+
+        $recommendationsNonFunctionalRequirements = NonFunctionalRequirements::whereIn('name', $nonFunctionalRequirementsFromExternal)->get();
         $nonFunctionalRequirements = NonFunctionalRequirements::with('user')->get();
         return view('dashboard.framework.framework-step04', ['nonFunctionalRequirements' => $nonFunctionalRequirements, 'recommendationsNonFunctionalRequirements' => $recommendationsNonFunctionalRequirements]);
     }
@@ -155,19 +173,21 @@ class FrameworkController extends Controller
             $nfrForSpecification->save();
         }
 
-        foreach($allNonFunctionalRequirements as $nonFunctionalRequirement) {                
-            $nfrForSpecification = new NonFunctionalRequirementsForSpecification;
-            $nfrForSpecification->project_id = 1;
-            $nfrForSpecification->users_id = 1;
-            $nfrForSpecification->is_recommendation = 0;
-            $nfrForSpecification->nfr_id = $nonFunctionalRequirement;
-            $nfrForSpecification->legal_requirements_id="1,2,3";
-            $nfrForSpecification->description = "";
-            $nfrForSpecification->acceptance_criteria = "";
-            $nfrForSpecification->evaluation_metrics = "";
-            $nfrForSpecification->content = "";
-            $nfrForSpecification->image = "";
-            $nfrForSpecification->save();
+        if (!empty($allNonFunctionalRequirements)) {
+            foreach($allNonFunctionalRequirements as $nonFunctionalRequirement) {                
+                $nfrForSpecification = new NonFunctionalRequirementsForSpecification;
+                $nfrForSpecification->project_id = 1;
+                $nfrForSpecification->users_id = 1;
+                $nfrForSpecification->is_recommendation = 0;
+                $nfrForSpecification->nfr_id = $nonFunctionalRequirement;
+                $nfrForSpecification->legal_requirements_id="1,2,3";
+                $nfrForSpecification->description = "";
+                $nfrForSpecification->acceptance_criteria = "";
+                $nfrForSpecification->evaluation_metrics = "";
+                $nfrForSpecification->content = "";
+                $nfrForSpecification->image = "";
+                $nfrForSpecification->save();
+            }
         }
 
         return redirect()->action([FrameworkController::class, 'step5']);

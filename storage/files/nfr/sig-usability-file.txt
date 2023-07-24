@@ -5,8 +5,8 @@
       "id": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e",
       "text": "Usabilidade",
       "type": "nfr.NFR",
-      "x": 1191,
-      "y": 10,
+      "x": 1569,
+      "y": 135,
       "customProperties": {
         "Description": ""
       }
@@ -15,8 +15,8 @@
       "id": "cee71d70-652b-4852-bda2-b1b093321106",
       "text": "Reconhecimento de adequação",
       "type": "nfr.NFR",
-      "x": 584,
-      "y": 93,
+      "x": 602,
+      "y": 177,
       "customProperties": {
         "Description": "Refere-se à facilidade com que os usuários podem reconhecer se o sistema é adequado para suas necessidades e objetivos."
       }
@@ -35,8 +35,8 @@
       "id": "7011e15a-ec3e-4a92-ad85-7d06355df01a",
       "text": "Aprendizagem",
       "type": "nfr.NFR",
-      "x": 1660,
-      "y": 527,
+      "x": 1564,
+      "y": 495,
       "customProperties": {
         "Description": "Refere-se à facilidade de aprendizado do sistema para novos usuários e a capacidade de relembrar a utilização após um período de não uso."
       }
@@ -45,8 +45,8 @@
       "id": "96e1dcd4-ea7a-44f1-9df5-def924fefd54",
       "text": "Estética da interface do usuário",
       "type": "nfr.NFR",
-      "x": 1933,
-      "y": 354,
+      "x": 1789,
+      "y": 382,
       "customProperties": {
         "Description": "Refere-se ao design visual e à estética geral da interface do usuário, focando na satisfação estética do usuário."
       }
@@ -55,8 +55,8 @@
       "id": "f2db5df9-ac3e-4dc1-900b-1ec9de19bf5e",
       "text": "Proteção contra erros do usuário",
       "type": "nfr.NFR",
-      "x": 2228,
-      "y": 290,
+      "x": 2023,
+      "y": 348,
       "customProperties": {
         "Referesecapacidadedosistemadeprevenirdetectarerecuperarerroscometidospelousurio": ""
       }
@@ -65,162 +65,162 @@
       "id": "e1465084-37b1-4b54-8132-dc3d2281a221",
       "text": "Experiência do Usuário",
       "type": "nfr.NFR",
-      "x": 258,
-      "y": 250
+      "x": 276,
+      "y": 450
     },
     {
       "id": "475ac96f-cb2c-4238-b323-7ea578a2de70",
       "text": "Responsividade",
       "type": "nfr.NFR",
-      "x": 749,
-      "y": 229
+      "x": 742,
+      "y": 316
     },
     {
       "id": "88a65186-6710-4977-9d15-ba4811cbe893",
       "text": "Disponibilidade",
       "type": "nfr.NFR",
-      "x": 517,
-      "y": 248
+      "x": 535,
+      "y": 410
     },
     {
       "id": "24d53936-82e5-480f-86ed-05c5349e7105",
       "text": "Segurança",
       "type": "nfr.NFR",
-      "x": 957,
-      "y": 128
+      "x": 391,
+      "y": 189
     },
     {
       "id": "7e7dd76e-7569-4ec1-8d0e-33297f9d6a70",
       "text": "Desempenho",
       "type": "nfr.NFR",
-      "x": 885,
-      "y": 203
+      "x": 882,
+      "y": 311
     },
     {
       "id": "90c3d1a3-7270-4429-83bf-06a693f3e4be",
       "text": "Design da Interface do Usuário",
       "type": "nfr.Operationalization",
-      "x": 146,
-      "y": 499
+      "x": 143,
+      "y": 580
     },
     {
       "id": "09b854c5-c691-4098-9a41-c1725be2c602",
       "text": "Navegação",
       "type": "nfr.Operationalization",
-      "x": 315,
-      "y": 493
+      "x": 256,
+      "y": 584
     },
     {
       "id": "3e64bad6-4bd4-463a-893c-de6f61e15956",
       "text": "Ajuda",
       "type": "nfr.Operationalization",
-      "x": 472,
-      "y": 494
+      "x": 424,
+      "y": 590
     },
     {
       "id": "e90d3cdb-692d-40ea-b011-8c36d589c442",
       "text": "visual minimalista",
       "type": "nfr.Operationalization",
-      "x": 12,
-      "y": 570
+      "x": 8,
+      "y": 609
     },
     {
       "id": "fb6a5ed4-0ead-40cf-9a66-625afbaeda36",
       "text": "Mostrar indicação de gestos",
       "type": "nfr.Operationalization",
-      "x": 35,
-      "y": 641
+      "x": 31,
+      "y": 677
     },
     {
       "id": "51876ce5-aff4-4997-ac0e-858e50279e7a",
       "text": "Usar dicas visuais ",
       "type": "nfr.Operationalization",
-      "x": 78,
-      "y": 701
+      "x": 80,
+      "y": 759
     },
     {
       "id": "c56db6ff-c0b0-42d3-a8d3-cfb925599ad7",
       "text": "Uso de Cores para destacar botões",
       "type": "nfr.Operationalization",
-      "x": 178,
-      "y": 719
+      "x": 180,
+      "y": 787
     },
     {
       "id": "aed70b96-8781-4fe9-b4e7-ee9ff43b2295",
       "text": "Visual mais limpo",
       "type": "nfr.Operationalization",
-      "x": 249,
-      "y": 597
+      "x": 241,
+      "y": 706
     },
     {
       "id": "022dd3ad-293b-4e05-825d-9d95caeea42c",
       "text": "Aumentar os elementos visuais",
       "type": "nfr.Operationalization",
-      "x": 299,
-      "y": 671
+      "x": 338,
+      "y": 755
     },
     {
       "id": "b42aaba5-d0e7-466e-9211-41b76e60c8f5",
       "text": "Ícones com Nomes",
       "type": "nfr.Operationalization",
-      "x": 374,
-      "y": 607
+      "x": 396,
+      "y": 693
     },
     {
       "id": "ba986350-a4bd-4dca-95d5-eea546149506",
       "text": "tutoriais e vídeos explicativos",
       "type": "nfr.Operationalization",
-      "x": 439,
-      "y": 669
+      "x": 480,
+      "y": 773
     },
     {
       "id": "3baee841-5254-42ba-9e7f-f5a33dd0a6be",
       "text": "Uso de áudio e vídeo",
       "type": "nfr.Operationalization",
-      "x": 523,
-      "y": 613
+      "x": 587,
+      "y": 761
     },
     {
       "id": "0407e1b4-fdbf-40de-9b46-47ef9c336e46",
       "text": "Media Queries",
       "type": "nfr.Operationalization",
-      "x": 656,
-      "y": 310
+      "x": 659,
+      "y": 397
     },
     {
       "id": "28bbbf68-a05d-4711-be7f-6fa85e553efe",
       "text": "Flexbox",
       "type": "nfr.Operationalization",
-      "x": 703,
-      "y": 375
+      "x": 710,
+      "y": 472
     },
     {
       "id": "79618984-723e-4c07-b41b-c1da3bfdcae9",
       "text": "Minificação de Código",
       "type": "nfr.Operationalization",
-      "x": 804,
-      "y": 393
+      "x": 808,
+      "y": 493
     },
     {
       "id": "98323e3f-a3e9-4926-a3cb-aee5fa2f34f0",
       "text": "Componentes Prontos",
       "type": "nfr.Operationalization",
-      "x": 929,
-      "y": 357
+      "x": 897,
+      "y": 426
     },
     {
       "id": "17e2fc22-bca8-4d06-9548-056bb09231f4",
       "text": "Paginas em manutenção",
       "type": "nfr.Operationalization",
-      "x": 445,
-      "y": 370
+      "x": 461,
+      "y": 515
     },
     {
       "id": "a815888d-5198-470e-a76b-74e71bc5fbd6",
       "text": "Verificação Periodica Links quebrados",
       "type": "nfr.Operationalization",
-      "x": 551,
-      "y": 400
+      "x": 596,
+      "y": 572
     },
     {
       "id": "cfa3b979-aaf2-48af-a5f7-143605be8308",
@@ -365,15 +365,15 @@
       "id": "7badfe05-c14c-496c-afc0-3161a011016c",
       "text": "Prioridade de conteúdo e recurso",
       "type": "nfr.Operationalization",
-      "x": 1503,
-      "y": 708
+      "x": 1455,
+      "y": 711
     },
     {
       "id": "70aebf4e-bb7c-4200-81c2-bda0955a5177",
       "text": "Modelos Mentais",
       "type": "nfr.Operationalization",
-      "x": 1648,
-      "y": 701,
+      "x": 1567,
+      "y": 782,
       "customProperties": {
         "Description": "https://xd.adobe.com/ideas/process/user-testing/how-to-test-your-designs-learnability/"
       }
@@ -382,43 +382,43 @@
       "id": "d1f357f3-d69b-4af6-ab4d-892e6ead65ac",
       "text": "Treinamento",
       "type": "nfr.Operationalization",
-      "x": 1802,
-      "y": 684
+      "x": 1706,
+      "y": 698
     },
     {
       "id": "7431eafd-3df5-4bb4-b16f-713b410cbe2b",
       "text": "Peso visual em objetos",
       "type": "nfr.Operationalization",
-      "x": 1425,
-      "y": 841
+      "x": 1392,
+      "y": 842
     },
     {
       "id": "3e06b85e-dbb3-4a66-826f-7bc333e8e58e",
       "text": "Tamanho de objetos individuais",
       "type": "nfr.Operationalization",
-      "x": 1546,
-      "y": 836
+      "x": 1446,
+      "y": 933
     },
     {
       "id": "069681cb-d59c-412f-8a92-d716bfc9ea60",
       "text": "Instruções claras de cada etapa",
       "type": "nfr.Operationalization",
-      "x": 1577,
-      "y": 921
+      "x": 1531,
+      "y": 971
     },
     {
       "id": "9429e756-f5c5-4bbf-9137-195e26ef6f85",
       "text": "Facilitar a localização de instruções",
       "type": "nfr.Operationalization",
-      "x": 1659,
-      "y": 853
+      "x": 1607,
+      "y": 1059
     },
     {
       "id": "e47543d2-2e0d-42b7-b889-69202830a8cd",
       "text": "Design centrado na experiência do usuário",
       "type": "nfr.Operationalization",
-      "x": 1748,
-      "y": 918
+      "x": 1652,
+      "y": 969
     },
     {
       "id": "faca50a4-7ac8-4d6c-a6a4-a00057994723",
@@ -442,227 +442,227 @@
     },
     {
       "id": "04678519-67f7-4679-9b2d-cdc925a8b605",
-      "text": " Utilizar cores e fontes coerentes e apropriadas",
+      "text": "Cores e fontes coerentes e apropriadas",
       "type": "nfr.Operationalization",
-      "x": 1829,
-      "y": 527
+      "x": 1726,
+      "y": 556
     },
     {
       "id": "095918c2-7637-499e-8ce2-89d047433b71",
       "text": "ícones intuitivos e reconhecíveis",
       "type": "nfr.Operationalization",
-      "x": 1893,
-      "y": 578
+      "x": 1801,
+      "y": 601
     },
     {
       "id": "e747b9ec-6bc6-481e-86b9-db2852e4936f",
       "text": "animações suaves e naturais",
       "type": "nfr.Operationalization",
-      "x": 1987,
-      "y": 525
+      "x": 1898,
+      "y": 541
     },
     {
       "id": "d5d2699a-1330-490c-a3d0-4b40ff009cb9",
       "text": "feedback visual",
       "type": "nfr.Operationalization",
-      "x": 2095,
-      "y": 578
+      "x": 1877,
+      "y": 685
     },
     {
       "id": "0ce3c2bc-13c8-4d40-ad37-f760bb5db1c3",
-      "text": "implementação de campos de validação",
+      "text": "Campos de validação",
       "type": "nfr.Operationalization",
-      "x": 2195,
-      "y": 489
+      "x": 2090,
+      "y": 517
     },
     {
       "id": "cbc6dcdb-cc8b-4f74-96d7-7ea49e264bb7",
       "text": "mensagens de erro claras",
       "type": "nfr.Operationalization",
-      "x": 2267,
-      "y": 558
+      "x": 2069,
+      "y": 682
     },
     {
       "id": "ab2bd141-e73d-470e-95c2-995c6018f354",
       "text": "informações de ajuda",
       "type": "nfr.Operationalization",
-      "x": 2340,
-      "y": 458
+      "x": 2213,
+      "y": 573
     },
     {
       "id": "3e38ae20-7849-4cc5-b160-cd3956a4c79f",
       "text": "Alertas de confirmação",
       "type": "nfr.Operationalization",
-      "x": 2347,
-      "y": 635
+      "x": 1994,
+      "y": 614
     },
     {
       "id": "819def32-792e-41a5-bd7d-30a97c6b50a3",
       "text": "Internationalização",
       "type": "nfr.NFR",
-      "x": 2532,
-      "y": 343.5
+      "x": 2246,
+      "y": 336
     },
     {
       "id": "a15649b9-c345-42de-b658-1100aba450ba",
       "text": "Conformidade",
       "type": "nfr.NFR",
-      "x": 2745,
-      "y": 420
+      "x": 2477,
+      "y": 386
     },
     {
       "id": "1da8219e-88de-460f-b527-35e63769eda7",
       "text": "Compatibilidade",
       "type": "nfr.NFR",
-      "x": 3006,
-      "y": 365
+      "x": 2641,
+      "y": 375
     },
     {
       "id": "5fbf128a-fea9-4259-a540-30bde11fda1e",
       "text": "Adaptabilidade",
       "type": "nfr.NFR",
-      "x": 3339,
-      "y": 274
+      "x": 3059,
+      "y": 243
     },
     {
       "id": "35ac76a0-d548-4aac-b780-4d91cb330ca0",
       "text": "Cultura",
       "type": "nfr.Operationalization",
-      "x": 2446,
-      "y": 450.5
+      "x": 2241,
+      "y": 454
     },
     {
       "id": "ae32365a-1fc0-479f-8eb6-23bdcc9713da",
       "text": "Suporte Características da Localização",
       "type": "nfr.Operationalization",
-      "x": 2538,
-      "y": 504
+      "x": 2348,
+      "y": 459
     },
     {
       "id": "4db3026f-a489-4d63-89d9-c13e73ed246c",
       "text": "WCAG 2.0",
       "type": "nfr.Operationalization",
-      "x": 2552,
-      "y": 598
+      "x": 2363,
+      "y": 631
     },
     {
       "id": "6e584ba6-6bc3-42f2-831e-89613944e1ef",
       "text": "Web Accessibility Initiative",
       "type": "nfr.Operationalization",
-      "x": 2575,
-      "y": 672
+      "x": 2389,
+      "y": 723
     },
     {
       "id": "f9e22b20-cf69-4842-9b21-9e8474c8e1b4",
       "text": "Section 508",
       "type": "nfr.Operationalization",
-      "x": 2640,
-      "y": 751
+      "x": 2471,
+      "y": 635
     },
     {
       "id": "15e6b2c2-8280-46a3-9559-d73c114e05c6",
       "text": "NBR ISO 9241-171/2018",
       "type": "nfr.Operationalization",
-      "x": 2822,
-      "y": 651
+      "x": 2590,
+      "y": 637
     },
     {
       "id": "55e31736-0145-4df0-9ff8-7fecb5990534",
       "text": "ISO 9241-110:2020",
       "type": "nfr.Operationalization",
-      "x": 2756,
-      "y": 724
+      "x": 2544,
+      "y": 741
     },
     {
       "id": "b491fe3e-f778-4587-a8dd-1320ced41e51",
       "text": "tecnologias interoperáveis",
       "type": "nfr.Operationalization",
-      "x": 2926,
-      "y": 504.5
+      "x": 2603,
+      "y": 490
     },
     {
       "id": "c7ae7384-7842-4020-909e-68ea7aebeeca",
       "text": "Design Responsivo",
       "type": "nfr.Operationalization",
-      "x": 3033,
-      "y": 510.5
+      "x": 2715,
+      "y": 497
     },
     {
       "id": "cb5b1d9f-afaf-47d5-9d19-092f579da907",
       "text": "Customização",
       "type": "nfr.NFR",
-      "x": 3240,
-      "y": 417
+      "x": 2908,
+      "y": 433
     },
     {
       "id": "e9f47e70-c356-46f8-b6c9-b80660a8ace2",
       "text": "Flexibilidade",
       "type": "nfr.NFR",
-      "x": 3530,
-      "y": 426
+      "x": 3180,
+      "y": 407
     },
     {
       "id": "5da2c5c1-eafe-4b23-a189-f8743abe7bb1",
       "text": "Componentes Nativos",
       "type": "nfr.Operationalization",
-      "x": 3179,
-      "y": 597
+      "x": 2827,
+      "y": 632
     },
     {
       "id": "d4ab17e6-caa7-4c70-b78d-aabad5398165",
       "text": "tecnologia assistiva",
       "type": "nfr.Operationalization",
-      "x": 3282,
-      "y": 603
+      "x": 2946,
+      "y": 632
     },
     {
       "id": "31e27771-f86f-4e0a-b885-ef6bf09cafb2",
       "text": "Utilizar frameworks",
       "type": "nfr.Operationalization",
-      "x": 3424,
-      "y": 577
+      "x": 3083,
+      "y": 559
     },
     {
       "id": "153949ec-b3ec-4c67-b456-8ecda65f92e3",
       "text": "Web",
       "type": "nfr.Operationalization",
-      "x": 3306,
-      "y": 716
+      "x": 2999,
+      "y": 751
     },
     {
       "id": "f6c2e2a4-4eba-405b-ae69-a80b96b1ee73",
       "text": "Desktop",
       "type": "nfr.Operationalization",
-      "x": 3348,
-      "y": 775
+      "x": 3110,
+      "y": 753
     },
     {
       "id": "ed1569d7-224d-41d7-8538-8316c035781e",
       "text": "Mobile",
       "type": "nfr.Operationalization",
-      "x": 3444,
-      "y": 727
+      "x": 3218,
+      "y": 744
     },
     {
       "id": "24e0feae-6bc0-4807-80df-4131feb4360a",
       "text": "Reutilização Componentes",
       "type": "nfr.Operationalization",
-      "x": 3550,
-      "y": 578
+      "x": 3204,
+      "y": 560
     },
     {
       "id": "b9e963ae-746e-4db4-a99b-bb83136e6dd0",
       "text": "Técnicas de refatoração",
       "type": "nfr.Operationalization",
-      "x": 3680,
-      "y": 576
+      "x": 3325,
+      "y": 548
     },
     {
       "id": "641eda78-58e1-49e6-b871-aa241817e0a3",
       "text": "Interface do usuário",
       "type": "nfr.Operationalization",
-      "x": 3640,
-      "y": 699.5,
+      "x": 3297,
+      "y": 656,
       "customProperties": {
         "Description": "Você pode fazer alterações simples na IU e refatorar o código. Por exemplo: alinhe o campo de entrada, aplique a fonte, reformule em voz ativa, indique o formato, aplique o tamanho do botão comum e aumente o contraste da cor, etc."
       }
@@ -671,8 +671,8 @@
       "id": "356b084e-ac36-4168-aef9-13fbf7b43079",
       "text": "Vermelho-Verde",
       "type": "nfr.Operationalization",
-      "x": 3754,
-      "y": 689,
+      "x": 3404,
+      "y": 653,
       "customProperties": {
         "Description": "Red-Green é a técnica de refatoração de código mais popular e amplamente usada no processo de desenvolvimento de software Agile. Essa técnica segue a abordagem “teste primeiro” para design e implementação, o que estabelece a base para todas as formas de refatoração. Os desenvolvedores tomam a iniciativa de refatorar no ciclo de desenvolvimento orientado a testes e isso é realizado nas três etapas distritais."
       }
@@ -681,8 +681,8 @@
       "id": "156ad9d2-302e-4e09-9b7a-8f573dfa9f33",
       "text": "Acessibilidade",
       "type": "nfr.NFR",
-      "x": 2873,
-      "y": 177,
+      "x": 2584,
+      "y": 192,
       "customProperties": {
         "Description": "Refere-se à capacidade do sistema de ser utilizado por uma ampla gama de usuários, incluindo aqueles com deficiências ou necessidades especiais"
       }
@@ -1293,7 +1293,7 @@
   },
   "tool": "dsm3-goals",
   "metamodelVersion": "1.0",
-  "saveDate": "Fri, 21 Jul 2023 13:46:53 GMT",
+  "saveDate": "Fri, 21 Jul 2023 17:30:03 GMT",
   "diagram": {
     "width": 3884,
     "height": 1300,

@@ -33,7 +33,7 @@ class LegalAndNormativeRequirementsController extends Controller
     public function index()
     {
         $requirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
-        return view('dashboard.legalAndNormativeRequirements.requirementsList', ['requirements' => $requirements]);
+        return view('dashboard.legalAndNormativeRequirements.legalRequirementsList', ['requirements' => $requirements]);
     }
 
     /**

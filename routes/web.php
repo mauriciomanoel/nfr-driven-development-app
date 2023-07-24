@@ -64,14 +64,11 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/stakeholders/{id}', [FrameworkController::class, 'stakeholders'])->name('framework.stakeholders');
             Route::get('/stakeholders/experiencies/{id}', [FrameworkController::class, 'stakeholdersExperiencies'])->name('framework.stakeholders.experiencies');
             Route::post('/confirmNonFunctionalRequirements', [FrameworkController::class, 'confirmNonFunctionalRequirements'])->name('framework.confirmNonFunctionalRequirements');
-
-            
         });
 
-        Route::resource('legalAndNormativeRequirements', LegalAndNormativeRequirementsController::class);
+        Route::resource('legalRequirements', LegalAndNormativeRequirementsController::class);
         Route::resource('nonFunctionalRequirements', NonFunctionalRequirementsController::class);
         Route::get('nonFunctionalRequirements/downloadSIG/{id}', [NonFunctionalRequirementsController::class, 'downloadSIG'])->name('download.sig');
-
 
         Route::prefix('artifacts')->group(function () {  
             Route::get('/storytellings', [ArtifactsController::class, 'indexStorytellings'])->name('artifacts.storytellings.index');

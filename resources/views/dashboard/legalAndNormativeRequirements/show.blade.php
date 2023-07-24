@@ -8,7 +8,7 @@
               <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                      <i class="fa fa-align-justify"></i><strong>Legal/Normative Requirement:</strong> {{ $legalAndNormativeRequirements->name }}</div>
+                      <i class="fa fa-align-justify"></i><strong>Legal Requirement:</strong> {{ $legalAndNormativeRequirements->name }}</div>
                     <div class="card-body">
                         <h5><strong>Author:</strong></h5>
                         <p> {{ $legalAndNormativeRequirements->user->name }}</p>

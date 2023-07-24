@@ -144,18 +144,22 @@ class MenusTableSeeder extends Seeder
             $this->insertLink('guest,user,admin', 'Step 3 - 2',      '/framework/step3_2');
             $this->insertLink('guest,user,admin', 'Step 4',      '/framework/step4');
             $this->insertLink('guest,user,admin', 'Step 5',      '/framework/step5');
+        $this->endDropdown();
+        $this->insertLink('guest,user,admin', 'Non-Functional Requirements', '/nonFunctionalRequirements', 'cil-description');
+        $this->insertLink('guest,user,admin', 'Legal Requirements',  '/legalRequirements', 'cil-library');
+        $this->insertLink('guest,user,admin', 'SIG Trees',          'artifacts/sigs', "cil-folder");
 
+        // $this->beginDropdown('guest,user,admin', 'Artifacts', 'cil-library');
+            $this->insertLink('guest,user,admin', 'Storytellings',      'artifacts/storytellings', "cil-notes");
+            // $this->insertLink('guest,user,admin', 'Taxonomy',           'artifacts/taxonomies');
+        // $this->endDropdown();
+
+
+        $this->beginDropdown('guest,user,admin', 'Taxonomy', 'cil-library');
+                $this->insertLink('guest,user,admin', 'NFR',      'artifacts/storytellings');
+                $this->insertLink('guest,user,admin', 'Acceptability',  'artifacts/legalregulations');
         $this->endDropdown();
 
-
-        $this->beginDropdown('guest,user,admin', 'Artifacts', 'cil-library');
-            $this->insertLink('guest,user,admin', 'Storytellings',      'artifacts/storytellings');
-            $this->insertLink('guest,user,admin', 'Legal Regulations',  'artifacts/legalregulations');
-            $this->insertLink('guest,user,admin', 'SIG Trees',          'artifacts/sigs');
-            $this->insertLink('guest,user,admin', 'Taxonomy',           'artifacts/taxonomies');
-        $this->endDropdown();
-
-        $this->insertLink('guest,user,admin', 'Requeriments', '/requirements', 'cil-description');
         // $this->beginDropdown('guest,user,admin', 'Requeriments', 'cil-description');
         //     $this->insertLink('guest,user,admin', 'Non-Functional', 'requeriments/Non-Functional');
         //     $this->insertLink('guest,user,admin', 'Function',   'artifact/legalregulations');

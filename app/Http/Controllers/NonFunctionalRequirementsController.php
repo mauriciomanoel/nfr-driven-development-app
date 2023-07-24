@@ -34,8 +34,8 @@ class NonFunctionalRequirementsController extends Controller
      */
     public function index()
     {
-        $requirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
-        return view('dashboard.legalAndNormativeRequirements.requirementsList', ['requirements' => $requirements]);
+        $requirements = NonFunctionalRequirements::with('user')->paginate( 20 );
+        return view('dashboard.nonFunctionalRequirements.nonFunctionalRequirementsList', ['requirements' => $requirements]);
     }
 
     /**

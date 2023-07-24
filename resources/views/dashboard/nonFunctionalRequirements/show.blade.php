@@ -39,7 +39,7 @@
                                   <td><strong>{{ $legalAndNormativeRequirement->name }}</strong></td>
                                   <td>{{ $legalAndNormativeRequirement->description }}</td>                                
                                   <td>
-                                    <a href="{{ url('/legalAndNormativeRequirements/' . $legalAndNormativeRequirement->id) }}" class="btn btn-block btn-primary">View</a>
+                                    <a href="{{ url('/legalRequirements/' . $legalAndNormativeRequirement->id) }}" class="btn btn-block btn-primary">View</a>
                                   </td>                                
                                 </tr>
                               @endforeach

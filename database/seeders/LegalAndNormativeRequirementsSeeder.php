@@ -199,6 +199,163 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
                 'nfr_id' => $requirement->id,
             ]);
         }
+
+
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+            'name' => "ISO/IEC 25066:2016 - Software Engineering - Software product Quality Requirements and Evaluation (SQuaRE) - Common Industry Format (CIF) for Usability: User requirements for feedback",
+            'description' => "A norma ISO/IEC 25066:2016 é uma parte da série ISO/IEC 25000, que trata da avaliação de qualidade de produtos de software. Especificamente, a ISO/IEC 25066 estabelece requisitos para a documentação de produtos de software, com o objetivo de garantir que a informação fornecida seja adequada, precisa e útil para os usuários finais, desenvolvedores e outros stakeholders envolvidos no ciclo de vida do software.",
+            'legal_references' => "<p>https://www.iso.org/standard/63831.html</p>",
+            'recommendations' => "
+            <p>Identificação clara do público-alvo da documentação, de forma a adequar o conteúdo e o formato às necessidades dos usuários finais, desenvolvedores ou outros stakeholders específicos.</p>
+            <p>Garantir que a documentação seja completa, abrangente e consistente, cobrindo todos os aspectos relevantes do produto de software.</p>            
+            <p>Utilizar uma linguagem clara e concisa, evitando terminologias ambíguas ou jargões técnicos que possam dificultar a compreensão.</p>            
+            <p>Fornecer instruções detalhadas sobre a instalação, configuração e operação do software, a fim de facilitar a sua utilização eficiente.</p>
+            <p>Incluir exemplos e ilustrações que auxiliem na compreensão dos conceitos e funcionalidades do software.</p>            
+            <p>Manter a documentação atualizada e compatível com as versões mais recentes do produto de software.</p>",
+            'content' => "",
+            'life_settings_id' => $lifeSettings->id,
+            'users_id' => $user->id,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),            
+        ]);
+
+        $requirements = NonFunctionalRequirements::whereIn('name', ['Accuracy', 'Completeness', 'Coherence', "Usability", "Clarity"])->get();
+        foreach($requirements as $requirement) {
+            DB::table('legal_has_nfr_requirement')->insert([
+                'legal_id' =>  $legalAndNormativeRequirement->id,
+                'nfr_id' => $requirement->id,
+            ]);
+        }
+
+
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+            'name' => "ISO 9241-11:2018 Ergonomics of human-system interaction — Part 11: Usability: Definitions and concepts",
+            'description' => "ISO 9241-11:2018 is a part of the ISO 9241 series, which deals with the ergonomic design of human-system interactions. Specifically, ISO 9241-11 provides essential definitions and concepts related to usability, aiming to establish a common understanding of usability concepts among designers, developers, and other stakeholders involved in creating interactive systems. This standard addresses key aspects of usability, such as effectiveness, efficiency, and user satisfaction, and emphasizes the importance of considering user needs and characteristics throughout the design process.",
+            'legal_references' => "<p>https://www.iso.org/standard/63500.html</p>",
+            'recommendations' => "
+            <p>Understand User Characteristics: Designers should thoroughly analyze the characteristics, needs, and requirements of the intended user group to tailor the interactive system accordingly.</p>
+            <p>Focus on Effectiveness: Ensure that the interactive system enables users to accomplish their tasks accurately and completely, without errors or unnecessary complexity.</p>            
+            <p>Enhance Efficiency: Strive to optimize the efficiency of user interactions with the system, minimizing the time and effort required to perform tasks.            
+            <p>Consider User Satisfaction: User satisfaction is a crucial aspect of usability. Designers should aim to create systems that are pleasant to use and fulfill users' expectations.</p>        
+            <p>Provide Feedback: Interactive systems should offer appropriate feedback to users, keeping them informed about the system's status, progress, and outcomes.</p>            
+            <p>Ensure Learnability: Make the system easy to learn and understand for new users, allowing them to quickly become proficient in its use.</p>",
+            'content' => "",
+            'life_settings_id' => $lifeSettings->id,
+            'users_id' => $user->id,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),            
+        ]);
+
+        $requirements = NonFunctionalRequirements::whereIn('name', ['Usability', 'User Experience', 'Accessibility', "Performance", "Flexibility", "User Error Protection"])->get();
+        foreach($requirements as $requirement) {
+            DB::table('legal_has_nfr_requirement')->insert([
+                'legal_id' =>  $legalAndNormativeRequirement->id,
+                'nfr_id' => $requirement->id,
+            ]);
+        }
+
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+            'name' => "ISO/IEC 40500:2012 Information technology — W3C Web Content Accessibility Guidelines (WCAG) 2.0",
+            'description' => "ISO/IEC 40500:2012, also known as the Web Content Accessibility Guidelines (WCAG) 2.0, is an international standard developed by the World Wide Web Consortium (W3C) in collaboration with the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC). The standard provides guidelines and success criteria for making web content more accessible to people with disabilities, ensuring that web pages and web applications can be used and understood by a broader audience, including those with visual, auditory, cognitive, and motor impairments. The guidelines cover various aspects of web content accessibility, including perceivability, operability, understandability, and robustness, and are designed to enhance the overall user experience for all users, regardless of their abilities.",
+            'legal_references' => "<p>https://www.iso.org/standard/58625.html</p>",
+            'recommendations' => "
+            <p>Provide Alternative Text: Use descriptive alternative text for non-text content, such as images, to ensure users with visual impairments can understand the content.</p>
+            <p>Ensure Keyboard Accessibility: Ensure all functionality and content on the website can be accessed using a keyboard alone, without requiring mouse interactions.</p>            
+            <p>Provide Synchronized Multimedia Alternatives: Offer alternatives for time-based media content, like captions and audio descriptions for videos, to support users with hearing impairments.</p>            
+            <p>Use Consistent Navigation and Layout: Maintain a consistent and predictable layout and navigation structure to help users understand and navigate the website easily.</p>            
+            <p>Create Accessible Forms: Ensure that all form elements are properly labeled and can be understood and completed by users with various disabilities.</p>            
+            <p>Test with Assistive Technologies: Conduct accessibility testing using various assistive technologies to verify that the content is perceivable and operable for users with disabilities.</p>",
+            'content' => "",
+            'life_settings_id' => $lifeSettings->id,
+            'users_id' => $user->id,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),            
+        ]);
+
+        $requirements = NonFunctionalRequirements::whereIn('name', ['Accessibility', 'Usability', 'Compatibility', "Performance", "Reliability"])->get();
+        foreach($requirements as $requirement) {
+            DB::table('legal_has_nfr_requirement')->insert([
+                'legal_id' =>  $legalAndNormativeRequirement->id,
+                'nfr_id' => $requirement->id,
+            ]);
+        }
+
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+            'name' => "ISO/IEC 27001:2013 - Information technology - Security techniques - Information security management systems - Requirements",
+            'description' => "ISO/IEC 27001:2013 is an international standard that falls under the category of information technology and security techniques. It specifically deals with information security management systems (ISMS) and lays down the requirements for establishing, implementing, maintaining, and continually improving an ISMS within the context of an organization. The standard emphasizes the importance of systematically managing information security risks to safeguard the confidentiality, integrity, and availability of sensitive information assets. It provides a framework for organizations to develop a comprehensive approach to identifying, assessing, and mitigating information security risks while also ensuring compliance with legal, regulatory, and contractual requirements.",
+            'legal_references' => "<p>https://www.iso.org/standard/27001</p>",
+            'recommendations' => "
+            <p>Conduct Information Security Risk Assessment: Identify and assess the information security risks faced by the organization, considering internal and external threats.</p>
+            <p>Develop an Information Security Policy: Create a comprehensive information security policy that defines the organization's commitment to information security and sets the framework for the ISMS.</p>
+            <p>Implement Risk Treatment Measures: Develop and implement appropriate risk treatment plans to mitigate identified information security risks.</p>
+            <p>Train and Raise Awareness: Train employees and stakeholders on information security best practices and raise awareness about the importance of information security.</p>            
+            <p>Monitor and Review: Regularly monitor, review, and assess the effectiveness of the ISMS, making necessary improvements to address evolving risks and challenges.</p>            
+            <p>Conduct Periodic Audits: Perform internal and external audits of the ISMS to ensure compliance and identify areas for improvement.</p>",
+            'content' => "",
+            'life_settings_id' => $lifeSettings->id,
+            'users_id' => $user->id,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),            
+        ]);
+
+        $requirements = NonFunctionalRequirements::whereIn('name', ['Compliance', 'Confidentiality', 'Integrity', "Availability", "Reliability"])->get();
+        foreach($requirements as $requirement) {
+            DB::table('legal_has_nfr_requirement')->insert([
+                'legal_id' =>  $legalAndNormativeRequirement->id,
+                'nfr_id' => $requirement->id,
+            ]);
+        }
+
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+            'name' => "ISO/TS 24289:2021 - Health informatics — Hierarchical file structure specification for secondary storage of health-related information",
+            'description' => "ISO/TS 24289:2021 is a technical specification in the field of health informatics. It specifically deals with the specification of a hierarchical file structure for the secondary storage of health-related information. The standard provides guidelines and requirements for organizing and storing health-related data in a hierarchical manner to ensure efficient retrieval, management, and security of the information. The hierarchical file structure defined in this technical specification is designed to be used in the context of secondary storage systems, where large volumes of health-related data are stored for long-term archiving and accessibility.",
+            'legal_references' => "<p>https://www.iso.org/standard/27001</p>",
+            'recommendations' => "
+            <p>Implement Hierarchical Organization: Follow the specified hierarchical file structure to categorize and organize health-related information systematically.</p><p>Consider Scalability: Design the secondary storage system to accommodate the growing volume of health-related data over time, ensuring scalability.</p>
+            <p>Data Integrity and Security: Implement robust data integrity and security measures to protect the confidentiality and privacy of health-related information.</p>
+            <p>Long-Term Archiving: Ensure that the hierarchical file structure and storage system can support long-term archiving of health-related data without loss or corruption.</p>
+            <p>Interoperability: Consider interoperability requirements to enable seamless data exchange and sharing between different healthcare systems and facilities.</p>
+            <p>Compliance with Regulatory Standards: Adhere to relevant legal, regulatory, and industry standards for the storage and handling of health-related information.</p>",
+            'content' => "",
+            'life_settings_id' => $lifeSettings->id,
+            'users_id' => $user->id,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),            
+        ]);
+
+        $requirements = NonFunctionalRequirements::whereIn('name', ['Security', 'Performance', 'Reliability', "Scalability", "Integrity"])->get();
+        foreach($requirements as $requirement) {
+            DB::table('legal_has_nfr_requirement')->insert([
+                'legal_id' =>  $legalAndNormativeRequirement->id,
+                'nfr_id' => $requirement->id,
+            ]);
+        }
+
+        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+            'name' => "ISO/TR 21332:2021 - Health informatics — Cloud computing considerations for the security and privacy of health information systems",
+            'description' => "ISO/TR 21332:2021 is a technical report in the field of health informatics. It focuses on providing considerations and guidelines for the security and privacy aspects of health information systems when using cloud computing technologies. The report addresses the unique challenges and opportunities related to adopting cloud computing in the healthcare industry while safeguarding the confidentiality, integrity, and availability of health information.The technical report offers insights into best practices, risk management, and security measures that healthcare organizations should consider when migrating or deploying health information systems in cloud environments.",
+            'legal_references' => "<p>https://www.iso.org/standard/70568.html</p>",
+            'recommendations' => "
+            <p>Risk Assessment and Management: Conduct thorough risk assessments to identify and mitigate potential security and privacy risks associated with cloud-based health information systems.</p>
+            <p>Data Protection: Implement strong data protection measures, including encryption, access controls, and data anonymization, to safeguard health information from unauthorized access and breaches.</p>            
+            <p>Compliance with Regulations: Ensure compliance with relevant data protection and privacy regulations, industry standards, and contractual obligations when using cloud computing for health information systems.</p>            
+            <p> Cloud Service Provider Evaluation: Select cloud service providers that demonstrate a strong commitment to security and privacy and have appropriate certifications and audits in place.</p>            
+            <p>Incident Response and Recovery: Establish incident response and recovery plans to address security incidents promptly and minimize their impact on health information systems.</p>            
+            <p>Data Interoperability: Address data interoperability challenges to enable seamless data exchange between different cloud-based health information systems and healthcare providers.</p>",
+            'content' => "",
+            'life_settings_id' => $lifeSettings->id,
+            'users_id' => $user->id,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),            
+        ]);
+
+        $requirements = NonFunctionalRequirements::whereIn('name', ['Security', 'Privacy', 'Reliability', "Performance", "Scalability", "Compliance"])->get();
+        foreach($requirements as $requirement) {
+            DB::table('legal_has_nfr_requirement')->insert([
+                'legal_id' =>  $legalAndNormativeRequirement->id,
+                'nfr_id' => $requirement->id,
+            ]);
+        }
         
     }
 }

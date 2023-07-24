@@ -158,4 +158,17 @@ class NonFunctionalRequirementsController extends Controller
         }
         return redirect()->route('projects.index');
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function sigsthree()
+    {
+
+        $requirements = NonFunctionalRequirements::with('user')->whereNotNull('content')->paginate( 20 );
+        return view('dashboard.nonFunctionalRequirements.sigsThreeList', ['requirements' => $requirements]);
+    }
 }

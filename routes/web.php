@@ -67,7 +67,9 @@ Route::group(['middleware' => 'auth'], function () {
         });
 
         Route::resource('legalRequirements', LegalAndNormativeRequirementsController::class);
+        Route::get('nonFunctionalRequirements/sigsthree', [NonFunctionalRequirementsController::class, 'sigsthree']);
         Route::resource('nonFunctionalRequirements', NonFunctionalRequirementsController::class);
+
         Route::get('nonFunctionalRequirements/downloadSIG/{id}', [NonFunctionalRequirementsController::class, 'downloadSIG'])->name('download.sig');
 
         Route::prefix('artifacts')->group(function () {  
@@ -80,7 +82,6 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/update', [ArtifactsController::class, 'update'])->name('menu.menu.update');
             Route::get('/delete', [ArtifactsController::class, 'delete'])->name('menu.menu.delete');
         });
-
     
         Route::group(['middleware' => ['role:user']], function () {
             Route::get('/colors', function () {     return view('dashboard.colors'); });

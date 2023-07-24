@@ -147,7 +147,7 @@ class MenusTableSeeder extends Seeder
         $this->endDropdown();
         $this->insertLink('guest,user,admin', 'Non-Functional Requirements', '/nonFunctionalRequirements', 'cil-description');
         $this->insertLink('guest,user,admin', 'Legal Requirements',  '/legalRequirements', 'cil-library');
-        $this->insertLink('guest,user,admin', 'SIG Trees',          'artifacts/sigs', "cil-folder");
+        $this->insertLink('guest,user,admin', 'SIG Trees',          '/nonFunctionalRequirements/sigsthree', "cil-folder");
 
         // $this->beginDropdown('guest,user,admin', 'Artifacts', 'cil-library');
             $this->insertLink('guest,user,admin', 'Storytellings',      'artifacts/storytellings', "cil-notes");

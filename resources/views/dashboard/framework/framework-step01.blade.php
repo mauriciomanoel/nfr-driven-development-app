@@ -47,13 +47,13 @@
                         <td>{{ $legalAndNormativeRequirement->description }}</td>
                         <td>{{ $legalAndNormativeRequirement->updated_at }}</td>                        
                         <td>
-                          <a href="{{ url('/legalAndNormativeRequirements/' . $legalAndNormativeRequirement->id) }}" class="btn btn-block btn-primary">View</a>
+                          <a href="{{ url('/legalRequirements/' . $legalAndNormativeRequirement->id) }}" class="btn btn-block btn-primary">View</a>
                         </td>
                         <!--<td>
-                          <a href="{{ url('/legalAndNormativeRequirements/' . $legalAndNormativeRequirement->id . '/edit') }}" class="btn btn-block btn-primary">Edit</a>
+                          <a href="{{ url('/legalRequirements/' . $legalAndNormativeRequirement->id . '/edit') }}" class="btn btn-block btn-primary">Edit</a>
                         </td>
                         <td>
-                          <form action="{{ route('legalAndNormativeRequirements.destroy', $legalAndNormativeRequirement->id ) }}" method="POST">
+                          <form action="{{ route('legalRequirements.destroy', $legalAndNormativeRequirement->id ) }}" method="POST">
                               @method('DELETE')
                               @csrf
                               <button class="btn btn-block btn-danger">Delete</button>

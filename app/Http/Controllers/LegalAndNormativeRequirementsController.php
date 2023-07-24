@@ -11,7 +11,6 @@ use App\Models\LifeSettingsCategories;
 use App\Models\LifeSettingsSubcategories;
 use App\Models\NonFunctionalRequirements;
 
-
 class LegalAndNormativeRequirementsController extends Controller
 {
 

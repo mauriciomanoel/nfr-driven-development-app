@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         
-        Schema::create('legal_and_normative_requirement', function (Blueprint $table) {
+        Schema::create('legal_requirements', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('name');
             $table->text('description');
@@ -37,7 +37,7 @@ return new class extends Migration
 
             $table->foreign('legal_id')
                 ->references('id')
-                ->on('legal_and_normative_requirement');
+                ->on('legal_requirements');
 
             $table->foreign('nfr_id')
                 ->references('id')
@@ -52,7 +52,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('legal_and_normative_requirement');
+        Schema::dropIfExists('legal_requirements');
         Schema::dropIfExists('legal_has_nfr_requirement');
 
     }

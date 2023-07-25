@@ -27,22 +27,25 @@
                 <p>Essa documentação apresenta informações sobre o requisito legal ou normativo relevante, incluindo o nome, descrição, texto legal/referência e os requisitos não funcionais impactados por este requisito.</p>
               
                 <p><strong>Saída:</strong> Documentação dos requisitos legais e normativos identificados e analisados.</p>
+                
+                <form method="POST" action="{{ route('framework.step1.confirmLegalRequirement') }}">
+                    @csrf
                 <table class="table table-responsive-sm table-striped">
                   <thead>
                     <tr>
-                      <!-- <th>Author</th> -->
+                      <th></th>
                       <th>Name</th>
                       <th>Description</th>
                       <th>Last Update</th>
                       <!-- <th>Status</th> -->
                       <!-- <th>Note type</th> -->
-                      <th colspan="3" class="text-center">Actions</th>
-                      
+                      <th colspan="3" class="text-center">Actions</th>                      
                     </tr>
                   </thead>
                   <tbody>
                     @foreach($legalAndNormativeRequirements as $legalAndNormativeRequirement)
                       <tr>
+                        <td><input type="checkbox" id="legalRequirements" name="legalRequirements[]" value="{{ $legalAndNormativeRequirement->id }}"></strong></td>
                         <td><strong>{{ $legalAndNormativeRequirement->name }}</strong></td>
                         <td>{{ $legalAndNormativeRequirement->description }}</td>
                         <td>{{ $legalAndNormativeRequirement->updated_at }}</td>                        
@@ -64,7 +67,11 @@
                   </tbody>
                 </table>
                 {{ $legalAndNormativeRequirements->links() }}
-                            
+                
+                
+                        <button class="btn btn-block btn-primary" type="submit">{{ __('Save Legal Requirements and Advance to the next phase') }}</button>
+                    
+              </form>
               </div>
           </div>
         </div>

@@ -22,8 +22,8 @@ return new class extends Migration
             $table->text('description');
             $table->text('acceptance_criteria');
             $table->text('evaluation_metrics');
-            $table->longText('content')->nullable();;
-            $table->longText('image')->nullable();;
+            $table->longText('content')->nullable();
+            $table->longText('image')->nullable();
 
             $table->timestamps();
 
@@ -34,7 +34,7 @@ return new class extends Migration
 
             // $table->foreign('legal_id')
             // ->references('id')
-            // ->on('legal_and_normative_requirement')
+            // ->on('legal_requirements')
             // ->onDelete('cascade');
         });
     }

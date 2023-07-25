@@ -36,10 +36,11 @@ class DatabaseSeeder extends Seeder
             LifeSettingsSeeder::class,
             ArtifactsSeeder::class,
             ProjectsSeeder::class,
-            RequirementsSeeder::class,
             NonFunctionRequirementsSeeder::class,
             LegalAndNormativeRequirementsSeeder::class,
             StakeholderSeeder::class,
+            FrameworkSeeder::class,
+            DataCollectionTechniquesSeeder::class,
         ]);
     }
 }

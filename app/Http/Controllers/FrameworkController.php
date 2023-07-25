@@ -192,4 +192,53 @@ class FrameworkController extends Controller
 
         return redirect()->action([FrameworkController::class, 'step5']);
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function step1ConfirmLegalRequirement(Request $request)
+    {
+
+        var_dump($request["legalRequirements"]); exit;
+        // $recommendationsNonFunctionalRequirements = $request["recommendationsNonFunctionalRequirements"];
+        // $allNonFunctionalRequirements = $request["nonFunctionalRequirements"];
+
+        // NonFunctionalRequirementsForSpecification::where('project_id', '=', '1')->delete();
+
+        // foreach($recommendationsNonFunctionalRequirements as $recommendationNonFunctionalRequirement) {                
+        //     $nfrForSpecification = new NonFunctionalRequirementsForSpecification;
+        //     $nfrForSpecification->project_id = 1;
+        //     $nfrForSpecification->users_id = 1;
+        //     $nfrForSpecification->is_recommendation = 1;
+        //     $nfrForSpecification->nfr_id = $recommendationNonFunctionalRequirement;
+        //     $nfrForSpecification->legal_requirements_id="1,2,3";
+        //     $nfrForSpecification->description = "";
+        //     $nfrForSpecification->acceptance_criteria = "";
+        //     $nfrForSpecification->evaluation_metrics = "";
+        //     $nfrForSpecification->content = "";
+        //     $nfrForSpecification->image = "";
+        //     $nfrForSpecification->save();
+        // }
+
+        // if (!empty($allNonFunctionalRequirements)) {
+        //     foreach($allNonFunctionalRequirements as $nonFunctionalRequirement) {                
+        //         $nfrForSpecification = new NonFunctionalRequirementsForSpecification;
+        //         $nfrForSpecification->project_id = 1;
+        //         $nfrForSpecification->users_id = 1;
+        //         $nfrForSpecification->is_recommendation = 0;
+        //         $nfrForSpecification->nfr_id = $nonFunctionalRequirement;
+        //         $nfrForSpecification->legal_requirements_id="1,2,3";
+        //         $nfrForSpecification->description = "";
+        //         $nfrForSpecification->acceptance_criteria = "";
+        //         $nfrForSpecification->evaluation_metrics = "";
+        //         $nfrForSpecification->content = "";
+        //         $nfrForSpecification->image = "";
+        //         $nfrForSpecification->save();
+        //     }
+        // }
+
+        // return redirect()->action([FrameworkController::class, 'step5']);
+    }
 }

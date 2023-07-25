@@ -9,7 +9,7 @@ class LegalAndNormativeRequirements extends Model
 {
     use HasFactory;
 
-    protected $table = 'legal_and_normative_requirement';
+    protected $table = 'legal_requirements';
   
         /**
      * Get the User that owns the Projects.

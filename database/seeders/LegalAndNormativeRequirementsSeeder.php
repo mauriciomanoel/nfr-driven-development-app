@@ -26,7 +26,7 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
         $lifeSettings = LifeSettings::where('name' , '=' , 'Generic' )->first();
 
         $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
-            'name' => "Regulamento Geral de Proteção de Dados (RGPD)",
+            'name' => "General Data Protection Regulation (RGPD)",
             'description' => "O sistema AAL deve cumprir as disposições do RGPD em relação à coleta, processamento e armazenamento de dados pessoais. Isso inclui obter o consentimento adequado dos usuários para o uso de seus dados, garantir a segurança e a privacidade desses dados, e possibilitar que os usuários acessem, retifiquem e excluam suas informações pessoais.",
             'legal_references' => "<p>Artigo 6(1)(a) do RGPD - Base legal para o processamento de dados pessoais com o consentimento do titular dos dados.</p><p>Artigo 25 do RGPD - Princípio da proteção de dados desde a concepção e por padrão.</p>",
             'recommendations' => "<p>Implementar um mecanismo de obtenção de consentimento explícito dos usuários para o processamento de seus dados pessoais.</p><p>Adotar medidas técnicas e organizativas adequadas para garantir a segurança e privacidade dos dados pessoais.</p><p>Disponibilizar uma interface para que os usuários possam acessar, retificar e excluir suas informações pessoais.</p>",
@@ -39,7 +39,6 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Security', 'Privacy', 'Confidentiality'])->get();
         foreach($requirements as $requirement) {
-            var_dump($requirement->name);
             DB::table('legal_has_nfr_requirement')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
@@ -47,7 +46,7 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
         }
 
         $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
-            'name' => "Acessibilidade dos sítios Web e das aplicações móveis de organismos do setor público",
+            'name' => "Accessibility of public sector websites and mobile apps",
             'description' => "O sistema AAL deve ser projetado e desenvolvido levando em consideração os princípios de acessibilidade, garantindo que seja utilizável por pessoas com diferentes níveis de habilidades e capacidades. Isso inclui a implementação de recursos e funcionalidades que permitam o acesso e a interação por parte de pessoas com deficiência, como pessoas com deficiência visual, auditiva, motora ou cognitiva.",
             'legal_references' => "<p>Diretiva (UE) 2016/2102 relativa à acessibilidade dos sítios Web e das aplicações móveis de organismos do setor público - https://eur-lex.europa.eu/legal-content/PT/LSU/?uri=CELEX:32016L2102</p><p>Norma ISO 9241-171:2020 - Requisitos de acessibilidade e usabilidade para produtos e serviços interativos</p>",
             'recommendations' => "<p>Realizar testes de usabilidade com usuários representativos de diferentes habilidades e capacidades para garantir a acessibilidade e usabilidade do sistema.</p><p>Implementar diretrizes e padrões de acessibilidade reconhecidos, como as diretrizes WCAG (Web Content Accessibility Guidelines).</p><p>Fornecer suporte para tecnologias assistivas, como leitores de tela e teclados alternativos.</p><p>Garantir que a interface do sistema seja compatível com diferentes tamanhos de tela e resoluções.</p><p>Oferecer opções de personalização da interface, como controle de contraste, tamanho de fonte e opções de navegação alternativas.</p>",
@@ -114,7 +113,7 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
         }
 
         $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
-            'name' => "Usabilidade",
+            'name' => "Usability",
             'description' => "O sistema AAL deve ser projetado considerando os princípios de usabilidade, facilitando seu uso pelos usuários independentemente de suas habilidades técnicas. Usabilidade refere-se à medida em que um sistema pode ser usado por usuários específicos para atingir objetivos específicos com eficácia, eficiência e satisfação em um contexto específico de uso.",
             'legal_references' => "
             <p>ISO 9241-210:2019 - Ergonomics of human-system interaction — Part 210: Human-centred design for interactive - https://www.iso.org/obp/ui/en/#iso:std:iec:31010:ed-2:v1:en.</p>

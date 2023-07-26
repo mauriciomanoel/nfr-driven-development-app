@@ -30,6 +30,7 @@
                             <tr>
                               <th>Author</th>
                               <th>Name</th>
+                              <th>Alias</th>
                               <th>Description</th>
                               <th>Model Quality</th>
                               <th>Date</th>
@@ -42,6 +43,7 @@
                               <tr>
                                 <td><strong>{{ $requirement->user->name }}</strong></td>
                                 <td><strong>{{ $requirement->name }}</strong></td>
+                                <td><strong>{{ $requirement->alias }}</strong></td>
                                 <td>{{ $requirement->description }}</td>
                                 <td>{{ $requirement->model_quality }}</td>
                                 <td>{{ $requirement->created_at }}</td>

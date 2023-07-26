@@ -22,6 +22,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         $acceptabilityRequeriment = NonFunctionalRequirements::create([  
             'name' => "Acceptability",
+            'alias' => "Aceitabilidade",
             'description' => "Refere-se à medida em que um sistema é considerado adequado, satisfatório e útil para os usuários finais ou os destinatários do sistema. Envolve a avaliação de fatores como usabilidade, acessibilidade, adaptabilidade, segurança e a satisfação geral do usuário com o sistema.",
             'model_quality' => "Transversal",
             'source' => "<p>Leal, José Eugênio. Avaliação da aceitabilidade de um sistema de apoio à logística humanitária. Diss. PUC-Rio, 2019.</p><p>McCreadie, Claudine, and Anthea Tinker. The acceptability of assistive technology to older people. Ageing & Society 25.1 (2005): 91-110.</p><p>Whelan, Sally, et al. Factors affecting the acceptability of social robots by older adults including people with dementia or cognitive impairment: a literature review. International Journal of Social Robotics 10.5 (2018): 643-668.</p>",
@@ -34,6 +35,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Health",
+            'alias' => "Saúde",
             'description' => "referem-se a critérios ou necessidades relacionadas à saúde física e mental dos usuários ou clientes. Esses requisitos podem incluir aspectos como segurança, ergonomia, qualidade de vida e bem-estar geral.",
             'model_quality' => "Transversal",
             'source' => "Liu, Xuegang, Pei-Lin Shen, and Yung-Shen Tsai. Dance intervention effects on physical function in healthy older adults: a systematic review and meta-analysis. Aging clinical and experimental research 33 (2021): 253-263.",
@@ -61,6 +63,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Environmental",
+            'alias' => "Ambiental",
             'description' => "referem-se a critérios ou necessidades relacionadas ao ambiente físico no qual o sistema ou produto será utilizado. Isso pode incluir aspectos como temperatura, umidade, pressão, iluminação e ruído.",
             'model_quality' => "Transversal",
             'source' => "Shajahan, Amreen, Charles H. Culp, and Brandon Williamson. Effects of indoor environmental parameters related to building heating, ventilation, and air conditioning systems on patients' medical outcomes: A review of scientific research on hospital buildings. Indoor Air 29.2 (2019): 161-176.",
@@ -76,6 +79,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Integration",
+            'alias' => "Integração",
             'description' => "referem-se a critérios ou necessidades relacionadas à capacidade do sistema de se conectar e interagir com outros sistemas ou componentes.",
             'model_quality' => "Transversal",
             'source' => "",
@@ -95,6 +99,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Acceptance",
+            'alias' => "Aceitação",
             'description' => "São critérios que um sistema ou produto deve atender para ser considerado satisfatório e aceito pelos usuários ou clientes. Esses requisitos geralmente são estabelecidos com base nas necessidades e expectativas dos stakeholders.",
             'model_quality' => "Transversal",
             'source' => "<p>Nadal, Camille, Corina Sas, and Gavin Doherty. Technology acceptance in mobile health: scoping review of definitions, models, and measurement. Journal of Medical Internet Research 22.7 (2020): e17256.</p>
@@ -115,6 +120,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         $functionalSuitabilityRequeriment = NonFunctionalRequirements::create([  
             'name' => "Functional Suitability",
+            'alias' => "Adequação Funcional",
             'description' => "Refere-se ao grau em que o conjunto de funções abrange todas as tarefas e objetivos especificados.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -127,6 +133,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Functional Completeness",
+            'alias' => "Integralidade Funcional",
             'description' => "Refere-se ao grau em que o conjunto de funções do sistema abrange todas as tarefas e objetivos especificados. Isso significa que todas as funcionalidades necessárias para realizar as atividades planejadas devem estar presentes.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -139,6 +146,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
        NonFunctionalRequirements::create([  
             'name' => "Functional Correctness",
+            'alias' => "Correção Funcional",
             'description' => "Refere-se ao grau em que um sistema fornece resultados corretos com o nível necessário de precisão. Isso significa que o sistema deve produzir os resultados esperados, sem erros ou inconsistências.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -151,6 +159,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Functional Appropriateness",
+            'alias' => "Adequação Funcional",
             'description' => "Refere-se ao grau em que as funções do sistema facilitam a realização de tarefas e objetivos específicos. Isso significa que as funcionalidades devem ser adequadas e relevantes para os usuários, ajudando-os a atingir seus objetivos.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -164,6 +173,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         $performanceEfficiencyRequeriment = NonFunctionalRequirements::create([  
             'name' => "Performance Efficiency",
+            'alias' => "Eficiência de Desempenho",
             'description' => "Esta característica representa o desempenho relativo à quantidade de recursos utilizados nas condições estabelecidas.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -176,6 +186,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Time Behavior",
+            'alias' => "Comportamento do Tempo",
             'description' => "Refere-se ao grau em que os tempos de resposta, processamento e taxa de transferência de um sistema AAL atendem aos requisitos estabelecidos. Isso implica que o sistema deve realizar suas funções de maneira eficiente e dentro de prazos aceitáveis.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -188,6 +199,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Resource Utilization",
+            'alias' => "Utilização de Recursos",
             'description' => "Refere-se ao grau em que o uso de recursos (como memória, processamento e armazenamento) por parte do sistema atende aos requisitos estabelecidos. Isso implica que o sistema deve utilizar os recursos de forma eficiente, evitando desperdícios ou sobrecargas desnecessárias",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -200,6 +212,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Capacity",
+            'alias' => "Capacidade",
             'description' => "Refere-se ao grau em que os limites máximos de parâmetros do sistema AAL atendem aos requisitos estabelecidos. Isso implica que o sistema deve ser capaz de lidar com a quantidade esperada de usuários, dispositivos e dados, sem prejudicar sua funcionalidade e desempenho.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -212,6 +225,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Punctuality",
+            'alias' => "Pontualidade",
             'description' => "Refere-se à capacidade de um sistema AAL de concluir uma tarefa ou cumprir uma obrigação dentro de um prazo previamente determinado. Isso implica que o sistema deve ser confiável em termos de pontualidade para garantir uma experiência satisfatória do usuário.",
             'model_quality' => "Product quality",
             'source' => "<p>Skubich, J. J., et al. Time requirement specification in the graphical design of real-time software. Control Engineering Practice 4.2 (1996): 207-215.</p><p>Mekki, Ahmed, Mohamed Ghazel, and Armand Toguyeni. Patterns-Based Assistance for Temporal Requirement Specification. Proceedings of the International Conference on Software Engineering Research and Practice (SERP). The Steering Committee of The World Congress in Computer Science, Computer Engineering and Applied Computing (WorldComp), 2011.</p>",
@@ -224,6 +238,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         $usabilityRequeriment = NonFunctionalRequirements::create([  
             'name' => "Usability",
+            'alias' => "Usabilidade",
             'description' => "Grau em que um produto ou sistema pode ser usado por usuários específicos para atingir objetivos específicos com eficácia, eficiência e satisfação em um contexto específico de uso.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -236,6 +251,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Appropriateness Recognizability",
+            'alias' => "Reconhecimento de Adequação",
             'description' => "Refere-se ao grau em que os usuários conseguem reconhecer se um sistema AAL é adequado para atender às suas necessidades.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -248,6 +264,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Learnability",
+            'alias' => "Aprendizagem",
             'description' => "Refere-se ao grau em que os usuários podem aprender a usar o sistema AAL para alcançar os objetivos desejados, de forma eficaz, eficiente, livre de riscos e com satisfação.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -260,6 +277,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Operability",
+            'alias' => "Operabilidade",
             'description' => "Refere-se ao grau em que um sistema AAL possui atributos que o tornam fácil de operar e controlar.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -272,6 +290,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "User Error Protection",
+            'alias' => "Proteção contra erros do Usuário",
             'description' => "Refere-se ao grau em que um sistema AAL protege os usuários contra a ocorrência de erros. ",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -284,6 +303,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Accessibility",
+            'alias' => "Acessibilidade",
             'description' => "Refere-se ao grau em que um sistema AAL pode ser usado por pessoas com a mais ampla gama de características e capacidades para alcançar um objetivo específico em um contexto de uso especificado.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -296,6 +316,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Comprehensibility",
+            'alias' => "Compreensibilidade",
             'description' => "O sistema AAL deve ser projetado para garantir que as informações exibidas sejam claras e compreensíveis para todos os usuários, independentemente de suas habilidades cognitivas. Ele deve evitar jargões técnicos e fornecer explicações claras e simples sobre o uso e funcionamento do sistemaa.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -309,6 +330,7 @@ class NonFunctionRequirementsSeeder extends Seeder
         
         $reliabilityRequeriment = NonFunctionalRequirements::create([  
             'name' => "Reliability",
+            'alias' => "Confiabilidade",
             'description' => "Grau em que um sistema, produto ou componente executa funções especificadas sob condições especificadas por um período de tempo especificado.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -321,6 +343,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Maturity",
+            'alias' => "Maturidade",
             'description' => "Refere-se ao grau em que um sistema, produto ou componente atende às necessidades de confiabilidade durante a operação normal.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -333,6 +356,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Availability",
+            'alias' => "Disponibilidade",
             'description' => "Refere-se ao grau em que um sistema, produto ou componente está operacional e acessível quando necessário para uso.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -345,6 +369,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Fault Tolerance",
+            'alias' => "Tolerância ao Erro",
             'description' => "Refere-se ao grau em que um sistema, produto ou componente opera conforme o esperado, mesmo na presença de falhas de hardware ou software.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -357,6 +382,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Recoverability",
+            'alias' => "Recuperabilidade",
             'description' => "Refere-se ao grau em que um produto ou sistema AAL é capaz de recuperar os dados afetados diretamente e restabelecer o estado desejado do sistema após uma interrupção ou falha.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
@@ -369,6 +395,7 @@ class NonFunctionRequirementsSeeder extends Seeder
 
         NonFunctionalRequirements::create([  
             'name' => "Dependability",
+            'alias' => "Dependability",
             'description' => "Refere-se à capacidade de evitar falhas de serviço que sejam mais frequentes e mais severas do que o aceitável, sem impor restrições às falhas.",
             'model_quality' => "Product quality",
             'source' => "<p>Kinoshita, Yoshiki. User Oriented Dependability. (2009).</p><p>Avizienis, Algirdas, Jean-Claude Laprie, and Brian Randell. Fundamental concepts of dependability. Department of Computing Science Technical Report Series (2001).</p><p>Maciel, Paulo RM, et al. Dependability modeling. Performance and dependability in service computing: concepts, techniques and research directions. IGI Global, 2012. 53-97.</p>",

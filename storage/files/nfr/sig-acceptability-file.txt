@@ -6,7 +6,7 @@
       "text": "Saúde",
       "type": "nfr.NFR",
       "x": 308,
-      "y": 210,
+      "y": 338,
       "customProperties": {
         "Description": "Referem-se a critérios ou necessidades relacionadas à saúde física e mental dos usuários ou clientes. Esses requisitos podem incluir aspectos como segurança, ergonomia, qualidade de vida e bem-estar geral",
         "definition": ""
@@ -16,8 +16,8 @@
       "id": "ba10f8ed-95c2-4b35-b7da-9d31c4750a0e",
       "text": "Aceitabilidade",
       "type": "nfr.NFR",
-      "x": 790,
-      "y": 2,
+      "x": 1049,
+      "y": 40,
       "customProperties": {
         "Description": "Refere-se à medida em que um sistema é considerado adequado, satisfatório e útil para os usuários finais ou os destinatários do sistema. Envolve a avaliação de fatores como usabilidade, acessibilidade, adaptabilidade, segurança e a satisfação geral do usuário com o sistema."
       }
@@ -27,7 +27,7 @@
       "text": "Ambiental",
       "type": "nfr.NFR",
       "x": 653,
-      "y": 279,
+      "y": 407,
       "customProperties": {
         "Description": "Referem-se a critérios ou necessidades relacionadas ao ambiente físico no qual o sistema ou produto será utilizado. Isso pode incluir aspectos como temperatura, umidade, pressão, iluminação e ruído."
       }
@@ -37,7 +37,7 @@
       "text": "Usabilidade",
       "type": "nfr.NFR",
       "x": 1364,
-      "y": 93,
+      "y": 221,
       "customProperties": {
         "Description": "é definida como \"a medida em que um produto pode ser usado por usuários específicos para alcançar metas específicas com eficácia, eficiência e satisfação em um contexto de uso específico\"."
       }
@@ -47,7 +47,7 @@
       "text": "Segurança",
       "type": "nfr.NFR",
       "x": 1407,
-      "y": 217,
+      "y": 345,
       "customProperties": {
         "Description": "Referem-se a critérios ou necessidades relacionadas à proteção do sistema, dados e usuários contra ameaças, vulnerabilidades e acessos não autorizados. Isso pode incluir aspectos como autenticação, criptografia, controle de acesso, detecção de intrusões e auditoria."
       }
@@ -57,7 +57,7 @@
       "text": "Integração",
       "type": "nfr.NFR",
       "x": 963,
-      "y": 266,
+      "y": 394,
       "customProperties": {
         "Description": "Referem-se a critérios ou necessidades relacionadas à capacidade do sistema de se conectar e interagir com outros sistemas ou componentes. Isso pode incluir aspectos como integração de APIs, interoperabilidade, troca de dados e compatibilidade com padrões e protocolos."
       }
@@ -67,7 +67,7 @@
       "text": "Aceitação",
       "type": "nfr.NFR",
       "x": 1936,
-      "y": 51,
+      "y": 179,
       "customProperties": {
         "Description": "Critérios que um sistema ou produto deve atender para ser considerado satisfatório e aceito pelos usuários ou clientes. Esses requisitos geralmente são estabelecidos com base nas necessidades e expectativas dos stakeholders. Também pode ser uma avaliação pragmática a posteriori, implicando que uma atividade real é exigida do usuário antes da avaliação de aceitação"
       }
@@ -77,7 +77,7 @@
       "text": "Bem-Estar",
       "type": "nfr.NFR",
       "x": 211,
-      "y": 321,
+      "y": 449,
       "customProperties": {
         "Description": "Dizem respeito a objetivos ou critérios que promovem a satisfação e o bem-estar dos usuários. Isso pode envolver aspectos emocionais, sociais, cognitivos e físicos."
       }
@@ -87,7 +87,7 @@
       "text": "Recursos",
       "type": "nfr.NFR",
       "x": 347,
-      "y": 322,
+      "y": 450,
       "customProperties": {
         "Description": "refere-se à disponibilidade de recursos relacionados à saúde, como instalações médicas, medicamentos, equipamentos médicos, profissionais de saúde qualificados, acesso a serviços de saúde, entre outros"
       }
@@ -97,7 +97,7 @@
       "text": "Preferências",
       "type": "nfr.NFR",
       "x": 585,
-      "y": 490,
+      "y": 618,
       "customProperties": {
         "Description": "referem-se às escolhas individuais dos usuários em relação a um produto, serviço ou sistema. Elas envolvem aspectos como personalização, configurações personalizáveis, opções de escolha e ajustes que atendam às necessidades e preferências específicas de cada usuário"
       }
@@ -107,7 +107,7 @@
       "text": "Satisfação",
       "type": "nfr.NFR",
       "x": 495,
-      "y": 302,
+      "y": 430,
       "customProperties": {
         "Description": "refere-se ao grau em que as necessidades e expectativas dos usuários são atendidas e excedidas. É a percepção subjetiva dos usuários em relação à qualidade, utilidade e valor do produto, serviço ou sistema fornecido."
       }
@@ -117,7 +117,7 @@
       "text": "Relacionamento",
       "type": "nfr.NFR",
       "x": 474,
-      "y": 488,
+      "y": 616,
       "customProperties": {
         "Description": "refere-se à qualidade da interação entre uma organização e seus usuários. Envolve a construção de confiança, comunicação efetiva e estabelecimento de vínculos duradouros. Um bom relacionamento implica em ouvir ativamente os usuários, compreender suas necessidades e expectativas, bem como responder de maneira eficiente e personalizada."
       }
@@ -127,7 +127,7 @@
       "text": "Locacionais",
       "type": "nfr.NFR",
       "x": 645,
-      "y": 359,
+      "y": 487,
       "customProperties": {
         "Description": "Refere-se aos aspectos relacionados à localização física de um projeto, serviço ou sistema. Isso pode envolver aspectos como infraestrutura disponível, restrições geográficas, exigências regulatórias e características do ambiente local entre outros fatores que podem influenciar o ambiente em que o sistema será implantado."
       }
@@ -137,7 +137,7 @@
       "text": "Manutenção",
       "type": "nfr.NFR",
       "x": 869,
-      "y": 493,
+      "y": 621,
       "customProperties": {
         "Description": "refere-se à facilidade e eficácia com que um sistema pode ser mantido, atualizado e corrigido ao longo do tempo. Envolve atividades como monitoramento, diagnóstico, reparo, aplicação de atualizações e correção de falhas. Um sistema com boa manutenção permite que as equipes de suporte e desenvolvimento realizem as atividades de manutenção de forma eficiente, minimizando o tempo de inatividade e garantindo a disponibilidade contínua do sistema"
       }
@@ -147,7 +147,7 @@
       "text": "Eficiência",
       "type": "nfr.NFR",
       "x": 1053,
-      "y": 530,
+      "y": 658,
       "customProperties": {
         "Description": "Considera à utilização otimizada dos recursos, como processamento, memória, largura de banda ou energia, pelo sistema. Um sistema eficiente é capaz de realizar suas funções de maneira rápida e com uso mínimo de recursos, garantindo um desempenho adequado sem desperdício."
       }
@@ -157,7 +157,7 @@
       "text": "Envolvimento do Usuário",
       "type": "nfr.NFR",
       "x": 1717,
-      "y": 197,
+      "y": 325,
       "customProperties": {
         "Description": "Inserir o idoso desde as fases iniciais do projeto, envolva no processo de desenvolvimento para entender suas necessidades, expectativas e requisitos. Pode ser usado sessões de feedback e iterações com os idosos para garantir que suas perspectivas sejam consideradas no desenvolvimento do sistema AAL."
       }
@@ -167,7 +167,7 @@
       "text": "Documentação e Suporte",
       "type": "nfr.NFR",
       "x": 1972,
-      "y": 205,
+      "y": 333,
       "customProperties": {
         "Description": "Forneçer documentação clara e abrangente, bem como suporte adequado ao idoso. Isso inclui manuais de usuário, tutoriais, recursos de ajuda online e um canal de suporte para responder a perguntas e solucionar problemas"
       }
@@ -177,7 +177,7 @@
       "text": "Performance",
       "type": "nfr.NFR",
       "x": 2148,
-      "y": 201,
+      "y": 329,
       "customProperties": {
         "Description": "Garantir que o desempenho do sistema atenda às expectativas dos usuários. Isso inclui tempos de resposta rápidos, eficiência no processamento de dados e capacidade de lidar com cargas de trabalho esperadas. Realize testes de desempenho para identificar possíveis gargalos e otimizar o sistema quando necessário"
       }
@@ -187,7 +187,7 @@
       "text": "Comunicação Efetiva",
       "type": "nfr.NFR",
       "x": 2348,
-      "y": 119,
+      "y": 247,
       "customProperties": {
         "Description": "Manter uma comunicação aberta e efetiva com os idosos ou cuidadores durante todo o processo de desenvolvimento. Manter informados sobre o progresso do sistema, envolva-os em discussões relevantes e esteja disponível para responder a perguntas ou preocupações."
       }
@@ -197,7 +197,7 @@
       "text": "Monitoramento de Saúde",
       "type": "nfr.Operationalization",
       "x": 41,
-      "y": 401,
+      "y": 529,
       "customProperties": {
         "Description": "Envolve a interpretação e análise dos dados coletados por meio do monitoramento da saúde dos idosos. O objetivo é compreender o estado de bem-estar, identificar doenças, deficiências ou problemas de saúde específicos e obter informações relevantes para a tomada de decisões relacionadas ao cuidado e tratamento adequados."
       }
@@ -207,7 +207,7 @@
       "text": "Tecnologia de Saúde",
       "type": "nfr.Operationalization",
       "x": 126,
-      "y": 448,
+      "y": 576,
       "customProperties": {
         "Description": "Refere-se ao fornecimento de tecnologias, dispositivos e soluções que permitem o monitoramento contínuo da saúde dos idosos. Isso inclui dispositivos de monitoramento, sensores, aplicativos móveis e outras ferramentas tecnológicas que permitem a coleta, análise e transmissão de dados relevantes sobre saúde e bem-estar."
       }
@@ -217,7 +217,7 @@
       "text": "Gestão da Saúde",
       "type": "nfr.Operationalization",
       "x": 226,
-      "y": 467,
+      "y": 595,
       "customProperties": {
         "Description": "Envolve a identificação, compreensão e abordagem de deficiências físicas, doenças crônicas e deficiências mentais específicas enfrentadas pelos idosos. Isso inclui a implementação de estratégias, tratamentos e cuidados específicos para melhorar a saúde física, controlar doenças crônicas e fornecer suporte adequado para deficiências mentais."
       }
@@ -227,7 +227,7 @@
       "text": "Serviços de Saúde",
       "type": "nfr.Operationalization",
       "x": 354,
-      "y": 465,
+      "y": 593,
       "customProperties": {
         "Description": "Refere-se à disponibilização de soluções, serviços e intervenções personalizadas para abordar as deficiências físicas, doenças crônicas e deficiências mentais identificadas. Isso inclui tratamentos médicos, terapias, adaptações no ambiente físico e psicossocial, e suporte adequado para melhorar a qualidade de vida dos idosos afetados por essas condições."
       }
@@ -237,7 +237,7 @@
       "text": "Serviços médicos",
       "type": "nfr.Operationalization",
       "x": 289,
-      "y": 594,
+      "y": 722,
       "customProperties": {
         "Description": "São serviços relacionados ao cuidado da saúde prestados por profissionais de saúde, como médicos, enfermeiros e terapeutas. Eles abrangem uma ampla gama de intervenções e tratamentos médicos para abordar as deficiências físicas, doenças crônicas e deficiências mentais identificadas em idosos. Os serviços médicos podem incluir diagnóstico, prescrição de medicamentos, exames de laboratório, cirurgia, fisioterapia, terapia ocupacional, terapia da fala e outros tratamentos direcionados para melhorar a saúde e o bem-estar dos idosos afetados"
       }
@@ -247,7 +247,7 @@
       "text": "Serviços Digitais",
       "type": "nfr.Operationalization",
       "x": 394,
-      "y": 598,
+      "y": 726,
       "customProperties": {
         "Description": "São serviços baseados em tecnologia digital e computação que complementam ou apoiam os serviços médicos e a saúde dos idosos. Os serviços digitais na área de AAL se concentram em fornecer soluções inovadoras para melhorar a qualidade de vida dos idosos, promovendo sua autonomia, segurança e bem-estar."
       }
@@ -257,14 +257,14 @@
       "text": "Comunicação Efetiva",
       "type": "nfr.Operationalization",
       "x": 432,
-      "y": 701
+      "y": 829
     },
     {
       "id": "b9537e86-4605-47d4-995f-29f6fd3eed87",
       "text": "Feedback",
       "type": "nfr.Operationalization",
       "x": 506,
-      "y": 749,
+      "y": 877,
       "customProperties": {
         "Description": "refere-se à informação ou resposta fornecida aos usuários sobre suas ações, interações ou o estado do sistema. É uma forma de comunicação bidirecional entre o sistema e o usuário, permitindo que o usuário compreenda melhor o que está acontecendo e tome decisões informadas."
       }
@@ -274,7 +274,7 @@
       "text": "Personalização",
       "type": "nfr.Operationalization",
       "x": 580,
-      "y": 627,
+      "y": 755,
       "customProperties": {
         "Description": "refere-se à capacidade de adaptar ou customizar um sistema ou produto de acordo com as preferências e necessidades individuais dos usuários. Envolve oferecer opções e recursos que permitam aos usuários configurar o sistema de acordo com suas preferências, tornando-o mais adequado e relevante para suas necessidades específicas"
       }
@@ -284,63 +284,63 @@
       "text": "Infraestrutura",
       "type": "nfr.Operationalization",
       "x": 639,
-      "y": 436
+      "y": 564
     },
     {
       "id": "1d3bd459-6f67-475f-9e7c-b9128c55b945",
       "text": "Restrições Geográficas",
       "type": "nfr.Operationalization",
       "x": 748,
-      "y": 530
+      "y": 658
     },
     {
       "id": "8d170208-a1ac-4b1b-9625-e95dae20aa51",
       "text": "Características Local",
       "type": "nfr.Operationalization",
       "x": 774,
-      "y": 448
+      "y": 576
     },
     {
       "id": "bd5f1729-7fae-433c-b6d0-a77b544ebc6e",
       "text": "Normativas Legais",
       "type": "nfr.Operationalization",
       "x": 1385,
-      "y": 861
+      "y": 989
     },
     {
       "id": "2ac7fa4d-84a0-45f6-b7b1-9b2d1e9f910d",
       "text": "Padrões",
       "type": "nfr.Operationalization",
       "x": 1490,
-      "y": 857
+      "y": 985
     },
     {
       "id": "ffd14392-37d7-4d15-bf49-50376430ada4",
       "text": "Disponibilidade",
       "type": "nfr.NFR",
       "x": 1208,
-      "y": 309
+      "y": 437
     },
     {
       "id": "82b9f300-3c80-4e9f-a8c4-69c39f4c9f29",
       "text": "Integridade de Dados",
       "type": "nfr.NFR",
       "x": 1353,
-      "y": 473
+      "y": 601
     },
     {
       "id": "50757511-8a46-4bdf-b017-c3d9dc8201c6",
       "text": "Segurança de Conteúdo",
       "type": "nfr.NFR",
       "x": 1499,
-      "y": 585
+      "y": 713
     },
     {
       "id": "ac4da81e-651a-4dba-b680-aead4d73f9d1",
       "text": "Privacidade",
       "type": "nfr.NFR",
       "x": 1936,
-      "y": 590,
+      "y": 718,
       "customProperties": {
         "Description": "Refere-se ao grau de proteção das informações e dados dos usuários."
       }
@@ -350,7 +350,7 @@
       "text": "Consentimento",
       "type": "nfr.NFR",
       "x": 2069,
-      "y": 711,
+      "y": 839,
       "customProperties": {
         "Description": "Refere-se ao requisito de obter o consentimento explícito dos usuários antes de coletar, processar ou compartilhar suas informações pessoais. É importante garantir que os usuários tenham a capacidade de tomar decisões informadas sobre o uso de seus dados pessoais."
       }
@@ -360,7 +360,7 @@
       "text": "Anonimização",
       "type": "nfr.NFR",
       "x": 1881,
-      "y": 708,
+      "y": 836,
       "customProperties": {
         "Description": "Envolve o processo de remoção ou alteração de informações pessoais identificáveis, de forma que os dados se tornem anônimos e não possam ser atribuídos a um indivíduo específico. A anonimização é uma medida importante para proteger a privacidade dos usuários."
       }
@@ -370,7 +370,7 @@
       "text": "Controle",
       "type": "nfr.NFR",
       "x": 1715,
-      "y": 717,
+      "y": 845,
       "customProperties": {
         "Description": "Refere-se à capacidade dos usuários de controlar suas informações pessoais, incluindo a capacidade de acessar, atualizar, corrigir ou excluir seus dados. Os sistemas AAL devem fornecer mecanismos para que os usuários tenham controle sobre seus dados pessoais."
       }
@@ -380,7 +380,7 @@
       "text": "Conformidade",
       "type": "nfr.NFR",
       "x": 1439,
-      "y": 760,
+      "y": 888,
       "customProperties": {
         "Description": "Diz respeito ao cumprimento de regulamentações e leis de privacidade relevantes. Os sistemas AAL devem ser projetados e operados em conformidade com essas regulamentações para garantir a proteção adequada dos dados pessoais dos usuários."
       }
@@ -390,7 +390,7 @@
       "text": "GDPR",
       "type": "nfr.Operationalization",
       "x": 1328,
-      "y": 1050,
+      "y": 1178,
       "customProperties": {
         "Description": "General Data Protection Regulation"
       }
@@ -400,7 +400,7 @@
       "text": "LGPD",
       "type": "nfr.Operationalization",
       "x": 1273,
-      "y": 966,
+      "y": 1094,
       "customProperties": {
         "Description": "Lei Geral de Proteção de Dados"
       }
@@ -410,7 +410,7 @@
       "text": "ADPPA",
       "type": "nfr.Operationalization",
       "x": 1431,
-      "y": 1032,
+      "y": 1160,
       "customProperties": {
         "Description": "American Data Privacy and Protection Act"
       }
@@ -420,7 +420,7 @@
       "text": "Abordagem Atenciosa",
       "type": "nfr.Operationalization",
       "x": 1984,
-      "y": 895,
+      "y": 1023,
       "customProperties": {
         "Description": "Interaja com o idoso de maneira respeitosa, considerando sua privacidade, dignidade e autonomia. Esteja ciente de que algumas pessoas idosas podem ter dificuldades de audição, visão ou cognição, então adapte sua comunicação de acordo."
       }
@@ -430,7 +430,7 @@
       "text": "Explicação Clara",
       "type": "nfr.Operationalization",
       "x": 2068,
-      "y": 991,
+      "y": 1119,
       "customProperties": {
         "Description": "xplique de forma clara e simples o motivo pelo qual está buscando o consentimento do idoso em relação à privacidade. Certifique-se de que ele entenda os benefícios e possíveis riscos envolvidos. Use uma linguagem acessível e evite termos técnicos complicados."
       }
@@ -440,7 +440,7 @@
       "text": "Consentimento Escrito",
       "type": "nfr.Operationalization",
       "x": 2149,
-      "y": 930,
+      "y": 1058,
       "customProperties": {
         "Description": "Se possível, obtenha o consentimento por escrito. Isso pode ser feito por meio de uma assinatura em um formulário ou documento específico, ou até mesmo por meio de um processo eletrônico, se for viável e compreensível para o idoso."
       }
@@ -450,7 +450,7 @@
       "text": "Representação Legal",
       "type": "nfr.Operationalization",
       "x": 2242,
-      "y": 858,
+      "y": 986,
       "customProperties": {
         "Description": "Em casos em que o idoso não tem capacidade legal para consentir, por motivos de saúde ou outros, é importante envolver um representante legal adequado, como um membro da família ou um tutor legal, para tomar decisões em nome do idoso."
       }
@@ -460,7 +460,7 @@
       "text": "Criptografia",
       "type": "nfr.Operationalization",
       "x": 1740,
-      "y": 1109,
+      "y": 1237,
       "customProperties": {
         "Description": "Utilize criptografia para proteger os dados durante o armazenamento e a transmissão. Isso ajuda a garantir que apenas pessoas autorizadas possam acessar e decifrar as informações"
       }
@@ -470,7 +470,7 @@
       "text": "Coleta Mínima de Dados",
       "type": "nfr.Operationalization",
       "x": 1849,
-      "y": 963,
+      "y": 1091,
       "customProperties": {
         "Description": "Limite a coleta de dados pessoais ao mínimo necessário para cumprir o objetivo pretendido. Quanto menos informações identificáveis forem coletadas, menor será o risco de identificação do idoso."
       }
@@ -480,7 +480,7 @@
       "text": "Políticas Acesso Restrito",
       "type": "nfr.Operationalization",
       "x": 1905,
-      "y": 1050,
+      "y": 1178,
       "customProperties": {
         "Description": "Implemente controles de acesso adequados para garantir que apenas pessoas autorizadas possam acessar os dados pessoais dos idosos. Isso inclui autenticação forte, restrição de privilégios e monitoramento de atividades."
       }
@@ -490,7 +490,7 @@
       "text": "Padrões de Projeto",
       "type": "nfr.Operationalization",
       "x": 792,
-      "y": 623,
+      "y": 751,
       "customProperties": {
         "Description": "O uso de padrões de projeto facilitam a documentação e manutenção da arquitetura do software."
       }
@@ -500,7 +500,7 @@
       "text": "Monitoramento e registro de erros",
       "type": "nfr.Operationalization",
       "x": 896,
-      "y": 660,
+      "y": 788,
       "customProperties": {
         "Description": "Implementar mecanismos de monitoramento em tempo real e registre erros ou problemas encontrados no sistema. Isso ajuda a identificar rapidamente possíveis falhas ou necessidades de correção, permitindo uma resposta mais ágil e eficaz"
       }
@@ -510,7 +510,7 @@
       "text": "Automação de Processos",
       "type": "nfr.Operationalization",
       "x": 822,
-      "y": 728,
+      "y": 856,
       "customProperties": {
         "Description": "Utilizar ferramentas e técnicas de automação para simplificar as tarefas de manutenção e atualização do sistema. Isso pode incluir a automação de testes, implantação contínua, monitoramento de desempenho e notificações de erros. A automação reduz a necessidade de intervenção manual e acelera o processo de manutenção."
       }
@@ -520,7 +520,7 @@
       "text": "Compactação e Otimização de dados",
       "type": "nfr.Operationalization",
       "x": 1063,
-      "y": 641,
+      "y": 769,
       "customProperties": {
         "Description": "Utilizar técnicas de compactação e otimização de dados para reduzir o uso de memória e largura de banda. Comprima os dados quando possível, utilizando algoritmos de compactação eficientes, e remova informações redundantes ou desnecessárias"
       }
@@ -530,7 +530,7 @@
       "text": "Cache e Armazenamento em Cache",
       "type": "nfr.Operationalization",
       "x": 1275,
-      "y": 710,
+      "y": 838,
       "customProperties": {
         "Description": "Implementar mecanismos de cache para reduzir a necessidade de acessar recursos externos repetidamente. Armazene em cache dados frequentemente acessados ou processados para minimizar a carga de processamento, a latência e o consumo de largura de banda"
       }
@@ -540,7 +540,7 @@
       "text": "Gerenciamento Conexões",
       "type": "nfr.Operationalization",
       "x": 1165,
-      "y": 704,
+      "y": 832,
       "customProperties": {
         "Description": "Considerar que na integração com sistemas externos, gerenciar eficientemente as conexões de rede pode minimizar a sobrecarga e o consumo de largura de banda. Utilizar pools de conexões para reutilizar conexões existentes em vez de abrir e fechar conexões repetidamente."
       }
@@ -550,7 +550,7 @@
       "text": "Acesso aos Dados",
       "type": "nfr.Operationalization",
       "x": 1604,
-      "y": 922,
+      "y": 1050,
       "customProperties": {
         "Description": "Garantir que os idosos tenham o direito de acessar seus dados pessoais facilmente. Forneçer uma opção para que eles possam solicitar uma cópia de suas informações pessoais e disponibilize um processo simples e eficiente para atender a essa solicitação."
       }
@@ -560,7 +560,7 @@
       "text": "Controle de Privacidade",
       "type": "nfr.Operationalization",
       "x": 1704,
-      "y": 877,
+      "y": 1005,
       "customProperties": {
         "Description": "Criar um painel de controle de privacidade intuitivo e acessível aos idosos. Esse painel deve permitir que eles visualizem e gerenciem suas preferências de privacidade, incluindo a seleção de dados a serem compartilhados, a escolha de finalidades de processamento e a definição de limitações de compartilhamento."
       }
@@ -570,7 +570,7 @@
       "text": "Exclusão de Dados",
       "type": "nfr.Operationalization",
       "x": 1780,
-      "y": 815,
+      "y": 943,
       "customProperties": {
         "Description": "Permitir a capacidade de solicitar a exclusão de seus dados pessoais quando não forem mais necessários para as finalidades originais ou quando o consentimento for retirado. Implementar um processo para avaliar e atender a essas solicitações de exclusão de forma oportuna."
       }
@@ -580,7 +580,7 @@
       "text": "Testes de Aceitação",
       "type": "nfr.Operationalization",
       "x": 1591,
-      "y": 311,
+      "y": 439,
       "customProperties": {
         "Description": "Realizar testes de aceitação com os idosos para validar se o sistema atende aos requisitos funcionais e não funcionais estabelecidos. Esses testes devem ser projetados para simular as condições reais de uso do sistema e verificar se ele está em conformidade com as expectativas dos usuários."
       }
@@ -590,7 +590,7 @@
       "text": "Testes de Usabilidade",
       "type": "nfr.Operationalization",
       "x": 1685,
-      "y": 344,
+      "y": 472,
       "customProperties": {
         "Description": "Realizar testes de usabilidade envolvendo idosos como usuários participantes. Observe como eles interagem com o sistema, identifique dificuldades ou confusões e obtenha feedback direto sobre a experiência de uso. Isso ajudará a identificar áreas de melhoria e a otimizar a usabilidade para atender às necessidades do público idoso."
       }
@@ -600,7 +600,7 @@
       "text": "Feedback Contínuo",
       "type": "nfr.Operationalization",
       "x": 1759,
-      "y": 428,
+      "y": 556,
       "customProperties": {
         "Description": "Estabeleçer canais de comunicação para receber feedback contínuo dos idosos. Isso pode ser feito por meio de pesquisas, formulários de feedback, grupos de discussão ou sessões de feedback direto. Demonstre que as opiniões e preocupações dos idosos são valorizadas e levadas em consideração no processo de desenvolvimento"
       }
@@ -610,7 +610,7 @@
       "text": "Engajamento Participativo",
       "type": "nfr.Operationalization",
       "x": 1804,
-      "y": 348,
+      "y": 476,
       "customProperties": {
         "Description": "Incentivar a participação ativa dos idosos no desenvolvimento do sistema. Isso pode ser feito por meio de grupos de discussão, comitês consultivos ou convites para fornecer feedback em estágios-chave do processo. Dê voz aos idosos e envolva-os na tomada de decisões relacionadas às funcionalidades e experiência de uso do sistema."
       }
@@ -620,7 +620,7 @@
       "text": "Treinamento Presencial",
       "type": "nfr.Operationalization",
       "x": 1884,
-      "y": 425,
+      "y": 553,
       "customProperties": {
         "Description": "Realizar sessões de treinamento presencial para os idosos, oferecendo orientações práticas sobre o uso do sistema AAL. Essas sessões podem ser conduzidas em grupos ou individualmente, dependendo das necessidades e preferências dos idosos. Garantir que o treinamento seja adaptado às habilidades e características dos usuários idosos, com ênfase na interatividade e no esclarecimento de dúvidas"
       }
@@ -630,7 +630,7 @@
       "text": "Manuais do Usuário",
       "type": "nfr.Operationalization",
       "x": 1973,
-      "y": 469,
+      "y": 597,
       "customProperties": {
         "Description": "Desenvolver manuais do usuário adaptados para o público idoso, escritos em linguagem clara e acessível. Utilizar recursos visuais e exemplos práticos para facilitar a compreensão das funcionalidades e do uso do sistema."
       }
@@ -640,7 +640,7 @@
       "text": "Canais de Suporte",
       "type": "nfr.Operationalization",
       "x": 2040,
-      "y": 395,
+      "y": 523,
       "customProperties": {
         "Description": "Estabeleçer canais de suporte direto, como uma linha de suporte telefônico ou um serviço de atendimento ao cliente via chat. Certifique-se de que os idosos tenham um meio fácil de entrar em contato com a equipe de suporte para receber ajuda personalizada, esclarecer dúvidas ou relatar problemas encontrados no sistema"
       }
@@ -650,7 +650,7 @@
       "text": "Tempo de Resposta",
       "type": "nfr.Operationalization",
       "x": 2131,
-      "y": 365,
+      "y": 493,
       "customProperties": {
         "Description": "Garantir que o sistema AAL responda prontamente às interações dos idosos. Isso inclui a resposta rápida aos comandos, a exibição instantânea de informações relevantes e a minimização de atrasos perceptíveis. Otimizar o desempenho do sistema para garantir uma experiência fluida e sem interrupções."
       }
@@ -660,7 +660,7 @@
       "text": "Tempo de inicialização e reinicialização",
       "type": "nfr.Operationalization",
       "x": 2240,
-      "y": 360,
+      "y": 488,
       "customProperties": {
         "Description": "Reduzir o tempo necessário para iniciar ou reiniciar o sistema AAL. Minimizar o tempo de inicialização e forneça feedback visual ou sonoro para indicar o progresso durante esse processo."
       }
@@ -670,7 +670,7 @@
       "text": "Linguagem Clara e Simples",
       "type": "nfr.Operationalization",
       "x": 2278,
-      "y": 245,
+      "y": 373,
       "customProperties": {
         "Description": "Utilize uma linguagem clara, simples e acessível ao se comunicar com os idosos. Evitar jargões técnicos e termos complexos que possam gerar confusão ou dificuldade de compreensão. A comunicação deve se adaptar ao nível de conhecimento, contexto e habilidades dos idosos."
       }
@@ -680,7 +680,7 @@
       "text": "Instruções Visuais e Auditivas",
       "type": "nfr.Operationalization",
       "x": 2388,
-      "y": 243,
+      "y": 371,
       "customProperties": {
         "Description": "Utilizar instruções visuais e auditivas para auxiliar a comunicação com os idosos. Por exemplo, exibir informações relevantes na interface do sistema AAL por meio de ícones, imagens ou índices claros. Além disso, forneça feedback sonoro, como avisos ou confirmações sonoras, para garantir que os idosos recebam informações de maneira efetiva."
       }
@@ -690,126 +690,126 @@
       "text": "Interoperabilidade",
       "type": "nfr.NFR",
       "x": 956,
-      "y": 542
+      "y": 670
     },
     {
       "id": "a88f50e0-7b6f-44c8-b4ae-fba0e82d4c62",
       "text": "Padrões de Comunicação",
       "type": "nfr.Operationalization",
       "x": 932,
-      "y": 803
+      "y": 931
     },
     {
       "id": "6510fdd8-d579-416a-ad1b-13557d2d6ede",
       "text": "Protocolos de Integração",
       "type": "nfr.Operationalization",
       "x": 998,
-      "y": 739
+      "y": 867
     },
     {
       "id": "2e52b07f-5c06-4d74-a0be-a3f4f4d07a5f",
       "text": "APIs e Interfaces",
       "type": "nfr.Operationalization",
       "x": 1091,
-      "y": 819
+      "y": 947
     },
     {
       "id": "e001b998-7a94-4dc3-9c6a-5ea072d4036f",
       "text": "Armazenamento e Backup Seguros",
       "type": "nfr.NFR",
       "x": 1531,
-      "y": 396
+      "y": 524
     },
     {
       "id": "e484cc0f-914d-4ebb-af7c-a4f07c397c1b",
       "text": "Resistência à Violação e Recuperação",
       "type": "nfr.NFR",
       "x": 1717,
-      "y": 512
+      "y": 640
     },
     {
       "id": "1efd6773-754d-4673-8de8-5e0a662276b2",
       "text": "Redundância",
       "type": "nfr.Operationalization",
       "x": 1114,
-      "y": 408
+      "y": 536
     },
     {
       "id": "fae4829e-14be-463f-bc22-14a2093005c2",
       "text": "Arquitetura tolerante a falhas",
       "type": "nfr.Operationalization",
       "x": 1212,
-      "y": 423
+      "y": 551
     },
     {
       "id": "dd069270-fe06-4f79-bafe-db2dbded50cf",
       "text": "Recuperação de Desastres",
       "type": "nfr.Operationalization",
       "x": 1306,
-      "y": 398
+      "y": 526
     },
     {
       "id": "50370edd-1024-4d02-bbbb-3137c31a6be6",
       "text": "Mecanismos de Validação de Dados",
       "type": "nfr.Operationalization",
       "x": 1235,
-      "y": 539
+      "y": 667
     },
     {
       "id": "fcd43ff5-a2cb-4884-ac91-5c7a158350cc",
       "text": "Detecção e Correção de Erros",
       "type": "nfr.Operationalization",
       "x": 1294,
-      "y": 592
+      "y": 720
     },
     {
       "id": "52e5aef4-9685-4767-926b-ad502d9495b3",
       "text": "Trilhas de Auditoria",
       "type": "nfr.Operationalization",
       "x": 1399,
-      "y": 585
+      "y": 713
     },
     {
       "id": "851025f9-add2-4720-b105-a642fb504425",
       "text": "Mecanismos de controle de acesso",
       "type": "nfr.Operationalization",
       "x": 1469,
-      "y": 676
+      "y": 804
     },
     {
       "id": "08a691a2-4917-4a18-900d-ab6c65c39c2e",
       "text": "Backups Regulares",
       "type": "nfr.Operationalization",
       "x": 1517,
-      "y": 481
+      "y": 609
     },
     {
       "id": "89b1da09-6045-439e-886f-c43a695d1edc",
       "text": "Transferência segura de dados",
       "type": "nfr.Operationalization",
       "x": 1614,
-      "y": 482
+      "y": 610
     },
     {
       "id": "d5c0bf06-39f7-4e48-a7b2-e7d44424eb6c",
       "text": "Sistemas de Detecção de Intrusão",
       "type": "nfr.Operationalization",
       "x": 1609,
-      "y": 601
+      "y": 729
     },
     {
       "id": "6c943f50-4220-4434-85ca-2570e160ff1f",
       "text": "Planejar Resposta a Incidentes",
       "type": "nfr.Operationalization",
       "x": 1709,
-      "y": 598
+      "y": 726
     },
     {
       "id": "ec7b2ad0-627a-4655-97cb-21d654dc8ae5",
       "text": "Processo Recuperação de Dados",
       "type": "nfr.Operationalization",
       "x": 1812,
-      "y": 590
+      "y": 718
     }
   ],
   "dependencies": [],
@@ -1435,7 +1435,7 @@
       "vertices": [
         {
           "x": 1476,
-          "y": 441
+          "y": 569
         }
       ]
     },
@@ -1443,11 +1443,11 @@
       "vertices": [
         {
           "x": 1164,
-          "y": 321
+          "y": 449
         },
         {
           "x": 1635,
-          "y": 151
+          "y": 279
         }
       ]
     },
@@ -1455,29 +1455,29 @@
       "vertices": [
         {
           "x": 1785,
-          "y": 165
+          "y": 293
         },
         {
           "x": 1274,
-          "y": 205
+          "y": 333
         },
         {
           "x": 1184,
-          "y": 215
+          "y": 343
         },
         {
           "x": 741,
-          "y": 221
+          "y": 349
         }
       ]
     }
   },
   "tool": "dsm3-goals",
   "metamodelVersion": "1.0",
-  "saveDate": "Fri, 14 Jul 2023 03:06:34 GMT",
+  "saveDate": "Wed, 26 Jul 2023 17:30:33 GMT",
   "diagram": {
     "width": 2513,
-    "height": 1300,
+    "height": 1428,
     "name": "Example NFR model",
     "customProperties": {
       "Description": "This tool supports two things that are often troublesome to develop with generic modelling frameworks:\n - draw complex shapes (clouds) without distorting when they are resized\n - create links from an element to a link (claim links)"

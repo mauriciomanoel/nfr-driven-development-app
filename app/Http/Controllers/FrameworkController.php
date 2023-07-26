@@ -256,39 +256,47 @@ class FrameworkController extends Controller
         foreach($nonFunctionalRequirementsForSpecification as $nonFunctionalRequirementForSpecification) {
             $nonFunctionalRequirement = $nonFunctionalRequirementForSpecification->nonFunctionalRequirement;
             $legalRequirements = $nonFunctionalRequirement->legalRequirements;
-            var_dump($legalRequirements); exit;
+            $legalRequirementsName = array();
+            foreach($legalRequirements as $legalRequirement) {
+                $legalRequirementsName[] = $legalRequirement->name;
+            }
+            if (empty($nonFunctionalRequirement->content)) continue;
+
+            var_dump($nonFunctionalRequirement->name);
             $element = json_decode($nonFunctionalRequirement->content, true);
             $element["orphans"][0]["customProperties"]["Description"] = trim($nonFunctionalRequirement->description);
             $element["orphans"][0]["customProperties"]["name"] = trim($nonFunctionalRequirement->name);
             $element["orphans"][0]["customProperties"]["recommendations"] = trim($nonFunctionalRequirement->recommendations);
-
-
-            var_dump($element["orphans"][0]); exit;
-
-            $arrayContent[] = json_decode($nonFunctionalRequirementForSpecification->nonFunctionalRequirement->content, true);
+            $element["orphans"][0]["customProperties"]["legalRequirements"] = implode(";", $legalRequirementsName);
+            $arrayContent[] = $element;
         }
 
-        var_dump($arrayContent); exit;
-        $data = "bina"; 
+        exit;
+        $data = $this::mergeSigs($arrayContent);
+
+        //  var_dump($value); exit;
+        // $data = "bina"; 
         $headers = ['Content-Type: application/json'];
         $fileName = "sig-file.txt";
         $fileStorePath = public_path('/tmp/'.$fileName);
         File::put($fileStorePath, $data);
 
         return response()->download($fileStorePath, $fileName, $headers);
+
+        
     }
 
     public function mergeSigs($arrayContent) {
         
-        $firstArray = json_decode(array_shift($arrayContent), true);
+        $firstArray = array_shift($arrayContent);
         
         $maxValueX = $this::getMaxValueFromArray($firstArray["orphans"]);
         
         $replaceIds = array();
-        foreach($arrayContent as $value) {
-            if (empty($value)) continue;
+        foreach($arrayContent as $element) {
+            if (empty($element)) continue;
             
-            $element = json_decode($value, true);                
+            // $element = json_decode($value, true);                
             foreach($element["orphans"] as $key => $orphan) {
                 $element["orphans"][$key]["x"] += $maxValueX;
                 $replaceIds[] = $orphan["id"];
@@ -320,15 +328,15 @@ class FrameworkController extends Controller
         // //  var_dump($newJson); 
         // // exit;
 
-        $data = json_encode($firstArray); 
-        $headers = ['Content-Type: application/json'];
-        $fileName = "sig-file.txt";
-        $fileStorePath = public_path('/tmp/'.$fileName);
-        File::put($fileStorePath, $data);
+        // $data = json_encode($firstArray); 
+        // $headers = ['Content-Type: application/json'];
+        // $fileName = "sig-file.txt";
+        // $fileStorePath = public_path('/tmp/'.$fileName);
+        // File::put($fileStorePath, $data);
 
-        $value = response()->download($fileStorePath, $fileName, $headers);
+        // $value = response()->download($fileStorePath, $fileName, $headers);
 
-        return $value;
+        return json_encode($firstArray);
     }
 
     private function getMaxValueFromArray($elements) {

@@ -14,12 +14,13 @@ return new class extends Migration
         Schema::create('non_functional_requirement', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('name');
+            $table->text('alias')->nullable();
             $table->longText('description');
             $table->text('model_quality');
             $table->text('source');
             $table->text('recommendations');
-            $table->longText('content')->nullable();;
-            $table->longText('image')->nullable();;
+            $table->longText('content')->nullable();
+            $table->longText('image')->nullable();
             $table->unsignedBigInteger('users_id');
             $table->unsignedBigInteger('characteristics_id');
             $table->timestamps();

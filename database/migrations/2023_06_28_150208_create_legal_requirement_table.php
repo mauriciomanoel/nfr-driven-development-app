@@ -53,7 +53,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('legal_requirements');
-        Schema::dropIfExists('legal_requirements_non_functional_requirements');
+        Schema::dropIfExists('legal_requirements_has_nfr_requirements');
 
     }
 };

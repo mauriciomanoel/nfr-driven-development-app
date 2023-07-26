@@ -35,6 +35,6 @@ class NonFunctionalRequirements extends Model
     }
 
     public function legalRequirements(){
-        return $this->belongsToMany(LegalRequirements::class);
+        return $this->belongsToMany(LegalRequirements::class, "legal_requirements_non_functional_requirements", "legal_id", "nfr_id");
     }
 }

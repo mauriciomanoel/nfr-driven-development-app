@@ -26,9 +26,8 @@
                 <p>Os requisitos não funcionais são especificados de forma clara e precisa, fornecendo operacionalizações e justificativas (Claim) nas operacionalizações sobre cada requisito não funcional entre outros elementos relevantes.<p> 
                 <p><strong>Saída:</strong> Documentação detalhada (SIG) dos requisitos não funcionais especificados.</p>
               
-                
-                <p><a href=" " class="btn btn-primary btn-block" data-toggle="button" aria-pressed="true">Download Documents</a></p>
-                <p><a href=" " class="btn btn-primary btn-block" data-toggle="button" aria-pressed="true">Download All SIG File</a></p>
+                <p><a href="{{route('download.sig',5)}}" download="" class="btn btn-primary btn-block"><strong>Download Documents</strong></a></p>
+                <p><a href="{{route('framework.download.all.sig')}}" download="" class="btn btn-primary btn-block"><strong>Download All SIG File</strong></a></p>
 
 
                 <table class="table table-responsive-sm table-striped">

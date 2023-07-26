@@ -34,7 +34,7 @@
                               </tr>
                             </thead>
                             <tbody>
-                            @foreach($legalAndNormativeRequirements as $legalAndNormativeRequirement)
+                            @foreach($legalRequirements as $legalAndNormativeRequirement)
                                 <tr>
                                   <td><strong>{{ $legalAndNormativeRequirement->name }}</strong></td>
                                   <td>{{ $legalAndNormativeRequirement->description }}</td>                                

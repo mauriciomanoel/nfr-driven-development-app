@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\LegalAndNormativeRequirements;
+use App\Models\LegalRequirements;
 use App\Models\Projects;
 use App\Models\LifeSettings;
 use App\Models\LifeSettingsCategories;
 use App\Models\LifeSettingsSubcategories;
 use App\Models\NonFunctionalRequirements;
 
-class LegalAndNormativeRequirementsController extends Controller
+class LegalRequirementsController extends Controller
 {
 
     /**
@@ -31,8 +31,8 @@ class LegalAndNormativeRequirementsController extends Controller
      */
     public function index()
     {
-        $requirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
-        return view('dashboard.legalAndNormativeRequirements.legalRequirementsList', ['requirements' => $requirements]);
+        $requirements = LegalRequirements::with('user')->paginate( 20 );
+        return view('dashboard.legalRequirements.legalRequirementsList', ['requirements' => $requirements]);
     }
 
     /**
@@ -83,12 +83,12 @@ class LegalAndNormativeRequirementsController extends Controller
         // DB::enableQueryLog();
 
          $nonFunctionalRequirements = NonFunctionalRequirements::whereIn('name', ["Security", "Privacy", "Usability"])->get();
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::with('user', 'nonFunctionRequeriments')->where("id", "=", $id)->first();
+        $legalAndNormativeRequirement = LegalRequirements::with('user', 'nonFunctionRequeriments')->where("id", "=", $id)->first();
         // dd(DB::getQueryLog());
         //  var_dump($legalAndNormativeRequirement->nonFunctionRequeriments); 
          
         //  exit;
-        return view('dashboard.legalAndNormativeRequirements.show', ['legalAndNormativeRequirements' => $legalAndNormativeRequirement , 'nonFunctionalRequirements' => $nonFunctionalRequirements]);
+        return view('dashboard.legalRequirements.show', ['legalRequirements' => $legalAndNormativeRequirement , 'nonFunctionalRequirements' => $nonFunctionalRequirements]);
     }
 
     /**

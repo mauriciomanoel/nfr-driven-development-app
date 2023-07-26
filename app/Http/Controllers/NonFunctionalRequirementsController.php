@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\LegalAndNormativeRequirements;
+use App\Models\LegalRequirements;
 use App\Models\Projects;
 use App\Models\LifeSettings;
 use App\Models\LifeSettingsCategories;
@@ -84,9 +84,9 @@ class NonFunctionalRequirementsController extends Controller
     public function show($id)
     {
 
-        $legalAndNormativeRequirements = LegalAndNormativeRequirements::whereIn('id', [1, 2, 3])->get();
+        $legalRequirements = LegalRequirements::whereIn('id', [1, 2, 3])->get();
         $nonFunctionalRequirement = NonFunctionalRequirements::with('user')->find($id);
-        return view('dashboard.nonFunctionalRequirements.show', ['nonFunctionalRequirement' => $nonFunctionalRequirement, 'legalAndNormativeRequirements' => $legalAndNormativeRequirements  ]);
+        return view('dashboard.nonFunctionalRequirements.show', ['nonFunctionalRequirement' => $nonFunctionalRequirement, 'legalRequirements' => $legalRequirements  ]);
     }
 
     /**

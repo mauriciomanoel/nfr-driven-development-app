@@ -43,7 +43,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($legalAndNormativeRequirements as $legalAndNormativeRequirement)
+                    @foreach($legalRequirements as $legalAndNormativeRequirement)
                       <tr>
                         <td><input type="checkbox" id="legalRequirements" name="legalRequirements[]" value="{{ $legalAndNormativeRequirement->id }}"></strong></td>
                         <td><strong>{{ $legalAndNormativeRequirement->name }}</strong></td>
@@ -66,7 +66,7 @@
                     @endforeach
                   </tbody>
                 </table>
-                {{ $legalAndNormativeRequirements->links() }}
+                {{ $legalRequirements->links() }}
                 
                 
                         <button class="btn btn-block btn-primary" type="submit">{{ __('Save Legal Requirements and Advance to the next phase') }}</button>

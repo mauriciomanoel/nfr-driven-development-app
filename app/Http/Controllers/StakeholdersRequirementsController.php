@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\LegalAndNormativeRequirements;
+use App\Models\LegalRequirements;
 use App\Models\Projects;
 use App\Models\LifeSettings;
 use App\Models\LifeSettingsCategories;
@@ -32,8 +32,8 @@ class StakeholdersRequirementsController extends Controller
      */
     public function index()
     {
-        $requirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
-        return view('dashboard.legalAndNormativeRequirements.requirementsList', ['requirements' => $requirements]);
+        $requirements = LegalRequirements::with('user')->paginate( 20 );
+        return view('dashboard.legalRequirements.requirementsList', ['requirements' => $requirements]);
     }
 
     /**
@@ -82,8 +82,8 @@ class StakeholdersRequirementsController extends Controller
     public function show($id)
     {
         $nonFunctionalRequirements = NonFunctionalRequirements::whereIn('name', ["Security", "Privacy", "Usability"])->get();
-        $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->find($id);
-        return view('dashboard.legalAndNormativeRequirements.show', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements , 'nonFunctionalRequirements' => $nonFunctionalRequirements ]);
+        $legalRequirements = LegalRequirements::with('user')->find($id);
+        return view('dashboard.legalRequirements.show', ['legalRequirements' => $legalRequirements , 'nonFunctionalRequirements' => $nonFunctionalRequirements ]);
     }
 
     /**

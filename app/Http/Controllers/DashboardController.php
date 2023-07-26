@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Projects;
 use App\Models\LifeSettings;
-use App\Models\LegalAndNormativeRequirements;
+use App\Models\LegalRequirements;
 use App\Models\Stakeholders;
 use App\Models\StakeholderExperiencies;
 use App\Models\NonFunctionalRequirements;
@@ -35,8 +35,8 @@ class DashboardController extends Controller
         $nonFunctionalRequirements = NonFunctionalRequirements::get();
         $nonFunctionalRequirementCount = $nonFunctionalRequirements->count();
 
-        $legalAndNormativeRequirements = LegalAndNormativeRequirements::get();
-        $legalAndNormativeRequirementCount = $legalAndNormativeRequirements->count();
+        $legalRequirements = LegalRequirements::get();
+        $legalAndNormativeRequirementCount = $legalRequirements->count();
 
         $sigs = NonFunctionalRequirements::whereNotNull('content')->get();
         $sigCount = $sigs->count();

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\LegalRequirements;
 
 class NonFunctionalRequirements extends Model
 {
@@ -33,7 +34,7 @@ class NonFunctionalRequirements extends Model
         return $this->belongsTo('App\Models\Requirements', 'characteristics_id');
     }
 
-    public function legalAndNormativeRequirements(){
-        return $this->belongsToMany(LegalAndNormativeRequirements::class);
+    public function legalRequirements(){
+        return $this->belongsToMany(LegalRequirements::class);
     }
 }

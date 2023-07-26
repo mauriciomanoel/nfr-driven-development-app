@@ -6,13 +6,13 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Requirements;
-use App\Models\LegalAndNormativeRequirements;
+use App\Models\LegalRequirements;
 use App\Models\LifeSettings;
 use App\Models\NonFunctionalRequirements;
 use Carbon\Carbon;
 
 
-class LegalAndNormativeRequirementsSeeder extends Seeder
+class LegalRequirementsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -25,7 +25,7 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
         $user = User::where('email' , '=' , 'admin@nddframework.io' )->first();
         $lifeSettings = LifeSettings::where('name' , '=' , 'Generic' )->first();
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+        $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "General Data Protection Regulation (RGPD)",
             'description' => "O sistema AAL deve cumprir as disposições do RGPD em relação à coleta, processamento e armazenamento de dados pessoais. Isso inclui obter o consentimento adequado dos usuários para o uso de seus dados, garantir a segurança e a privacidade desses dados, e possibilitar que os usuários acessem, retifiquem e excluam suas informações pessoais.",
             'legal_references' => "<p>Artigo 6(1)(a) do RGPD - Base legal para o processamento de dados pessoais com o consentimento do titular dos dados.</p><p>Artigo 25 do RGPD - Princípio da proteção de dados desde a concepção e por padrão.</p>",
@@ -39,13 +39,13 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Security', 'Privacy', 'Confidentiality'])->get();
         foreach($requirements as $requirement) {
-            DB::table('legal_has_nfr_requirement')->insert([
+            DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+        $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "Accessibility of public sector websites and mobile apps",
             'description' => "O sistema AAL deve ser projetado e desenvolvido levando em consideração os princípios de acessibilidade, garantindo que seja utilizável por pessoas com diferentes níveis de habilidades e capacidades. Isso inclui a implementação de recursos e funcionalidades que permitam o acesso e a interação por parte de pessoas com deficiência, como pessoas com deficiência visual, auditiva, motora ou cognitiva.",
             'legal_references' => "<p>Diretiva (UE) 2016/2102 relativa à acessibilidade dos sítios Web e das aplicações móveis de organismos do setor público - https://eur-lex.europa.eu/legal-content/PT/LSU/?uri=CELEX:32016L2102</p><p>Norma ISO 9241-171:2020 - Requisitos de acessibilidade e usabilidade para produtos e serviços interativos</p>",
@@ -59,13 +59,13 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Usability', 'Accessibility', 'Fault tolerance', "Adaptability", "Comprehensibility"])->get();
         foreach($requirements as $requirement) {
-            DB::table('legal_has_nfr_requirement')->insert([
+            DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+        $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "ISO/IEC 27001:2022(en) Information security, cybersecurity and privacy protection — Information security management systems",
             'description' => "O sistema AAL deve ser projetado e implementado de acordo com os padrões e regulamentos de segurança aplicáveis, garantindo a integridade e confiabilidade do sistema. O objetivo é proteger informações confidenciais, impedir o acesso não autorizado e mitigar possíveis riscos e ameaças à segurança.",
             'legal_references' => "<p>ISO/IEC 27001:2022 - Sistemas de gestão de segurança da informação. Este padrão internacional fornece uma estrutura para estabelecer, implementar, manter e melhorar continuamente um sistema de gerenciamento de segurança da informação - https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-3:v1:en.</p><p>Leis e regulamentos de proteção de dados e privacidade aplicáveis. Isso pode incluir o Regulamento Geral de Proteção de Dados (GDPR) e outras leis regionais ou específicas do setor que regem a coleta, o processamento e o armazenamento de dados pessoais.</p>",
@@ -84,13 +84,13 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Reliability', 'Availability', 'Performance', "Usability", "Auditability"])->get();
         foreach($requirements as $requirement) {
-            DB::table('legal_has_nfr_requirement')->insert([
+            DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+        $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "ISO 9241-171:2008 Ergonomics of human-system interaction",
             'description' => "O sistema AAL deve ser projetado para atender às necessidades de uma ampla gama de usuários, considerando recursos como acessibilidade, linguagem clara e opções de personalização. O design inclusivo visa garantir que o sistema possa ser usado por indivíduos com diversas habilidades, incluindo aqueles com deficiências ou habilidades cognitivas limitadas. O objetivo é fornecer uma experiência inclusiva e amigável para todos os usuários.",
             'legal_references' => "<p>ISO 9241-171:2008 Ergonomics of human-system interaction - https://www.iso.org/obp/ui/en/#iso:std:iso:9241:-171:ed-1:v1:en.</p>",
@@ -106,13 +106,13 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Usability', 'Accessibility', 'Satisfaction', "Reliability"])->get();
         foreach($requirements as $requirement) {
-            DB::table('legal_has_nfr_requirement')->insert([
+            DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+        $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "Usability",
             'description' => "O sistema AAL deve ser projetado considerando os princípios de usabilidade, facilitando seu uso pelos usuários independentemente de suas habilidades técnicas. Usabilidade refere-se à medida em que um sistema pode ser usado por usuários específicos para atingir objetivos específicos com eficácia, eficiência e satisfação em um contexto específico de uso.",
             'legal_references' => "
@@ -133,13 +133,13 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Performance', 'Reliability', 'Learnability', "Satisfaction"])->get();
         foreach($requirements as $requirement) {
-            DB::table('legal_has_nfr_requirement')->insert([
+            DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+        $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "Health Informatics",
             'description' => "ISO/TS 22272:2021 é um padrão na área de Informática em Saúde que fornece uma metodologia para analisar as necessidades de negócios e informações das empresas de saúde. O padrão visa apoiar o desenvolvimento de arquiteturas baseadas em padrões no setor de saúde. Ele fornece orientação sobre a realização de análises abrangentes para identificar os requisitos e desafios enfrentados pelas empresas de saúde na implementação de tecnologias e sistemas de informação.",
             'legal_references' => "<p>ISO/TS 22272:2021 - Health Informatics - https://www.iso.org/obp/ui/#iso:std:iso:ts:22272:ed-1:v1:en.</p>",
@@ -157,13 +157,13 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Interoperability', 'Security', 'Performance', "Usability", "Scalability", "Reliability", "Maintainability", "Accessibility", "Auditability"])->get();
         foreach($requirements as $requirement) {
-            DB::table('legal_has_nfr_requirement')->insert([
+            DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+        $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "AAL Guidelines for Ethics, data privacy and security",
             'description' => "As Diretrizes de Ética, Privacidade e Segurança de Dados da AAL são um documento que fornece um modelo para alcançar a excelência ética em tecnologias digitais para um envelhecimento ativo e saudável. Integra o cumprimento da legislação geral com um diálogo ético e oferece reflexões sobre como estabelecer excelência ética para soluções voltadas para o envelhecimento ativo e saudável por meio de tecnologias digitais.",
             'legal_references' => "<p>ISO TC314 Ageing Societies</p>
@@ -193,14 +193,14 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Usability', 'Accessibility', 'Privacy', "Security", "Ethics", "Autonomy"])->get();
         foreach($requirements as $requirement) {
-            DB::table('legal_has_nfr_requirement')->insert([
+            DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);
         }
 
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+        $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "ISO/IEC 25066:2016 - Software Engineering - Software product Quality Requirements and Evaluation (SQuaRE) - Common Industry Format (CIF) for Usability: User requirements for feedback",
             'description' => "A norma ISO/IEC 25066:2016 é uma parte da série ISO/IEC 25000, que trata da avaliação de qualidade de produtos de software. Especificamente, a ISO/IEC 25066 estabelece requisitos para a documentação de produtos de software, com o objetivo de garantir que a informação fornecida seja adequada, precisa e útil para os usuários finais, desenvolvedores e outros stakeholders envolvidos no ciclo de vida do software.",
             'legal_references' => "<p>https://www.iso.org/standard/63831.html</p>",
@@ -220,14 +220,14 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Accuracy', 'Completeness', 'Coherence', "Usability", "Clarity"])->get();
         foreach($requirements as $requirement) {
-            DB::table('legal_has_nfr_requirement')->insert([
+            DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);
         }
 
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+        $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "ISO 9241-11:2018 Ergonomics of human-system interaction — Part 11: Usability: Definitions and concepts",
             'description' => "ISO 9241-11:2018 is a part of the ISO 9241 series, which deals with the ergonomic design of human-system interactions. Specifically, ISO 9241-11 provides essential definitions and concepts related to usability, aiming to establish a common understanding of usability concepts among designers, developers, and other stakeholders involved in creating interactive systems. This standard addresses key aspects of usability, such as effectiveness, efficiency, and user satisfaction, and emphasizes the importance of considering user needs and characteristics throughout the design process.",
             'legal_references' => "<p>https://www.iso.org/standard/63500.html</p>",
@@ -247,13 +247,13 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Usability', 'User Experience', 'Accessibility', "Performance", "Flexibility", "User Error Protection"])->get();
         foreach($requirements as $requirement) {
-            DB::table('legal_has_nfr_requirement')->insert([
+            DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+        $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "ISO/IEC 40500:2012 Information technology — W3C Web Content Accessibility Guidelines (WCAG) 2.0",
             'description' => "ISO/IEC 40500:2012, also known as the Web Content Accessibility Guidelines (WCAG) 2.0, is an international standard developed by the World Wide Web Consortium (W3C) in collaboration with the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC). The standard provides guidelines and success criteria for making web content more accessible to people with disabilities, ensuring that web pages and web applications can be used and understood by a broader audience, including those with visual, auditory, cognitive, and motor impairments. The guidelines cover various aspects of web content accessibility, including perceivability, operability, understandability, and robustness, and are designed to enhance the overall user experience for all users, regardless of their abilities.",
             'legal_references' => "<p>https://www.iso.org/standard/58625.html</p>",
@@ -273,13 +273,13 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Accessibility', 'Usability', 'Compatibility', "Performance", "Reliability"])->get();
         foreach($requirements as $requirement) {
-            DB::table('legal_has_nfr_requirement')->insert([
+            DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+        $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "ISO/IEC 27001:2013 - Information technology - Security techniques - Information security management systems - Requirements",
             'description' => "ISO/IEC 27001:2013 is an international standard that falls under the category of information technology and security techniques. It specifically deals with information security management systems (ISMS) and lays down the requirements for establishing, implementing, maintaining, and continually improving an ISMS within the context of an organization. The standard emphasizes the importance of systematically managing information security risks to safeguard the confidentiality, integrity, and availability of sensitive information assets. It provides a framework for organizations to develop a comprehensive approach to identifying, assessing, and mitigating information security risks while also ensuring compliance with legal, regulatory, and contractual requirements.",
             'legal_references' => "<p>https://www.iso.org/standard/27001</p>",
@@ -299,13 +299,13 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Compliance', 'Confidentiality', 'Integrity', "Availability", "Reliability"])->get();
         foreach($requirements as $requirement) {
-            DB::table('legal_has_nfr_requirement')->insert([
+            DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+        $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "ISO/TS 24289:2021 - Health informatics — Hierarchical file structure specification for secondary storage of health-related information",
             'description' => "ISO/TS 24289:2021 is a technical specification in the field of health informatics. It specifically deals with the specification of a hierarchical file structure for the secondary storage of health-related information. The standard provides guidelines and requirements for organizing and storing health-related data in a hierarchical manner to ensure efficient retrieval, management, and security of the information. The hierarchical file structure defined in this technical specification is designed to be used in the context of secondary storage systems, where large volumes of health-related data are stored for long-term archiving and accessibility.",
             'legal_references' => "<p>https://www.iso.org/standard/27001</p>",
@@ -324,13 +324,13 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Security', 'Performance', 'Reliability', "Scalability", "Integrity"])->get();
         foreach($requirements as $requirement) {
-            DB::table('legal_has_nfr_requirement')->insert([
+            DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);
         }
 
-        $legalAndNormativeRequirement = LegalAndNormativeRequirements::create([  
+        $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "ISO/TR 21332:2021 - Health informatics — Cloud computing considerations for the security and privacy of health information systems",
             'description' => "ISO/TR 21332:2021 is a technical report in the field of health informatics. It focuses on providing considerations and guidelines for the security and privacy aspects of health information systems when using cloud computing technologies. The report addresses the unique challenges and opportunities related to adopting cloud computing in the healthcare industry while safeguarding the confidentiality, integrity, and availability of health information.The technical report offers insights into best practices, risk management, and security measures that healthcare organizations should consider when migrating or deploying health information systems in cloud environments.",
             'legal_references' => "<p>https://www.iso.org/standard/70568.html</p>",
@@ -350,7 +350,7 @@ class LegalAndNormativeRequirementsSeeder extends Seeder
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Security', 'Privacy', 'Reliability', "Performance", "Scalability", "Compliance"])->get();
         foreach($requirements as $requirement) {
-            DB::table('legal_has_nfr_requirement')->insert([
+            DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);

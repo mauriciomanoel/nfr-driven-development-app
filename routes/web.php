@@ -30,7 +30,7 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\FrameworkController;
-use App\Http\Controllers\LegalAndNormativeRequirementsController;
+use App\Http\Controllers\LegalRequirementsController;
 use App\Http\Controllers\NonFunctionalRequirementsController;
 use App\Http\Controllers\StakeholdersRequirementsController;
 
@@ -65,10 +65,11 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/stakeholders/experiencies/{id}', [FrameworkController::class, 'stakeholdersExperiencies'])->name('framework.stakeholders.experiencies');
             Route::post('/confirmNonFunctionalRequirements', [FrameworkController::class, 'confirmNonFunctionalRequirements'])->name('framework.confirmNonFunctionalRequirements');
             Route::post('/step1/confirmLegalRequirement', [FrameworkController::class, 'step1ConfirmLegalRequirement'])->name('framework.step1.confirmLegalRequirement');
+            Route::get('/downloadAllSIGs', [FrameworkController::class, 'downloadAllSIG'])->name('framework.download.all.sig');
 
         });
 
-        Route::resource('legalRequirements', LegalAndNormativeRequirementsController::class);
+        Route::resource('legalRequirements', LegalRequirementsController::class);
         Route::get('nonFunctionalRequirements/sigsthree', [NonFunctionalRequirementsController::class, 'sigsthree']);
         Route::resource('nonFunctionalRequirements', NonFunctionalRequirementsController::class);
 

@@ -30,7 +30,7 @@ return new class extends Migration
 
         });
 
-        Schema::create('legal_has_nfr_requirement', function (Blueprint $table) {
+        Schema::create('legal_requirements_non_functional_requirements', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedBigInteger('legal_id');
             $table->unsignedBigInteger('nfr_id');
@@ -53,7 +53,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('legal_requirements');
-        Schema::dropIfExists('legal_has_nfr_requirement');
+        Schema::dropIfExists('legal_requirements_non_functional_requirements');
 
     }
 };

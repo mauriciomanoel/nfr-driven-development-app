@@ -8,18 +8,18 @@
               <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                      <i class="fa fa-align-justify"></i><strong>Legal Requirement:</strong> {{ $legalAndNormativeRequirements->name }}</div>
+                      <i class="fa fa-align-justify"></i><strong>Legal Requirement:</strong> {{ $legalRequirements->name }}</div>
                     <div class="card-body">
                         <h5><strong>Author:</strong></h5>
-                        <p> {{ $legalAndNormativeRequirements->user->name }}</p>
+                        <p> {{ $legalRequirements->user->name }}</p>
                         <h5><strong>Name:</strong></h4>
-                        <p> {{ $legalAndNormativeRequirements->name }}</p>
+                        <p> {{ $legalRequirements->name }}</p>
                         <h5><strong>Description:</strong></h5> 
-                        <p>{{ $legalAndNormativeRequirements->description }}</p>
+                        <p>{{ $legalRequirements->description }}</p>
                         <h5><strong>Legal Text/Reference:</strong></h5> 
-                        <p>{!! html_entity_decode($legalAndNormativeRequirements->legal_references) !!}</p>
+                        <p>{!! html_entity_decode($legalRequirements->legal_references) !!}</p>
                         <h5><strong>Recommendations:</strong></h5> 
-                        <p>{!! html_entity_decode($legalAndNormativeRequirements->recommendations) !!}</p>
+                        <p>{!! html_entity_decode($legalRequirements->recommendations) !!}</p>
                         
                         <h5><strong>Non-Functional Requirements:</strong></h5> 
                         <p>                        
@@ -32,7 +32,7 @@
                               </tr>
                             </thead>
                             <tbody>
-                            @foreach($legalAndNormativeRequirements->nonFunctionRequeriments as $nonFunctionalRequirement)
+                            @foreach($legalRequirements->nonFunctionRequeriments as $nonFunctionalRequirement)
                                 <tr>
                                   <td><strong>{{ $nonFunctionalRequirement->name }}</strong></td>
                                   <td>{{ $nonFunctionalRequirement->description }}</td>                                
@@ -45,7 +45,7 @@
                           </table>
                         </p>
                         <h5><strong>Last Update:</strong></h5> 
-                        <p>{{ $legalAndNormativeRequirements->created_at }}</p>                     
+                        <p>{{ $legalRequirements->created_at }}</p>                     
                         <a href="{{ url()->previous() }}" class="btn btn-block btn-primary">{{ __('Return') }}</a>
                     </div>
                 </div>

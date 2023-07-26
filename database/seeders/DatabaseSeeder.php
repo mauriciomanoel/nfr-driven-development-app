@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
             FrameworkSeeder::class,
             ProjectsSeeder::class,
             NonFunctionRequirementsSeeder::class,
-            LegalAndNormativeRequirementsSeeder::class,
+            LegalRequirementsSeeder::class,
             StakeholderSeeder::class,            
             DataCollectionTechniquesSeeder::class,
         ]);

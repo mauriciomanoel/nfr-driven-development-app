@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use App\Models\LegalAndNormativeRequirements;
+use App\Models\LegalRequirements;
 use App\Models\Stakeholders;
 use App\Models\StakeholderExperiencies;
 use App\Models\NonFunctionalRequirements;
 use App\Models\NonFunctionalRequirementsForSpecification;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
-
+use File;
 use Session;
 
 class FrameworkController extends Controller
@@ -45,8 +45,8 @@ class FrameworkController extends Controller
      */
     public function step1()
     {
-        $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
-        return view('dashboard.framework.framework-step01', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
+        $legalRequirements = LegalRequirements::with('user')->paginate( 20 );
+        return view('dashboard.framework.framework-step01', ['legalRequirements' => $legalRequirements]);
     }
 
          /**
@@ -67,8 +67,8 @@ class FrameworkController extends Controller
      */
     public function step3()
     {
-        $legalAndNormativeRequirements = LegalAndNormativeRequirements::with('user')->paginate( 20 );
-        return view('dashboard.framework.framework-step03', ['legalAndNormativeRequirements' => $legalAndNormativeRequirements]);
+        $legalRequirements = LegalRequirements::with('user')->paginate( 20 );
+        return view('dashboard.framework.framework-step03', ['legalRequirements' => $legalRequirements]);
     }
 
              /**
@@ -125,8 +125,7 @@ class FrameworkController extends Controller
             $arrayContent[] = $nonFunctionalRequirementForSpecification->nonFunctionalRequirement->content;
         }
        
-        // exit;
-        $this::mergeSigs($arrayContent);
+        // $this::mergeSigs($arrayContent);
         return view('dashboard.framework.framework-step05', ['nonFunctionalRequirements' => $nonFunctionalRequirementsForSpecification]);
     }
 
@@ -250,21 +249,46 @@ class FrameworkController extends Controller
         // return redirect()->action([FrameworkController::class, 'step5']);
     }
 
-    public function mergeSigs($arrayContent) {
+    public function downloadAllSIG() {
 
-        $firstArray = json_decode(array_shift($arrayContent), true);
-        // var_dump($arrayContent); exit;
-        
-        $maxValueX = 0;
-        // Found max X
-        foreach($firstArray["orphans"] as $orphan) {
-            if ($maxValueX < $orphan["x"]) $maxValueX = $orphan["x"];
+        $nonFunctionalRequirementsForSpecification = NonFunctionalRequirementsForSpecification::with('nonFunctionalRequirement')->get();
+        $arrayContent = array();
+        foreach($nonFunctionalRequirementsForSpecification as $nonFunctionalRequirementForSpecification) {
+            $nonFunctionalRequirement = $nonFunctionalRequirementForSpecification->nonFunctionalRequirement;
+            $legalRequirements = $nonFunctionalRequirement->legalRequirements;
+            var_dump($legalRequirements); exit;
+            $element = json_decode($nonFunctionalRequirement->content, true);
+            $element["orphans"][0]["customProperties"]["Description"] = trim($nonFunctionalRequirement->description);
+            $element["orphans"][0]["customProperties"]["name"] = trim($nonFunctionalRequirement->name);
+            $element["orphans"][0]["customProperties"]["recommendations"] = trim($nonFunctionalRequirement->recommendations);
+
+
+            var_dump($element["orphans"][0]); exit;
+
+            $arrayContent[] = json_decode($nonFunctionalRequirementForSpecification->nonFunctionalRequirement->content, true);
         }
 
-        // var_dump(Str::uuid()->toString());
+        var_dump($arrayContent); exit;
+        $data = "bina"; 
+        $headers = ['Content-Type: application/json'];
+        $fileName = "sig-file.txt";
+        $fileStorePath = public_path('/tmp/'.$fileName);
+        File::put($fileStorePath, $data);
+
+        return response()->download($fileStorePath, $fileName, $headers);
+    }
+
+    public function mergeSigs($arrayContent) {
+        
+        $firstArray = json_decode(array_shift($arrayContent), true);
+        
+        $maxValueX = $this::getMaxValueFromArray($firstArray["orphans"]);
+        
         $replaceIds = array();
-        while($element = json_decode(array_shift($arrayContent), true)) {
+        foreach($arrayContent as $value) {
+            if (empty($value)) continue;
             
+            $element = json_decode($value, true);                
             foreach($element["orphans"] as $key => $orphan) {
                 $element["orphans"][$key]["x"] += $maxValueX;
                 $replaceIds[] = $orphan["id"];
@@ -281,17 +305,40 @@ class FrameworkController extends Controller
             $firstArray["links"] = array_merge($firstArray["links"], $element["links"]);
             $firstArray["display"] = array_merge($firstArray["display"], $element["display"]);
 
-            foreach($firstArray["orphans"] as $orphan) {
-                if ($maxValueX < $orphan["x"]) $maxValueX = $orphan["x"];
-            }
+            // foreach($firstArray["orphans"] as $orphan) {
+            //     if ($maxValueX < $orphan["x"]) $maxValueX = $orphan["x"];
+            // }
+            $maxValueX = $this::getMaxValueFromArray($firstArray["orphans"]);
         }
         
         $firstArray["diagram"]["customProperties"]["Description"] = "Generation by NDD Framework";
+        $firstArray["saveDate"] = gmdate("M d Y H:i:s");
         $firstArray["diagram"]["name"] = "New SIG";
         $firstArray["diagram"]["width"] = $maxValueX + 200;
 
-        $newJson = json_encode($firstArray); 
-        var_dump($newJson); exit;
+        // $newJson = json_encode($firstArray); 
+        // //  var_dump($newJson); 
+        // // exit;
+
+        $data = json_encode($firstArray); 
+        $headers = ['Content-Type: application/json'];
+        $fileName = "sig-file.txt";
+        $fileStorePath = public_path('/tmp/'.$fileName);
+        File::put($fileStorePath, $data);
+
+        $value = response()->download($fileStorePath, $fileName, $headers);
+
+        return $value;
+    }
+
+    private function getMaxValueFromArray($elements) {
+
+        $maxValueX = 0;
+        foreach($elements as $orphan) {
+            if ($maxValueX < $orphan["x"]) $maxValueX = $orphan["x"];
+        }
+
+        return $maxValueX;
     }
 
 }

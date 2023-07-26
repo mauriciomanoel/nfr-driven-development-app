@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use App\Models\LegalAndNormativeRequirements;
 use App\Models\Stakeholders;
 use App\Models\StakeholderExperiencies;
@@ -118,8 +119,15 @@ class FrameworkController extends Controller
     public function step5()
     {
 
-        $nonFunctionalRequirements = NonFunctionalRequirementsForSpecification::with('nonFunctionalRequirement')->get();
-        return view('dashboard.framework.framework-step05', ['nonFunctionalRequirements' => $nonFunctionalRequirements]);
+        $nonFunctionalRequirementsForSpecification = NonFunctionalRequirementsForSpecification::with('nonFunctionalRequirement')->get();
+        $arrayContent = array();
+        foreach($nonFunctionalRequirementsForSpecification as $nonFunctionalRequirementForSpecification) {
+            $arrayContent[] = $nonFunctionalRequirementForSpecification->nonFunctionalRequirement->content;
+        }
+       
+        // exit;
+        $this::mergeSigs($arrayContent);
+        return view('dashboard.framework.framework-step05', ['nonFunctionalRequirements' => $nonFunctionalRequirementsForSpecification]);
     }
 
     /**
@@ -241,4 +249,49 @@ class FrameworkController extends Controller
 
         // return redirect()->action([FrameworkController::class, 'step5']);
     }
+
+    public function mergeSigs($arrayContent) {
+
+        $firstArray = json_decode(array_shift($arrayContent), true);
+        // var_dump($arrayContent); exit;
+        
+        $maxValueX = 0;
+        // Found max X
+        foreach($firstArray["orphans"] as $orphan) {
+            if ($maxValueX < $orphan["x"]) $maxValueX = $orphan["x"];
+        }
+
+        // var_dump(Str::uuid()->toString());
+        $replaceIds = array();
+        while($element = json_decode(array_shift($arrayContent), true)) {
+            
+            foreach($element["orphans"] as $key => $orphan) {
+                $element["orphans"][$key]["x"] += $maxValueX;
+                $replaceIds[] = $orphan["id"];
+            }
+
+            $tempElement = json_encode($element);
+            // replace Ids
+            foreach($replaceIds as $id) {
+                $tempElement = str_replace($id, Str::uuid()->toString(), $tempElement);
+            }
+
+            $element = json_decode($tempElement, true);
+            $firstArray["orphans"] = array_merge($firstArray["orphans"], $element["orphans"]);
+            $firstArray["links"] = array_merge($firstArray["links"], $element["links"]);
+            $firstArray["display"] = array_merge($firstArray["display"], $element["display"]);
+
+            foreach($firstArray["orphans"] as $orphan) {
+                if ($maxValueX < $orphan["x"]) $maxValueX = $orphan["x"];
+            }
+        }
+        
+        $firstArray["diagram"]["customProperties"]["Description"] = "Generation by NDD Framework";
+        $firstArray["diagram"]["name"] = "New SIG";
+        $firstArray["diagram"]["width"] = $maxValueX + 200;
+
+        $newJson = json_encode($firstArray); 
+        var_dump($newJson); exit;
+    }
+
 }

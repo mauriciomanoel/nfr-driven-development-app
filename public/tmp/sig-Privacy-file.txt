@@ -1,0 +1,503 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "b79575b1-2b32-466b-bd0f-2f2f41cbcf41",
+      "text": "Privacidade",
+      "type": "nfr.NFR",
+      "x": 708,
+      "y": 47,
+      "customProperties": {
+        "Description": "Garantir a proteção adequada das informações pessoais e a privacidade dos usuários nos sistemas AAL."
+      }
+    },
+    {
+      "id": "cdfac142-9e92-403f-a3c9-b1858a5e6e77",
+      "text": "Confidencialidade",
+      "type": "nfr.NFR",
+      "x": 460,
+      "y": 194,
+      "customProperties": {
+        "Description": ""
+      }
+    },
+    {
+      "id": "67e5a5df-ff16-4fae-bbfa-235881aa03e1",
+      "text": "Criptografar com hash SHA-2",
+      "type": "nfr.Operationalization",
+      "x": 355,
+      "y": 447,
+      "customProperties": {
+        "Description": ""
+      }
+    },
+    {
+      "id": "1f16044e-7b7a-49c3-b8ac-8b3bb2410b3c",
+      "text": "Criptografar com hash SHA-1",
+      "type": "nfr.Operationalization",
+      "x": 228,
+      "y": 422,
+      "customProperties": {
+        "Description": ""
+      }
+    },
+    {
+      "id": "457b4872-538b-458d-8bd2-71564f69f1ee",
+      "text": "Entrar com usuário e senha",
+      "type": "nfr.Operationalization",
+      "x": 400,
+      "y": 533,
+      "customProperties": {
+        "Description": ""
+      }
+    },
+    {
+      "id": "2e3b9ff6-e56e-4e43-94d8-d3c50335e8be",
+      "text": "Protecao Dados",
+      "type": "nfr.Operationalization",
+      "x": 328,
+      "y": 297
+    },
+    {
+      "id": "4a7e41e5-4012-420a-b414-8c58ca04b4c7",
+      "text": "Controle Acesso",
+      "type": "nfr.Operationalization",
+      "x": 467,
+      "y": 319
+    },
+    {
+      "id": "987d855d-1e03-4ffb-97b8-da385ac2fb7c",
+      "text": "Consentimento",
+      "type": "nfr.NFR",
+      "x": 736,
+      "y": 206
+    },
+    {
+      "id": "69fc80a6-4aaa-4d96-a2ee-dfdaff9c0a2d",
+      "text": "Anonimização",
+      "type": "nfr.NFR",
+      "x": 1248,
+      "y": 207,
+      "customProperties": {
+        "Description": "Envolve o processo de remoção ou alteração de informações pessoais identificáveis, de forma que os dados se tornem anônimos e não possam ser atribuídos a um indivíduo específico. A anonimização é uma medida importante para proteger a privacidade dos usuários."
+      }
+    },
+    {
+      "id": "25258d58-7681-4614-8e5b-d686589f329b",
+      "text": "Conformidade",
+      "type": "nfr.NFR",
+      "x": 1056,
+      "y": 210,
+      "customProperties": {
+        "Description": "Diz respeito ao cumprimento de regulamentações e leis de privacidade relevantes. Os sistemas AAL devem ser projetados e operados em conformidade com essas regulamentações para garantir a proteção adequada dos dados pessoais dos usuários."
+      }
+    },
+    {
+      "id": "be20c3e8-67d1-42d5-8c86-e28270d2046e",
+      "text": "GDPR",
+      "type": "nfr.Operationalization",
+      "x": 928,
+      "y": 440,
+      "customProperties": {
+        "Description": "General Data Protection Regulation",
+        "LegalTextReference": "https://gdpr-info.eu/"
+      }
+    },
+    {
+      "id": "2cd5387f-eb46-4e3e-84e8-77f148e7aea1",
+      "text": "LGPD",
+      "type": "nfr.Operationalization",
+      "x": 1031,
+      "y": 451,
+      "customProperties": {
+        "Description": "Lei Geral de Proteção de Dados"
+      }
+    },
+    {
+      "id": "5ebfbb42-ee73-49d1-a46b-33eea7819367",
+      "text": "ADPPA",
+      "type": "nfr.Operationalization",
+      "x": 1126,
+      "y": 404,
+      "customProperties": {
+        "Description": "American Data Privacy and Protection Act"
+      }
+    },
+    {
+      "id": "e324d7aa-4535-496c-86c9-45a9c1397f05",
+      "text": "Abordagem Atenciosa",
+      "type": "nfr.Operationalization",
+      "x": 694,
+      "y": 355,
+      "customProperties": {
+        "Description": "Interaja com o idoso de maneira respeitosa, considerando sua privacidade, dignidade e autonomia. Esteja ciente de que algumas pessoas idosas podem ter dificuldades de audição, visão ou cognição, então adapte sua comunicação de acordo."
+      }
+    },
+    {
+      "id": "e09b1f59-0f7c-4f54-a80a-861f744d26c1",
+      "text": "Explicação Clara",
+      "type": "nfr.Operationalization",
+      "x": 806,
+      "y": 393,
+      "customProperties": {
+        "Description": "xplique de forma clara e simples o motivo pelo qual está buscando o consentimento do idoso em relação à privacidade. Certifique-se de que ele entenda os benefícios e possíveis riscos envolvidos. Use uma linguagem acessível e evite termos técnicos complicados."
+      }
+    },
+    {
+      "id": "6ae06499-cf1c-4842-a0cf-ae21bad76435",
+      "text": "Consentimento Escrito",
+      "type": "nfr.Operationalization",
+      "x": 940,
+      "y": 265,
+      "customProperties": {
+        "Description": "Se possível, obtenha o consentimento por escrito. Isso pode ser feito por meio de uma assinatura em um formulário ou documento específico, ou até mesmo por meio de um processo eletrônico, se for viável e compreensível para o idoso."
+      }
+    },
+    {
+      "id": "3951efa9-7fd0-4ed2-b489-efa337825014",
+      "text": "Representação Legal",
+      "type": "nfr.Operationalization",
+      "x": 890,
+      "y": 332,
+      "customProperties": {
+        "Description": "Em casos em que o idoso não tem capacidade legal para consentir, por motivos de saúde ou outros, é importante envolver um representante legal adequado, como um membro da família ou um tutor legal, para tomar decisões em nome do idoso."
+      }
+    },
+    {
+      "id": "e2457711-2d24-4804-91fb-845e8a1106e1",
+      "text": "Criptografia",
+      "type": "nfr.Operationalization",
+      "x": 1203,
+      "y": 457,
+      "customProperties": {
+        "Description": "Utilize criptografia para proteger os dados durante o armazenamento e a transmissão. Isso ajuda a garantir que apenas pessoas autorizadas possam acessar e decifrar as informações"
+      }
+    },
+    {
+      "id": "c15a03d2-7ec8-437a-bb79-8c766211605b",
+      "text": "Coleta Mínima de Dados",
+      "type": "nfr.Operationalization",
+      "x": 1423,
+      "y": 400,
+      "customProperties": {
+        "Description": "Limite a coleta de dados pessoais ao mínimo necessário para cumprir o objetivo pretendido. Quanto menos informações identificáveis forem coletadas, menor será o risco de identificação do idoso."
+      }
+    },
+    {
+      "id": "02ddb11b-8f14-4a8f-a6ee-fcc2116fa66a",
+      "text": "Políticas Acesso Restrito",
+      "type": "nfr.Operationalization",
+      "x": 1322,
+      "y": 426,
+      "customProperties": {
+        "Description": "Implemente controles de acesso adequados para garantir que apenas pessoas autorizadas possam acessar os dados pessoais dos idosos. Isso inclui autenticação forte, restrição de privilégios e monitoramento de atividades."
+      }
+    },
+    {
+      "id": "ac9c694e-8f33-4487-b6a0-9c1a7a4404ee",
+      "text": "Acesso aos Dados",
+      "type": "nfr.Operationalization",
+      "x": 666,
+      "y": 509,
+      "customProperties": {
+        "Description": "Garantir que os idosos tenham o direito de acessar seus dados pessoais facilmente. Forneçer uma opção para que eles possam solicitar uma cópia de suas informações pessoais e disponibilize um processo simples e eficiente para atender a essa solicitação."
+      }
+    },
+    {
+      "id": "4552d2ad-3d3d-4a23-b310-20e7a4e89bca",
+      "text": "Controle de Privacidade",
+      "type": "nfr.Operationalization",
+      "x": 561,
+      "y": 519,
+      "customProperties": {
+        "Description": "Criar um painel de controle de privacidade intuitivo e acessível aos idosos. Esse painel deve permitir que eles visualizem e gerenciem suas preferências de privacidade, incluindo a seleção de dados a serem compartilhados, a escolha de finalidades de processamento e a definição de limitações de compartilhamento."
+      }
+    },
+    {
+      "id": "6b059c4b-bcbc-411e-868b-b30cf6e1f00c",
+      "text": "Exclusão de Dados",
+      "type": "nfr.Operationalization",
+      "x": 585,
+      "y": 317,
+      "customProperties": {
+        "Description": "Permitir a capacidade de solicitar a exclusão de seus dados pessoais quando não forem mais necessários para as finalidades originais ou quando o consentimento for retirado. Implementar um processo para avaliar e atender a essas solicitações de exclusão de forma oportuna."
+      }
+    },
+    {
+      "id": "c886aa20-e141-402a-bd80-72cc0980e2b0",
+      "text": "Técnicas",
+      "type": "nfr.Operationalization",
+      "x": 1271,
+      "y": 538
+    },
+    {
+      "id": "64d153db-05a2-48ae-aa62-f31bb207b57b",
+      "text": "Generalização",
+      "type": "nfr.Operationalization",
+      "x": 1170,
+      "y": 655,
+      "customProperties": {
+        "Definition": "elimina apenas algumas partes dos dados para torná-los menos identificáveis, mas também mantém a precisão dos dados."
+      }
+    },
+    {
+      "id": "db6e8bc7-dab2-465c-938e-6148ef6e4daf",
+      "text": "Perturbação",
+      "type": "nfr.Operationalization",
+      "x": 1268,
+      "y": 661,
+      "customProperties": {
+        "Definition": "modifica levemente um conjunto de dados adicionando ruído aleatório e aplicando técnicas que arredondam números."
+      }
+    },
+    {
+      "id": "f97d8710-90c0-49d6-9786-39b4f4503b79",
+      "text": "Pseudonimização",
+      "type": "nfr.Operationalization",
+      "x": 1371,
+      "y": 659,
+      "customProperties": {
+        "Definition": "Substituir identificadores privados por identificadores falsos ou pseudônimos - anonimização de dados e pseudônimos são termos frequentemente usados de forma intercambiável"
+      }
+    },
+    {
+      "id": "cf840daa-5ed4-49ed-a769-4635700023ec",
+      "text": "Embaralhamento",
+      "type": "nfr.Operationalization",
+      "x": 1482,
+      "y": 650,
+      "customProperties": {
+        "Definition": "As letras são completamente misturadas e reorganizadas."
+      }
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "34099a1a-dd1f-42aa-97ac-9b66612dbf12",
+      "type": "nfr.AndRefinementLink",
+      "source": "cdfac142-9e92-403f-a3c9-b1858a5e6e77",
+      "target": "b79575b1-2b32-466b-bd0f-2f2f41cbcf41"
+    },
+    {
+      "id": "acdc248a-d443-4a97-b4ec-915238e3eb8a",
+      "type": "nfr.AndRefinementLink",
+      "source": "2e3b9ff6-e56e-4e43-94d8-d3c50335e8be",
+      "target": "cdfac142-9e92-403f-a3c9-b1858a5e6e77"
+    },
+    {
+      "id": "0ea0193c-2547-49d3-a674-4349be482650",
+      "type": "nfr.AndRefinementLink",
+      "source": "4a7e41e5-4012-420a-b414-8c58ca04b4c7",
+      "target": "cdfac142-9e92-403f-a3c9-b1858a5e6e77"
+    },
+    {
+      "id": "8e491394-9d66-4f95-9d4a-e446914d7db1",
+      "type": "nfr.ContributionLink",
+      "source": "457b4872-538b-458d-8bd2-71564f69f1ee",
+      "target": "4a7e41e5-4012-420a-b414-8c58ca04b4c7",
+      "label": "+"
+    },
+    {
+      "id": "091a0726-1e25-4168-837b-1a4cb45a2d19",
+      "type": "nfr.ContributionLink",
+      "source": "67e5a5df-ff16-4fae-bbfa-235881aa03e1",
+      "target": "2e3b9ff6-e56e-4e43-94d8-d3c50335e8be",
+      "label": "+"
+    },
+    {
+      "id": "7797c17c-2510-44d5-b98f-4d3290de89ce",
+      "type": "nfr.ContributionLink",
+      "source": "1f16044e-7b7a-49c3-b8ac-8b3bb2410b3c",
+      "target": "2e3b9ff6-e56e-4e43-94d8-d3c50335e8be",
+      "label": "–"
+    },
+    {
+      "id": "03dca66f-e852-4e26-9f8f-d6b9c7817703",
+      "type": "nfr.AndRefinementLink",
+      "source": "987d855d-1e03-4ffb-97b8-da385ac2fb7c",
+      "target": "b79575b1-2b32-466b-bd0f-2f2f41cbcf41"
+    },
+    {
+      "id": "5dd77915-5537-41bd-b3b9-5ab3df70af74",
+      "type": "nfr.OrRefinementLink",
+      "source": "be20c3e8-67d1-42d5-8c86-e28270d2046e",
+      "target": "25258d58-7681-4614-8e5b-d686589f329b"
+    },
+    {
+      "id": "d5805672-2218-4ee3-8c33-94888be4b4c2",
+      "type": "nfr.OrRefinementLink",
+      "source": "2cd5387f-eb46-4e3e-84e8-77f148e7aea1",
+      "target": "25258d58-7681-4614-8e5b-d686589f329b"
+    },
+    {
+      "id": "8461a375-aa5f-4f74-ae18-5adf6771df59",
+      "type": "nfr.OrRefinementLink",
+      "source": "5ebfbb42-ee73-49d1-a46b-33eea7819367",
+      "target": "25258d58-7681-4614-8e5b-d686589f329b"
+    },
+    {
+      "id": "bd7d62d6-6079-4ba4-ab44-8faa5d9dd673",
+      "type": "nfr.OrRefinementLink",
+      "source": "e2457711-2d24-4804-91fb-845e8a1106e1",
+      "target": "69fc80a6-4aaa-4d96-a2ee-dfdaff9c0a2d"
+    },
+    {
+      "id": "a7cbda6c-c393-4945-a409-e1557f4ca894",
+      "type": "nfr.OrRefinementLink",
+      "source": "c15a03d2-7ec8-437a-bb79-8c766211605b",
+      "target": "69fc80a6-4aaa-4d96-a2ee-dfdaff9c0a2d"
+    },
+    {
+      "id": "b8fdbc53-7201-492c-b8d7-b19d07a5880f",
+      "type": "nfr.OrRefinementLink",
+      "source": "02ddb11b-8f14-4a8f-a6ee-fcc2116fa66a",
+      "target": "69fc80a6-4aaa-4d96-a2ee-dfdaff9c0a2d"
+    },
+    {
+      "id": "65541032-0a20-45fe-8f56-004831a3fc0f",
+      "type": "nfr.ContributionLink",
+      "source": "e324d7aa-4535-496c-86c9-45a9c1397f05",
+      "target": "987d855d-1e03-4ffb-97b8-da385ac2fb7c",
+      "label": "+"
+    },
+    {
+      "id": "4ea6bd96-2906-4133-919a-dc64d8a4567e",
+      "type": "nfr.ContributionLink",
+      "source": "e09b1f59-0f7c-4f54-a80a-861f744d26c1",
+      "target": "987d855d-1e03-4ffb-97b8-da385ac2fb7c",
+      "label": "+"
+    },
+    {
+      "id": "4a35cecd-9871-48f7-806a-ec430eaf176c",
+      "type": "nfr.ContributionLink",
+      "source": "3951efa9-7fd0-4ed2-b489-efa337825014",
+      "target": "987d855d-1e03-4ffb-97b8-da385ac2fb7c",
+      "label": "+"
+    },
+    {
+      "id": "27c0a35b-bb1a-4d31-9ddd-52c1e72deed1",
+      "type": "nfr.ContributionLink",
+      "source": "6ae06499-cf1c-4842-a0cf-ae21bad76435",
+      "target": "987d855d-1e03-4ffb-97b8-da385ac2fb7c",
+      "label": "+"
+    },
+    {
+      "id": "2c4062a1-0557-44e9-b7bf-bc04d9924d26",
+      "type": "nfr.AndRefinementLink",
+      "source": "6b059c4b-bcbc-411e-868b-b30cf6e1f00c",
+      "target": "cdfac142-9e92-403f-a3c9-b1858a5e6e77"
+    },
+    {
+      "id": "48eaa3aa-5ab2-486b-9af3-5ae75952450a",
+      "type": "nfr.AndRefinementLink",
+      "source": "4552d2ad-3d3d-4a23-b310-20e7a4e89bca",
+      "target": "4a7e41e5-4012-420a-b414-8c58ca04b4c7"
+    },
+    {
+      "id": "6ca6ce53-1c1a-4e7a-8faa-b4b1a70b9595",
+      "type": "nfr.AndRefinementLink",
+      "source": "ac9c694e-8f33-4487-b6a0-9c1a7a4404ee",
+      "target": "4a7e41e5-4012-420a-b414-8c58ca04b4c7"
+    },
+    {
+      "id": "fcb867bd-9a8e-46c7-ba3a-bb2c413a0421",
+      "type": "nfr.AndRefinementLink",
+      "source": "25258d58-7681-4614-8e5b-d686589f329b",
+      "target": "b79575b1-2b32-466b-bd0f-2f2f41cbcf41"
+    },
+    {
+      "id": "8c7f5519-0235-4fa1-b259-e871b15f2f6b",
+      "type": "nfr.AndRefinementLink",
+      "source": "69fc80a6-4aaa-4d96-a2ee-dfdaff9c0a2d",
+      "target": "b79575b1-2b32-466b-bd0f-2f2f41cbcf41"
+    },
+    {
+      "id": "1e5f6bc6-9637-4082-82da-1d8b4d6e2681",
+      "type": "nfr.ContributionLink",
+      "source": "c886aa20-e141-402a-bd80-72cc0980e2b0",
+      "target": "69fc80a6-4aaa-4d96-a2ee-dfdaff9c0a2d",
+      "label": "+"
+    },
+    {
+      "id": "bea6eb51-f970-4cef-a5dc-f56c1aa5f7d3",
+      "type": "nfr.OrRefinementLink",
+      "source": "cf840daa-5ed4-49ed-a769-4635700023ec",
+      "target": "c886aa20-e141-402a-bd80-72cc0980e2b0"
+    },
+    {
+      "id": "c20d720d-ec1b-4533-bc3d-5f87ba5757b4",
+      "type": "nfr.OrRefinementLink",
+      "source": "f97d8710-90c0-49d6-9786-39b4f4503b79",
+      "target": "c886aa20-e141-402a-bd80-72cc0980e2b0"
+    },
+    {
+      "id": "9f2a2c95-0b2f-4638-9d52-d796e59829a9",
+      "type": "nfr.OrRefinementLink",
+      "source": "db6e8bc7-dab2-465c-938e-6148ef6e4daf",
+      "target": "c886aa20-e141-402a-bd80-72cc0980e2b0"
+    },
+    {
+      "id": "3e8f5a5d-afc9-490a-8423-96c3dd36922e",
+      "type": "nfr.OrRefinementLink",
+      "source": "64d153db-05a2-48ae-aa62-f31bb207b57b",
+      "target": "c886aa20-e141-402a-bd80-72cc0980e2b0"
+    },
+    {
+      "id": "e5a1cf9a-04bf-46ea-b37f-ddc39722c833",
+      "type": "nfr.ContributionLink",
+      "source": "67e5a5df-ff16-4fae-bbfa-235881aa03e1",
+      "target": "e2457711-2d24-4804-91fb-845e8a1106e1",
+      "label": "+"
+    }
+  ],
+  "display": {
+    "cdfac142-9e92-403f-a3c9-b1858a5e6e77": {
+      "width": 112.59014892578125,
+      "height": 56.806610107421875
+    },
+    "67e5a5df-ff16-4fae-bbfa-235881aa03e1": {
+      "width": 121.08137512207031,
+      "height": 53.9871826171875
+    },
+    "1f16044e-7b7a-49c3-b8ac-8b3bb2410b3c": {
+      "width": 116.08197021484375,
+      "height": 55.9866943359375
+    },
+    "457b4872-538b-458d-8bd2-71564f69f1ee": {
+      "width": 145.07916259765625,
+      "height": 54.487335205078125
+    },
+    "987d855d-1e03-4ffb-97b8-da385ac2fb7c": {
+      "width": 100.59149169921875,
+      "height": 59.305999755859375
+    },
+    "e5a1cf9a-04bf-46ea-b37f-ddc39722c833": {
+      "vertices": [
+        {
+          "x": 825,
+          "y": 491
+        },
+        {
+          "x": 952,
+          "y": 536
+        },
+        {
+          "x": 1090,
+          "y": 535
+        }
+      ]
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Wed, 12 Jul 2023 08:45:19 GMT",
+  "diagram": {
+    "width": 2271,
+    "height": 1300,
+    "name": "Example NFR model",
+    "customProperties": {
+      "Description": "This tool supports two things that are often troublesome to develop with generic modelling frameworks:\n - draw complex shapes (clouds) without distorting when they are resized\n - create links from an element to a link (claim links)"
+    }
+  }
+}

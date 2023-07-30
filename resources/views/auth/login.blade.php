@@ -48,7 +48,7 @@
                 <div>
                   <h2>Sign up</h2>
                   <br>
-                  <p>NFR-Driven Development Framework Tool</p>
+                  <p>NFR-driven development Framework Application</p>
                   @if (Route::has('password.request'))
                     <!-- <a href="{{ route('register') }}" class="btn btn-primary active mt-3">{{ __('Register') }}</a> -->
                   @endif

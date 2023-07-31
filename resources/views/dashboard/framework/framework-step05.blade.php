@@ -59,10 +59,10 @@
                         <td>{{ $nonFunctionalRequirement->is_recommendation }}</td>
                         <td>{{ $nonFunctionalRequirement->updated_at }}</td>                        
                         <td>
-                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-info">Download SIG File</a>
+                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">Download SIG File</a>
                         </td>
                         <td>
-                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-info">View Document</a>
+                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">View Document</a>
                         </td>
                         
                       </tr>

@@ -273,28 +273,32 @@ class FrameworkController extends Controller
      */
     public function step4ConfirmNonFunctionalRequirements(Request $request)
     {
-
+        $isMoveNextStep = false;
         $recommendationsNonFunctionalRequirements = $request["recommendationsNonFunctionalRequirements"];
         $allNonFunctionalRequirements = $request["nonFunctionalRequirements"];
 
         NonFunctionalRequirementsForSpecification::where('project_id', '=', '1')->delete();
 
-        foreach($recommendationsNonFunctionalRequirements as $recommendationNonFunctionalRequirement) {                
-            $nfrForSpecification = new NonFunctionalRequirementsForSpecification;
-            $nfrForSpecification->project_id = 1;
-            $nfrForSpecification->users_id = 1;
-            $nfrForSpecification->is_recommendation = 1;
-            $nfrForSpecification->nfr_id = $recommendationNonFunctionalRequirement;
-            $nfrForSpecification->legal_requirements_id="1,2,3";
-            $nfrForSpecification->description = "";
-            $nfrForSpecification->acceptance_criteria = "";
-            $nfrForSpecification->evaluation_metrics = "";
-            $nfrForSpecification->content = "";
-            $nfrForSpecification->image = "";
-            $nfrForSpecification->save();
+        if (!empty($recommendationsNonFunctionalRequirements)) {
+            $isMoveNextStep = true;
+            foreach($recommendationsNonFunctionalRequirements as $recommendationNonFunctionalRequirement) {                
+                $nfrForSpecification = new NonFunctionalRequirementsForSpecification;
+                $nfrForSpecification->project_id = 1;
+                $nfrForSpecification->users_id = 1;
+                $nfrForSpecification->is_recommendation = 1;
+                $nfrForSpecification->nfr_id = $recommendationNonFunctionalRequirement;
+                $nfrForSpecification->legal_requirements_id="1,2,3";
+                $nfrForSpecification->description = "";
+                $nfrForSpecification->acceptance_criteria = "";
+                $nfrForSpecification->evaluation_metrics = "";
+                $nfrForSpecification->content = "";
+                $nfrForSpecification->image = "";
+                $nfrForSpecification->save();
+            }
         }
 
         if (!empty($allNonFunctionalRequirements)) {
+            $isMoveNextStep = true;
             foreach($allNonFunctionalRequirements as $nonFunctionalRequirement) {                
                 $nfrForSpecification = new NonFunctionalRequirementsForSpecification;
                 $nfrForSpecification->project_id = 1;
@@ -311,6 +315,11 @@ class FrameworkController extends Controller
             }
         }
 
+        if (!$isMoveNextStep) {
+            $request->session()->flash('message', 'Please select one or more Non-Functional Requirements');
+            return redirect()->back()->withErrors("error");
+        }
+        
         $this::setCompleteStatusStep(5);
         return redirect()->action([FrameworkController::class, 'step5']);
     }

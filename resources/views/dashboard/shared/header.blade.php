@@ -11,9 +11,6 @@
             }
         ?>  
         
-
-        
-
         <ul class="c-header-nav ml-auto mr-4">
         <?php
             use App\MenuBuilder\ProjectPositionedMenus;

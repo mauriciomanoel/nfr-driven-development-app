@@ -7,16 +7,17 @@
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
           <div class="card">
-              @if(Session::has('message'))
+              
+              @if($errors->any())
                   <div class="row">
                       <div class="col-12">
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">{{ Session::get('message') }}
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">{{ Session::get('message') }}
                           <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
                         </div>
 
                       </div>
                   </div>
-              @endif  
+              @endif
 
               <div class="card-header">
                 <i class="fa fa-align-justify"></i><strong>{{ __('Step 04: Definir Requisitos não Funcionais') }}</strong>

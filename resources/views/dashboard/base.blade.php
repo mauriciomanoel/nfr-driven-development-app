@@ -60,8 +60,6 @@
     <link href="{{ asset('css/coreui-chartjs.css') }}" rel="stylesheet">
   </head>
 
-
-
   <body class="c-app">
     <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
 

@@ -56,7 +56,12 @@
                   </tbody>
                 </table>
                 {{ $stakeholders->links() }}
-                <button class="btn btn-block btn-primary" type="submit">{{ __('Save and Advance to the next phase') }}</button>
+                <button class="btn btn-block {{ $isEnableNextStep ? "btn-primary" : "btn-secondary" }}" type="submit" {{ $isEnableNextStep ? "" : "disabled" }}>{{ __('Save and Advance to the next phase') }}</button>
+                @if (!$isEnableNextStep)
+                    <div class="disabled-explanation text-center">
+                        {{ __('This button is disabled because you need to confirm the previous step to execute this step.') }}
+                    </div>
+                @endif
                 </form>
               </div>
           </div>

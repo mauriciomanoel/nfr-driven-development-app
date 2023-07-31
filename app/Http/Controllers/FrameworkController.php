@@ -71,9 +71,9 @@ class FrameworkController extends Controller
         
         $project = Session::get('currentProject');
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
-
+        $isEnableNextStep = $this::isEnableNextStep(2);
         $stakeholders = Stakeholders::with('analysis')->paginate( 20 );
-        return view('dashboard.framework.framework-step02_1', ['stakeholders' => $stakeholders, 'stepsFrameworkProject' => $stepsFrameworkProject]);
+        return view('dashboard.framework.framework-step02_1', ['stakeholders' => $stakeholders, 'stepsFrameworkProject' => $stepsFrameworkProject, "isEnableNextStep" => $isEnableNextStep]);
     }
 
          /**
@@ -87,10 +87,10 @@ class FrameworkController extends Controller
         $project = Session::get('currentProject');
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
 
-        // $stakeholders = Stakeholders::with('analysis')->paginate( 20 );
+        $isEnableNextStep = $this::isEnableNextStep(3);
         $stakeholders = Steps2Framework::with("stakeholder")->get();
         
-        return view('dashboard.framework.framework-step02_2', ['stakeholders' => $stakeholders, 'stepsFrameworkProject' => $stepsFrameworkProject]);
+        return view('dashboard.framework.framework-step02_2', ['stakeholders' => $stakeholders, 'stepsFrameworkProject' => $stepsFrameworkProject, "isEnableNextStep" => $isEnableNextStep]);
     }
 
 
@@ -165,9 +165,6 @@ class FrameworkController extends Controller
     }
 
 
-
-
-
          /**
      * Display a listing of the resource.
      *
@@ -177,9 +174,9 @@ class FrameworkController extends Controller
     {
         $project = Session::get('currentProject');
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
-        
+        $isEnableNextStep = $this::isEnableNextStep(4);
         $legalRequirements = LegalRequirements::with('user')->paginate( 20 );
-        return view('dashboard.framework.framework-step03', ['legalRequirements' => $legalRequirements, 'stepsFrameworkProject' => $stepsFrameworkProject]);
+        return view('dashboard.framework.framework-step03', ['legalRequirements' => $legalRequirements, 'stepsFrameworkProject' => $stepsFrameworkProject, "isEnableNextStep" => $isEnableNextStep]);
     }
 
              /**
@@ -191,9 +188,9 @@ class FrameworkController extends Controller
     {
         $project = Session::get('currentProject');
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
-
+        $isEnableNextStep = $this::isEnableNextStep(5);
         $stakeholderExperiencies = StakeholderExperiencies::with('stakeholders')->paginate( 20 );
-        return view('dashboard.framework.framework-step03_2', ['stakeholderExperiencies' => $stakeholderExperiencies, 'stepsFrameworkProject' => $stepsFrameworkProject]);
+        return view('dashboard.framework.framework-step03_2', ['stakeholderExperiencies' => $stakeholderExperiencies, 'stepsFrameworkProject' => $stepsFrameworkProject, "isEnableNextStep" => $isEnableNextStep]);
     }
          /**
      * Display a listing of the resource.
@@ -222,10 +219,11 @@ class FrameworkController extends Controller
         $nonFunctionalRequirementsFromExternal = explode(";", $values[1]);
         $nonFunctionalRequirementsFromExternal[] = "Acceptability";
         $nonFunctionalRequirementsFromExternal[] = "Ethics";
-
+        $isEnableNextStep = $this::isEnableNextStep(6);
         $recommendationsNonFunctionalRequirements = NonFunctionalRequirements::whereIn('name', $nonFunctionalRequirementsFromExternal)->get();
         $nonFunctionalRequirements = NonFunctionalRequirements::with('user')->get();
-        return view('dashboard.framework.framework-step04', ['nonFunctionalRequirements' => $nonFunctionalRequirements, 'recommendationsNonFunctionalRequirements' => $recommendationsNonFunctionalRequirements, 'stepsFrameworkProject' => $stepsFrameworkProject]);
+        
+        return view('dashboard.framework.framework-step04', ['nonFunctionalRequirements' => $nonFunctionalRequirements, 'recommendationsNonFunctionalRequirements' => $recommendationsNonFunctionalRequirements, 'stepsFrameworkProject' => $stepsFrameworkProject, "isEnableNextStep" => $isEnableNextStep]);
     }
 
          /**
@@ -262,8 +260,6 @@ class FrameworkController extends Controller
         $stakeholderExperience = StakeholderExperiencies::with('stakeholders')->find($id);
         return view('dashboard.framework.stakeholders-experience-show', ['stakeholderExperience' => $stakeholderExperience]);
     }
-
-    
 
     /**
      * Display a listing of the resource.
@@ -501,5 +497,18 @@ class FrameworkController extends Controller
             $nextStep->status = Config::get('constants.frameworkStates.active');
             $nextStep->save();
         }
+    }
+
+    private function isEnableNextStep($currentStep) {
+
+        $project = Session::get('currentProject');
+
+        $previousStep = StepsFrameworkProject::where("project_id", "=", $project->id)
+                                ->where("steps_framework_id", "=", $currentStep-1)->first();
+
+        if ($previousStep->status == Config::get('constants.frameworkStates.complete')) {
+           return true;
+        }
+        return false;
     }
 }

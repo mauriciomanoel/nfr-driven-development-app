@@ -247,8 +247,6 @@ class FrameworkController extends Controller
         return view('dashboard.framework.framework-step05', ['nonFunctionalRequirements' => $nonFunctionalRequirementsForSpecification, 'stepsFrameworkProject' => $stepsFrameworkProject]);
     }
 
-    
-
     /**
      * Display a listing of the resource.
      *

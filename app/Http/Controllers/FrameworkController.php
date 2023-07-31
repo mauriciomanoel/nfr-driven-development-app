@@ -13,6 +13,7 @@ use App\Models\StepsFrameworkProject;
 use App\Models\NonFunctionalRequirementsForSpecification;
 use App\Models\Steps1Framework;
 use App\Models\Steps2Framework;
+use App\Models\DataCollectionTechniques;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 use File;
@@ -39,8 +40,6 @@ class FrameworkController extends Controller
      */
     public function index()
     {
-
-
         $project = Session::get('currentProject');
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
         return view('dashboard.framework.index', ['stepsFrameworkProject' => $stepsFrameworkProject]);
@@ -106,7 +105,6 @@ class FrameworkController extends Controller
         $project = Session::get('currentProject');
         $currentStep = StepsFrameworkProject::where("project_id", "=", $project->id)->where("steps_framework_id", "=", 1)->first();
 
-        
         if (!empty($stakeholders)) {
             $isMoveNextStep = true;
 
@@ -175,11 +173,33 @@ class FrameworkController extends Controller
         $project = Session::get('currentProject');
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
         $isEnableNextStep = $this::isEnableNextStep(4);
-        $legalRequirements = LegalRequirements::with('user')->paginate( 20 );
-        return view('dashboard.framework.framework-step03_1', ['legalRequirements' => $legalRequirements, 'stepsFrameworkProject' => $stepsFrameworkProject, "isEnableNextStep" => $isEnableNextStep]);
+        $isEnableNextStep = true;
+        $dataCollectionTechniques = DataCollectionTechniques::get();
+        // $legalRequirements = LegalRequirements::with('user')->paginate( 20 );
+        return view('dashboard.framework.framework-step03_1', ['dataCollectionTechniques' => $dataCollectionTechniques, 'stepsFrameworkProject' => $stepsFrameworkProject, "isEnableNextStep" => $isEnableNextStep]);
     }
 
-             /**
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function step3SelectDataCollectionTechniques(Request $request)
+    {
+
+        $validatedData = $request->validate([
+            'dataCollectionTechnique'    => 'required',
+        ]);
+
+        $project = Session::get('currentProject');
+        $steps31Framework = new Steps31Framework();
+        $steps31Framework->data_collection_technique_id = "";
+        $steps31Framework->project_id = $project->id;
+        $this::setCompleteStatusStep(4);
+        return redirect()->action([FrameworkController::class, 'step3_2']);
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -295,18 +315,6 @@ class FrameworkController extends Controller
 
     }
 
-    
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function step3SelectDataCollectionTechniques(Request $request)
-    {
-        $this::setCompleteStatusStep(4);
-        return redirect()->action([FrameworkController::class, 'step3_2']);
-    }
 
     /**
      * Display a listing of the resource.

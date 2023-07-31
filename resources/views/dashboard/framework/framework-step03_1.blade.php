@@ -46,18 +46,23 @@
 
               <form method="POST" action="{{ route('framework.step3.confirmDataCollectionTechniques') }}">
                     @csrf
+              <!-- Hidden input field to store information about the selected div -->
+              <input type="hidden" id="selectedDivId" name="dataCollectionTechnique" value="">
               <div class="card-group">
+
+              
+              @foreach($dataCollectionTechniques as $dataCollectionTechnique)
                 <div class="col-sm-3">
-      
-                  <div class="card" id="btn-interviews" style="cursor: pointer">
+                  <div class="card" id="btn-{{ strtolower($dataCollectionTechnique->name) }}" style="cursor: pointer" onclick="selectDiv('btn-{{ strtolower($dataCollectionTechnique->name) }}', '{{ $dataCollectionTechnique->name }}')">
                     <div class="card-body bg-light card-body-fixed">
-                      <h5 class="card-title text-center">Entrevistas</h5>
-                      <p class="card-text">Como os usuários finais são idosos, realizar entrevistas individuais ou em grupo pode ser uma maneira eficaz de coletar informações detalhadas sobre suas necessidades, expectativas e experiências. As entrevistas permitem explorar as preocupações específicas de cada usuário, entender sua experiência com tecnologia e obter feedback direto sobre a usabilidade e a aceitabilidade do sistema AAL.</p>
+                      <h5 class="card-title text-center">{{ $dataCollectionTechnique->name}}</h5>
+                      <p class="card-text">{{ $dataCollectionTechnique->description}}</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-3">
-                  <div class="card" id="btn-researches" style="cursor: pointer">
+              @endforeach
+                <!-- <div class="col-sm-3">
+                  <div class="card" id="btn-researches" style="cursor: pointer" onclick="selectDiv('btn-researches')">
                     <div class="card-body bg-light card-body-fixed">
                       <h5 class="card-title text-center">Questionários</h5>
                       <p class="card-text">A realização de pesquisas pode ser útil para coletar dados quantitativos e obter uma visão mais abrangente das necessidades e preferências dos usuários finais. As pesquisas podem ser projetadas para incluir perguntas fechadas, como escalas de classificação e perguntas de escolha múltipla, para medir a importância de diferentes recursos e identificar preferências gerais. Além disso, podem incluir perguntas abertas para permitir que os usuários compartilhem suas opiniões e sugestões.</p>
@@ -65,7 +70,7 @@
                   </div>
                 </div>
                 <div class="col-sm-3">
-                  <div class="card" id="btn-observations" style="cursor: pointer">
+                  <div class="card" id="btn-observations" style="cursor: pointer" onclick="selectDiv('btn-observations')">
                     <div class="card-body bg-light card-body-fixed">
                       <h5 class="card-title text-center">Observações</h5>
                       <p class="card-text">Observar os usuários finais interagindo com o sistema AAL em seu ambiente natural pode fornecer insights valiosos sobre o uso real do sistema e identificar possíveis problemas de usabilidade. As observações podem revelar desafios específicos enfrentados pelos usuários durante o uso do sistema, bem como suas reações e comportamentos em relação às funcionalidades. Essa abordagem pode ser combinada com entrevistas para obter uma compreensão mais completa das experiências dos usuários.</p>
@@ -73,23 +78,35 @@
                   </div>
                 </div>
                 <div class="col-sm-3">
-                <div class="card" id="btn-storytelling" style="cursor: pointer">
+                <div class="card" id="btn-storytelling" style="cursor: pointer" onclick="selectDiv('btn-storytelling')">
                     <div class="card-body bg-light card-body-fixed">
                       <h5 class="card-title text-center">Storytelling</h5>
                       <p class="card-text">O storytelling pode ser uma técnica complementar para coletar informações qualitativas e obter insights mais profundos sobre as experiências, necessidades e expectativas dos usuários finais. Encorajar os usuários a compartilharem histórias e exemplos específicos de como o sistema AAL afeta sua vida cotidiana pode fornecer um entendimento mais rico e ajudar a identificar áreas de melhoria. Essa abordagem pode ser realizada por meio de entrevistas estruturadas ou em formatos mais informais, como grupos focais.</p>
                     </div>
                   </div>
                 </div>     
-              </div>
-              <div id="interviews-details" class="collapse1" style="display: none;">
+              </div> -->
 
+              @error('dataCollectionTechnique')
+                <div class="alert alert-danger">{{ $message }}
+                  <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+              @enderror
+
+              @foreach($dataCollectionTechniques as $dataCollectionTechnique)
+                <div id="{{ strtolower($dataCollectionTechnique->name) }}-details" class="collapseDetails" style="display: none;">
+                  
+                    {!! $dataCollectionTechnique->insights !!}                    
+                  
+                </div>
+              @endforeach
+
+              <!-- <div id="interviews-details" class="collapse1" style="display: none;">
                 <ul>
-
                   <li><p>Realize entrevistas individuais para permitir que cada idoso se sinta confortável e à vontade para compartilhar suas experiências e opiniões.</p></li>
                   <li><p>Prepare um roteiro de perguntas abertas que aborde tópicos como familiaridade com tecnologia, necessidades de suporte diário, preocupações com privacidade e segurança, experiências anteriores com sistemas similares, expectativas em relação ao sistema AAL e feedback sobre a interface do usuário.</p></li>
                   <li><p>Use uma abordagem empática e encoraje os idosos a compartilharem exemplos concretos de como o sistema pode melhorar sua vida diária.</p></li>
                   <li><p>Considere a possibilidade de realizar entrevistas remotas para facilitar a participação dos idosos e garantir sua comodidade.</p></li>
-
                 </ul>
               </div>
               <div id="researches-details" class="collapse1" style="display: none;">
@@ -130,7 +147,7 @@
                     <li><p>Documentar e analisar as histórias: Grave ou registre as histórias compartilhadas pelos idosos, para garantir que as informações sejam capturadas de forma precisa. Após o processo de storytelling, analise as histórias coletadas para identificar padrões, temas recorrentes e necessidades específicas que possam direcionar o desenvolvimento e aprimoramento do sistema AAL.</p></li>
 
                   </ul>
-              </div>
+              </div> -->
 
               <button class="btn btn-block {{ $isEnableNextStep ? "btn-primary" : "btn-secondary" }}" type="submit" {{ $isEnableNextStep ? "" : "disabled" }}>{{ __('Save and Advance to the next phase') }}</button>
                 @if (!$isEnableNextStep)
@@ -150,31 +167,39 @@
 @section('javascript')
 
 <script type="text/javascript">
-   
-  $(document).ready(function(){
-    $('.collapse1').hide();
-    $('#btn-interviews').click(function(){     
-       $('.collapse1').hide();
-       $("btn-interviews").css("background-color", "yellow");
-      $('#interviews-details').show();
-    });
 
-    $('#btn-researches').click(function(){     
-       $('.collapse1').hide();
-      $('#researches-details').show();
-    });
+  var lastDiv;
 
-    $('#btn-observations').click(function(){     
-       $('.collapse1').hide();
-      $('#observations-details').show();
-    });
+  function selectDiv(divId, nameTechnique) {
+        // Remove the "selected" class from all divs to ensure only one div is highlighted at a time
+        const allDivs = document.querySelectorAll('.card');
+        allDivs.forEach((div) => {
+            div.classList.remove('selected');
+        });
 
-    $('#btn-storytelling').click(function(){     
-       $('.collapse1').hide();
-      $('#storytelling-details').show();
-    });
+        // Add the "selected" class to the clicked div to apply the highlight effect
+        const selectedDiv = document.getElementById(divId);
 
-  })
+        const allCollapseDetails = document.querySelectorAll('.collapseDetails');
+        
+        allCollapseDetails.forEach((divDetail) => {          
+          divDetail.style.display = "none";
+        });
+        
+        if (lastDiv != selectedDiv) {
+          selectedDiv.classList.add('selected');
+          lastDiv = selectedDiv;
+          // Update the value of the hidden input field with the selected div's information
+          document.getElementById('selectedDivId').value = nameTechnique;
+          document.getElementById(nameTechnique.toLowerCase() + '-details').style.display = "block";
+        } else {
+          lastDiv = null;
+          // Update the value of the hidden input field with the selected div's information
+          document.getElementById('selectedDivId').value = "";
+          document.getElementById(nameTechnique.toLowerCase() + '-details').style.display = "none";
+        }
+    }
+
 </script>
 
 
@@ -184,6 +209,12 @@
   .card-body-fixed {
     height: 330px; /* Set the desired fixed height here */
     overflow-y: auto; /* Add a vertical scrollbar if content exceeds the fixed height */
+  }
+
+  .selected {
+    border: 2px solid red; /* Example: a red border for highlighting */
+    background-color: #f9f9f9; /* Example: a light background color for highlighting */
+    /* Add any other styles you want for the highlight effect */
   }
 </style>
 

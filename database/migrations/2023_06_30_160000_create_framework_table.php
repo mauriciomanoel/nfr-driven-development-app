@@ -88,16 +88,16 @@ return new class extends Migration
         
         Schema::create('steps3_1_framework', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('steps_framework_project_id');
+            $table->unsignedBigInteger('project_id');
             $table->unsignedBigInteger('data_collection_technique_id');
             $table->timestamps();
 
-            $table->foreign('steps_framework_project_id')
-                ->references('id')
-                ->on('steps_framework_project')
-                ->onDelete('cascade');
+            $table->foreign('project_id')
+            ->references('id')
+            ->on('projects')
+            ->onDelete('cascade');
 
-                $table->foreign('data_collection_technique_id')
+            $table->foreign('data_collection_technique_id')
                 ->references('id')
                 ->on('data_collection_techniques')
                 ->onDelete('cascade');

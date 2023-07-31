@@ -7,10 +7,10 @@
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
           <div class="card">
-              @if(Session::has('message'))
+              @if($errors->any())
                   <div class="row">
                       <div class="col-12">
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">{{ Session::get('message') }}
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">{{ Session::get('message') }}
                           <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
                         </div>
 
@@ -19,7 +19,7 @@
               @endif  
 
               <div class="card-header">
-                <i class="fa fa-align-justify"></i><strong>{{ __('Step 01: Levantar Requisitos Legais e Normativos') }}</strong>
+                <i class="fa fa-align-justify"></i><strong>{{ __('Step 1: Levantar Requisitos Legais') }}</strong>
               </div>
               <div class="card-body">
 
@@ -28,7 +28,7 @@
                       <div class="col-xs-2 bs-wizard-step {{ $stepFrameworkProject->status }}">
                         <div class="text-center bs-wizard-stepnum">{{ $stepFrameworkProject->StepsFramework->code }}</div>
                         <div class="progress"><div class="progress-bar"></div></div>
-                        <a href="{{ route('framework.step2') }}" class="bs-wizard-dot"></a>
+                        <a href="{{ route('framework.step2.1') }}" class="bs-wizard-dot"></a>
                         <div class="bs-wizard-info text-center"></div>
                       </div>
                   @endforeach                  

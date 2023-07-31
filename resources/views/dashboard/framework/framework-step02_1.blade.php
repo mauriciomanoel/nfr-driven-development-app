@@ -19,11 +19,10 @@
               @endif  
 
               <div class="card-header">
-                <i class="fa fa-align-justify"></i><strong>{{ __('Step 3.2: Coletar Experiência dos Stakeholders') }}</strong>
+                <i class="fa fa-align-justify"></i><strong>{{ __('Step 2: Identificar e Análise de Stakeholders') }}</strong>
               </div>
               <div class="card-body">
-
-              <div class="row justify-content-md-center bs-wizard" style="border-bottom:0;">                        
+                <div class="row justify-content-md-center bs-wizard" style="border-bottom:0;">                        
                   @foreach($stepsFrameworkProject as $stepFrameworkProject)
                       <div class="col-xs-2 bs-wizard-step {{ $stepFrameworkProject->status }}">
                         <div class="text-center bs-wizard-stepnum">{{ $stepFrameworkProject->StepsFramework->code }}</div>
@@ -32,39 +31,31 @@
                         <div class="bs-wizard-info text-center"></div>
                       </div>
                   @endforeach                  
-              </div>
+                </div>
 
-                <p>Esta etapa tem como descrever o que foi coletado de informações sobre a experiência dos stakeholders em relação à usabilidade e aceitabilidade de sistemas AAL.</p> 
-                              
-                <p><strong>Saída:</strong> Dados e insights obtidos a partir das atividades de coleta de experiência dos stakeholders.</p>
-              
-                <form method="POST" action="{{ route('framework.step3.confirmCollectStakeholderExperience') }}">
-                    @csrf
-                <table class="table table-responsive-sm table-striped">
+              <p>Esta etapa tem como objetivo identificar os diferentes stakeholders envolvidos no sistema AAL.</p> 
+              <p><strong>Saída:</strong> Lista de stakeholders relevantes do sistema AAL.</p>
+              <form method="POST" action="{{ route('framework.step2.confirmIdentifyStakeholders') }}">
+                    @csrf              
+              <table class="table table-responsive-sm table-striped">
                   <thead>
                     <tr>
-                      <!-- <th>Author</th> -->
+                      <th></th>
                       <th>Name</th>
                       <th>Description</th>
-                      <th>Last Update</th>
-                      <th colspan="3" class="text-center">Actions</th>
-                      
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($stakeholderExperiencies as $stakeholderExperience)
+                    @foreach($stakeholders as $stakeholder)
                       <tr>
-                        <td><strong>{{ $stakeholderExperience->stakeholders->name }}</strong></td>
-                        <td>{{ $stakeholderExperience->description }}</td>
-                        <td>{{ $stakeholderExperience->updated_at }}</td>                        
-                        <td>
-                          <a href="{{ url('framework/stakeholders/experiencies/' . $stakeholderExperience->id) }}" class="btn btn-block btn-primary">Detail</a>
-                        </td>                        
+                        <td><input type="checkbox" id="stakeholders" name="stakeholders[]" value="{{ $stakeholder->id }}"></strong></td>
+                        <td><strong>{{ $stakeholder->name }}</strong></td>
+                        <td>{{ $stakeholder->description }}</td>
                       </tr>
                     @endforeach
                   </tbody>
                 </table>
-                {{ $stakeholderExperiencies->links() }}
+                {{ $stakeholders->links() }}
                 <button class="btn btn-block btn-primary" type="submit">{{ __('Save and Advance to the next phase') }}</button>
                 </form>
               </div>
@@ -76,7 +67,6 @@
 
 @endsection
 @section('javascript')
-
 <link href="{{ asset('css/process-steps.css') }}" rel="stylesheet">
 
 @endsection

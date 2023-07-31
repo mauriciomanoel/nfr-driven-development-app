@@ -28,7 +28,7 @@
                       <div class="col-xs-2 bs-wizard-step {{ $stepFrameworkProject->status }}">
                         <div class="text-center bs-wizard-stepnum">{{ $stepFrameworkProject->StepsFramework->code }}</div>
                         <div class="progress"><div class="progress-bar"></div></div>
-                        <a href="{{ route('framework.step2') }}" class="bs-wizard-dot"></a>
+                        <a href="{{ route('framework.step2.1') }}" class="bs-wizard-dot"></a>
                         <div class="bs-wizard-info text-center"></div>
                       </div>
                   @endforeach                  

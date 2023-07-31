@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class StepsFramework extends Model
+class Steps1Framework extends Model
 {
 
     use HasFactory;
 
-    protected $table = 'steps_framework';
+    protected $table = 'steps1_framework';
     
 
     // /**

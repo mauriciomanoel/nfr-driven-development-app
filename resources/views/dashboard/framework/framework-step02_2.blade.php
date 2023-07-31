@@ -19,7 +19,7 @@
               @endif  
 
               <div class="card-header">
-                <i class="fa fa-align-justify"></i><strong>{{ __('Step 02: Identificar e Análise de Stakeholders') }}</strong>
+                <i class="fa fa-align-justify"></i><strong>{{ __('Step 2: Identificar e Análise de Stakeholders') }}</strong>
               </div>
               <div class="card-body">
                 <div class="row justify-content-md-center bs-wizard" style="border-bottom:0;">                        
@@ -27,7 +27,7 @@
                       <div class="col-xs-2 bs-wizard-step {{ $stepFrameworkProject->status }}">
                         <div class="text-center bs-wizard-stepnum">{{ $stepFrameworkProject->StepsFramework->code }}</div>
                         <div class="progress"><div class="progress-bar"></div></div>
-                        <a href="{{ route('framework.step2') }}" class="bs-wizard-dot"></a>
+                        <a href="{{ route('framework.step2.1') }}" class="bs-wizard-dot"></a>
                         <div class="bs-wizard-info text-center"></div>
                       </div>
                   @endforeach                  
@@ -36,12 +36,11 @@
               <p>Esta etapa tem como objetico identificar os diferentes stakeholders envolvidos no sistema AAL e analisar suas necessidades, expectativas e experiências em relação ao sistema.</p> 
               <p>Sua análise deve ter o foco na usabilidade e aceitabilidade, permitindo priorizar as demandas dos stakeholders e estabelecer uma comunicação efetiva ao longo do processo de desenvolvimento.</p>
               <p><strong>Saída:</strong> Lista de stakeholders relevantes e documentação das suas necessidades, expectativas e experiências relacionadas à usabilidade e aceitabilidade do sistema AAL.</p>
-              <form method="POST" action="{{ route('framework.step2.confirmIdentifyAndAnalyzeStakeholders') }}">
+              <form method="POST" action="{{ route('framework.step2.confirmAnalyzeStakeholders') }}">
                     @csrf              
               <table class="table table-responsive-sm table-striped">
                   <thead>
                     <tr>
-                      <!-- <th>Author</th> -->
                       <th>Name</th>
                       <th>Description</th>
                       <th>Last Update</th>
@@ -52,17 +51,20 @@
                   <tbody>
                     @foreach($stakeholders as $stakeholder)
                       <tr>
-                        <td><strong>{{ $stakeholder->name }}</strong></td>
-                        <td>{{ $stakeholder->description }}</td>
+                        <td><strong>{{ $stakeholder->stakeholder->name }}</strong></td>
+                        <td>{{ $stakeholder->stakeholder->description }}</td>
                         <td>{{ $stakeholder->updated_at }}</td>                        
                         <td>
-                          <a href="{{ url('framework/stakeholders/' . $stakeholder->id) }}" class="btn btn-block btn-primary">Detail</a>
+                          <a href="{{ url('framework/detailStakeholders/' . $stakeholder->id) }}" class="btn btn-block btn-primary">Detail</a>
+                        </td> 
+                        <td>
+                          <a href="{{ url('framework/analyzeStakeholders/' . $stakeholder->id) }}" class="btn btn-block btn-primary">Analyze</a>
                         </td>                        
                       </tr>
                     @endforeach
                   </tbody>
                 </table>
-                {{ $stakeholders->links() }}
+                
                 <button class="btn btn-block btn-primary" type="submit">{{ __('Save and Advance to the next phase') }}</button>
                 </form>
               </div>

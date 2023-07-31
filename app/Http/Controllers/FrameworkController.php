@@ -11,12 +11,13 @@ use App\Models\StakeholderExperiencies;
 use App\Models\NonFunctionalRequirements;
 use App\Models\StepsFrameworkProject;
 use App\Models\NonFunctionalRequirementsForSpecification;
+use App\Models\Steps1Framework;
+use App\Models\Steps2Framework;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 use File;
 use Session;
 use Illuminate\Support\Facades\Config;
-
 
 class FrameworkController extends Controller
 {
@@ -54,8 +55,8 @@ class FrameworkController extends Controller
     {
         
         $project = Session::get('currentProject');
-        $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
         $this::setActiveStatusStep(1);
+        $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
         $legalRequirements = LegalRequirements::with('user')->paginate( 20 );
         return view('dashboard.framework.framework-step01', ['legalRequirements' => $legalRequirements, 'stepsFrameworkProject' => $stepsFrameworkProject]);
     }
@@ -65,15 +66,107 @@ class FrameworkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function step2()
+    public function step2_1()
     {
         
         $project = Session::get('currentProject');
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
 
         $stakeholders = Stakeholders::with('analysis')->paginate( 20 );
-        return view('dashboard.framework.framework-step02', ['stakeholders' => $stakeholders, 'stepsFrameworkProject' => $stepsFrameworkProject]);
+        return view('dashboard.framework.framework-step02_1', ['stakeholders' => $stakeholders, 'stepsFrameworkProject' => $stepsFrameworkProject]);
     }
+
+         /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function step2_2()
+    {
+        
+        $project = Session::get('currentProject');
+        $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
+
+        // $stakeholders = Stakeholders::with('analysis')->paginate( 20 );
+        $stakeholders = Steps2Framework::with("stakeholder")->get();
+        
+        return view('dashboard.framework.framework-step02_2', ['stakeholders' => $stakeholders, 'stepsFrameworkProject' => $stepsFrameworkProject]);
+    }
+
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function step2ConfirmIdentifyStakeholders(Request $request)
+    {
+
+        $stakeholders = $request["stakeholders"];
+        $project = Session::get('currentProject');
+        $currentStep = StepsFrameworkProject::where("project_id", "=", $project->id)->where("steps_framework_id", "=", 1)->first();
+
+        
+        if (!empty($stakeholders)) {
+            $isMoveNextStep = true;
+
+            foreach($stakeholders as $stakeholdersId) {                
+                 $steps2Framework = new Steps2Framework();
+                 $steps2Framework->stakeholder_id = $stakeholdersId;
+                 $steps2Framework->steps_framework_project_id = $currentStep->id;
+                 $steps2Framework->save();
+            }
+
+        }
+
+        if (!$isMoveNextStep) {
+            $request->session()->flash('message', 'Please select one or more Legal requirements');
+            return redirect()->back()->withErrors("error");
+        }
+
+        $this::setCompleteStatusStep(2);
+        return redirect()->action([FrameworkController::class, 'step2_2']);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function step2ConfirmAnalyzeStakeholder()
+    {
+        $this::setCompleteStatusStep(3);
+        // $this::setCompleteStatusStep(2);
+        return redirect()->action([FrameworkController::class, 'step3']);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showAnalyzeStakeholder($id)
+    {
+        $stakeholder = Steps2Framework::with('stakeholders')->find($id);
+        return view('dashboard.framework.framework-step02_2-stakeholders-show', ['stakeholder' => $stakeholder]);
+    }
+
+
+        /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function editAnalyzeStakeholder($id)
+    {
+        $stakeholder = Steps2Framework::with('stakeholder')->find($id);
+
+        return view('dashboard.framework.framework-step02_2-stakeholders-edit', ['stakeholder' => $stakeholder]);
+    }
+
+
+
+
 
          /**
      * Display a listing of the resource.
@@ -156,16 +249,7 @@ class FrameworkController extends Controller
         return view('dashboard.framework.framework-step05', ['nonFunctionalRequirements' => $nonFunctionalRequirementsForSpecification, 'stepsFrameworkProject' => $stepsFrameworkProject]);
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function stakeholders($id)
-    {
-        $stakeholder = Stakeholders::with('analysis')->find($id);
-        return view('dashboard.framework.stakeholders-show', ['stakeholder' => $stakeholder]);
-    }
+    
 
     /**
      * Display a listing of the resource.
@@ -189,60 +273,35 @@ class FrameworkController extends Controller
     public function step1ConfirmLegalRequirement(Request $request)
     {
 
+        $isMoveNextStep = false;
+
+        $legalRequirements = $request["legalRequirements"];
+        $project = Session::get('currentProject');
+        $currentStep = StepsFrameworkProject::where("project_id", "=", $project->id)->where("steps_framework_id", "=", 1)->first();
+
+        if (!empty($legalRequirements)) {
+            $isMoveNextStep = true;
+
+            foreach($legalRequirements as $legalRequirementId) {
+                $steps1Framework = new Steps1Framework();
+                $steps1Framework->legal_requirements_id = $legalRequirementId;
+                $steps1Framework->steps_framework_project_id = $currentStep->id;
+                $steps1Framework->save();
+            }
+
+        }
+
+        if (!$isMoveNextStep) {
+            $request->session()->flash('message', 'Please select one or more Legal requirements');
+            return redirect()->back()->withErrors("error");
+        }
+
         $this::setCompleteStatusStep(1);
-        return redirect()->action([FrameworkController::class, 'step2']);
-        
-        // var_dump($request["legalRequirements"]); exit;
-        // $recommendationsNonFunctionalRequirements = $request["recommendationsNonFunctionalRequirements"];
-        // $allNonFunctionalRequirements = $request["nonFunctionalRequirements"];
+        return redirect()->action([FrameworkController::class, 'step2_1']);
 
-        // NonFunctionalRequirementsForSpecification::where('project_id', '=', '1')->delete();
-
-        // foreach($recommendationsNonFunctionalRequirements as $recommendationNonFunctionalRequirement) {                
-        //     $nfrForSpecification = new NonFunctionalRequirementsForSpecification;
-        //     $nfrForSpecification->project_id = 1;
-        //     $nfrForSpecification->users_id = 1;
-        //     $nfrForSpecification->is_recommendation = 1;
-        //     $nfrForSpecification->nfr_id = $recommendationNonFunctionalRequirement;
-        //     $nfrForSpecification->legal_requirements_id="1,2,3";
-        //     $nfrForSpecification->description = "";
-        //     $nfrForSpecification->acceptance_criteria = "";
-        //     $nfrForSpecification->evaluation_metrics = "";
-        //     $nfrForSpecification->content = "";
-        //     $nfrForSpecification->image = "";
-        //     $nfrForSpecification->save();
-        // }
-
-        // if (!empty($allNonFunctionalRequirements)) {
-        //     foreach($allNonFunctionalRequirements as $nonFunctionalRequirement) {                
-        //         $nfrForSpecification = new NonFunctionalRequirementsForSpecification;
-        //         $nfrForSpecification->project_id = 1;
-        //         $nfrForSpecification->users_id = 1;
-        //         $nfrForSpecification->is_recommendation = 0;
-        //         $nfrForSpecification->nfr_id = $nonFunctionalRequirement;
-        //         $nfrForSpecification->legal_requirements_id="1,2,3";
-        //         $nfrForSpecification->description = "";
-        //         $nfrForSpecification->acceptance_criteria = "";
-        //         $nfrForSpecification->evaluation_metrics = "";
-        //         $nfrForSpecification->content = "";
-        //         $nfrForSpecification->image = "";
-        //         $nfrForSpecification->save();
-        //     }
-        // }
-
-        // return redirect()->action([FrameworkController::class, 'step5']);
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function step2ConfirmIdentifyAndAnalyzeStakeholders(Request $request)
-    {
-        $this::setCompleteStatusStep(2);
-        return redirect()->action([FrameworkController::class, 'step3']);
-    }
+    
 
     /**
      * Display a listing of the resource.
@@ -251,7 +310,7 @@ class FrameworkController extends Controller
      */
     public function step3SelectDataCollectionTechniques(Request $request)
     {
-        $this::setCompleteStatusStep(3);
+        $this::setCompleteStatusStep(4);
         return redirect()->action([FrameworkController::class, 'step3_2']);
     }
 
@@ -262,7 +321,7 @@ class FrameworkController extends Controller
      */
     public function step3CollectStakeholderExperience(Request $request)
     {
-        $this::setCompleteStatusStep(4);
+        $this::setCompleteStatusStep(5);
         return redirect()->action([FrameworkController::class, 'step4']);
     }
 
@@ -320,7 +379,7 @@ class FrameworkController extends Controller
             return redirect()->back()->withErrors("error");
         }
         
-        $this::setCompleteStatusStep(5);
+        $this::setCompleteStatusStep(6);
         return redirect()->action([FrameworkController::class, 'step5']);
     }
 

@@ -61,6 +61,9 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('steps_framework_project_id');
             $table->unsignedBigInteger('stakeholder_id');
+            $table->text('identified_needs')->nullable();
+            $table->text('expectations')->nullable();
+            $table->text('experiences')->nullable();
             $table->timestamps();
 
             $table->foreign('steps_framework_project_id')

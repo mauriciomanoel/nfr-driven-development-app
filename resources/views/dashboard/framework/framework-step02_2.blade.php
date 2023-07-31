@@ -36,9 +36,12 @@
               <p>Esta etapa tem como objetico identificar os diferentes stakeholders envolvidos no sistema AAL e analisar suas necessidades, expectativas e experiências em relação ao sistema.</p> 
               <p>Sua análise deve ter o foco na usabilidade e aceitabilidade, permitindo priorizar as demandas dos stakeholders e estabelecer uma comunicação efetiva ao longo do processo de desenvolvimento.</p>
               <p><strong>Saída:</strong> Lista de stakeholders relevantes e documentação das suas necessidades, expectativas e experiências relacionadas à usabilidade e aceitabilidade do sistema AAL.</p>
+              
               <form method="POST" action="{{ route('framework.step2.confirmAnalyzeStakeholders') }}">
-                    @csrf              
-              <table class="table table-responsive-sm table-striped">
+                    @csrf  
+                
+                @if(count($stakeholders) > 0)
+                <table class="table table-responsive-sm table-striped">
                   <thead>
                     <tr>
                       <th>Name</th>
@@ -64,6 +67,9 @@
                     @endforeach
                   </tbody>
                 </table>
+                @else
+                <div class="alert alert-warning" role="alert">You need to select a stakeholder in the previous step.</div>
+                @endif
                 
                 <button class="btn btn-block {{ $isEnableNextStep ? "btn-primary" : "btn-secondary" }}" type="submit" {{ $isEnableNextStep ? "" : "disabled" }}>{{ __('Save and Advance to the next phase') }}</button>
                 @if (!$isEnableNextStep)

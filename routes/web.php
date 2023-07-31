@@ -59,9 +59,8 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/analyzeStakeholders/{id}', [FrameworkController::class, 'editAnalyzeStakeholder'])->name('framework.editAnalyzeStakeholder');
             Route::post('/confirmAnalyzeStakeholder/{id}', [FrameworkController::class, 'step2ConfirmAnalyzeStakeholder'])->name('framework.step2ConfirmAnalyzeStakeholder');
 
-
-            Route::get('/step3', [FrameworkController::class, 'step3'])->name('framework.step3');
-            Route::get('/step3_2', [FrameworkController::class, 'step3_2'])->name('framework.step3_2');
+            Route::get('/step3.1', [FrameworkController::class, 'step3'])->name('framework.step3');
+            Route::get('/step3.2', [FrameworkController::class, 'step3_2'])->name('framework.step3_2');
 
             Route::get('/step4', [FrameworkController::class, 'step4'])->name('framework.step4');
             Route::get('/step5', [FrameworkController::class, 'step5'])->name('framework.step5');

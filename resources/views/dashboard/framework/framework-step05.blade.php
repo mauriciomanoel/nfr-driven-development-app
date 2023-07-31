@@ -37,9 +37,10 @@
                 <p>Os requisitos não funcionais são especificados de forma clara e precisa, fornecendo operacionalizações e justificativas (Claim) nas operacionalizações sobre cada requisito não funcional entre outros elementos relevantes.<p> 
                 <p><strong>Saída:</strong> Documentação detalhada (SIG) dos requisitos não funcionais especificados.</p>
               
+                @if(count($nonFunctionalRequirements) > 0)
+
                 <p><a href="{{route('download.sig',5)}}" download="" class="btn btn-primary btn-block"><strong>Download Full Document</strong></a></p>
                 <p><a href="{{route('framework.download.all.sig')}}" download="" class="btn btn-primary btn-block"><strong>Download All SIG File</strong></a></p>
-
 
                 <table class="table table-responsive-sm table-striped">
                   <thead>
@@ -68,7 +69,10 @@
                       </tr>
                     @endforeach
                   </tbody>
-                </table>                            
+                </table>  
+                @else
+                  <div class="alert alert-warning" role="alert">You need to select a Non-Functional Requirements in the previous step.</div>
+                @endif                          
               </div>
           </div>
         </div>

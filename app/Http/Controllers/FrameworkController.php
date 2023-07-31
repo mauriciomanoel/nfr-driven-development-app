@@ -176,7 +176,7 @@ class FrameworkController extends Controller
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
         $isEnableNextStep = $this::isEnableNextStep(4);
         $legalRequirements = LegalRequirements::with('user')->paginate( 20 );
-        return view('dashboard.framework.framework-step03', ['legalRequirements' => $legalRequirements, 'stepsFrameworkProject' => $stepsFrameworkProject, "isEnableNextStep" => $isEnableNextStep]);
+        return view('dashboard.framework.framework-step03_1', ['legalRequirements' => $legalRequirements, 'stepsFrameworkProject' => $stepsFrameworkProject, "isEnableNextStep" => $isEnableNextStep]);
     }
 
              /**

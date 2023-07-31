@@ -50,16 +50,15 @@
                 <div class="col-sm-3">
       
                   <div class="card" id="btn-interviews" style="cursor: pointer">
-                    <div class="card-body bg-light">
+                    <div class="card-body bg-light card-body-fixed">
                       <h5 class="card-title text-center">Entrevistas</h5>
                       <p class="card-text">Como os usuários finais são idosos, realizar entrevistas individuais ou em grupo pode ser uma maneira eficaz de coletar informações detalhadas sobre suas necessidades, expectativas e experiências. As entrevistas permitem explorar as preocupações específicas de cada usuário, entender sua experiência com tecnologia e obter feedback direto sobre a usabilidade e a aceitabilidade do sistema AAL.</p>
-                      <p>&nbsp;</p><br>
                     </div>
                   </div>
                 </div>
                 <div class="col-sm-3">
                   <div class="card" id="btn-researches" style="cursor: pointer">
-                    <div class="card-body bg-light">
+                    <div class="card-body bg-light card-body-fixed">
                       <h5 class="card-title text-center">Questionários</h5>
                       <p class="card-text">A realização de pesquisas pode ser útil para coletar dados quantitativos e obter uma visão mais abrangente das necessidades e preferências dos usuários finais. As pesquisas podem ser projetadas para incluir perguntas fechadas, como escalas de classificação e perguntas de escolha múltipla, para medir a importância de diferentes recursos e identificar preferências gerais. Além disso, podem incluir perguntas abertas para permitir que os usuários compartilhem suas opiniões e sugestões.</p>
                     </div>
@@ -67,15 +66,15 @@
                 </div>
                 <div class="col-sm-3">
                   <div class="card" id="btn-observations" style="cursor: pointer">
-                    <div class="card-body bg-light">
+                    <div class="card-body bg-light card-body-fixed">
                       <h5 class="card-title text-center">Observações</h5>
                       <p class="card-text">Observar os usuários finais interagindo com o sistema AAL em seu ambiente natural pode fornecer insights valiosos sobre o uso real do sistema e identificar possíveis problemas de usabilidade. As observações podem revelar desafios específicos enfrentados pelos usuários durante o uso do sistema, bem como suas reações e comportamentos em relação às funcionalidades. Essa abordagem pode ser combinada com entrevistas para obter uma compreensão mais completa das experiências dos usuários.</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-sm-3">
-                  <div class="card bg-light">
-                    <div class="card-body" id="btn-storytelling" style="cursor: pointer">
+                <div class="card" id="btn-storytelling" style="cursor: pointer">
+                    <div class="card-body bg-light card-body-fixed">
                       <h5 class="card-title text-center">Storytelling</h5>
                       <p class="card-text">O storytelling pode ser uma técnica complementar para coletar informações qualitativas e obter insights mais profundos sobre as experiências, necessidades e expectativas dos usuários finais. Encorajar os usuários a compartilharem histórias e exemplos específicos de como o sistema AAL afeta sua vida cotidiana pode fornecer um entendimento mais rico e ajudar a identificar áreas de melhoria. Essa abordagem pode ser realizada por meio de entrevistas estruturadas ou em formatos mais informais, como grupos focais.</p>
                     </div>
@@ -147,6 +146,7 @@
   </div>
 
 @endsection
+
 @section('javascript')
 
 <script type="text/javascript">
@@ -177,7 +177,16 @@
   })
 </script>
 
+
 <link href="{{ asset('css/process-steps.css') }}" rel="stylesheet">
+
+<style>
+  .card-body-fixed {
+    height: 330px; /* Set the desired fixed height here */
+    overflow-y: auto; /* Add a vertical scrollbar if content exceeds the fixed height */
+  }
+</style>
+
 
 @endsection
 

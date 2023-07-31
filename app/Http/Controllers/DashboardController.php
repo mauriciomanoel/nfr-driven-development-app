@@ -11,6 +11,7 @@ use App\Models\Stakeholders;
 use App\Models\StakeholderExperiencies;
 use App\Models\NonFunctionalRequirements;
 use App\Models\NonFunctionalRequirementsForSpecification;
+use Session;
 
 class DashboardController extends Controller
 {
@@ -32,6 +33,13 @@ class DashboardController extends Controller
      */
     public function index()
     {
+
+        if (is_null(Session::get('currentProject'))) {
+            $user = auth()->user();
+            $project = Projects::where('users_id',$user->id)->where("current",1)->first();
+            Session::put('currentProject', $project);
+        }
+
         $nonFunctionalRequirements = NonFunctionalRequirements::get();
         $nonFunctionalRequirementCount = $nonFunctionalRequirements->count();
 

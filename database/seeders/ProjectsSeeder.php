@@ -38,7 +38,7 @@ class ProjectsSeeder extends Seeder
             StepsFrameworkProject::create([  
                 'steps_framework_id' => $stepFramework->id,
                 'project_id' => $project->id,
-                'status' => 0
+                'status' => "disabled"
             ]);
         }
 
@@ -58,7 +58,7 @@ class ProjectsSeeder extends Seeder
             StepsFrameworkProject::create([  
                 'steps_framework_id' => $stepFramework->id,
                 'project_id' => $project->id,
-                'status' => 0
+                'status' => "disabled"
             ]);
         }
 
@@ -78,7 +78,7 @@ class ProjectsSeeder extends Seeder
             StepsFrameworkProject::create([  
                 'steps_framework_id' => $stepFramework->id,
                 'project_id' => $project->id,
-                'status' => 0
+                'status' => "disabled"
             ]);
         }
 
@@ -99,7 +99,7 @@ class ProjectsSeeder extends Seeder
             StepsFrameworkProject::create([  
                 'steps_framework_id' => $stepFramework->id,
                 'project_id' => $project->id,
-                'status' => 0
+                'status' => "disabled"
             ]);
         }
 
@@ -117,7 +117,7 @@ class ProjectsSeeder extends Seeder
             StepsFrameworkProject::create([  
                 'steps_framework_id' => $stepFramework->id,
                 'project_id' => $project->id,
-                'status' => 0
+                'status' => "disabled"
             ]);
         }
 

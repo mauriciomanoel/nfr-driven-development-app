@@ -22,10 +22,23 @@
                 <i class="fa fa-align-justify"></i><strong>{{ __('Step 02: Identificar e Análise de Stakeholders') }}</strong>
               </div>
               <div class="card-body">
+                <div class="row justify-content-md-center bs-wizard" style="border-bottom:0;">                        
+                  @foreach($stepsFrameworkProject as $stepFrameworkProject)
+                      <div class="col-xs-2 bs-wizard-step {{ $stepFrameworkProject->status }}">
+                        <div class="text-center bs-wizard-stepnum">{{ $stepFrameworkProject->StepsFramework->code }}</div>
+                        <div class="progress"><div class="progress-bar"></div></div>
+                        <a href="{{ route('framework.step2') }}" class="bs-wizard-dot"></a>
+                        <div class="bs-wizard-info text-center"></div>
+                      </div>
+                  @endforeach                  
+                </div>
+
               <p>Esta etapa tem como objetico identificar os diferentes stakeholders envolvidos no sistema AAL e analisar suas necessidades, expectativas e experiências em relação ao sistema.</p> 
               <p>Sua análise deve ter o foco na usabilidade e aceitabilidade, permitindo priorizar as demandas dos stakeholders e estabelecer uma comunicação efetiva ao longo do processo de desenvolvimento.</p>
               <p><strong>Saída:</strong> Lista de stakeholders relevantes e documentação das suas necessidades, expectativas e experiências relacionadas à usabilidade e aceitabilidade do sistema AAL.</p>
-                <table class="table table-responsive-sm table-striped">
+              <form method="POST" action="{{ route('framework.step2.confirmIdentifyAndAnalyzeStakeholders') }}">
+                    @csrf              
+              <table class="table table-responsive-sm table-striped">
                   <thead>
                     <tr>
                       <!-- <th>Author</th> -->
@@ -50,7 +63,8 @@
                   </tbody>
                 </table>
                 {{ $stakeholders->links() }}
-
+                <button class="btn btn-block btn-primary" type="submit">{{ __('Save and Advance to the next phase') }}</button>
+                </form>
               </div>
           </div>
         </div>
@@ -60,5 +74,7 @@
 
 @endsection
 @section('javascript')
+<link href="{{ asset('css/process-steps.css') }}" rel="stylesheet">
+
 @endsection
 

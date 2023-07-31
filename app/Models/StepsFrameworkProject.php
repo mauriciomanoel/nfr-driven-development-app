@@ -20,11 +20,11 @@ class StepsFrameworkProject extends Model
     //     return $this->belongsTo('App\Models\User', 'users_id')->withTrashed();
     // }
 
-    // /**
-    //  * Get the Status that owns the Projects.
-    //  */
-    // public function lifeSettings()
-    // {
-    //     return $this->belongsTo('App\Models\LifeSettings', 'life_settings_id');
-    // }
+    /**
+     * Get the Status that owns the Projects.
+     */
+    public function StepsFramework()
+    {
+        return $this->belongsTo('App\Models\StepsFramework', 'steps_framework_id');
+    }
 }

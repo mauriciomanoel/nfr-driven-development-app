@@ -22,6 +22,18 @@
                 <i class="fa fa-align-justify"></i><strong>{{ __('Step 04: Definir Requisitos não Funcionais') }}</strong>
               </div>
               <div class="card-body">
+
+              <div class="row justify-content-md-center bs-wizard" style="border-bottom:0;">                        
+                  @foreach($stepsFrameworkProject as $stepFrameworkProject)
+                      <div class="col-xs-2 bs-wizard-step {{ $stepFrameworkProject->status }}">
+                        <div class="text-center bs-wizard-stepnum">{{ $stepFrameworkProject->StepsFramework->code }}</div>
+                        <div class="progress"><div class="progress-bar"></div></div>
+                        <a href="{{ route('framework.step2') }}" class="bs-wizard-dot"></a>
+                        <div class="bs-wizard-info text-center"></div>
+                      </div>
+                  @endforeach                  
+              </div>
+
               <p>Com base nos requisitos legais e normativos identificados, bem como nas informações coletadas sobre a experiência dos stakeholders, os requisitos não funcionais relacionados à usabilidade e aceitabilidade do sistema AAL são definidos</p>
               <p><strong>Saída:</strong>Documentação dos requisitos não funcionais específicos relacionados à usabilidade e aceitabilidade do sistema AAL.</p>
                 </br>
@@ -82,9 +94,7 @@
                     </tbody>
                   </table>
 
-
-                <button type="submit" class="btn btn-block btn-primary">Confirm the NFR</button>
-
+                <button class="btn btn-block btn-primary" type="submit">{{ __('Save and Advance to the next phase') }}</button>  
 
               </form>
                             
@@ -97,5 +107,6 @@
 
 @endsection
 @section('javascript')
+<link href="{{ asset('css/process-steps.css') }}" rel="stylesheet">
 @endsection
 

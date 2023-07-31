@@ -23,6 +23,17 @@
               </div>
               <div class="card-body">
 
+              <div class="row justify-content-md-center bs-wizard" style="border-bottom:0;">                        
+                  @foreach($stepsFrameworkProject as $stepFrameworkProject)
+                      <div class="col-xs-2 bs-wizard-step {{ $stepFrameworkProject->status }}">
+                        <div class="text-center bs-wizard-stepnum">{{ $stepFrameworkProject->StepsFramework->code }}</div>
+                        <div class="progress"><div class="progress-bar"></div></div>
+                        <a href="{{ route('framework.step2') }}" class="bs-wizard-dot"></a>
+                        <div class="bs-wizard-info text-center"></div>
+                      </div>
+                  @endforeach                  
+              </div>
+
               <p>Esta etapa tem como objetivo coletar informações sobre a experiência dos stakeholders em relação à usabilidade e aceitabilidade de sistemas AAL.</p> 
               
               <p>Para chegar ao objetivo, pode ser utilizado entrevistas, pesquisas, observações, storytelling ou outras técnicas de coleta de dados.</p> 
@@ -33,6 +44,8 @@
               <h2>Sugestões de técnicas para coleta de dados:</h2>
               <br>
 
+              <form method="POST" action="{{ route('framework.step3.confirmDataCollectionTechniques') }}">
+                    @csrf
               <div class="card-group">
                 <div class="col-sm-3">
       
@@ -69,7 +82,6 @@
                   </div>
                 </div>     
               </div>
-
               <div id="interviews-details" class="collapse1" style="display: none;">
 
                 <ul>
@@ -81,7 +93,6 @@
 
                 </ul>
               </div>
-
               <div id="researches-details" class="collapse1" style="display: none;">
                 <ul>                  
                 <li><p>Projete uma pesquisa online com perguntas de escolha múltipla, escalas de classificação e questões abertas..</p></li>
@@ -90,7 +101,6 @@
                   <li><p>Divulgue a pesquisa em locais frequentados por idosos, como centros comunitários, residências para a terceira idade e organizações voltadas para a terceira idade.</p></li>
                 </ul>
               </div>
-
               <div id="observations-details" class="collapse1" style="display: none;">
                 <ul>                  
                 <li><p>Realize observações no ambiente natural dos idosos, como em suas casas ou em ambientes onde eles interagem com o sistema AAL.</p></li>
@@ -99,7 +109,6 @@
                 <li><p>Seja respeitoso e discreto durante as observações, garantindo a privacidade dos idosos e obtendo seu consentimento informado.</p></li>
                 </ul>
               </div>
-
               <div id="storytelling-details" class="collapse1" style="display: none;">
                   <ul>                  
                     <li><p>Realize observações no ambiente natural dos idosos, como em suas casas ou em ambientes onde eles vão interagir com o sistema AAL.</p></li>
@@ -124,7 +133,8 @@
                   </ul>
               </div>
 
-
+              <button class="btn btn-block btn-primary" type="submit">{{ __('Save and Advance to the next phase') }}</button>
+              </form>
           </div>
         </div>
       </div>
@@ -133,11 +143,9 @@
 
 @endsection
 @section('javascript')
-<link href="{{ asset('css/bootstrap-3.1.0.css') }}" rel="stylesheet">
 
 <script type="text/javascript">
    
-
   $(document).ready(function(){
     $('.collapse1').hide();
     $('#btn-interviews').click(function(){     
@@ -164,7 +172,7 @@
   })
 </script>
 
-
+<link href="{{ asset('css/process-steps.css') }}" rel="stylesheet">
 
 @endsection
 

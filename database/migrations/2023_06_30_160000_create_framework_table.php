@@ -14,6 +14,7 @@ return new class extends Migration
         
         Schema::create('steps_framework', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->text('code');
             $table->text('name');
             $table->text('description');
             $table->text('output');
@@ -24,7 +25,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('steps_framework_id');
             $table->unsignedBigInteger('project_id');
-            $table->boolean('status'); 
+            $table->text('status'); 
             $table->timestamps();
 
             $table->foreign('steps_framework_id')

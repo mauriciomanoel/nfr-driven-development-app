@@ -63,8 +63,14 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/step5', [FrameworkController::class, 'step5'])->name('framework.step5');
             Route::get('/stakeholders/{id}', [FrameworkController::class, 'stakeholders'])->name('framework.stakeholders');
             Route::get('/stakeholders/experiencies/{id}', [FrameworkController::class, 'stakeholdersExperiencies'])->name('framework.stakeholders.experiencies');
-            Route::post('/confirmNonFunctionalRequirements', [FrameworkController::class, 'confirmNonFunctionalRequirements'])->name('framework.confirmNonFunctionalRequirements');
+            Route::post('/confirmNonFunctionalRequirements', [FrameworkController::class, 'step4ConfirmNonFunctionalRequirements'])->name('framework.confirmNonFunctionalRequirements');
             Route::post('/step1/confirmLegalRequirement', [FrameworkController::class, 'step1ConfirmLegalRequirement'])->name('framework.step1.confirmLegalRequirement');
+            Route::post('/step2/confirmIdentifyAndAnalyzeStakeholders', [FrameworkController::class, 'step2ConfirmIdentifyAndAnalyzeStakeholders'])->name('framework.step2.confirmIdentifyAndAnalyzeStakeholders');
+            Route::post('/step3/confirmDataCollectionTechniques', [FrameworkController::class, 'step3SelectDataCollectionTechniques'])->name('framework.step3.confirmDataCollectionTechniques');
+            Route::post('/step3/step3CollectStakeholderExperience', [FrameworkController::class, 'step3CollectStakeholderExperience'])->name('framework.step3.confirmCollectStakeholderExperience');
+
+            
+
             Route::get('/downloadAllSIGs', [FrameworkController::class, 'downloadAllSIG'])->name('framework.download.all.sig');
 
         });

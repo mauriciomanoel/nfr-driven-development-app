@@ -23,11 +23,23 @@
               </div>
               <div class="card-body">
 
+              <div class="row justify-content-md-center bs-wizard" style="border-bottom:0;">                        
+                  @foreach($stepsFrameworkProject as $stepFrameworkProject)
+                      <div class="col-xs-2 bs-wizard-step {{ $stepFrameworkProject->status }}">
+                        <div class="text-center bs-wizard-stepnum">{{ $stepFrameworkProject->StepsFramework->code }}</div>
+                        <div class="progress"><div class="progress-bar"></div></div>
+                        <a href="{{ route('framework.step2') }}" class="bs-wizard-dot"></a>
+                        <div class="bs-wizard-info text-center"></div>
+                      </div>
+                  @endforeach                  
+              </div>
+
                 <p>Esta etapa tem como descrever o que foi coletado de informações sobre a experiência dos stakeholders em relação à usabilidade e aceitabilidade de sistemas AAL.</p> 
                               
                 <p><strong>Saída:</strong> Dados e insights obtidos a partir das atividades de coleta de experiência dos stakeholders.</p>
               
-              
+                <form method="POST" action="{{ route('framework.step3.confirmCollectStakeholderExperience') }}">
+                    @csrf
                 <table class="table table-responsive-sm table-striped">
                   <thead>
                     <tr>
@@ -53,10 +65,9 @@
                   </tbody>
                 </table>
                 {{ $stakeholderExperiencies->links() }}
-
+                <button class="btn btn-block btn-primary" type="submit">{{ __('Save and Advance to the next phase') }}</button>
+                </form>
               </div>
-
-
           </div>
         </div>
       </div>
@@ -65,37 +76,8 @@
 
 @endsection
 @section('javascript')
-<link href="{{ asset('css/bootstrap-3.1.0.css') }}" rel="stylesheet">
 
-<script type="text/javascript">
-   
-
-  $(document).ready(function(){
-    $('.collapse1').hide();
-    $('#btn-interviews').click(function(){     
-       $('.collapse1').hide();
-      $('#interviews-details').show();
-    });
-
-    $('#btn-researches').click(function(){     
-       $('.collapse1').hide();
-      $('#researches-details').show();
-    });
-
-    $('#btn-observations').click(function(){     
-       $('.collapse1').hide();
-      $('#observations-details').show();
-    });
-
-    $('#btn-storytelling').click(function(){     
-       $('.collapse1').hide();
-      $('#storytelling-details').show();
-    });
-
-  })
-</script>
-
-
+<link href="{{ asset('css/process-steps.css') }}" rel="stylesheet">
 
 @endsection
 

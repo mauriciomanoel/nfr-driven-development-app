@@ -23,44 +23,15 @@
                       <i class="fa fa-align-justify"></i>{{ __('NFR-driven developlment Framework AAL') }}
                     </div>
                     <div class="card-body">
-                        <div class="row justify-content-md-center bs-wizard" style="border-bottom:0;">
-                        
-                            <div class="col-xs-2 bs-wizard-step disabled"> 
-                              <div class="text-center bs-wizard-stepnum">Step 1</div>
-                              <div class="progress"><div class="progress-bar"></div></div>
-                              <a href="{{ route('framework.step1') }}" class="bs-wizard-dot"></a>
-                              <div class="bs-wizard-info text-center">Levantar Requisitos Legais</div>
-                            </div>
-                            
-                            <div class="col-xs-2 bs-wizard-step disabled"><!-- complete -->
-                              <div class="text-center bs-wizard-stepnum">Step 2</div>
-                              <div class="progress"><div class="progress-bar"></div></div>
-                              <a href="{{ route('framework.step2') }}" class="bs-wizard-dot"></a>
-                              <div class="bs-wizard-info text-center">Identificar e Análise de Stakeholders</div>
-                            </div>
-                            
-                            <div class="col-xs-2 bs-wizard-step disabled"><!-- complete -->
-                              <div class="text-center bs-wizard-stepnum">Step 3</div>
-                              <div class="progress"><div class="progress-bar"></div></div>
-                              <a href="{{ route('framework.step3') }}" class="bs-wizard-dot"></a>
-                              <div class="bs-wizard-info text-center">Coletar da Experiência dos Stakeholders</div>
-                            </div>
-                            
-                            <div class="col-xs-2 bs-wizard-step disabled"><!-- active -->
-                              <div class="text-center bs-wizard-stepnum">Step 4</div>
-                              <div class="progress"><div class="progress-bar"></div></div>
-                              <a href="{{ route('framework.step4') }}" class="bs-wizard-dot"></a>
-                              <div class="bs-wizard-info text-center"> Definir de Requisitos Não Funcionais</div>
-                            </div>
-                            
-                            <div class="col-xs-2 bs-wizard-step disabled"><!-- active -->
-                              <div class="text-center bs-wizard-stepnum">Step 5</div>
-                              <div class="progress"><div class="progress-bar"></div></div>
-                              <a href="{{ route('framework.step5') }}" class="bs-wizard-dot"></a>
-                              <div class="bs-wizard-info text-center"> Espeficicar dos Requisitos Não Funcionais</div>
-                            </div>
-
-                  
+                        <div class="row justify-content-md-center bs-wizard" style="border-bottom:0;">                        
+                          @foreach($stepsFrameworkProject as $stepFrameworkProject)
+                              <div class="col-xs-2 bs-wizard-step {{ $stepFrameworkProject->status }}">
+                                <div class="text-center bs-wizard-stepnum">{{ $stepFrameworkProject->StepsFramework->code }}</div>
+                                <div class="progress"><div class="progress-bar"></div></div>
+                                <a href="{{ route('framework.step2') }}" class="bs-wizard-dot"></a>
+                                <div class="bs-wizard-info text-center">{{ $stepFrameworkProject->StepsFramework->name }}</div>
+                              </div>
+                          @endforeach                  
                         </div>
                     </div>
                 </div>

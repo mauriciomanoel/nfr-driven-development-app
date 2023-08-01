@@ -8,19 +8,19 @@
               <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                      <i class="fa fa-align-justify"></i><strong>Stakeholder:</strong> {{ $stakeholder->name }}</div>
+                      <i class="fa fa-align-justify"></i><strong>Stakeholder:</strong> {{ $stakeholder->stakeholder->name }}</div>
                     <div class="card-body">
                         <h5><strong>Description:</strong></h5> 
-                        <p>{{ $stakeholder->analysis[0]->description }}</p>
+                        <p>{{ $stakeholder->description }}</p>
                         <h5><strong>Identified Needs:</strong></h5> 
-                        <p>{!! html_entity_decode($stakeholder->analysis[0]->identified_needs) !!}</p>
+                        <p>{!! html_entity_decode($stakeholder->identified_needs) !!}</p>
                         <h5><strong>Expectations:</strong></h5> 
-                        <p>{!! html_entity_decode($stakeholder->analysis[0]->expectations) !!}</p>
+                        <p>{!! html_entity_decode($stakeholder->expectations) !!}</p>
                         <h5><strong>Experiences:</strong></h5> 
-                        <p>{!! html_entity_decode($stakeholder->analysis[0]->experiences) !!}</p>
+                        <p>{!! html_entity_decode($stakeholder->experiences) !!}</p>
                                                 
                         <h5><strong>Last Update:</strong></h5> 
-                        <p>{{ $stakeholder->analysis[0]->created_at }}</p>                     
+                        <p>{{ $stakeholder->created_at }}</p>                     
                         <a href="{{ url()->previous() }}" class="btn btn-block btn-primary">{{ __('Return') }}</a>
                     </div>
                 </div>

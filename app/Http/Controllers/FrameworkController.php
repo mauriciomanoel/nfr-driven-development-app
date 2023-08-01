@@ -13,6 +13,8 @@ use App\Models\StepsFrameworkProject;
 use App\Models\NonFunctionalRequirementsForSpecification;
 use App\Models\Steps1Framework;
 use App\Models\Steps2Framework;
+use App\Models\Steps31Framework;
+use App\Models\Steps32Framework;
 use App\Models\DataCollectionTechniques;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
@@ -145,7 +147,7 @@ class FrameworkController extends Controller
      */
     public function showAnalyzeStakeholder($id)
     {
-        $stakeholder = Steps2Framework::with('stakeholders')->find($id);
+        $stakeholder = Steps2Framework::with('stakeholder')->find($id);
         return view('dashboard.framework.framework-step02_2-stakeholders-show', ['stakeholder' => $stakeholder]);
     }
 
@@ -209,10 +211,73 @@ class FrameworkController extends Controller
         $project = Session::get('currentProject');
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
         $isEnableNextStep = $this::isEnableNextStep(5);
-        $stakeholderExperiencies = StakeholderExperiencies::with('stakeholders')->paginate( 20 );
-        return view('dashboard.framework.framework-step03_2', ['stakeholderExperiencies' => $stakeholderExperiencies, 'stepsFrameworkProject' => $stepsFrameworkProject, "isEnableNextStep" => $isEnableNextStep]);
+        
+        $stakeholders = Steps2Framework::with("stakeholder")->get();
+        return view('dashboard.framework.framework-step03_2', ['stakeholders' => $stakeholders, 'stepsFrameworkProject' => $stepsFrameworkProject, "isEnableNextStep" => $isEnableNextStep]);
     }
-         /**
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function step3ViewStakeholderExperience($id)
+    {
+        
+        $stakeholderExperience = StakeholderExperiencies::with('stakeholders')->find($id);
+        return view('dashboard.framework.stakeholders-experience-show', ['stakeholderExperience' => $stakeholderExperience]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function step3EditStakeholderExperience($id)
+    {
+        
+        $stakeholderExperience = StakeholderExperiencies::with('stakeholders')->find($id);
+        return view('dashboard.framework.framework-step03-experience-edit', ['stakeholderExperience' => $stakeholderExperience]);
+    }
+
+
+    public function step3ConfirmStakeholderExperience(Request $request, $id)
+    {
+
+        $project = Session::get('currentProject');
+        $currentStep = StepsFrameworkProject::where("project_id", "=", $project->id)->where("steps_framework_id", "=", 5)->first();
+
+        $validatedData = $request->validate([
+            'factors_that_impact_acceptability'    => 'required',
+            'factors_that_impact_usability'    => 'required',
+            'proposed_improvements'    => 'required',
+            'recommendations'    => 'required',
+        ]);
+
+        $factorsThatImpactAcceptability = $request["factors_that_impact_acceptability"];
+        $factorsThatImpactUsability = $request["factors_that_impact_usability"];
+        $proposedImprovements = $request["proposed_improvements"];
+        $recommendations = $request["recommendations"];
+        $description = $request["description"];
+
+        $steps32Framework = new Steps32Framework();
+        $steps32Framework->steps_framework_project_id = $currentStep->id;
+        $steps32Framework->description = $description;
+        $steps32Framework->stakeholder_id = $id;
+        $steps32Framework->factors_impact_acceptability = $factorsThatImpactAcceptability;
+        $steps32Framework->factors_impact_usability = $factorsThatImpactUsability;
+        $steps32Framework->proposed_improvements = $proposedImprovements;
+        $steps32Framework->recommendations = $recommendations;
+        $steps32Framework->save();
+
+        // $this::setCompleteStatusStep(5);
+        return redirect()->action([FrameworkController::class, 'step3_2']);
+    }
+
+    
+    
+         
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

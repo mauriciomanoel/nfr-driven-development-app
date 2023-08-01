@@ -52,19 +52,22 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($stakeholderExperiencies as $stakeholderExperience)
+                    @foreach($stakeholders as $stakeholder)
                       <tr>
-                        <td><strong>{{ $stakeholderExperience->stakeholders->name }}</strong></td>
-                        <td>{{ $stakeholderExperience->description }}</td>
-                        <td>{{ $stakeholderExperience->updated_at }}</td>                        
+                        <td><strong>{{ $stakeholder->stakeholder->name }}</strong></td>
+                        <td>{{ $stakeholder->stakeholder->description }}</td>
+                        <td>{{ $stakeholder->updated_at }}</td>                        
                         <td>
-                          <a href="{{ url('framework/stakeholders/experiencies/' . $stakeholderExperience->id) }}" class="btn btn-block btn-primary">Detail</a>
-                        </td>                        
+                        <a href="{{ url('framework/step3/viewStakeholderExperience/' . $stakeholder->id) }}" class="btn btn-block btn-primary">Detail</a>
+                        </td>
+                        <td>
+                          <a href="{{ url('framework/step3/editStakeholderExperience/' . $stakeholder->id) }}" class="btn btn-block btn-primary">Analyze</a>
+                        </td>
                       </tr>
                     @endforeach
                   </tbody>
                 </table>
-                {{ $stakeholderExperiencies->links() }}
+                
                 <button class="btn btn-block {{ $isEnableNextStep ? "btn-primary" : "btn-secondary" }}" type="submit" {{ $isEnableNextStep ? "" : "disabled" }}>{{ __('Save and Advance to the next phase') }}</button>
                 @if (!$isEnableNextStep)
                     <div class="disabled-explanation text-center">

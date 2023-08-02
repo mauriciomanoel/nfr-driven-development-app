@@ -29,7 +29,11 @@ class LegalRequirementsSeeder extends Seeder
             'name' => "General Data Protection Regulation (RGPD)",
             'description' => "O sistema AAL deve cumprir as disposições do RGPD em relação à coleta, processamento e armazenamento de dados pessoais. Isso inclui obter o consentimento adequado dos usuários para o uso de seus dados, garantir a segurança e a privacidade desses dados, e possibilitar que os usuários acessem, retifiquem e excluam suas informações pessoais.",
             'legal_references' => "<p>Artigo 6(1)(a) do RGPD - Base legal para o processamento de dados pessoais com o consentimento do titular dos dados.</p><p>Artigo 25 do RGPD - Princípio da proteção de dados desde a concepção e por padrão.</p>",
-            'recommendations' => "<p>Implementar um mecanismo de obtenção de consentimento explícito dos usuários para o processamento de seus dados pessoais.</p><p>Adotar medidas técnicas e organizativas adequadas para garantir a segurança e privacidade dos dados pessoais.</p><p>Disponibilizar uma interface para que os usuários possam acessar, retificar e excluir suas informações pessoais.</p>",
+            'recommendations' => "<p>Implementar um mecanismo de obtenção de consentimento explícito dos usuários para o processamento de seus dados pessoais.</p><p>Adotar medidas técnicas e organizativas adequadas para garantir a segurança e privacidade dos dados pessoais.</p><p>Disponibilizar uma interface para que os usuários possam acessar, retificar e excluir suas informações pessoais.</p>
+            <p>Coletar apenas os dados pessoais necessários para o funcionamento do sistema AAL. Evite coletar informações excessivas ou não relevantes para a finalidade do sistema</p>
+            <p> Implementar medidas de segurança robustas para proteger os dados pessoais contra acesso não autorizado, perda ou divulgação não autorizada. Utilizar técnicas de criptografia e protocolos de segurança adequados.</p>
+            <p>Caso o sistema AAL compartilhe dados com terceiros, assegure-se de que exista uma base legal válida para o compartilhamento e que seja feita a divulgação apropriada aos usuários./p>
+            <p>Forneçer informações claras e compreensíveis aos usuários sobre como seus dados pessoais serão coletados, processados, usados e compartilhados no contexto do sistema AAL.</p>",
             'content' => "",
             'life_settings_id' => $lifeSettings->id,
             'users_id' => $user->id,

@@ -62,10 +62,10 @@
                           <a href="{{route('framework.download.sig',$nonFunctionalRequirement->id)}}" class="btn btn-block btn-primary"> SIG</a>
                         </td>
                         <td>
-                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">Detail</a>
+                          <a href="{{route('framework.step5.viewEspecification',$nonFunctionalRequirement->id)}}" class="btn btn-block btn-primary">View</a>
                         </td>
                         <td>
-                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">Edit</a>
+                          <a href="{{route('framework.step5.editEspecification',$nonFunctionalRequirement->id)}}" class="btn btn-block btn-primary">Edit</a>
                         </td>
                         
                       </tr>

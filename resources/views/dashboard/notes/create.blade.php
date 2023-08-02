@@ -42,7 +42,7 @@
                             </div>
  
                             <button class="btn btn-block btn-success" type="submit">{{ __('Add') }}</button>
-                            <a href="{{ route('notes.index') }}" class="btn btn-block btn-primary">{{ __('Return') }}</a> 
+                            <a href="{{ route('notes.index') }}" class="btn btn-block btn-primary">{{ __('Go Back') }}</a> 
                         </form>
                     </div>
                 </div>

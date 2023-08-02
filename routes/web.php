@@ -73,10 +73,13 @@ Route::group(['middleware' => 'auth'], function () {
 
             Route::get('/step4', [FrameworkController::class, 'step4'])->name('framework.step4');
             Route::get('/step5', [FrameworkController::class, 'step5'])->name('framework.step5');
+            Route::get('/step5/viewEspecification/{id}', [FrameworkController::class, 'step5ViewEspecification'])->name('framework.step5.viewEspecification');
+            Route::get('/step5/editEspecification/{id}', [FrameworkController::class, 'step5EditEspecification'])->name('framework.step5.editEspecification');
+            Route::post('/step5/confirmEspecification/{id}', [FrameworkController::class, 'step5ConfirmEspecification'])->name('framework.step5.confirmEspecification');
+
             Route::get('/stakeholders/experiencies/{id}', [FrameworkController::class, 'stakeholdersExperiencies'])->name('framework.stakeholders.experiencies');
             Route::post('/confirmNonFunctionalRequirements', [FrameworkController::class, 'step4ConfirmNonFunctionalRequirements'])->name('framework.confirmNonFunctionalRequirements');
 
-            
             Route::get('/downloadAllSIGs', [FrameworkController::class, 'downloadAllSIG'])->name('framework.download.all.sig');
             Route::get('/downloadSIG/{id}', [FrameworkController::class, 'downloadSIG'])->name('framework.download.sig');
 

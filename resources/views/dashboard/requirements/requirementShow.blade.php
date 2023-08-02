@@ -24,7 +24,7 @@
                         <p>{{ $requirement->source }}</p>
                         <h5>Date:</h5> 
                         <p>{{ $requirement->created_at }}</p>                     
-                        <a href="{{ route('requirements.index') }}" class="btn btn-block btn-primary">{{ __('Return') }}</a>
+                        <a href="{{ route('requirements.index') }}" class="btn btn-block btn-primary">{{ __('Go Back') }}</a>
                     </div>
                 </div>
               </div>

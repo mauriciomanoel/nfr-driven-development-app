@@ -20,7 +20,7 @@
                         <p>{{ $project->lifeSettings->name }}</p>
                         <h5>Date:</h5> 
                         <p>{{ $project->created_at }}</p>                     
-                        <a href="{{ route('notes.index') }}" class="btn btn-block btn-primary">{{ __('Return') }}</a>
+                        <a href="{{ route('notes.index') }}" class="btn btn-block btn-primary">{{ __('Go Back') }}</a>
                     </div>
                 </div>
               </div>

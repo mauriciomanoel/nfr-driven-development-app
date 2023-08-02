@@ -11,11 +11,8 @@ class Steps32Framework extends Model
 
     protected $table = 'steps3_2_framework';
 
-    /**
-     * 
-     */
-    // public function dataCollectionTechniques()
-    // {
-    //     return $this->belongsTo('App\Models\DataCollectionTechniques', 'data_collection_technique_id');
-    // }
+    public function stakeholder()
+    {
+        return $this->belongsTo('App\Models\Stakeholders', 'stakeholder_id');
+    }
 }

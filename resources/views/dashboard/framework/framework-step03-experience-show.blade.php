@@ -8,7 +8,7 @@
               <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                      <i class="fa fa-align-justify"></i><strong>Stakeholder Experience:</strong> {{ $stakeholderExperience->stakeholders->name }}</div>
+                      <i class="fa fa-align-justify"></i><strong>Stakeholder Experience:</strong> {{ $stakeholderExperience->stakeholder->name }}</div>
                     <div class="card-body">
                         <h5><strong>Description:</strong></h5> 
                         <p>{{ $stakeholderExperience->description }}</p>
@@ -23,7 +23,7 @@
                                                 
                         <h5><strong>Last Update:</strong></h5> 
                         <p>{{ $stakeholderExperience->updated_at }}</p>                     
-                        <a href="{{ url()->previous() }}" class="btn btn-block btn-primary">{{ __('Return') }}</a>
+                        <a href="{{ url()->previous() }}" class="btn btn-block btn-primary">{{ __('Go Back') }}</a>
                     </div>
                 </div>
               </div>

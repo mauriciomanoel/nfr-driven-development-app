@@ -47,16 +47,20 @@
                           </table>
                         </p>
                         <h5><strong>Image:</strong></h5>
-                        <p>
-                          <a href="{{route('download.sig',$nonFunctionalRequirement->id)}}" download=""><strong>Click Here</strong></a> to download Softgoal Interdependency Graph (SIG)
-                          and Open in <a href="https://www.cin.ufpe.br/~jhcp/dsm3goals/nfr.html#">DSM3 - NFR</a>
-                        </p>                          
-                        <p>  
-                          <img src="{{ $nonFunctionalRequirement->image }}" width="60%" alt="Softgoal Interdependency Graph (SIG)" />
-                        </p>
+                        @if(!empty($nonFunctionalRequirement->image))
+                          <p>
+                            <a href="{{route('download.sig',$nonFunctionalRequirement->id)}}" download=""><strong>Click Here</strong></a> to download Softgoal Interdependency Graph (SIG)
+                            and Open in <a href="https://www.cin.ufpe.br/~jhcp/dsm3goals/nfr.html#">DSM3 - NFR</a>
+                          </p>
+                          <p>  
+                            <img src="{{ $nonFunctionalRequirement->image }}" width="60%" alt="Softgoal Interdependency Graph (SIG)" />
+                          </p>
+                          @else
+                           <p>NFR without image or SIG file</p>
+                        @endif
                         <h5><strong>Last Update:</strong></h5> 
                         <p>{{ $nonFunctionalRequirement->created_at }}</p>
-                        <a href="{{ url()->previous() }}" class="btn btn-block btn-primary">{{ __('Return') }}</a>
+                        <a href="{{ url()->previous() }}" class="btn btn-block btn-primary">{{ __('Go Back') }}</a>
                     </div>
                 </div>
               </div>

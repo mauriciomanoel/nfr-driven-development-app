@@ -8,7 +8,7 @@
               <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                      <i class="fa fa-align-justify"></i><strong>Stakeholder Experience:</strong> {{ $stakeholderExperience->stakeholders->name }}</div>
+                      <i class="fa fa-align-justify"></i><strong>Stakeholder Experience:</strong> {{ $stakeholderExperience->stakeholder->name }}</div>
                     <div class="card-body">
                       <form method="POST" action="/framework/step3/confirmStakeholderExperience/{{ $stakeholderExperience->id }}">
                         @csrf
@@ -28,7 +28,7 @@
                           <div class="form-group">
                             <div class="col">
                                 <label><h5><strong>Factors That Impact Acceptability:</strong></h5> </label>
-                                <textarea class="form-control myedittextarea" name="factors_that_impact_acceptability">{{ $stakeholderExperience->factors_that_impact_acceptability }}</textarea>
+                                <textarea class="form-control myedittextarea" name="factors_that_impact_acceptability">{{ $stakeholderExperience->factors_impact_acceptability }}</textarea>
                                 @error('factors_that_impact_acceptability')
                                   <div class="alert alert-danger">{{ $message }}
                                     <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
@@ -40,7 +40,7 @@
                           <div class="form-group">
                             <div class="col">
                                 <label><h5><strong>Factors That Impact Usability:</strong></h5> </label>
-                                <textarea class="form-control myedittextarea" name="factors_that_impact_usability">{{ $stakeholderExperience->factors_that_impact_usability }}</textarea>
+                                <textarea class="form-control myedittextarea" name="factors_that_impact_usability">{{ $stakeholderExperience->factors_impact_usability }}</textarea>
                                 @error('factors_that_impact_usability')
                                   <div class="alert alert-danger">{{ $message }}
                                     <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>

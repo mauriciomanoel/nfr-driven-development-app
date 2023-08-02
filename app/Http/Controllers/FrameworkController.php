@@ -16,6 +16,7 @@ use App\Models\Steps2Framework;
 use App\Models\Steps31Framework;
 use App\Models\Steps32Framework;
 use App\Models\Steps5Framework;
+use App\Models\Projects;
 use App\Models\DataCollectionTechniques;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
@@ -43,7 +44,7 @@ class FrameworkController extends Controller
      */
     public function index()
     {
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
         return view('dashboard.framework.index', ['stepsFrameworkProject' => $stepsFrameworkProject]);
     }
@@ -56,7 +57,7 @@ class FrameworkController extends Controller
     public function step1()
     {
         
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
         $this::setActiveStatusStep(1);
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
         $legalRequirements = LegalRequirements::with('user')->paginate( 20 );
@@ -71,7 +72,7 @@ class FrameworkController extends Controller
     public function step2_1()
     {
         
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
         $isEnableNextStep = $this::isEnableNextStep(2);
         $stakeholders = Stakeholders::with('analysis')->paginate( 20 );
@@ -86,7 +87,7 @@ class FrameworkController extends Controller
     public function step2_2()
     {
         
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
 
         $isEnableNextStep = $this::isEnableNextStep(3);
@@ -105,7 +106,7 @@ class FrameworkController extends Controller
     {
 
         $stakeholders = $request["stakeholders"];
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
         $currentStep = StepsFrameworkProject::where("project_id", "=", $project->id)->where("steps_framework_id", "=", 1)->first();
 
         if (!empty($stakeholders)) {
@@ -173,7 +174,7 @@ class FrameworkController extends Controller
      */
     public function step3()
     {
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
         $isEnableNextStep = $this::isEnableNextStep(4);
         $isEnableNextStep = true;
@@ -194,9 +195,10 @@ class FrameworkController extends Controller
             'dataCollectionTechnique'    => 'required',
         ]);
 
-        $project = Session::get('currentProject');
+        $dataCollectionTechniques = DataCollectionTechniques::where("name", "like", $request["dataCollectionTechnique"])->first();
+        $project = $this::getCurrentProject();
         $steps31Framework = new Steps31Framework();
-        $steps31Framework->data_collection_technique_id = "";
+        $steps31Framework->data_collection_technique_id = $dataCollectionTechniques->id;
         $steps31Framework->project_id = $project->id;
         $this::setCompleteStatusStep(4);
         return redirect()->action([FrameworkController::class, 'step3_2']);
@@ -209,7 +211,7 @@ class FrameworkController extends Controller
      */
     public function step3_2()
     {
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
         $isEnableNextStep = $this::isEnableNextStep(5);
         
@@ -225,7 +227,8 @@ class FrameworkController extends Controller
     public function step3ViewStakeholderExperience($id)
     {
         
-        $stakeholderExperience = StakeholderExperiencies::with('stakeholders')->find($id);
+        $stakeholderExperience = Steps32Framework::with('stakeholder')->find($id);
+        // var_dump($stakeholderExperience->stakeholder->name); exit;
         return view('dashboard.framework.stakeholders-experience-show', ['stakeholderExperience' => $stakeholderExperience]);
     }
 
@@ -237,7 +240,7 @@ class FrameworkController extends Controller
     public function step3EditStakeholderExperience($id)
     {
         
-        $stakeholderExperience = StakeholderExperiencies::with('stakeholders')->find($id);
+        $stakeholderExperience = Steps32Framework::with('stakeholder')->find($id);
         return view('dashboard.framework.framework-step03-experience-edit', ['stakeholderExperience' => $stakeholderExperience]);
     }
 
@@ -245,7 +248,7 @@ class FrameworkController extends Controller
     public function step3ConfirmStakeholderExperience(Request $request, $id)
     {
 
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
         $currentStep = StepsFrameworkProject::where("project_id", "=", $project->id)->where("steps_framework_id", "=", 5)->first();
 
         $validatedData = $request->validate([
@@ -255,20 +258,14 @@ class FrameworkController extends Controller
             'recommendations'    => 'required',
         ]);
 
-        $factorsThatImpactAcceptability = $request["factors_that_impact_acceptability"];
-        $factorsThatImpactUsability = $request["factors_that_impact_usability"];
-        $proposedImprovements = $request["proposed_improvements"];
-        $recommendations = $request["recommendations"];
-        $description = $request["description"];
-
         $steps32Framework = new Steps32Framework();
         $steps32Framework->steps_framework_project_id = $currentStep->id;
-        $steps32Framework->description = $description;
+        $steps32Framework->description = html_entity_decode($request["description"]);
         $steps32Framework->stakeholder_id = $id;
-        $steps32Framework->factors_impact_acceptability = $factorsThatImpactAcceptability;
-        $steps32Framework->factors_impact_usability = $factorsThatImpactUsability;
-        $steps32Framework->proposed_improvements = $proposedImprovements;
-        $steps32Framework->recommendations = $recommendations;
+        $steps32Framework->factors_impact_acceptability = html_entity_decode($request["factors_that_impact_acceptability"]);
+        $steps32Framework->factors_impact_usability = html_entity_decode($request["factors_that_impact_usability"]);
+        $steps32Framework->proposed_improvements = html_entity_decode($request["proposed_improvements"]);
+        $steps32Framework->recommendations = html_entity_decode($request["recommendations"]);
         $steps32Framework->save();
 
         // $this::setCompleteStatusStep(5);
@@ -286,7 +283,7 @@ class FrameworkController extends Controller
     public function step4()
     {
         
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
 
         $valueTreinamento = storage_path() . "/python/treinamento.txt";
@@ -320,7 +317,7 @@ class FrameworkController extends Controller
     public function step5()
     {
 
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
 
         $nonFunctionalRequirementsForSpecification = Steps5Framework::with('nonFunctionalRequirement')->where("project_id", "=", $project->id)->get();
@@ -351,7 +348,7 @@ class FrameworkController extends Controller
         $isMoveNextStep = false;
 
         $legalRequirements = $request["legalRequirements"];
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
         $currentStep = StepsFrameworkProject::where("project_id", "=", $project->id)->where("steps_framework_id", "=", 1)->first();
 
         if (!empty($legalRequirements)) {
@@ -387,7 +384,7 @@ class FrameworkController extends Controller
         $this::setCompleteStatusStep(5);
         return redirect()->action([FrameworkController::class, 'step4']);
     }
-
+    
     /**
      * Display a listing of the resource.
      *
@@ -400,7 +397,7 @@ class FrameworkController extends Controller
         $allNonFunctionalRequirements = $request["nonFunctionalRequirements"];
 
         NonFunctionalRequirementsForSpecification::where('project_id', '=', '1')->delete();
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
 
         if (!empty($recommendationsNonFunctionalRequirements)) {
             $isMoveNextStep = true;
@@ -445,6 +442,54 @@ class FrameworkController extends Controller
         
         $this::setCompleteStatusStep(6);
         return redirect()->action([FrameworkController::class, 'step5']);
+    }
+
+        /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function step5ViewEspecification($id)
+    {
+        // $this::setCompleteStatusStep(5);
+        $nonFunctionalRequirement = Steps5Framework::with('nonFunctionalRequirement')->find($id);
+        return view('dashboard.framework.framework-step05-especification-show', ['nonFunctionalRequirement' => $nonFunctionalRequirement]);
+    }
+
+    public function step5EditEspecification($id)
+    {        
+        $nonFunctionalRequirement = Steps5Framework::with('nonFunctionalRequirement')->find($id);
+        return view('dashboard.framework.framework-step05-especification-edit', ['nonFunctionalRequirement' => $nonFunctionalRequirement]);
+    }
+
+    public function step5ConfirmEspecification(Request $request, $id)
+    {
+       
+        $request->validate([
+            'fileImage' => 'required|mimes:png|max:2048',
+            'fileSIG' => 'required|mimes:txt,json|max:2048',
+            'description' => 'required|max:2048',
+            'acceptance_criteria' => 'required|max:2048',
+            'evaluation_metrics' => 'required|max:2048',
+        ]);
+
+        
+        $fileImage = time().'.'.$request->fileImage->extension();  
+        $request->fileImage->move(public_path('tmp'), $fileImage);
+
+        $fileSIG = time().'.'.$request->fileSIG->extension();  
+        $request->fileSIG->move(public_path('tmp'), $fileSIG);
+
+        $nfrForSpecification = Steps5Framework::find($id);
+        $nfrForSpecification->description = html_entity_decode($request["description"]);
+        $nfrForSpecification->acceptance_criteria = html_entity_decode($request["acceptance_criteria"]);
+        $nfrForSpecification->evaluation_metrics = html_entity_decode($request["evaluation_metrics"]);
+        $nfrForSpecification->content = file_get_contents(public_path('tmp') . "/" . $fileSIG);
+        $nfrForSpecification->image = "data:image/png;base64,".base64_encode(file_get_contents(public_path('tmp') . "/" . $fileImage));
+        $nfrForSpecification->save();
+        
+        File::delete(public_path('tmp') . "/" . $fileImage);
+        File::delete(public_path('tmp') . "/" . $fileSIG);
     }
 
     public function downloadAllSIG() {
@@ -583,7 +628,7 @@ class FrameworkController extends Controller
 
     private function setActiveStatusStep($currentStep) {
 
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
 
         $nextStep = StepsFrameworkProject::where("project_id", "=", $project->id)
                                 ->where("steps_framework_id", "=", $currentStep+1)->first();
@@ -600,7 +645,7 @@ class FrameworkController extends Controller
 
     private function setCompleteStatusStep($currentStep) {
 
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
 
         $nextStep = StepsFrameworkProject::where("project_id", "=", $project->id)
                                 ->where("steps_framework_id", "=", $currentStep+1)->first();
@@ -620,7 +665,7 @@ class FrameworkController extends Controller
 
     private function isEnableNextStep($currentStep) {
 
-        $project = Session::get('currentProject');
+        $project = $this::getCurrentProject();
 
         $previousStep = StepsFrameworkProject::where("project_id", "=", $project->id)->where("steps_framework_id", "=", $currentStep-1)->first();
 
@@ -641,5 +686,15 @@ class FrameworkController extends Controller
 
         // var_dump($indice, $nonFunctionalRequirement->name, $nonFunctionalRequirement->alias, $element["orphans"]); exit;
         return $indice;
+    }
+
+    private function getCurrentProject() {
+        if (is_null(Session::get('currentProject'))) {
+            $user = auth()->user();
+            $project = Projects::where('users_id',$user->id)->where("current",1)->first();
+            Session::put('currentProject', $project);
+        } 
+
+        return Session::get('currentProject');
     }
 }

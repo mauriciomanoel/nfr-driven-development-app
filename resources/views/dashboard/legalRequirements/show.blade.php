@@ -46,7 +46,7 @@
                         </p>
                         <h5><strong>Last Update:</strong></h5> 
                         <p>{{ $legalRequirements->created_at }}</p>                     
-                        <a href="{{ url()->previous() }}" class="btn btn-block btn-primary">{{ __('Return') }}</a>
+                        <a href="{{ url()->previous() }}" class="btn btn-block btn-primary">{{ __('Go Back') }}</a>
                     </div>
                 </div>
               </div>

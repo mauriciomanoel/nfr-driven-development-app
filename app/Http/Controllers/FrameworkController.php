@@ -453,26 +453,29 @@ class FrameworkController extends Controller
     public function downloadAllSIG() {
 
         $nonFunctionalRequirementsForSpecification = NonFunctionalRequirementsForSpecification::with('nonFunctionalRequirement')->get();
+        $arrNonFunctionalRequirements = $this::getAllNonFunctionalRequirements();
         $arrayContent = array();
+
         foreach($nonFunctionalRequirementsForSpecification as $nonFunctionalRequirementForSpecification) {
             $nonFunctionalRequirement = $nonFunctionalRequirementForSpecification->nonFunctionalRequirement;
-            $legalRequirements = $nonFunctionalRequirement->legalRequirements;
-            $legalRequirementsName = array();
-            foreach($legalRequirements as $legalRequirement) {
-                $legalRequirementsName[] = $legalRequirement->name;
-            }
             if (empty($nonFunctionalRequirement->content)) continue;
 
-            // var_dump($nonFunctionalRequirement->name);
             $element = json_decode($nonFunctionalRequirement->content, true);
-            $element["orphans"][0]["customProperties"]["Description"] = trim($nonFunctionalRequirement->description);
-            $element["orphans"][0]["customProperties"]["name"] = trim($nonFunctionalRequirement->name);
-            $element["orphans"][0]["customProperties"]["recommendations"] = trim($nonFunctionalRequirement->recommendations);
-            $element["orphans"][0]["customProperties"]["legalRequirements"] = implode(";", $legalRequirementsName);
+            
+            foreach($element["orphans"] as $indice => $orphan) {
+                if (array_key_exists(strtolower($orphan["text"]), $arrNonFunctionalRequirements)) {
+                    $detail = $arrNonFunctionalRequirements[strtolower($orphan["text"])];
+                    $orphan["customProperties"]["Description"]         = $detail["description"];
+                    $orphan["customProperties"]["Alias"]               = $detail["alias"];
+                    $orphan["customProperties"]["Recommendations"]     = $detail["recommendations"];
+                    $orphan["customProperties"]["Legal Requirements"]  = $detail["legalRequirements"];
+                    $element["orphans"][$indice] = $orphan;
+                }
+            }
+            
             $arrayContent[] = $element;
         }
 
-        exit;
         $data = $this::mergeSigs($arrayContent);
 
         $headers = ['Content-Type: application/json'];
@@ -481,8 +484,36 @@ class FrameworkController extends Controller
         File::put($fileStorePath, $data);
 
         return response()->download($fileStorePath, $fileName, $headers);
+    }
 
+    public function downloadSIG($id) {
+
+        $nonFunctionalRequirementForSpecification = NonFunctionalRequirementsForSpecification::with('nonFunctionalRequirement')->where("id", "=", $id)->first();
         
+
+        $nonFunctionalRequirement = $nonFunctionalRequirementForSpecification->nonFunctionalRequirement;
+        $arrNonFunctionalRequirements = $this::getAllNonFunctionalRequirements();
+
+        $element = json_decode($nonFunctionalRequirement->content, true);
+        foreach($element["orphans"] as $indice => $orphan) {
+            if (array_key_exists(strtolower($orphan["text"]), $arrNonFunctionalRequirements)) {
+                $detail = $arrNonFunctionalRequirements[strtolower($orphan["text"])];
+                $orphan["customProperties"]["Description"]         = $detail["description"];
+                $orphan["customProperties"]["Alias"]               = $detail["alias"];
+                $orphan["customProperties"]["Recommendations"]     = $detail["recommendations"];
+                $orphan["customProperties"]["Legal Requirements"]  = $detail["legalRequirements"];
+                $element["orphans"][$indice] = $orphan;
+            }
+        }
+
+        $data = json_encode($element);
+ 
+        $headers = ['Content-Type: application/json'];
+        $fileName = "sig-file.txt";
+        $fileStorePath = public_path('/tmp/'.$fileName);
+        File::put($fileStorePath, $data);
+
+        return response()->download($fileStorePath, $fileName, $headers);
     }
 
     public function mergeSigs($arrayContent) {
@@ -533,6 +564,27 @@ class FrameworkController extends Controller
         return $maxValueX;
     }
 
+    private function getAllNonFunctionalRequirements() {
+        $nonFunctionalRequirements = NonFunctionalRequirements::get();
+        $arrNonFunctionalRequirements = array();
+        
+        foreach($nonFunctionalRequirements as $nonFunctionalRequirement) {
+            $key = strtolower($nonFunctionalRequirement->alias);
+
+            $legalRequirements = $nonFunctionalRequirement->legalRequirements;
+            $legalRequirementsName = array();
+            foreach($legalRequirements as $legalRequirement) {
+                $legalRequirementsName[] = $legalRequirement->name;
+            }
+            $arrNonFunctionalRequirements[$key]["description"]          = trim($nonFunctionalRequirement->description);
+            $arrNonFunctionalRequirements[$key]["alias"]                = trim($nonFunctionalRequirement->alias);
+            $arrNonFunctionalRequirements[$key]["recommendations"]      = trim($nonFunctionalRequirement->recommendations);
+            $arrNonFunctionalRequirements[$key]["legalRequirements"]    = implode(";", $legalRequirementsName);
+        }
+
+        return $arrNonFunctionalRequirements;
+    }
+
     private function setActiveStatusStep($currentStep) {
 
         $project = Session::get('currentProject');
@@ -574,12 +626,24 @@ class FrameworkController extends Controller
 
         $project = Session::get('currentProject');
 
-        $previousStep = StepsFrameworkProject::where("project_id", "=", $project->id)
-                                ->where("steps_framework_id", "=", $currentStep-1)->first();
+        $previousStep = StepsFrameworkProject::where("project_id", "=", $project->id)->where("steps_framework_id", "=", $currentStep-1)->first();
 
         if ($previousStep->status == Config::get('constants.frameworkStates.complete')) {
            return true;
         }
         return false;
+    }
+
+    private function getIndiceNFRFromArray($elements, $alias) {
+        $indice = -1;
+        foreach($elements["orphans"] as $key => $nfr) {
+            if (strtoupper($nfr["text"]) == strtoupper($alias)) {
+                $indice = $key;
+                break;
+            }
+        }
+
+        // var_dump($indice, $nonFunctionalRequirement->name, $nonFunctionalRequirement->alias, $element["orphans"]); exit;
+        return $indice;
     }
 }

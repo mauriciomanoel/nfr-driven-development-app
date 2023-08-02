@@ -15,6 +15,7 @@ use App\Models\Steps1Framework;
 use App\Models\Steps2Framework;
 use App\Models\Steps31Framework;
 use App\Models\Steps32Framework;
+use App\Models\Steps5Framework;
 use App\Models\DataCollectionTechniques;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
@@ -322,13 +323,8 @@ class FrameworkController extends Controller
         $project = Session::get('currentProject');
         $stepsFrameworkProject = StepsFrameworkProject::with("StepsFramework")->where("project_id", "=", $project->id)->get();
 
-        $nonFunctionalRequirementsForSpecification = NonFunctionalRequirementsForSpecification::with('nonFunctionalRequirement')->get();
-        $arrayContent = array();
-        foreach($nonFunctionalRequirementsForSpecification as $nonFunctionalRequirementForSpecification) {
-            $arrayContent[] = $nonFunctionalRequirementForSpecification->nonFunctionalRequirement->content;
-        }
-       
-        // $this::mergeSigs($arrayContent);
+        $nonFunctionalRequirementsForSpecification = Steps5Framework::with('nonFunctionalRequirement')->where("project_id", "=", $project->id)->get();
+        
         return view('dashboard.framework.framework-step05', ['nonFunctionalRequirements' => $nonFunctionalRequirementsForSpecification, 'stepsFrameworkProject' => $stepsFrameworkProject]);
     }
 
@@ -404,16 +400,17 @@ class FrameworkController extends Controller
         $allNonFunctionalRequirements = $request["nonFunctionalRequirements"];
 
         NonFunctionalRequirementsForSpecification::where('project_id', '=', '1')->delete();
+        $project = Session::get('currentProject');
 
         if (!empty($recommendationsNonFunctionalRequirements)) {
             $isMoveNextStep = true;
             foreach($recommendationsNonFunctionalRequirements as $recommendationNonFunctionalRequirement) {                
-                $nfrForSpecification = new NonFunctionalRequirementsForSpecification;
-                $nfrForSpecification->project_id = 1;
+                $nfrForSpecification = new Steps5Framework();
+                $nfrForSpecification->project_id = $project->id;
                 $nfrForSpecification->users_id = 1;
                 $nfrForSpecification->is_recommendation = 1;
                 $nfrForSpecification->nfr_id = $recommendationNonFunctionalRequirement;
-                $nfrForSpecification->legal_requirements_id="1,2,3";
+                // $nfrForSpecification->legal_requirements_id="1,2,3";
                 $nfrForSpecification->description = "";
                 $nfrForSpecification->acceptance_criteria = "";
                 $nfrForSpecification->evaluation_metrics = "";
@@ -426,12 +423,12 @@ class FrameworkController extends Controller
         if (!empty($allNonFunctionalRequirements)) {
             $isMoveNextStep = true;
             foreach($allNonFunctionalRequirements as $nonFunctionalRequirement) {                
-                $nfrForSpecification = new NonFunctionalRequirementsForSpecification;
-                $nfrForSpecification->project_id = 1;
+                $nfrForSpecification = new Steps5Framework;
+                $nfrForSpecification->project_id = $project->id;
                 $nfrForSpecification->users_id = 1;
                 $nfrForSpecification->is_recommendation = 0;
                 $nfrForSpecification->nfr_id = $nonFunctionalRequirement;
-                $nfrForSpecification->legal_requirements_id="1,2,3";
+                // $nfrForSpecification->legal_requirements_id="1,2,3";
                 $nfrForSpecification->description = "";
                 $nfrForSpecification->acceptance_criteria = "";
                 $nfrForSpecification->evaluation_metrics = "";
@@ -490,7 +487,6 @@ class FrameworkController extends Controller
 
         $nonFunctionalRequirementForSpecification = NonFunctionalRequirementsForSpecification::with('nonFunctionalRequirement')->where("id", "=", $id)->first();
         
-
         $nonFunctionalRequirement = $nonFunctionalRequirementForSpecification->nonFunctionalRequirement;
         $arrNonFunctionalRequirements = $this::getAllNonFunctionalRequirements();
 

@@ -60,10 +60,13 @@
                         <td>{{ $nonFunctionalRequirement->is_recommendation }}</td>
                         <td>{{ $nonFunctionalRequirement->updated_at }}</td>                        
                         <td>
-                          <a href="{{route('framework.download.sig',$nonFunctionalRequirement->id)}}" class="btn btn-block btn-primary">Download SIG File</a>
+                          <a href="{{route('framework.download.sig',$nonFunctionalRequirement->id)}}" class="btn btn-block btn-primary"> SIG</a>
                         </td>
                         <td>
-                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">View Document</a>
+                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">Detail</a>
+                        </td>
+                        <td>
+                          <a href="{{ url('/nonFunctionalRequirement/' . $nonFunctionalRequirement->id) }}" class="btn btn-block btn-primary">Edit</a>
                         </td>
                         
                       </tr>

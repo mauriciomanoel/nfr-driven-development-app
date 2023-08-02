@@ -144,16 +144,31 @@ return new class extends Migration
 
         Schema::create('steps5_framework', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('steps_framework_project_id');
-            $table->text('description');
+            // $table->unsignedBigInteger('steps_framework_project_id');
+            // $table->text('description');
+            // $table->longText('content')->nullable();
+            // $table->longText('image')->nullable();
+
+            $table->unsignedBigInteger('project_id');
+            $table->unsignedBigInteger('users_id');
+            $table->unsignedBigInteger('nfr_id');
+            $table->unsignedBigInteger('is_recommendation');
+            $table->text('description')->nullable();
+            $table->text('acceptance_criteria')->nullable();
+            $table->text('evaluation_metrics')->nullable();
             $table->longText('content')->nullable();
             $table->longText('image')->nullable();
             $table->timestamps();
 
-            $table->foreign('steps_framework_project_id')
+            $table->foreign('nfr_id')
                 ->references('id')
-                ->on('steps_framework_project')
+                ->on('non_functional_requirement')
                 ->onDelete('cascade');
+
+            // $table->foreign('steps_framework_project_id')
+            //     ->references('id')
+            //     ->on('steps_framework_project')
+            //     ->onDelete('cascade');
         });
 
     }

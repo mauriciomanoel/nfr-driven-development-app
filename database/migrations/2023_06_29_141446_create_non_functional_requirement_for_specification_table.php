@@ -24,7 +24,6 @@ return new class extends Migration
             $table->text('evaluation_metrics');
             $table->longText('content')->nullable();
             $table->longText('image')->nullable();
-
             $table->timestamps();
 
             $table->foreign('nfr_id')

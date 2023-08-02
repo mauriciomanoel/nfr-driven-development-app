@@ -23,6 +23,11 @@ class CreateProjectsTable extends Migration
             $table->unsignedBigInteger('users_id');
             $table->boolean('current');
             $table->timestamps();
+
+            $table->foreign('users_id')
+                ->references('id')
+                ->on('users')
+                ->onUpdate('cascade');
         });
     }
 

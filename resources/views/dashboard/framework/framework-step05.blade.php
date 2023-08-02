@@ -13,7 +13,6 @@
                         <div class="alert alert-success alert-dismissible fade show" role="alert">{{ Session::get('message') }}
                           <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
                         </div>
-
                       </div>
                   </div>
               @endif  
@@ -28,8 +27,8 @@
                       <div class="col-xs-2 bs-wizard-step {{ $stepFrameworkProject->status }}">
                         <div class="text-center bs-wizard-stepnum">{{ $stepFrameworkProject->StepsFramework->code }}</div>
                         <div class="progress"><div class="progress-bar"></div></div>
-                        <a href="{{ route('framework.step2.1') }}" class="bs-wizard-dot"></a>
-                        <div class="bs-wizard-info text-center"></div>
+                        <a href="{{ route('framework.'. str_replace(" ", "", strtolower($stepFrameworkProject->StepsFramework->code))) }}" class="bs-wizard-dot"></a>
+                        <div class="bs-wizard-info text-center">{{ $stepFrameworkProject->StepsFramework->name }}</div>
                       </div>
                   @endforeach                  
               </div>

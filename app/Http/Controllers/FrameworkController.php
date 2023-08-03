@@ -466,8 +466,8 @@ class FrameworkController extends Controller
     {
        
         $request->validate([
-            'fileImage' => 'required|mimes:png|max:2048',
-            'fileSIG' => 'required|mimes:txt,json|max:2048',
+            'fileImage' => 'required|mimes:png|max:4000',
+            'fileSIG' => 'required|mimes:txt,json|max:4000',
             'description' => 'required|max:2048',
             'acceptance_criteria' => 'required|max:2048',
             'evaluation_metrics' => 'required|max:2048',
@@ -490,6 +490,9 @@ class FrameworkController extends Controller
         
         File::delete(public_path('tmp') . "/" . $fileImage);
         File::delete(public_path('tmp') . "/" . $fileSIG);
+
+        return redirect()->action([FrameworkController::class, 'step5']);
+
     }
 
     public function downloadAllSIG() {

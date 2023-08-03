@@ -20,7 +20,7 @@
                 @endif  
                 
                     <div class="card-header">
-                      <i class="fa fa-align-justify"></i>{{ __('NFR-driven developlment Framework AAL') }}
+                      <i class="fa fa-align-justify"></i>{{ __('NFR-driven developlment Framework') }}
                     </div>
                     <div class="card-body">
                         <div class="row justify-content-md-center bs-wizard" style="border-bottom:0;">                        

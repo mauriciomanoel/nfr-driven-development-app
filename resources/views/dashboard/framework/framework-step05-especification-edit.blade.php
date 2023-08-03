@@ -51,7 +51,7 @@
                             <div class="form-group">
                               <div class="col">
                                   <label><h5><strong>Upload Image:</strong></h5> </label>
-                                  <input type="file" name="fileImage" id="inputFile" class="form-control @error('file') is-invalid @enderror">
+                                  <input type="file" name="fileImage" id="inputFile" class="form-control @error('fileImage') is-invalid @enderror">
                                   @error('fileImage')
                                     <div class="alert alert-danger">{{ $message }}
                                       <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>

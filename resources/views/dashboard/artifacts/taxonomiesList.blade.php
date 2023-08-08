@@ -20,10 +20,9 @@
                 @endif  
                 
                     <div class="card-header">
-                      <i class="fa fa-align-justify"></i>{{ __('Taxonomy') }}</div>
-                    <div class="card-body">
-                    <div id="observablehq-chart-221d9a14"></div>
+                      <i class="fa fa-align-justify"></i>{{ __('Taxonomy') }}
                     </div>
+                    <div class="card-body" id="card-body"></div>
                 </div>
               </div>
             </div>
@@ -32,19 +31,44 @@
 
 @endsection
 
+<style>
+    /* Add the provided CSS styles here */
+    .node {
+        cursor: pointer;
+    }
 
+    .node circle {
+        fill: #fff;
+        stroke: steelblue;
+        stroke-width: 3px;
+    }
+
+    .node text {
+        font: 12px sans-serif;
+    }
+
+    .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 2px;
+    }
+
+</style>
+    
 @section('javascript')
 
-<script type="module">
-  
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://www.rs4aal.site/js/collapsible-tree.js?v=4";
 
-  new Runtime().module(define, name => {
-    if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-221d9a14"));
-  });
 
-</script>
+<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+
+@php
+echo '<script>
+    var treeData = JSON.parse(\'' . $data . '\');
+    var urlMap = JSON.parse(\'' . $urlMap . '\');
+</script>';
+@endphp
+
+<script src="{{ asset('js/collapsible-tree.js?v=4') }}"></script>
 
 @endsection
 

@@ -8,9 +8,12 @@ use App\Models\Projects;
 use App\Models\Artifacts;
 use App\Models\User;
 use App\Models\LifeSettings;
+use App\Models\NonFunctionalRequirements;
 
 class ArtifactsController extends Controller
 {
+
+    public $mapUrl = array();
 
     /**
      * Create a new controller instance.
@@ -40,11 +43,44 @@ class ArtifactsController extends Controller
      */
     public function indexTaxonomies()
     {
-        $artifacts = Artifacts::with('user')->with('lifeSettingsSubcatetory')->where('artifacts_type_id', '=', 1)->paginate( 20 );
-        return view('dashboard.artifacts.taxonomiesList', ['artifacts' => $artifacts]);
+        $value = array();
+        // $mapUrl = array();
+        $value["name"] = "AAL";
+        $value["children"] = array();
+        $value["children"] = $this::getChildren(0);
+        // $requirements = NonFunctionalRequirements::where('characteristics_id', "=", "0")->get();
+        // foreach($requirements as $key => $requirement) {
+        //     $value["children"][$key]["name"] = $requirement->name;
+        //     $value["children"][$key]["children"] = array();
+
+        //     $childrens = NonFunctionalRequirements::where('characteristics_id', "=", $requirement->id)->get();
+        //     foreach($childrens as $i => $children) {
+        //         $value["children"][$key]["children"][$i]["name"] = $children->name;
+        //         $value["children"][$key]["children"][$i]["url"] = "http://127.0.0.1:8000/nonFunctionalRequirements/" . $children->id;
+        //     }
+        // }
+
+        $data = json_encode($value);
+        //   var_dump($this->mapUrl); exit;
+        // $artifacts = Artifacts::with('user')->with('lifeSettingsSubcatetory')->where('artifacts_type_id', '=', 1)->paginate( 20 );
+        return view('dashboard.artifacts.taxonomiesList', ['urlMap' => json_encode($this->mapUrl), "data" => $data]);
     }
 
-        /**
+    
+    private function getChildren($id) {
+        $requirements = NonFunctionalRequirements::where('characteristics_id', "=", $id)->get();
+        $value = array();
+        foreach($requirements as $i => $requirement) {
+            $value[$i]["name"] = $requirement->name;
+            $this->mapUrl[$requirement->name] = "nonFunctionalRequirements/" . $requirement->id;
+            $value[$i]["path_url"] = "nonFunctionalRequirements/" . $requirement->id;
+            $value[$i]["children"] = $this::getChildren($requirement->id);        
+        }
+        return $value;
+    }
+    
+    
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

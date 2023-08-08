@@ -497,7 +497,7 @@ class FrameworkController extends Controller
 
     public function downloadAllSIG() {
 
-        $nonFunctionalRequirementsForSpecification = NonFunctionalRequirementsForSpecification::with('nonFunctionalRequirement')->get();
+        $nonFunctionalRequirementsForSpecification = Steps5Framework::with('nonFunctionalRequirement')->get();
         $arrNonFunctionalRequirements = $this::getAllNonFunctionalRequirements();
         $arrayContent = array();
 
@@ -533,7 +533,7 @@ class FrameworkController extends Controller
 
     public function downloadSIG($id) {
 
-        $nonFunctionalRequirementForSpecification = NonFunctionalRequirementsForSpecification::with('nonFunctionalRequirement')->where("id", "=", $id)->first();
+        $nonFunctionalRequirementForSpecification = Steps5Framework::with('nonFunctionalRequirement')->where("id", "=", $id)->first();
         
         $nonFunctionalRequirement = $nonFunctionalRequirementForSpecification->nonFunctionalRequirement;
         $arrNonFunctionalRequirements = $this::getAllNonFunctionalRequirements();

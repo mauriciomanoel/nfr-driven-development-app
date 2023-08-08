@@ -130,4 +130,6 @@ php artisan route:list
 # start local server
 $ php artisan serve
 
+user: admin@nddframework.io
+pass: password
 ```

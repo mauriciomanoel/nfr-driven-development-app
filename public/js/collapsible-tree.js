@@ -199,7 +199,6 @@
         console.log('d.name:', d.name)
         console.log('d.data.name:', d.data.name)
         console.log('urlMap[d.data.name]:', urlMap[d.data.name])
-        // window.location = url + urlMap[d.data.name];
         window.open(url + urlMap[d.data.name], "_blank");
       }
       update(d);

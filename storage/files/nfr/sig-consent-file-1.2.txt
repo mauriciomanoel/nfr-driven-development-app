@@ -1,0 +1,305 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "6d32cbab-08b3-40de-9933-44a7c0640a6f",
+      "text": "Consentimento",
+      "type": "nfr.NFR",
+      "x": 551,
+      "y": 48,
+      "customProperties": {
+        "Description": "Refere-se ao requisito de obter o consentimento explícito dos usuários antes de coletar, processar ou compartilhar suas informações pessoais. É importante garantir que os usuários tenham a capacidade de tomar decisões informadas sobre o uso de seus dados pessoais."
+      }
+    },
+    {
+      "id": "e09b1f59-0f7c-4f54-a80a-861f744d26c1",
+      "text": "Explicação Clara",
+      "type": "nfr.Operationalization",
+      "x": 262,
+      "y": 68,
+      "customProperties": {
+        "Description": "xplique de forma clara e simples o motivo pelo qual está buscando o consentimento do idoso em relação à privacidade. Certifique-se de que ele entenda os benefícios e possíveis riscos envolvidos. Use uma linguagem acessível e evite termos técnicos complicados."
+      }
+    },
+    {
+      "id": "6ae06499-cf1c-4842-a0cf-ae21bad76435",
+      "text": "Consentimento Escrito",
+      "type": "nfr.Operationalization",
+      "x": 788,
+      "y": 209,
+      "customProperties": {
+        "Description": "Se possível, obtenha o consentimento por escrito. Isso pode ser feito por meio de uma assinatura em um formulário ou documento específico, ou até mesmo por meio de um processo eletrônico, se for viável e compreensível para o idoso."
+      }
+    },
+    {
+      "id": "3951efa9-7fd0-4ed2-b489-efa337825014",
+      "text": "Representação Legal",
+      "type": "nfr.Operationalization",
+      "x": 682,
+      "y": 402,
+      "customProperties": {
+        "Description": "Em casos em que o idoso não tem capacidade legal para consentir, por motivos de saúde ou outros, é importante envolver um representante legal adequado, como um membro da família ou um tutor legal, para tomar decisões em nome do idoso."
+      }
+    },
+    {
+      "id": "954db016-1ffc-43cb-b4dd-d300e7ae70bb",
+      "text": "Aceitação pelo Usuário",
+      "type": "nfr.NFR",
+      "x": 202,
+      "y": 204
+    },
+    {
+      "id": "4ccc87c3-9418-4416-87cf-20db3c7d8f94",
+      "text": "Apresentação Clara e Concisa",
+      "type": "nfr.NFR",
+      "x": 324,
+      "y": 254
+    },
+    {
+      "id": "11b2ec1b-c39c-4aa1-9b7e-d6bfa5d9cea7",
+      "text": "Compreensão das Políticas",
+      "type": "nfr.Operationalization",
+      "x": 97,
+      "y": 406
+    },
+    {
+      "id": "fa1172d4-f4f5-46bc-91d1-c682966fa5de",
+      "text": "Feedback e Perguntas",
+      "type": "nfr.Operationalization",
+      "x": 176,
+      "y": 480
+    },
+    {
+      "id": "fea29cd2-a087-4a72-9c36-be7e4ac37003",
+      "text": "Linguagem Fácil Compreensão",
+      "type": "nfr.Operationalization",
+      "x": 252,
+      "y": 528
+    },
+    {
+      "id": "fdd4e1b7-da48-476f-a511-d79da52adc6a",
+      "text": "Distinção Termos e Condições",
+      "type": "nfr.Operationalization",
+      "x": 348,
+      "y": 472
+    },
+    {
+      "id": "ce6bf63b-e305-42e6-bbc8-9f965133dffa",
+      "text": "Utilização de Dados",
+      "type": "nfr.NFR",
+      "x": 458,
+      "y": 255
+    },
+    {
+      "id": "042c903f-0959-4d6f-9f0f-1b416687b0e7",
+      "text": "Identificar Organização de Tratamento",
+      "type": "nfr.Operationalization",
+      "x": 406,
+      "y": 554
+    },
+    {
+      "id": "68db02e7-75ed-4e7f-93df-f8bac71412b3",
+      "text": "Especificar Fins de Tratamento",
+      "type": "nfr.Operationalization",
+      "x": 495,
+      "y": 620
+    },
+    {
+      "id": "209fefe6-2840-4d99-8d1c-abb26caee56b",
+      "text": "Inclusão de Informações",
+      "type": "nfr.NFR",
+      "x": 594,
+      "y": 246
+    },
+    {
+      "id": "8f7a46d8-f44b-4b2a-aa0a-53aeb0d0ecae",
+      "text": "Tipos de Dados Tratados",
+      "type": "nfr.Operationalization",
+      "x": 545,
+      "y": 407
+    },
+    {
+      "id": "0acd1350-3b4f-49ca-9851-3471a19357f5",
+      "text": "Retirar Consentimento",
+      "type": "nfr.Operationalization",
+      "x": 613,
+      "y": 495
+    },
+    {
+      "id": "f7b69e0b-323b-454e-873f-242f1e85fb10",
+      "text": "Documentação Detalhada",
+      "type": "nfr.Operationalization",
+      "x": 758,
+      "y": 503
+    },
+    {
+      "id": "d7d55967-8720-42cd-bc6b-0b06133777e8",
+      "text": "Formulários de Consentimento",
+      "type": "nfr.Operationalization",
+      "x": 835,
+      "y": 409
+    },
+    {
+      "id": "70096c60-589b-44a0-89d6-967abdc51a7b",
+      "text": "Clareza na Linguagem",
+      "type": "nfr.Operationalization",
+      "x": 876,
+      "y": 333
+    },
+    {
+      "id": "a587696c-be7d-442a-9267-e940c4a41fdc",
+      "text": "Acesso a Cópias",
+      "type": "nfr.Operationalization",
+      "x": 1026,
+      "y": 349
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "0d38a0b9-79bf-4fac-9600-8f3c47690fbb",
+      "type": "nfr.ContributionLink",
+      "source": "6ae06499-cf1c-4842-a0cf-ae21bad76435",
+      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f",
+      "label": "+"
+    },
+    {
+      "id": "7fa7e4d7-5293-4174-bb13-ab5bf42cb90e",
+      "type": "nfr.ContributionLink",
+      "source": "e09b1f59-0f7c-4f54-a80a-861f744d26c1",
+      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f",
+      "label": "+"
+    },
+    {
+      "id": "30f9d2c9-dc88-481c-9a32-2f9126a19459",
+      "type": "nfr.AndRefinementLink",
+      "source": "11b2ec1b-c39c-4aa1-9b7e-d6bfa5d9cea7",
+      "target": "954db016-1ffc-43cb-b4dd-d300e7ae70bb"
+    },
+    {
+      "id": "5d3c1c7c-3035-4220-98a6-e9fcde65af06",
+      "type": "nfr.AndRefinementLink",
+      "source": "fa1172d4-f4f5-46bc-91d1-c682966fa5de",
+      "target": "954db016-1ffc-43cb-b4dd-d300e7ae70bb"
+    },
+    {
+      "id": "ea20c921-5f28-419a-a8af-3812d1ce593a",
+      "type": "nfr.AndRefinementLink",
+      "source": "954db016-1ffc-43cb-b4dd-d300e7ae70bb",
+      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f"
+    },
+    {
+      "id": "45c9bdc0-d638-44ed-a9f4-25ae0bfe5ee7",
+      "type": "nfr.AndRefinementLink",
+      "source": "fea29cd2-a087-4a72-9c36-be7e4ac37003",
+      "target": "4ccc87c3-9418-4416-87cf-20db3c7d8f94"
+    },
+    {
+      "id": "00ad0825-8b50-4229-b62b-848042c78248",
+      "type": "nfr.AndRefinementLink",
+      "source": "fdd4e1b7-da48-476f-a511-d79da52adc6a",
+      "target": "4ccc87c3-9418-4416-87cf-20db3c7d8f94"
+    },
+    {
+      "id": "3d3f229e-330a-4a3a-988c-1ae52b5b545c",
+      "type": "nfr.AndRefinementLink",
+      "source": "042c903f-0959-4d6f-9f0f-1b416687b0e7",
+      "target": "ce6bf63b-e305-42e6-bbc8-9f965133dffa"
+    },
+    {
+      "id": "6a84c6c4-2e52-449e-91d7-34af26c1aeb6",
+      "type": "nfr.AndRefinementLink",
+      "source": "68db02e7-75ed-4e7f-93df-f8bac71412b3",
+      "target": "ce6bf63b-e305-42e6-bbc8-9f965133dffa"
+    },
+    {
+      "id": "4de7e303-1eec-4373-b169-156c0d8be47e",
+      "type": "nfr.AndRefinementLink",
+      "source": "8f7a46d8-f44b-4b2a-aa0a-53aeb0d0ecae",
+      "target": "209fefe6-2840-4d99-8d1c-abb26caee56b"
+    },
+    {
+      "id": "fb93dc6b-91c0-46e8-b6da-21a3d99dfac7",
+      "type": "nfr.AndRefinementLink",
+      "source": "0acd1350-3b4f-49ca-9851-3471a19357f5",
+      "target": "209fefe6-2840-4d99-8d1c-abb26caee56b"
+    },
+    {
+      "id": "c652b6ae-e2cf-4396-9a03-8037d6fc18bd",
+      "type": "nfr.AndRefinementLink",
+      "source": "3951efa9-7fd0-4ed2-b489-efa337825014",
+      "target": "209fefe6-2840-4d99-8d1c-abb26caee56b"
+    },
+    {
+      "id": "1273e839-dd1a-4288-9829-516621e88031",
+      "type": "nfr.AndRefinementLink",
+      "source": "4ccc87c3-9418-4416-87cf-20db3c7d8f94",
+      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f"
+    },
+    {
+      "id": "602b9fa3-e40d-49b6-980e-479efe4258fd",
+      "type": "nfr.AndRefinementLink",
+      "source": "ce6bf63b-e305-42e6-bbc8-9f965133dffa",
+      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f"
+    },
+    {
+      "id": "5d16aa0f-a6cc-4de6-b02d-66f7ce62bdd1",
+      "type": "nfr.AndRefinementLink",
+      "source": "209fefe6-2840-4d99-8d1c-abb26caee56b",
+      "target": "6d32cbab-08b3-40de-9933-44a7c0640a6f"
+    },
+    {
+      "id": "8e1e1855-5654-4bff-b64f-572e3caba7f5",
+      "type": "nfr.AndRefinementLink",
+      "source": "f7b69e0b-323b-454e-873f-242f1e85fb10",
+      "target": "6ae06499-cf1c-4842-a0cf-ae21bad76435"
+    },
+    {
+      "id": "922110ed-f336-45f9-a399-be032157d52a",
+      "type": "nfr.AndRefinementLink",
+      "source": "d7d55967-8720-42cd-bc6b-0b06133777e8",
+      "target": "6ae06499-cf1c-4842-a0cf-ae21bad76435"
+    },
+    {
+      "id": "0a65b9bb-940f-44c4-8a8c-5ae94a847e19",
+      "type": "nfr.AndRefinementLink",
+      "source": "70096c60-589b-44a0-89d6-967abdc51a7b",
+      "target": "6ae06499-cf1c-4842-a0cf-ae21bad76435"
+    },
+    {
+      "id": "9c435a9c-5f3c-4211-9780-4c5b1bb27007",
+      "type": "nfr.AndRefinementLink",
+      "source": "a587696c-be7d-442a-9267-e940c4a41fdc",
+      "target": "6ae06499-cf1c-4842-a0cf-ae21bad76435"
+    }
+  ],
+  "display": {
+    "6d32cbab-08b3-40de-9933-44a7c0640a6f": {
+      "width": 102.59130859375,
+      "height": 55.30694580078125
+    },
+    "6ae06499-cf1c-4842-a0cf-ae21bad76435": {
+      "width": 103.091064453125,
+      "height": 60.30572509765625
+    },
+    "3951efa9-7fd0-4ed2-b489-efa337825014": {
+      "width": 95.091796875,
+      "height": 57.80609130859375
+    },
+    "042c903f-0959-4d6f-9f0f-1b416687b0e7": {
+      "width": 96.59185791015625,
+      "height": 59.80584716796875
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Wed, 09 Aug 2023 10:58:40 GMT",
+  "diagram": {
+    "width": 2513,
+    "height": 1300,
+    "name": "Example NFR model",
+    "customProperties": {
+      "Description": "This tool supports two things that are often troublesome to develop with generic modelling frameworks:\n - draw complex shapes (clouds) without distorting when they are resized\n - create links from an element to a link (claim links)"
+    }
+  }
+}

@@ -23,6 +23,7 @@ use Symfony\Component\Process\Process;
 use File;
 use Session;
 use Illuminate\Support\Facades\Config;
+use Dompdf\Dompdf;
 
 class FrameworkController extends Controller
 {
@@ -558,6 +559,162 @@ class FrameworkController extends Controller
         File::put($fileStorePath, $data);
 
         return response()->download($fileStorePath, $fileName, $headers);
+    }
+
+    public function downloadFullDocument() {
+
+        // instantiate and use the dompdf class
+        $dompdf = new Dompdf();
+
+        $htmlHeader = '
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+        <head>
+        <style>
+            * {
+            font-family: helvetica,georgia,serif;            
+            }
+            
+            p {
+            text-align: justify;
+            font-size: 1em;
+            margin: 0.5em;
+            padding: 10px;
+            }
+
+            .page-break {
+                page-break-after: always;
+            }
+
+            h1 {
+                text-align: center;
+            }
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+              }
+              
+              td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+              }
+              
+              tr:nth-child(even) {
+                background-color: #dddddd;
+              }
+        </style>
+        </head>
+        <body>';
+        
+        $project = $this::getCurrentProject();
+
+        $htmlBody = '<h1>' . mb_strtoupper($project->title, 'UTF-8') . '</h1>';
+        $htmlBody .= '<p><strong>Descrição:</strong>' . $project->description . '</p>';
+        $htmlBody .= '<p><strong>Subdomain:</strong>' . $project->lifeSettings->name . '</p>';
+        $htmlBody .= '<div class="page-break"></div>';
+
+        $htmlBody .= '<h1>LEVANTAMENTO DE REQUISITOS LEGAIS</h1>';
+        
+        $legalRequirements = Steps1Framework::get();
+
+        foreach($legalRequirements as $legalRequirement) {
+            $htmlBody .= '<p><strong>Legal Requirement:</strong> ' . $legalRequirement->legalRequirement->name . '</p>';
+            $htmlBody .= '<p><strong>Description</strong></p>';
+            $htmlBody .= '' . $legalRequirement->legalRequirement->description . '';
+            $htmlBody .= '<p><strong>Legal Text/Reference</strong></p>';
+            $htmlBody .= '' . $legalRequirement->legalRequirement->legal_references . '';
+            $htmlBody .= '<p><strong>Recommendations</strong></p>';
+            $htmlBody .= '' . $legalRequirement->legalRequirement->recommendations . '';
+
+            $htmlBody .= '<p><strong>Non-Functional Requirements</strong></p>';
+
+            $htmlBody .= '<table><tr><th>Name</th><th>Description</th></tr>';
+            foreach($legalRequirement->legalRequirement->nonFunctionRequeriments as $nonFunctionRequeriment) {
+                $htmlBody .= '<tr><td>' . $nonFunctionRequeriment->name . '</td><td>' . $nonFunctionRequeriment->description . '</td></tr>';
+            }
+            $htmlBody .= '</table>';
+            $htmlBody .= '<div class="page-break"></div>';
+        }
+
+        $htmlBody .= '<h1>IDENTIFICAÇÃO E ANÁLISE DE STAKEHOLDERS</h1>';
+
+        $stakeholders = Steps2Framework::get();
+
+        foreach($stakeholders as $stakeholder) {            
+            $htmlBody .= '<p><strong>Stakeholders:</strong>' . $stakeholder->stakeholder->name . '</p>';
+            $htmlBody .= '<p><strong>Descrição:</strong>' . $stakeholder->stakeholder->description . '</p>';
+            $htmlBody .= '<p><strong>Identified Needs</strong></p>';
+            $htmlBody .= '' . $stakeholder->identified_needs . '';
+            $htmlBody .= '<p><strong>Expectations</strong></p>';
+            $htmlBody .= '' . $stakeholder->expectations . '';
+            $htmlBody .= '<p><strong>Experiences</strong></p>';
+            $htmlBody .= '' . $stakeholder->experiences . '';
+        }
+
+        $dataCollectionTechnique = Steps31Framework::where("project_id", "=", $project->id)->first();
+ 
+        $htmlBody .= '<h1>COLETAR EXPERIÊNCIA DOS STAKEHOLDERS</h1>';
+        $htmlBody .= '<p><strong>Técnica para coleta de dados:</strong>' . $dataCollectionTechnique->dataCollectionTechniques->name . '</p>';
+
+        $experiencies = Steps32Framework::get();
+
+        foreach($experiencies as $experiencie) {
+            $htmlBody .= '<p><strong>Stakeholder Experience:</strong>' . $experiencie->stakeholder->name . '</p>';
+            $htmlBody .= '<p><strong>Description</strong></p>';
+            $htmlBody .= '' . $experiencie->description . '';
+            $htmlBody .= '<p><strong>Factors That Impact Acceptability</strong></p>';
+            $htmlBody .= '' . $experiencie->factors_impact_acceptability . '';
+            $htmlBody .= '<p><strong>Factors That Impact Usability</strong></p>';
+            $htmlBody .= '' . $experiencie->factors_impact_usability . '';    
+            $htmlBody .= '<p><strong>Proposed Improvements</strong></p>';
+            $htmlBody .= '' . $experiencie->proposed_improvements . '';
+            $htmlBody .= '<p><strong>Recommendations</strong></p>';
+            $htmlBody .= '' . $experiencie->recommendations . '';
+        }
+
+        $htmlBody .= '<div class="page-break"></div>';
+
+        // $htmlBody .= '<h1>DEFINIR REQUISITOS NÃO FUNCIONAIS</h1>';
+        $htmlBody .= '<h1>ESPECIFICAR REQUISITOS NÃO FUNCIONAIS</h1>';
+
+        $nonFunctionRequerimentsForEspecification = Steps5Framework::get();
+        // $htmlBody .= '<table><tr><th>Name</th><th>Description</th></tr>';
+        foreach($nonFunctionRequerimentsForEspecification as $nonFunctionRequeriment) {
+            $htmlBody .= '<p><strong>NonFunctional Requirement:</strong> ' . $nonFunctionRequeriment->nonFunctionalRequirement->name . '</p>';
+            $htmlBody .= '<p><strong>Description</strong></p>';
+            $htmlBody .= '' . $nonFunctionRequeriment->description . '';
+            $htmlBody .= '<p><strong>Acceptance Criteria</strong></p>';
+            $htmlBody .= '' . $nonFunctionRequeriment->acceptance_criteria . '';
+            $htmlBody .= '<p><strong>Evaluation Metrics</strong></p>';
+            $htmlBody .= '' . $nonFunctionRequeriment->evaluation_metrics . '';            
+
+
+//             
+// 
+// image
+
+        }
+        $htmlBody .= '</table>';
+        $htmlBody .= '<div class="page-break"></div>';
+        
+       
+
+        
+        $htmlFooter = '</body> </html>';
+        $dompdf->loadHtml($htmlHeader . $htmlBody . $htmlFooter);
+        
+        // (Optional) Setup the paper size and orientation
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Output the generated PDF to Browser
+        $dompdf->stream();
+
+        
     }
 
     public function mergeSigs($arrayContent) {

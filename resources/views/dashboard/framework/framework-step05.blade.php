@@ -38,7 +38,7 @@
               
                 @if(count($nonFunctionalRequirements) > 0)
 
-                <p><a href="{{route('download.sig',5)}}" download="" class="btn btn-primary btn-block"><strong>Download Full Document</strong></a></p>
+                <p><a href="{{route('framework.download.full.document')}}" download="" class="btn btn-primary btn-block"><strong>Download Full Document</strong></a></p>
                 <p><a href="{{route('framework.download.all.sig')}}" download="" class="btn btn-primary btn-block"><strong>Download All SIG File</strong></a></p>
 
                 <table class="table table-responsive-sm table-striped">

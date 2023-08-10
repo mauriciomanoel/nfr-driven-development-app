@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
             LegalRequirementsSeeder::class,
             StakeholderSeeder::class,            
             DataCollectionTechniquesSeeder::class,
-            // FrameworkStepsSeeder::class,
+            FrameworkStepsSeeder::class,
         ]);
     }
 }

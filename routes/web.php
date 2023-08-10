@@ -81,6 +81,8 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('/confirmNonFunctionalRequirements', [FrameworkController::class, 'step4ConfirmNonFunctionalRequirements'])->name('framework.confirmNonFunctionalRequirements');
 
             Route::get('/downloadAllSIGs', [FrameworkController::class, 'downloadAllSIG'])->name('framework.download.all.sig');
+            Route::get('/downloadFullDocument', [FrameworkController::class, 'downloadFullDocument'])->name('framework.download.full.document');
+
             Route::get('/downloadSIG/{id}', [FrameworkController::class, 'downloadSIG'])->name('framework.download.sig');
 
         });

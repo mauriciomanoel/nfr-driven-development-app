@@ -60,6 +60,7 @@ class FrameworkStepsSeeder extends Seeder
         $steps31Framework = new Steps31Framework();
         $steps31Framework->data_collection_technique_id = $dataCollectionTechniques->id;
         $steps31Framework->project_id = $project->id;
+        $steps31Framework->save();
         $this::setCompleteStatusStep(4, $project);
 
 
@@ -120,7 +121,7 @@ class FrameworkStepsSeeder extends Seeder
         $nfrForSpecification->users_id = 1;
         $nfrForSpecification->is_recommendation = 1;
         $nfrForSpecification->nfr_id = $nonFunctionalRequirements->id;
-        $nfrForSpecification->description = "Facilidade de uso, eficiência e satisfação geral do usuário ao interagir com o sistema por meio do Android TV. A usabilidade é um elemento essencial para garantir que os usuários, especialmente idosos ou pessoas com limitações físicas, possam utilizar o sistema de forma intuitiva, alcançar seus objetivos e desfrutar de uma experiência agradável.";
+        $nfrForSpecification->description = "<p>Facilidade de uso, eficiência e satisfação geral do usuário ao interagir com o sistema por meio do Android TV. A usabilidade é um elemento essencial para garantir que os usuários, especialmente idosos ou pessoas com limitações físicas, possam utilizar o sistema de forma intuitiva, alcançar seus objetivos e desfrutar de uma experiência agradável.</p>";
         $nfrForSpecification->acceptance_criteria = "<p>O sistema AAL deve ser facilmente acessível através da interface do Android TV, utilizando o controle remoto padrão ou outros dispositivos de entrada comuns.</p>
         <p>Os ícones e elementos de interface devem ser claros, legíveis e de tamanho adequado para facilitar a identificação e navegação dos recursos do sistema.</p>
         <p>As telas e menus do sistema devem ser organizados de forma lógica e intuitiva, seguindo uma hierarquia coerente e facilitando o fluxo de tarefas.</p>
@@ -165,7 +166,7 @@ class FrameworkStepsSeeder extends Seeder
         $nfrForSpecification->users_id = 1;
         $nfrForSpecification->is_recommendation = 1;
         $nfrForSpecification->nfr_id = $nonFunctionalRequirements->id;
-        $nfrForSpecification->description = "Refere-se à capacidade do sistema AAL de Gestão de Saúde no Android TV de se adaptar a diferentes contextos, necessidades e preferências dos usuários. Ele visa proporcionar uma experiência personalizada e flexível para atender às demandas individuais, garantindo que o sistema seja útil e acessível para diversas situações e perfis de usuários.";
+        $nfrForSpecification->description = "<p>Refere-se à capacidade do sistema AAL de Gestão de Saúde no Android TV de se adaptar a diferentes contextos, necessidades e preferências dos usuários. Ele visa proporcionar uma experiência personalizada e flexível para atender às demandas individuais, garantindo que o sistema seja útil e acessível para diversas situações e perfis de usuários.</p>";
         $nfrForSpecification->acceptance_criteria = "<p>Deve haver mecanismos para que o stakeholder consigam personalizar a interface de acordo com suas preferências, como a reorganização de elementos, a seleção de cores e a escolha de temas.</p>
         <p>O sistema deve ser integrado a assistentes virtuais, como Google Assistant, permitindo a interações por meio de comandos de voz e realizar tarefas de forma mais conveniente.</p>
         <p>O sistema deve ser capaz de fornecer acesso remoto, permitindo que familiares ou cuidadores acompanhem a situação de saúde do usuário e possam oferecer suporte quando necessário.</p>
@@ -185,7 +186,7 @@ class FrameworkStepsSeeder extends Seeder
         $nfrForSpecification->users_id = 1;
         $nfrForSpecification->is_recommendation = 1;
         $nfrForSpecification->nfr_id = $nonFunctionalRequirements->id;
-        $nfrForSpecification->description = "refere-se ao compromisso do sistema AAL de Gestão de Saúde em aderir a princípios éticos e respeitar os valores morais e legais relacionados à privacidade e segurança. O sistema deve assegurar uma conduta responsável e transparente na coleta, garantindo que todas as decisões e interações sejam guiadas por padrões éticos sólidos.";
+        $nfrForSpecification->description = "<p>Refere-se ao compromisso do sistema AAL de Gestão de Saúde em aderir a princípios éticos e respeitar os valores morais e legais relacionados à privacidade e segurança. O sistema deve assegurar uma conduta responsável e transparente na coleta, garantindo que todas as decisões e interações sejam guiadas por padrões éticos sólidos.</p>";
         $nfrForSpecification->acceptance_criteria = "<p>Definir mecanismos de acessibilidade para todos considerando as necessidades de usuários com diferentes habilidades e características.</p>
         <p>Deve haver mecanismos para obter o consentimento explícito dos usuários antes de coletar e processar seus dados pessoais, deixando claro que a finalidade e as formas de utilização desses dados.</p>
         <p>Deve haver mecanismos de revisão das leis e regulamentos de proteção de dados da localidade sejam implementadas, coletando e processando e processados de forma legal e transparente os dados.</p>        

@@ -24,6 +24,10 @@ use File;
 use Session;
 use Illuminate\Support\Facades\Config;
 use Dompdf\Dompdf;
+use Dompdf\Options;
+
+
+ini_set('max_execution_time', 180); //3 minutes
 
 class FrameworkController extends Controller
 {
@@ -562,9 +566,11 @@ class FrameworkController extends Controller
     }
 
     public function downloadFullDocument() {
-
+        
+        $options = new Options();
+        // $options->set('isRemoteEnabled', true);
         // instantiate and use the dompdf class
-        $dompdf = new Dompdf();
+        $dompdf = new Dompdf($options);
 
         $htmlHeader = '
         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -603,6 +609,21 @@ class FrameworkController extends Controller
               
               tr:nth-child(even) {
                 background-color: #dddddd;
+            }
+
+
+            img {
+                -ms-transform: rotate(90deg); /* IE 9 */
+                -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+                transform: rotate(90deg);
+             }
+            .center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 30%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
               }
         </style>
         </head>
@@ -688,20 +709,21 @@ class FrameworkController extends Controller
             $htmlBody .= '<p><strong>Acceptance Criteria</strong></p>';
             $htmlBody .= '' . $nonFunctionRequeriment->acceptance_criteria . '';
             $htmlBody .= '<p><strong>Evaluation Metrics</strong></p>';
-            $htmlBody .= '' . $nonFunctionRequeriment->evaluation_metrics . '';            
+            $htmlBody .= '' . $nonFunctionRequeriment->evaluation_metrics . '';
 
-
-//             
-// 
-// image
-
+            if ($nonFunctionRequeriment->nonFunctionalRequirement->image != "") {
+                $htmlBody .= '<div class="page-break"></div>';
+                $htmlBody .= '<figure>';
+                $htmlBody .= '<div class="center"><img src="' . $nonFunctionRequeriment->nonFunctionalRequirement->image . '" width="180%"></div>';
+                $htmlBody .= '<figcaption>Softgoal Interdependency Graph: ' . $nonFunctionRequeriment->nonFunctionalRequirement->name . '</figcaption>';
+                $htmlBody .= '</figure>';
+                $htmlBody .= '<div class="page-break"></div>';
+            }
         }
         $htmlBody .= '</table>';
         $htmlBody .= '<div class="page-break"></div>';
         
-       
-
-        
+    
         $htmlFooter = '</body> </html>';
         $dompdf->loadHtml($htmlHeader . $htmlBody . $htmlFooter);
         

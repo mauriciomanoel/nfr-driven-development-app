@@ -58,8 +58,8 @@
                     @foreach($legalRequirements as $legalAndNormativeRequirement)
                       <tr>
                         <td><input type="checkbox" id="legalRequirements" name="legalRequirements[]" value="{{ $legalAndNormativeRequirement->id }}"></strong></td>
-                        <td><strong>{{ $legalAndNormativeRequirement->name }}</strong></td>
-                        <td>{{ $legalAndNormativeRequirement->description }}</td>
+                        <td><strong>{{ strip_tags($legalAndNormativeRequirement->name) }}</strong></td>
+                        <td>{{ strip_tags($legalAndNormativeRequirement->description) }}</td>
                         <td>{{ $legalAndNormativeRequirement->updated_at }}</td>                        
                         <td>
                           <a href="{{ url('/legalRequirements/' . $legalAndNormativeRequirement->id) }}" class="btn btn-block btn-primary">View</a>

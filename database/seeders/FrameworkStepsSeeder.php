@@ -147,15 +147,25 @@ class FrameworkStepsSeeder extends Seeder
         $nfrForSpecification->is_recommendation = 1;
         $nfrForSpecification->nfr_id = $nonFunctionalRequirements->id;
         $nfrForSpecification->description = "<p>A segurança dos sistemas de monitoramento de saúde AAL na Android TV trata da proteção dos dados pessoais dos usuários, garantindo que as informações armazenadas e transmitidas pelo sistema sejam confidenciais, precisas e acessíveis.</p>";
-        $nfrForSpecification->acceptance_criteria = "<p>Deve haver mecanismos de seguro na autenticação para garantir que apenas usuários autorizados possam acessar as informações e recursos do sistema.</p>
-        <p>Mecanismos de criptografia para armazenamento de dos dados pessoais de saúde, garantindo que em caso de acesso não autorizado, essas informações permaneçam ilegíveis.</p>
-        <p>Deve haver mecanismos de revisão para verificação de informações sensíveis são impressos em logs, mensagens de erro ou outras saídas não autorizadas.</p>
-        <p>Mecanismos de política de controle de acesso acordo com as funções e responsabilidades, limitando o acesso a dados confidenciais apenas aos profissionais autorizados.</p>
-        <p>Deve haver um mecanismo para auditoria e registro de atividades para o monitoramento de acessos e a detecção de comportamentos suspeitos.</p>";
-        $nfrForSpecification->evaluation_metrics = "<p>Gestão de Acesso: Avaliar a gestão da identidade do usuário, garantindo que a autorização seja devidamente atribuída e revogando quando necessário.</p>
-        <p>Acesso não autorizadas: Registrar e analise as tentativas de usuários não autorizados de acessar o sistema para identificar possíveis ameaças ou atividades suspeitas.</p>
-        <p>Tempo de resposta para detecção de intrusos: Medir o tempo necessário para o sistema identificar possíveis invasões ou comportamentos maliciosos e tomar as devidas ações corretivas.</p>
-        <p>Sucesso de Autenticação: Medir as tentativas de autenticação bem-sucedidas em relação ao total de tentativas.</p>";
+        $nfrForSpecification->acceptance_criteria = "<p>Apenas os dados necessários devem ser armazenados no STB usando um algoritmo de criptografia seguro, o restante da informação sensível deve vir de um servidor externo utilizando protocolo https.</p>
+        <p>O acesso aos dados deve ser restrito a usuários autenticados e autorizados.</p>
+        <p>O sistema Android TV deve registrar e monitorar todas as atividades de acesso aos dados, permitindo uma auditoria adequada.</p>
+        <p>O sistema em Android TV deve ter medidas efetivas para proteger o sistema, os dados e os usuários contra ameaças, vulnerabilidades e acessos não autorizados.</p>
+        <p>O sistema em Android TV deve estar disponível e acessível aos usuários dentro de um nível aceitável de tempo
+        <p>O sistema em Android TV deve garantir a integridade e consistência dos dados armazenados.</p>
+        <p>O sistema em Android TV deve garantir a segurança e proteção dos conteúdos exibidos.</p>
+        <p>O sistema em Android TV deve respeitar e proteger a privacidade dos usuários, garantindo a confidencialidade das informações pessoais.</p>
+        <p>O sistema em Android TV deve garantir a segurança do armazenamento de dados e ter procedimentos adequados de backup.</p>
+        <p>O sistema em Android TV deve ter mecanismos de proteção contra violações de segurança e ser capaz de se recuperar de possíveis incidentes.</p>";
+        $nfrForSpecification->evaluation_metrics = "<p>A taxa de sucesso na autenticação de usuários deve ser de 99\%.</p>
+        <p>Não deve haver registros de acesso não autorizado aos dados pessoais nos últimos 12 meses.</p>
+        <p>Realizar testes de avaliação de logs e verificação dos acessos aos dados.</p>
+        <p>Realizar testes de instrução e avaliação de vulnerabilidades para identificar possíveis brechas de segurança e avaliar a eficácia das medidas de proteção implementadas.</p>
+        <p>Medir o tempo de resposta do sistema e registrar o tempo de indisponibilidade para garantir que esteja dentro dos limites definidos.</p>
+        <p>Realizar verificações de integridade de dados periódicos e comparar os resultados com os dados armazenados para identificar discrepâncias ou corrupção de dados.</p>
+        <p>Implementar medidas de criptografia e autenticação para proteger o conteúdo transmitido e realizar auditorias periódicas para detectar qualquer violação de segurança.</p>
+        <p>Realizar uma análise de riscos de privacidade, revisar as políticas de privacidade e implementar medidas de anonimização e consentimento explícito do usuário.</p>
+        <p>Verificar a conformidade com as melhores práticas de segurança de armazenamento de dados, realizar testes de recuperação de backup e garantir a integridade dos dados restaurados.</p>";
         $nfrForSpecification->content = file_get_contents(storage_path() . '/files/nfr/sig-security-file_1.3.txt');
         $nfrForSpecification->image = "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-security-file_1.3.png'));
         $nfrForSpecification->save();

@@ -15,7 +15,7 @@
                         <h5><strong>Name:</strong></h4>
                         <p> {{ $legalRequirements->name }}</p>
                         <h5><strong>Description:</strong></h5> 
-                        <p>{{ $legalRequirements->description }}</p>
+                        <p>{!! html_entity_decode($legalRequirements->description) !!}</p>
                         <h5><strong>Legal Text/Reference:</strong></h5> 
                         <p>{!! html_entity_decode($legalRequirements->legal_references) !!}</p>
                         <h5><strong>Recommendations:</strong></h5> 

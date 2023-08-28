@@ -33,15 +33,11 @@ def extract_requirements(paragraphs):
         requirements.append(predicted_label[0].strip())
     return requirements
 
-corpus = []
-labels = []
+corpus, labels = []
 
 #definindo texto de treinamento
-values = loadFilesToArray("/home/mauricio/project/web/ndd-framework-app/storage/python/treinamento.txt")
-text = loadFiles("/home/mauricio/project/web/ndd-framework-app/storage/python/texto.txt")
-# values = loadFilesToArray(sys.argv[1])
-# text = loadFiles(sys.argv[2])
-
+values = loadFilesToArray(sys.argv[1])
+text = loadFiles(sys.argv[2])
 
 for value in values:
     data = value.split("|")

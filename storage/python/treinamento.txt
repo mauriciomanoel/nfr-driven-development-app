@@ -1,3 +1,9 @@
+Garantir que que pessoas com deficiências possam utilizar o sistema sem dificuldades|Usability
+Interface que utilize símbolos e palavras naturalmente compreensíveis do dia a dia|Aceitability
+Os usuários devem se familiarizem rapidamente com as funcionalidades e se sintam à vontade ao interagir|Aceitability
+Atender às necessidades específicas de cada usuário|Aceitability
+Oferecer recursos de personalização que permitam aos usuários ajustar as configurações|Aceitability
+Os usuários devem ter o controle sobre o uso de seus dados pessoais|Aceitability
 Este software deve ser acessível a todos os usuários|Accessibility
 A segurança dos dados deve ser uma prioridade absoluta|Security
 Este software deve ser desenvolvido seguindo os mais altos padrões éticos|Ethics
@@ -31,3 +37,8 @@ Este software deve atender aos padrões de acessibilidade estabelecidos|Accessib
 A segurança dos dados deve ser protegida por criptografia robusta|Security
 As práticas éticas devem ser seguidas em todas as interações com o software|Ethics
 Os usuários devem ter controle sobre o uso de seus dados pessoais|Autonomy
+Interface do seja intuitiva e fácil de usar, permitindo aos usuários interagir de maneira natural e sem complicações|Usability
+Os usuários devem entender prontamente como navegar e utilizar todas as funcionalidades|Usability
+Recursos personalizados que se adaptem às preferências e necessidades individuais dos usuários|Usability
+Os usuários devem personalizar as configurações do sistema de acordo com suas preferências|Usability
+Os símbolos e palavras utilizados sejam facilmente compreensíveis|Usability

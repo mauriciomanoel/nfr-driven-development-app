@@ -156,10 +156,11 @@ class MenusTableSeeder extends Seeder
             // $this->insertLink('guest,user,admin', 'Taxonomy',           'artifacts/taxonomies');
         // $this->endDropdown();
 
+        $this->insertLink('guest,user,admin', 'Taxonomy AAL',          '/artifacts/taxonomies', "cil-library");
 
-        $this->beginDropdown('guest,user,admin', 'Taxonomy', 'cil-library');
-                $this->insertLink('guest,user,admin', 'NFR',      'artifacts/storytellings');
-                $this->insertLink('guest,user,admin', 'Acceptability',  'artifacts/legalregulations');
+        // $this->beginDropdown('guest,user,admin', 'Taxonomy', 'cil-library');
+        // $this->insertLink('guest,user,admin', 'Taxonomy AAL',      'artifacts/taxonomies');
+                // $this->insertLink('guest,user,admin', 'Acceptability',  'artifacts/legalregulations');
         $this->endDropdown();
 
         // $this->beginDropdown('guest,user,admin', 'Requeriments', 'cil-description');

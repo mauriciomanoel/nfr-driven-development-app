@@ -294,7 +294,7 @@ class FrameworkController extends Controller
         $valueTreinamento = storage_path() . "/python/treinamento.txt";
         $valueText = storage_path() . "/python/texto.txt";
 
-        $command = "python " . storage_path() . "/python/classification_of_non_functional_requirements_1.3.py " . $valueTreinamento . " " . $valueText;
+        $command = "python3 " . storage_path() . "/python/classification_of_non_functional_requirements_1.3.py " . $valueTreinamento . " " . $valueText;
         $process = Process::fromShellCommandline($command);
         $process->run();
 

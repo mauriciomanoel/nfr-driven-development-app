@@ -195,7 +195,7 @@ class LegalRequirementsSeeder extends Seeder
             'updated_at' => Carbon::now(),            
         ]);
 
-        $requirements = NonFunctionalRequirements::whereIn('name', ['Usability', 'Accessibility', 'Privacy', "Security", "Ethics", "Autonomy"])->get();
+        $requirements = NonFunctionalRequirements::whereIn('name', ['Usability', 'Accessibility', 'Privacy', "Security", "Ethics", "Autonomy", 'Acceptability'])->get();
         foreach($requirements as $requirement) {
             DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,

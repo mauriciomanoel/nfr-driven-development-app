@@ -550,7 +550,7 @@ class ArtifactsSeeder extends Seeder
         $lifeSettingsSubcategories = LifeSettingsSubcategories::where('name' , '=' , 'Healthcare Management' )->first();
 
         $artifact = Artifacts::create([  
-            'title' => "Storintelling",
+            'title' => "Marilyn is 75 years old, suffering from heart problems.",
             'description' => "",
             'content' => "Marilyn is 75 years old, suffering from heart problems. As she lives alone and
             due to her health condition, she has acquired for her home a healthcare
@@ -648,7 +648,7 @@ class ArtifactsSeeder extends Seeder
         $lifeSettingsSubcategories = LifeSettingsSubcategories::where('name' , '=' , 'Experiences Exchanging' )->first();
 
         $artifact = Artifacts::create([  
-            'title' => "Storintelling",
+            'title' => "Hugh is a retired teacher of mathematics from the high school",
             'description' => "",
             'content' => "Hugh is a retired teacher of mathematics from the high school. Although he
             has 77 he feels extremely healthy an active.

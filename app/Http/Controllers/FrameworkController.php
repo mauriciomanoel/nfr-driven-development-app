@@ -307,6 +307,8 @@ class FrameworkController extends Controller
         $nonFunctionalRequirementsFromExternal = explode(";", $values[1]);
         $nonFunctionalRequirementsFromExternal[] = "Acceptability";
         $nonFunctionalRequirementsFromExternal[] = "Ethics";
+        $nonFunctionalRequirementsFromExternal[] = "Ethics";
+
         $isEnableNextStep = $this::isEnableNextStep(6);
         $recommendationsNonFunctionalRequirements = NonFunctionalRequirements::whereIn('name', $nonFunctionalRequirementsFromExternal)->get();
         $nonFunctionalRequirements = NonFunctionalRequirements::with('user')->get();
@@ -632,7 +634,7 @@ class FrameworkController extends Controller
         $project = $this::getCurrentProject();
 
         $htmlBody = '<h1>' . mb_strtoupper($project->title, 'UTF-8') . '</h1>';
-        $htmlBody .= '<p><strong>Descrição:</strong>' . $project->description . '</p>';
+        $htmlBody .= '<p><strong>Description:</strong>' . $project->description . '</p>';
         $htmlBody .= '<p><strong>Subdomain:</strong>' . $project->lifeSettings->name . '</p>';
         $htmlBody .= '<div class="page-break"></div>';
 
@@ -665,7 +667,7 @@ class FrameworkController extends Controller
 
         foreach($stakeholders as $stakeholder) {            
             $htmlBody .= '<p><strong>Stakeholders:</strong>' . $stakeholder->stakeholder->name . '</p>';
-            $htmlBody .= '<p><strong>Descrição:</strong>' . $stakeholder->stakeholder->description . '</p>';
+            $htmlBody .= '<p><strong>Description:</strong>' . $stakeholder->stakeholder->description . '</p>';
             $htmlBody .= '<p><strong>Identified Needs</strong></p>';
             $htmlBody .= '' . $stakeholder->identified_needs . '';
             $htmlBody .= '<p><strong>Expectations</strong></p>';

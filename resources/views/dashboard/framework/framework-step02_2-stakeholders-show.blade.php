@@ -11,7 +11,7 @@
                       <i class="fa fa-align-justify"></i><strong>Stakeholder:</strong> {{ $stakeholder->stakeholder->name }}</div>
                     <div class="card-body">
                         <h5><strong>Description:</strong></h5> 
-                        <p>{{ $stakeholder->description }}</p>
+                        <p>{{ $stakeholder->stakeholder->description }}</p>
                         <h5><strong>Identified Needs:</strong></h5> 
                         <p>{!! html_entity_decode($stakeholder->identified_needs) !!}</p>
                         <h5><strong>Expectations:</strong></h5> 
@@ -20,7 +20,7 @@
                         <p>{!! html_entity_decode($stakeholder->experiences) !!}</p>
                                                 
                         <h5><strong>Last Update:</strong></h5> 
-                        <p>{{ $stakeholder->created_at }}</p>                     
+                        <p>{{ $stakeholder->created_at }}</p>
                         <a href="{{ url()->previous() }}" class="btn btn-block btn-primary">{{ __('Go Back') }}</a>
                     </div>
                 </div>

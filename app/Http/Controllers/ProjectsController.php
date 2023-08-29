@@ -108,7 +108,7 @@ class ProjectsController extends Controller
         $project->life_settings_subcategory_id = $request->input('life_settings_subcategory');
         $project->current = 0;
 
-        var_dump($request->input('life_settings_subcategory'));
+        // var_dump($request->input('life_settings_subcategory'));
 
         $project->users_id = $user->id;
         $project->save();

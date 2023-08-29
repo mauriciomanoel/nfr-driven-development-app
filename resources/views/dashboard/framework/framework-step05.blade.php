@@ -59,7 +59,7 @@
                         <td>{{ $nonFunctionalRequirement->is_recommendation }}</td>
                         <td>{{ $nonFunctionalRequirement->updated_at }}</td>                        
                         <td>
-                          <a href="{{route('framework.download.sig',$nonFunctionalRequirement->id)}}" class="btn btn-block btn-primary"> SIG</a>
+                          <a href="{{route('framework.download.sig.especification',$nonFunctionalRequirement->id)}}" class="btn btn-block btn-primary"> SIG</a>
                         </td>
                         <td>
                           <a href="{{route('framework.step5.viewEspecification',$nonFunctionalRequirement->id)}}" class="btn btn-block btn-primary">View</a>

@@ -567,6 +567,38 @@ class FrameworkController extends Controller
         return response()->download($fileStorePath, $fileName, $headers);
     }
 
+    public function downloadSIGEspecification($id) {
+
+        $nonFunctionalRequirementForSpecification = Steps5Framework::with('nonFunctionalRequirement')->where("id", "=", $id)->first();
+        
+        $nonFunctionalRequirement = $nonFunctionalRequirementForSpecification->nonFunctionalRequirement;
+        $arrNonFunctionalRequirements = $this::getAllNonFunctionalRequirements();
+
+        $element = json_decode($nonFunctionalRequirementForSpecification->content, true);
+        foreach($element["orphans"] as $indice => $orphan) {
+            if (array_key_exists(strtolower($orphan["text"]), $arrNonFunctionalRequirements)) {
+                var_dump($orphan["text"]);
+                $detail = $arrNonFunctionalRequirements[strtolower($orphan["text"])];
+                $orphan["customProperties"]["Description"]         = $detail["description"];
+                $orphan["customProperties"]["Alias"]               = $detail["alias"];
+                $orphan["customProperties"]["Recommendations"]     = $detail["recommendations"];
+                $orphan["customProperties"]["Legal Requirements"]  = $detail["legalRequirements"];
+                $element["orphans"][$indice] = $orphan;
+            }
+        }
+
+        var_dump($arrNonFunctionalRequirements);
+
+        $data = json_encode($element);
+ 
+        $headers = ['Content-Type: application/json'];
+        $fileName = "sig-file.txt";
+        $fileStorePath = public_path('/tmp/'.$fileName);
+        File::put($fileStorePath, $data);
+
+        //return response()->download($fileStorePath, $fileName, $headers);
+    }
+
     public function downloadFullDocument() {
         
         $options = new Options();

@@ -19,7 +19,7 @@
                         <h5><strong>Image:</strong></h5>
                         @if(!empty($nonFunctionalRequirement->image))
                           <p>
-                            <a href="{{route('download.sig',$nonFunctionalRequirement->id)}}" download=""><strong>Click Here</strong></a> to download Softgoal Interdependency Graph (SIG)
+                            <a href="{{route('framework.download.sig.especification',$nonFunctionalRequirement->id)}}" download=""><strong>Click Here</strong></a> to download Softgoal Interdependency Graph (SIG)
                             and Open in <a href="https://www.cin.ufpe.br/~jhcp/dsm3goals/nfr.html#">DSM3 - NFR</a>
                           </p>
                           <p>  

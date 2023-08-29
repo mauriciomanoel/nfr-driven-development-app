@@ -84,6 +84,8 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/downloadFullDocument', [FrameworkController::class, 'downloadFullDocument'])->name('framework.download.full.document');
 
             Route::get('/downloadSIG/{id}', [FrameworkController::class, 'downloadSIG'])->name('framework.download.sig');
+            Route::get('/downloadSIGForEspecification/{id}', [FrameworkController::class, 'downloadSIGEspecification'])->name('framework.download.sig.especification');
+
 
         });
 

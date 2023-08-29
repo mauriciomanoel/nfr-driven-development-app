@@ -1,0 +1,356 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "9ee86a82-be12-4c4d-be60-fa9b4a2acc9d",
+      "text": "Adaptabilidade",
+      "type": "nfr.NFR",
+      "x": 1027,
+      "y": 112,
+      "customProperties": {
+        "Alias": "Adaptability"
+      }
+    },
+    {
+      "id": "5f46d5bf-3711-4677-afbb-0d1e0e352df9",
+      "text": "Personalização",
+      "type": "nfr.NFR",
+      "x": 683,
+      "y": 287
+    },
+    {
+      "id": "2bbe741c-74bc-4a56-93d0-9db838e409c4",
+      "text": "Assistentes Virtuais",
+      "type": "nfr.NFR",
+      "x": 827,
+      "y": 297
+    },
+    {
+      "id": "3f7b334d-ff53-4f4b-a727-1ec1f3b646cc",
+      "text": "Acesso Remoto",
+      "type": "nfr.NFR",
+      "x": 1095,
+      "y": 291
+    },
+    {
+      "id": "8624bff0-2c80-48ca-93af-accf5b757e3a",
+      "text": "Controle Remoto",
+      "type": "nfr.NFR",
+      "x": 1426,
+      "y": 260
+    },
+    {
+      "id": "417f0deb-b492-472e-a4c5-7676cc4d4575",
+      "text": "Interface",
+      "type": "nfr.Operationalization",
+      "x": 557,
+      "y": 421.5
+    },
+    {
+      "id": "7ecc9cef-c1dd-4560-a2aa-81893abc476a",
+      "text": "Notificações",
+      "type": "nfr.Operationalization",
+      "x": 741,
+      "y": 428
+    },
+    {
+      "id": "8295dd4d-6675-431b-91c9-e4f79893ca5d",
+      "text": "Reorganização de elementos",
+      "type": "nfr.Operationalization",
+      "x": 415,
+      "y": 540
+    },
+    {
+      "id": "6a3cce4a-48e9-48b2-a1a6-ceb99e41ccc2",
+      "text": "Seleção de cores e temas",
+      "type": "nfr.Operationalization",
+      "x": 440,
+      "y": 628
+    },
+    {
+      "id": "48281b03-369d-4ba7-aa42-b0eebbbaecb7",
+      "text": "Responsividade para dispositivos",
+      "type": "nfr.Operationalization",
+      "x": 543,
+      "y": 598
+    },
+    {
+      "id": "6522d1cc-6684-449e-bab1-114e1ae2c2c1",
+      "text": "Configuração de alertas e notificações",
+      "type": "nfr.Operationalization",
+      "x": 670,
+      "y": 531
+    },
+    {
+      "id": "c22603a4-f1e7-4b58-b9e9-032ca1efc39e",
+      "text": "Escolha de tipos, horários e sons",
+      "type": "nfr.Operationalization",
+      "x": 737,
+      "y": 603
+    },
+    {
+      "id": "6c17a25f-1a32-4ea3-86f9-bdeb974fb10f",
+      "text": "Notificações claras e informativas",
+      "type": "nfr.Operationalization",
+      "x": 815,
+      "y": 669
+    },
+    {
+      "id": "17d0519c-6008-47ee-89d0-5843ebdde724",
+      "text": "Integração assistentes virtuais",
+      "type": "nfr.Operationalization",
+      "x": 834,
+      "y": 477
+    },
+    {
+      "id": "5d580b08-cefe-4a92-9f5a-eda1a10110d5",
+      "text": "Tarefas por comandos de voz",
+      "type": "nfr.Operationalization",
+      "x": 915,
+      "y": 536
+    },
+    {
+      "id": "472f198b-e694-4802-ac2e-c93bf53a94ce",
+      "text": "Resposta rápida e precisa",
+      "type": "nfr.Operationalization",
+      "x": 958,
+      "y": 474
+    },
+    {
+      "id": "068c945a-267d-48bc-ba88-87c42e3760fa",
+      "text": "Acesso seguro e criptografado",
+      "type": "nfr.Operationalization",
+      "x": 1024,
+      "y": 411
+    },
+    {
+      "id": "f70d3381-7729-4d3d-b0fb-60b0eafb6a49",
+      "text": "Informações de saúde acessíveis",
+      "type": "nfr.Operationalization",
+      "x": 1094,
+      "y": 500
+    },
+    {
+      "id": "e5990c93-d10f-47e1-b614-c8bca65d2c68",
+      "text": "Privacidade dos dados garantida",
+      "type": "nfr.Operationalization",
+      "x": 1181,
+      "y": 453
+    },
+    {
+      "id": "e70f108f-06cb-44a4-8d0d-2a21a77c8f1e",
+      "text": "Comando de Voz",
+      "type": "nfr.Operationalization",
+      "x": 1261,
+      "y": 524
+    },
+    {
+      "id": "01c9ca06-8989-4946-82f8-860a7292503d",
+      "text": "Controle intuitivo à distância",
+      "type": "nfr.Operationalization",
+      "x": 1333,
+      "y": 583
+    },
+    {
+      "id": "bd3d8634-4079-4a63-bac5-9bfe1e496736",
+      "text": "Feedback claro das ações",
+      "type": "nfr.Operationalization",
+      "x": 1409,
+      "y": 518
+    },
+    {
+      "id": "eb0f9ef8-128d-494b-8e07-5111baf306f2",
+      "text": "Contraste de cores",
+      "type": "nfr.Operationalization",
+      "x": 1493,
+      "y": 630
+    },
+    {
+      "id": "e7690f70-7b22-4c98-9e1e-9bedcbd24f45",
+      "text": "Layout simples e organizado",
+      "type": "nfr.Operationalization",
+      "x": 1535,
+      "y": 530
+    },
+    {
+      "id": "4acfcb03-fe45-4ebe-b361-f1973d349116",
+      "text": "Sinalização Sonora",
+      "type": "nfr.Operationalization",
+      "x": 1614,
+      "y": 465
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "id": "82d73205-f35a-442e-8fb3-52aa3a925a8f",
+      "type": "nfr.AndRefinementLink",
+      "source": "417f0deb-b492-472e-a4c5-7676cc4d4575",
+      "target": "5f46d5bf-3711-4677-afbb-0d1e0e352df9"
+    },
+    {
+      "id": "58eb33e8-a7f9-4558-ae88-f8d5a554d9c2",
+      "type": "nfr.AndRefinementLink",
+      "source": "7ecc9cef-c1dd-4560-a2aa-81893abc476a",
+      "target": "5f46d5bf-3711-4677-afbb-0d1e0e352df9"
+    },
+    {
+      "id": "258cbb06-38f5-48b2-845b-b704652ac63c",
+      "type": "nfr.AndRefinementLink",
+      "source": "8295dd4d-6675-431b-91c9-e4f79893ca5d",
+      "target": "417f0deb-b492-472e-a4c5-7676cc4d4575"
+    },
+    {
+      "id": "cd18e8a3-3449-4210-acd4-3d5353a04e06",
+      "type": "nfr.AndRefinementLink",
+      "source": "6a3cce4a-48e9-48b2-a1a6-ceb99e41ccc2",
+      "target": "417f0deb-b492-472e-a4c5-7676cc4d4575"
+    },
+    {
+      "id": "67f18ecd-07d2-42bd-a9cc-1ff314e82a0c",
+      "type": "nfr.AndRefinementLink",
+      "source": "48281b03-369d-4ba7-aa42-b0eebbbaecb7",
+      "target": "417f0deb-b492-472e-a4c5-7676cc4d4575"
+    },
+    {
+      "id": "d58180ab-3d08-40c9-9913-83795a4292ab",
+      "type": "nfr.ContributionLink",
+      "source": "6c17a25f-1a32-4ea3-86f9-bdeb974fb10f",
+      "target": "7ecc9cef-c1dd-4560-a2aa-81893abc476a",
+      "label": "+"
+    },
+    {
+      "id": "017936ca-c5f2-4235-b70f-6395815fefb6",
+      "type": "nfr.AndRefinementLink",
+      "source": "6522d1cc-6684-449e-bab1-114e1ae2c2c1",
+      "target": "7ecc9cef-c1dd-4560-a2aa-81893abc476a"
+    },
+    {
+      "id": "630dc172-98a0-4049-8715-75ed982cf6d0",
+      "type": "nfr.AndRefinementLink",
+      "source": "c22603a4-f1e7-4b58-b9e9-032ca1efc39e",
+      "target": "7ecc9cef-c1dd-4560-a2aa-81893abc476a"
+    },
+    {
+      "id": "096d364b-edfb-43ab-875a-d31e203810f8",
+      "type": "nfr.AndRefinementLink",
+      "source": "5f46d5bf-3711-4677-afbb-0d1e0e352df9",
+      "target": "9ee86a82-be12-4c4d-be60-fa9b4a2acc9d"
+    },
+    {
+      "id": "f4dd6073-88ec-4447-8040-865100e32fe7",
+      "type": "nfr.AndRefinementLink",
+      "source": "2bbe741c-74bc-4a56-93d0-9db838e409c4",
+      "target": "9ee86a82-be12-4c4d-be60-fa9b4a2acc9d"
+    },
+    {
+      "id": "fce151e3-6ab3-4ff4-a254-3924fc843d5a",
+      "type": "nfr.AndRefinementLink",
+      "source": "3f7b334d-ff53-4f4b-a727-1ec1f3b646cc",
+      "target": "9ee86a82-be12-4c4d-be60-fa9b4a2acc9d"
+    },
+    {
+      "id": "ef97cafc-c42f-4e13-9a1f-d7734d62ac06",
+      "type": "nfr.AndRefinementLink",
+      "source": "8624bff0-2c80-48ca-93af-accf5b757e3a",
+      "target": "9ee86a82-be12-4c4d-be60-fa9b4a2acc9d"
+    },
+    {
+      "id": "06a3dbaa-bdfa-4d71-82f1-d665df67121f",
+      "type": "nfr.AndRefinementLink",
+      "source": "17d0519c-6008-47ee-89d0-5843ebdde724",
+      "target": "2bbe741c-74bc-4a56-93d0-9db838e409c4"
+    },
+    {
+      "id": "ae581c91-06a1-471d-a549-867fe5027347",
+      "type": "nfr.AndRefinementLink",
+      "source": "5d580b08-cefe-4a92-9f5a-eda1a10110d5",
+      "target": "2bbe741c-74bc-4a56-93d0-9db838e409c4"
+    },
+    {
+      "id": "bcb8a443-c76f-4591-8ec8-daa8f9267483",
+      "type": "nfr.ContributionLink",
+      "source": "472f198b-e694-4802-ac2e-c93bf53a94ce",
+      "target": "2bbe741c-74bc-4a56-93d0-9db838e409c4",
+      "label": "+"
+    },
+    {
+      "id": "1d4206ed-10d2-4665-bdd6-24e22a7cb462",
+      "type": "nfr.AndRefinementLink",
+      "source": "068c945a-267d-48bc-ba88-87c42e3760fa",
+      "target": "3f7b334d-ff53-4f4b-a727-1ec1f3b646cc"
+    },
+    {
+      "id": "056d7a9b-7839-4a64-8080-2e064ef40d63",
+      "type": "nfr.AndRefinementLink",
+      "source": "f70d3381-7729-4d3d-b0fb-60b0eafb6a49",
+      "target": "3f7b334d-ff53-4f4b-a727-1ec1f3b646cc"
+    },
+    {
+      "id": "15dae31b-b4aa-41dc-9fc1-0f3e7340d506",
+      "type": "nfr.AndRefinementLink",
+      "source": "e5990c93-d10f-47e1-b614-c8bca65d2c68",
+      "target": "3f7b334d-ff53-4f4b-a727-1ec1f3b646cc"
+    },
+    {
+      "id": "a261e991-506b-47ce-91fc-bf4ed7f068e3",
+      "type": "nfr.AndRefinementLink",
+      "source": "e70f108f-06cb-44a4-8d0d-2a21a77c8f1e",
+      "target": "8624bff0-2c80-48ca-93af-accf5b757e3a"
+    },
+    {
+      "id": "f8d80b18-ed20-49a0-96f6-16508fb96eef",
+      "type": "nfr.AndRefinementLink",
+      "source": "01c9ca06-8989-4946-82f8-860a7292503d",
+      "target": "8624bff0-2c80-48ca-93af-accf5b757e3a"
+    },
+    {
+      "id": "d7ef6149-7360-4bf2-ad06-871a40b797a9",
+      "type": "nfr.AndRefinementLink",
+      "source": "bd3d8634-4079-4a63-bac5-9bfe1e496736",
+      "target": "8624bff0-2c80-48ca-93af-accf5b757e3a"
+    },
+    {
+      "id": "e0ce3fae-1361-4bc3-aafa-94be3c931dc7",
+      "type": "nfr.AndRefinementLink",
+      "source": "eb0f9ef8-128d-494b-8e07-5111baf306f2",
+      "target": "8624bff0-2c80-48ca-93af-accf5b757e3a"
+    },
+    {
+      "id": "bacdd0cf-94ed-47ee-9fe2-9d6ef2885f28",
+      "type": "nfr.AndRefinementLink",
+      "source": "e7690f70-7b22-4c98-9e1e-9bedcbd24f45",
+      "target": "8624bff0-2c80-48ca-93af-accf5b757e3a"
+    },
+    {
+      "id": "74926441-b9c9-4663-835a-ac0023456eaa",
+      "type": "nfr.AndRefinementLink",
+      "source": "4acfcb03-fe45-4ebe-b361-f1973d349116",
+      "target": "8624bff0-2c80-48ca-93af-accf5b757e3a"
+    }
+  ],
+  "display": {
+    "9ee86a82-be12-4c4d-be60-fa9b4a2acc9d": {
+      "width": 113.0902099609375,
+      "height": 60.305755615234375
+    },
+    "5f46d5bf-3711-4677-afbb-0d1e0e352df9": {
+      "width": 98.09173583984375,
+      "height": 49.30816650390625
+    },
+    "8295dd4d-6675-431b-91c9-e4f79893ca5d": {
+      "width": 101.09130859375,
+      "height": 67.803955078125
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Tue, 29 Aug 2023 08:39:03 GMT",
+  "diagram": {
+    "width": 2513,
+    "height": 1428,
+    "customProperties": {
+      "Description": ""
+    }
+  }
+}

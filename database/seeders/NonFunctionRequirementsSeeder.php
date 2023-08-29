@@ -413,7 +413,10 @@ class NonFunctionRequirementsSeeder extends Seeder
             'description' => "Grau em que um produto ou sistema protege informações e dados para que pessoas ou outros produtos ou sistemas tenham o grau de acesso aos dados apropriado para seus tipos e níveis de autorização.",
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
-            'recommendations' => "",
+            'recommendations' => "<p>Os dados de saúde devem ser protegidos contra acesso não autorizado, tanto em trânsito quanto em repouso.</p>
+            <p>Utilize criptografia forte para proteger informações sensíveis, como dados médicos, identificadores pessoais e registros clínicos.</p>
+            <p>Implemente um sistema de autenticação robusto para garantir que apenas usuários autorizados tenham acesso ao sistema.</p>
+            <p>Adote práticas de privacidade sólidas, garantindo que os dados pessoais sejam tratados de acordo com as leis e regulamentos aplicáveis, como o GDPR.</p>",
             'content' => file_get_contents(storage_path() . '/files/nfr/sig-security-file.txt'),
             'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-security-file.png')),
             'characteristics_id' => $acceptabilityRequeriment->id,
@@ -637,8 +640,8 @@ class NonFunctionRequirementsSeeder extends Seeder
             'model_quality' => "Product quality",
             'source' => "ISO/IEC 25010:2011 Systems and software engineering",
             'recommendations' => "<p>Projetar o sistema AAL com uma arquitetura flexível e modular que possibilite a fácil adaptação a diferentes ambientes e tecnologias emergentes.</p><p>Utilizar padrões abertos e interfaces bem definidas para facilitar a interoperabilidade e a integração com outros sistemas e dispositivos.</p>",
-            'content' => null,
-            'image' => null,
+            'content' => file_get_contents(storage_path() . '/files/nfr/sig-adaptability-file.txt'),
+            'image' => "data:image/png;base64,".base64_encode(file_get_contents(storage_path() . '/files/nfr/sig-adaptability-file.png')),            
             'characteristics_id' => $portabilityRequeriment->id,
             'users_id' => $user->id,
         ]);

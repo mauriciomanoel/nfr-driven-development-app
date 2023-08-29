@@ -196,13 +196,13 @@ class LegalRequirementsSeeder extends Seeder
         ]);
 
         $requirements = NonFunctionalRequirements::whereIn('name', ['Usability', 'Accessibility', 'Privacy', "Security", "Ethics", "Autonomy", 'Acceptability'])->get();
+        
         foreach($requirements as $requirement) {
             DB::table('legal_requirements_non_functional_requirements')->insert([
                 'legal_id' =>  $legalAndNormativeRequirement->id,
                 'nfr_id' => $requirement->id,
             ]);
         }
-
 
         $legalAndNormativeRequirement = LegalRequirements::create([  
             'name' => "ISO/IEC 25066:2016 - Software Engineering - Software product Quality Requirements and Evaluation (SQuaRE) - Common Industry Format (CIF) for Usability: User requirements for feedback",

@@ -33,7 +33,8 @@ def extract_requirements(paragraphs):
         requirements.append(predicted_label[0].strip())
     return requirements
 
-corpus, labels = []
+corpus = []
+labels = []
 
 #definindo texto de treinamento
 values = loadFilesToArray(sys.argv[1])

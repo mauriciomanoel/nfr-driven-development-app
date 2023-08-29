@@ -37,7 +37,7 @@
                             @foreach($legalRequirements as $legalAndNormativeRequirement)
                                 <tr>
                                   <td><strong>{{ $legalAndNormativeRequirement->name }}</strong></td>
-                                  <td>{{ $legalAndNormativeRequirement->description }}</td>                                
+                                  <td>{!! html_entity_decode($legalAndNormativeRequirement->description) !!}</td>                                
                                   <td>
                                     <a href="{{ url('/legalRequirements/' . $legalAndNormativeRequirement->id) }}" class="btn btn-block btn-primary">View</a>
                                   </td>                                

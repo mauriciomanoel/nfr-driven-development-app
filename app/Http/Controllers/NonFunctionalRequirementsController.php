@@ -84,8 +84,14 @@ class NonFunctionalRequirementsController extends Controller
     public function show($id)
     {
 
-        $legalRequirements = LegalRequirements::whereIn('id', [1, 2, 3])->get();
+        // 
         $nonFunctionalRequirement = NonFunctionalRequirements::with('user')->find($id);
+        $legalRequirementsNonFunctionalRequirements = DB::table('legal_requirements_non_functional_requirements')
+                ->where('nfr_id', $nonFunctionalRequirement->id)
+                ->get();
+        $legalIdsArray = $legalRequirementsNonFunctionalRequirements->pluck('legal_id')->toArray();
+        $legalRequirements = LegalRequirements::whereIn('id', $legalIdsArray)->get();
+// var_dump(count($nonFunctionalRequirement->legalRequirements)); exit;
         return view('dashboard.nonFunctionalRequirements.show', ['nonFunctionalRequirement' => $nonFunctionalRequirement, 'legalRequirements' => $legalRequirements  ]);
     }
 

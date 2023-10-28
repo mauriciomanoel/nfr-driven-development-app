@@ -505,14 +505,17 @@ class FrameworkController extends Controller
     public function downloadAllSIG() {
 
         $nonFunctionalRequirementsForSpecification = Steps5Framework::with('nonFunctionalRequirement')->get();
+        // $nonFunctionalRequirementsForSpecification = Steps5Framework::with('nonFunctionalRequirement')->where("nfr_id", "=", 28)->get();
+
         $arrNonFunctionalRequirements = $this::getAllNonFunctionalRequirements();
         $arrayContent = array();
 
         foreach($nonFunctionalRequirementsForSpecification as $nonFunctionalRequirementForSpecification) {
             $nonFunctionalRequirement = $nonFunctionalRequirementForSpecification->nonFunctionalRequirement;
-            if (empty($nonFunctionalRequirement->content)) continue;
+            if (empty($nonFunctionalRequirementForSpecification->content)) continue;
 
-            $element = json_decode($nonFunctionalRequirement->content, true);
+            // var_dump($nonFunctionalRequirement->id, $nonFunctionalRequirement->name);
+            $element = json_decode($nonFunctionalRequirementForSpecification->content, true);
             
             foreach($element["orphans"] as $indice => $orphan) {
                 if (array_key_exists(strtolower($orphan["text"]), $arrNonFunctionalRequirements)) {
@@ -531,11 +534,11 @@ class FrameworkController extends Controller
         $data = $this::mergeSigs($arrayContent);
 
         $headers = ['Content-Type: application/json'];
-        $fileName = "sig-file.txt";
+        $fileName = "full-sigs-file-".time().".txt";
         $fileStorePath = public_path('/tmp/'.$fileName);
         File::put($fileStorePath, $data);
 
-        return response()->download($fileStorePath, $fileName, $headers);
+         return response()->download($fileStorePath, $fileName, $headers);
     }
 
     public function downloadSIG($id) {
@@ -773,27 +776,75 @@ class FrameworkController extends Controller
 
     public function mergeSigs($arrayContent) {
         
+
+        $replaceIds = array();
+        foreach($arrayContent as $element) {
+            foreach($element["orphans"] as $key => $orphan) {
+                $replaceIds[] = $orphan["id"];
+            }
+        }
+
+        $counts = array_count_values($replaceIds);
+
+        $duplicates = [];
+
+foreach ($counts as $value => $count) {
+    if ($count > 1) {
+        $duplicates[] = $value;
+    }
+}
+
+
+        // var_Dump($duplicates); exit;
+
+        $tempElement = json_encode($arrayContent);
+
+            // var_dump($replaceIds, $tempElement); 
+
+
+            // replace Ids
+            foreach($duplicates as $id) {
+                $uuid = Str::uuid()->toString();
+                $tempElement = str_replace($id, $uuid, $tempElement);
+            }
+
+
+
+            // return json_encode($tempElement);
+        $arrayContent = json_decode($tempElement, true);
+
         $firstArray = array_shift($arrayContent);
         
         $maxValueX = $this::getMaxValueFromArray($firstArray["orphans"]);
-        
-        $replaceIds = array();
+
         foreach($arrayContent as $element) {
             if (empty($element)) continue;
             
+            $replaceIds = array();
+            $tempElement = "";
+
             // $element = json_decode($value, true);                
             foreach($element["orphans"] as $key => $orphan) {
                 $element["orphans"][$key]["x"] += $maxValueX;
                 $replaceIds[] = $orphan["id"];
             }
 
-            $tempElement = json_encode($element);
-            // replace Ids
-            foreach($replaceIds as $id) {
-                $tempElement = str_replace($id, Str::uuid()->toString(), $tempElement);
-            }
+            // $tempElement = json_encode($element);
 
-            $element = json_decode($tempElement, true);
+            // var_dump($replaceIds, $tempElement); 
+
+
+            // replace Ids
+            // foreach($replaceIds as $id) {
+            //     $uuid = Str::uuid()->toString();
+
+            //     var_dump("DE: ". $id . " PARA: ". $uuid); 
+
+            //     $tempElement = str_replace($id, $uuid, $tempElement);
+            // }
+
+            
+            // $element = json_decode($tempElement, true);
             $firstArray["orphans"] = array_merge($firstArray["orphans"], $element["orphans"]);
             $firstArray["links"] = array_merge($firstArray["links"], $element["links"]);
             $firstArray["display"] = array_merge($firstArray["display"], $element["display"]);
@@ -801,11 +852,13 @@ class FrameworkController extends Controller
             $maxValueX = $this::getMaxValueFromArray($firstArray["orphans"]);
         }
         
-        $firstArray["diagram"]["customProperties"]["Description"] = "Generation by NDD Framework";
+        $firstArray["diagram"]["customProperties"]["Description"] = "Generation by NFR-DD Framework";
         $firstArray["saveDate"] = gmdate("M d Y H:i:s");
         $firstArray["diagram"]["name"] = "New SIG";
         $firstArray["diagram"]["width"] = $maxValueX + 200;
 
+
+        // var_dump( json_encode($firstArray)); exit;
         return json_encode($firstArray);
     }
 

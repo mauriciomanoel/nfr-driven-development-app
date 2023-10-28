@@ -43,7 +43,7 @@ class FrameworkStepsSeeder extends Seeder
         $this::setCompleteStatusStep(1, $project);
 
         $currentStep = StepsFrameworkProject::where("project_id", "=", $project->id)->where("steps_framework_id", "=", 1)->first();
-        $stakeholder = Stakeholders::where("name", "=", "Usuários Finais")->first();
+        $stakeholder = Stakeholders::where("name", "=", "Idosos")->first();
 
         $steps2Framework = new Steps2Framework();
         $steps2Framework->stakeholder_id = $stakeholder->id;

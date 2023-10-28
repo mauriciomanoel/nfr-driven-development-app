@@ -21,8 +21,8 @@ class StakeholderSeeder extends Seeder
     {
 
         $finalUsers = Stakeholders::create([  
-            'name' => "Usuários Finais",
-            'description' => "O grupo de usuários finais é composto por idosos que utilizarão o sistema AAL",
+            'name' => "Idosos",
+            'description' => "Composto por idosos que utilizarão o sistema AAL",
         ]);
 
         $familyAndCaregiver = Stakeholders::create([  
